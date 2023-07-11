@@ -2,3 +2,8 @@ baseURL = 'https://jnh.gitee.io/'
 languageCode = 'en-us'
 title = 'Hugo Book Site'
 theme = 'hugo-book'
+
+
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
