@@ -1,6 +1,6 @@
 baseURL = 'https://jnh.gitee.io/'
 languageCode = 'en-us'
-title = 'Hugo Book Site'
+title = 'Notebook for CNCF (K8s/Istio/...)'
 theme = 'hugo-book'
 
 
