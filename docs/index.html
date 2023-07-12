@@ -4,8 +4,12 @@
 	<meta name="generator" content="Hugo 0.115.2">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Learning Notes for Cloud Native/CNCF # This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;
-Linux # Kubernetes/Docker # Istio # Prometheus # CNCF Others # ">
+<meta name="description" content="Learning Notes for Cloud Native/CNCF # This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;
+Linux/Docker # Namespace, CGroup, UFS
+Debug in Docker https://training.play-with-docker.com/dev-stage2/
+Network &amp; security https://training.play-with-docker.com/ops-stage2/
+Kubernetes # Istio # Prometheus # CNCF Others # Reference # Other # My Gitee page
+My Github page">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
 <meta property="og:description" content="" />
@@ -16,7 +20,7 @@ Linux # Kubernetes/Docker # Istio # Prometheus # CNCF Others # ">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.8110238c03dfe54849bd21f155632f06022d89d57b8ce825d1bfffd8daeeb507.js" integrity="sha256-gRAjjAPf5UhJvSHxVWMvBgItidV7jOgl0b//2NrutQc=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.cac5582d86a4fbd3bbe615e200d4808049e507e49950bc9b570c82cfaed2896e.js" integrity="sha256-ysVYLYak&#43;9O75hXiANSAgEnlB&#43;SZULybVwyCz67SiW4=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/index.xml" title="Learning Notes" />
@@ -347,6 +351,24 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/k8s/" class="">Introduction</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
   </ul>
 
 
@@ -431,11 +453,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#learning-notes-for-cloud-nativecncf">Learning Notes for Cloud Native/CNCF</a>
       <ul>
-        <li><a href="#linux">Linux</a></li>
-        <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
+        <li><a href="#linuxdocker">Linux/Docker</a></li>
+        <li><a href="#kubernetes">Kubernetes</a></li>
         <li><a href="#istio">Istio</a></li>
         <li><a href="#prometheushttpsprometheusio"><a href="https://prometheus.io/">Prometheus</a></a></li>
         <li><a href="#cncf-others">CNCF Others</a></li>
+        <li><a href="#reference">Reference</a></li>
+        <li><a href="#other">Other</a></li>
       </ul>
     </li>
   </ul>
@@ -459,14 +483,21 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 <br/>
 <br/>
-<h2 id="linux">
-  Linux
-  <a class="anchor" href="#linux">#</a>
+<h2 id="linuxdocker">
+  Linux/Docker
+  <a class="anchor" href="#linuxdocker">#</a>
 </h2>
+<p>Namespace, CGroup, UFS</p>
+<p>Debug in Docker
+
+  <a href="https://training.play-with-docker.com/dev-stage2/">https://training.play-with-docker.com/dev-stage2/</a></p>
+<p>Network &amp; security
+
+  <a href="https://training.play-with-docker.com/ops-stage2/">https://training.play-with-docker.com/ops-stage2/</a></p>
 <br/>
-<h2 id="kubernetesdocker">
-  Kubernetes/Docker
-  <a class="anchor" href="#kubernetesdocker">#</a>
+<h2 id="kubernetes">
+  Kubernetes
+  <a class="anchor" href="#kubernetes">#</a>
 </h2>
 <br/>
 <h2 id="istio">
@@ -484,6 +515,21 @@ https://github.com/alex-shpak/hugo-book
   CNCF Others
   <a class="anchor" href="#cncf-others">#</a>
 </h2>
+<br/>
+<h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<br/>
+<h2 id="other">
+  Other
+  <a class="anchor" href="#other">#</a>
+</h2>
+<p>
+  <a href="https://jnh.gitee.io/">My Gitee page</a></p>
+<p>
+  <a href="https://nianjiang.github.io/">My Github page</a></p>
+<br/>
 </article>
  
       
@@ -493,9 +539,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/7db2597852a76472343358da4d2fddd1ac7784d6" title='最后修改者 Nian Jiang | 2023-07-12 16:43:05' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/3c788dca2c30c7ea0efa69cdfacc6d417b612933" title='最后修改者 Nian Jiang | 2023-07-12 17:05:43' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-07-12 16:43:05</span>
+      <span>2023-07-12 17:05:43</span>
     </a>
   </div>
 
@@ -540,11 +586,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#learning-notes-for-cloud-nativecncf">Learning Notes for Cloud Native/CNCF</a>
       <ul>
-        <li><a href="#linux">Linux</a></li>
-        <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
+        <li><a href="#linuxdocker">Linux/Docker</a></li>
+        <li><a href="#kubernetes">Kubernetes</a></li>
         <li><a href="#istio">Istio</a></li>
         <li><a href="#prometheushttpsprometheusio"><a href="https://prometheus.io/">Prometheus</a></a></li>
         <li><a href="#cncf-others">CNCF Others</a></li>
+        <li><a href="#reference">Reference</a></li>
+        <li><a href="#other">Other</a></li>
       </ul>
     </li>
   </ul>

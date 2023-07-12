@@ -11,13 +11,21 @@ type: docs
 
 <br/>
 
-## Linux
+## Linux/Docker
 
+Namespace, CGroup, UFS
+
+Debug in Docker
+https://training.play-with-docker.com/dev-stage2/
+
+
+Network & security
+https://training.play-with-docker.com/ops-stage2/
 
 
 <br/>
 
-## Kubernetes/Docker
+## Kubernetes
 
 
 
