@@ -11,6 +11,8 @@ This is a blog for recording my learning for Cloud Native/CNCF (k8s/Istio/...)
 
 [Sample2:](https://coostdocs.gitee.io/cn/about/co/)
 
+---------------------
+
 [Hugo](https://gohugo.io/)
 
 [Golang](https://go.dev/)
