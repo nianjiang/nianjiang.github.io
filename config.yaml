@@ -1,5 +1,5 @@
 baseURL: 'https://jnh.gitee.io/'
-title: 'Cloud'
+title: 'Learning Notes'
 theme: 'hugo-book'
 
 
@@ -32,7 +32,7 @@ menu:
   # before: []
   after:
     - name: "Gitee"
-      url: "https://gitee.com/jn"
+      url: "https://gitee.com/jnh"
       weight: 10
     - name: "Github"
       url: "https://github.com/nianjiang"
