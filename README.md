@@ -2,6 +2,9 @@
 
 This is a blog for recording my learning for Cloud Native/CNCF (k8s/Istio/...)
 
+[Gitee page](https://jnh.gitee.io/)
+
+[Github page](https://nianjiang.github.io/)
 
 ### Resource
 
