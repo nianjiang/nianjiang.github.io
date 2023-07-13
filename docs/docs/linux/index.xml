@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>K8S on Learning Notes</title>
-    <link>https://jnh.gitee.io/docs/k8s/</link>
-    <description>Recent content in K8S on Learning Notes</description>
+    <title>Linux on Learning Notes</title>
+    <link>https://jnh.gitee.io/docs/linux/</link>
+    <description>Recent content in Linux on Learning Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://jnh.gitee.io/docs/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://jnh.gitee.io/docs/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CRI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CRI/</link>
+      <link>https://jnh.gitee.io/docs/linux/CRI/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jnh.gitee.io/docs/k8s/CRI/</guid>
+      <guid>https://jnh.gitee.io/docs/linux/CRI/</guid>
       <description> CRI # </description>
     </item>
     
     <item>
       <title>CNI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CNI/</link>
+      <link>https://jnh.gitee.io/docs/linux/CNI/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jnh.gitee.io/docs/k8s/CNI/</guid>
+      <guid>https://jnh.gitee.io/docs/linux/CNI/</guid>
       <description> CNI # </description>
     </item>
     
     <item>
       <title>CSI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CSI/</link>
+      <link>https://jnh.gitee.io/docs/linux/CSI/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jnh.gitee.io/docs/k8s/CSI/</guid>
+      <guid>https://jnh.gitee.io/docs/linux/CSI/</guid>
       <description> CSI # </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jnh.gitee.io/docs/k8s/operator/</link>
+      <link>https://jnh.gitee.io/docs/linux/operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jnh.gitee.io/docs/k8s/operator/</guid>
+      <guid>https://jnh.gitee.io/docs/linux/operator/</guid>
       <description> Operator # </description>
     </item>
     

@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content=" Linux Notes # This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;
+https://pkg.go.dev/github.com/docker/libcontainer#section-readme https://pkg.go.dev/github.com/vishvananda/netns#section-readme https://pkg.go.dev/github.com/docker/docker/api/types/container
+https://dev.to/devopsvn/deep-into-container-build-your-own-container-with-golang-3f5e https://unixism.net/2020/06/containers-the-hard-way-gocker-a-mini-docker-written-in-go/ https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a
+# ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Tags" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Linux" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://jnh.gitee.io/tags/" />
-<title>Tags | Learning Notes</title>
+<meta property="og:url" content="https://jnh.gitee.io/docs/linux/" />
+<title>Linux | Learning Notes</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
@@ -17,7 +20,7 @@
   <script defer src="/zh.search.min.e1ef975c93591e3b264b10301d085951742f4574c90d0fb6b9d2d6b21c36abf3.js" integrity="sha256-4e&#43;XXJNZHjsmSxAwHQhZUXQvRXTJDQ&#43;2udLWshw2q/M=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/tags/index.xml" title="Learning Notes" />
+<link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/docs/linux/index.xml" title="Learning Notes" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -69,9 +72,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle"  />
+    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle" checked />
     <label for="section-6ae1a891fb3a3f71d71273fc61b29b76" class="flex justify-between">
-      <a href="/docs/linux/" class="">Linux</a>
+      <a href="/docs/linux/" class="active">Linux</a>
     </label>
   
 
@@ -557,7 +560,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Tags</strong>
+  <strong>Linux</strong>
 
   <label for="toc-control">
     
@@ -570,69 +573,17 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#linux-notes">Linux Notes</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/Development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/golang/">golang</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#heading"></a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/development/">development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/go/">go</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/golang/">golang</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/hugo/">hugo</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/templates/">templates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/themes/">themes</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
 
   </aside>
@@ -642,129 +593,31 @@ https://github.com/alex-shpak/hugo-book
 
       
       
+  <article class="markdown"><h1 id="linux-notes">
+  Linux Notes
+  <a class="anchor" href="#linux-notes">#</a>
+</h1>
+<blockquote>
+<p>This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;</p>
+</blockquote>
+<p>
+  <a href="https://pkg.go.dev/github.com/docker/libcontainer#section-readme">https://pkg.go.dev/github.com/docker/libcontainer#section-readme</a>
+
+  <a href="https://pkg.go.dev/github.com/vishvananda/netns#section-readme">https://pkg.go.dev/github.com/vishvananda/netns#section-readme</a>
+
+  <a href="https://pkg.go.dev/github.com/docker/docker/api/types/container">https://pkg.go.dev/github.com/docker/docker/api/types/container</a></p>
+<p>
+  <a href="https://dev.to/devopsvn/deep-into-container-build-your-own-container-with-golang-3f5e">https://dev.to/devopsvn/deep-into-container-build-your-own-container-with-golang-3f5e</a>
+
+  <a href="https://unixism.net/2020/06/containers-the-hard-way-gocker-a-mini-docker-written-in-go/">https://unixism.net/2020/06/containers-the-hard-way-gocker-a-mini-docker-written-in-go/</a>
+
+  <a href="https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a">https://medium.com/@teddyking/namespaces-in-go-basics-e3f0fc1ff69a</a></p>
+<br/>
+<h2 id="heading">
   
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/development/">development</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/go/">go</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/golang/">golang</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/hugo/">hugo</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/templates/">templates</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/tags/themes/">themes</a>
-    </h2>
-    
-  <h5>2014-04-02 00:00:00</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>
-    </p>
-  </article>
-  
-
-  
+  <a class="anchor" href="#heading">#</a>
+</h2>
+</article>
  
       
 
@@ -773,7 +626,20 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/a1705e5e44eb96a4bb27061af527c319467ccd9a" title='最后修改者 Nian Jiang | 2023-07-13 10:54:16' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2023-07-13 10:54:16</span>
+    </a>
+  </div>
 
+
+
+  <div>
+    <a class="flex align-center" href="https://gitee.com/jnh/jnh/edit/master/content/docs/linux/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
 
 
 </div>
@@ -789,6 +655,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -798,69 +668,17 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-toc">
       <div class="book-toc-content">
         
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#linux-notes">Linux Notes</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/Development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/golang/">golang</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#heading"></a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/development/">development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/go/">go</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/golang/">golang</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/hugo/">hugo</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/templates/">templates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/themes/">themes</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
  
       </div>
