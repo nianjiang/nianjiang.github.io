@@ -31,6 +31,9 @@ languages:
 menu:
   # before: []
   after:
+    - name: "Hugo Book"
+      url: "https://github.com/alex-shpak/hugo-book"
+      weight: 5
     - name: "Gitee"
       url: "https://gitee.com/jnh/jnh"
       weight: 10
