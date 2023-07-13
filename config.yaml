@@ -32,10 +32,10 @@ menu:
   # before: []
   after:
     - name: "Gitee"
-      url: "https://gitee.com/jnh"
+      url: "https://gitee.com/jnh/jnh"
       weight: 10
     - name: "Github"
-      url: "https://github.com/nianjiang"
+      url: "https://github.com/nianjiang/nianjiang.github.io"
       weight: 11
     - name: "常用导航"
       url: "/links"
@@ -78,7 +78,7 @@ params:
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Edit path must point to root directory of repo.
-  BookEditPath: edit/main
+  BookEditPath: edit/master
 
   # Configure the date format used on the pages
   # - In git information

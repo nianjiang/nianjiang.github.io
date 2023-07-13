@@ -1,6 +1,7 @@
 ---
-title: Introduction
-type: docs
+weight: 51
+title: "K8S"
+bookCollapseSection: true
 ---
 
 # Kubernetes Notes
