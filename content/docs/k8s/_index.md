@@ -1,7 +1,7 @@
 ---
 weight: 51
 title: "K8S"
-# bookCollapseSection: true
+bookCollapseSection: true
 ---
 
 # Kubernetes Notes
