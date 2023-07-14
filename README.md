@@ -1,6 +1,6 @@
 ## A blog by Hugo-book
 
-This is a blog for recording my learning for Cloud Native/CNCF (k8s/Istio/...)
+> This is a blog for recording my learning for Cloud Native/CNCF (k8s/Istio/...)
 
 ### Commands
 
