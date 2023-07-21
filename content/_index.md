@@ -11,7 +11,7 @@ type: docs
 
 <br/>
 
-## [Linux](https://github.com/torvalds/linux)/[Docker](https://www.docker.com/)
+## [Linux](https://github.com/torvalds/linux) & [Docker](https://www.docker.com/)
 
 Namespace, CGroup, UFS
 

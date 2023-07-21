@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Kubernetes Notes # This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;
-Linux # Kubernetes/Docker # ">
+<meta name="description" content="Kubernetes Notes # This is my learning Notes for Kubernetes
+Setup (minikube, SandBox)
+minikube website
+Componets (Scheduler, Controller, ETCD, API, Kubelet)
+Operator
+https://lib.jimmysong.io/kubernetes-handbook/develop/operator/
+CRI (containerd)
+CNI (cilium, calico)
+CSI (ceph, pv, pvc)
+Prometheus
+CKA, CKAD
+Linux # Kubernetes/Docker # Reference # Kubernetes 基础教程">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="K8S" />
 <meta property="og:description" content="" />
@@ -15,7 +25,7 @@ Linux # Kubernetes/Docker # ">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.4aa8b4a7f9796a3d4b0f68f7c6ea5bfb11c508f8b1f6aa4dec8462cd5d1712d3.js" integrity="sha256-Sqi0p/l5aj1LD2j3xupb&#43;xHFCPix9qpN7IRizV0XEtM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.763a55bb6caa6e8c678f73d54c7d6fa075c7b328c35c7a8e6a2d3896a2623d2f.js" integrity="sha256-djpVu2yqboxnj3PVTH1voHXHsyjDXHqOai04lqJiPS8=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/docs/k8s/index.xml" title="Learning Notes" />
@@ -78,58 +88,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CRI/" class="">CRI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CNI/" class="">CNI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CSI/" class="">CSI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/operator/" class="">Operator</a>
-  
-
-        </li>
-      
     
   </ul>
 
@@ -198,11 +156,66 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/k8s/docker/" class="">Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/k8s/operator/" class="">Operator</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0737253f49be88bf138c5b1b57550b21" class="toggle"  />
+    <label for="section-0737253f49be88bf138c5b1b57550b21" class="flex justify-between">
+      <a href="/docs/istio/" class="">Istio</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
+    <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
+      <a href="/docs/Prometheus/" class="">Prometheus</a>
+    </label>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -580,10 +593,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#kubernetes-notes">Kubernetes Notes</a>
+    <li><a href="#kuberneteshttpskubernetesio-notes"><a href="https://kubernetes.io/">Kubernetes</a> Notes</a>
       <ul>
         <li><a href="#linux">Linux</a></li>
         <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
+        <li><a href="#reference">Reference</a></li>
       </ul>
     </li>
   </ul>
@@ -598,14 +612,47 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="kubernetes-notes">
-  Kubernetes Notes
-  <a class="anchor" href="#kubernetes-notes">#</a>
+  <article class="markdown"><h1 id="kuberneteshttpskubernetesio-notes">
+  
+  <a href="https://kubernetes.io/">Kubernetes</a> Notes
+  <a class="anchor" href="#kuberneteshttpskubernetesio-notes">#</a>
 </h1>
 <blockquote>
-<p>This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;</p>
+<p>This is my learning Notes for Kubernetes</p>
 </blockquote>
+<hr>
+<ul>
+<li>
+<p>Setup (minikube, SandBox)</p>
+<p>
+  <a href="https://minikube.sigs.k8s.io/docs/start/">minikube website</a></p>
+</li>
+<li>
+<p>Componets (Scheduler, Controller, ETCD, API, Kubelet)</p>
+</li>
+<li>
+<p>Operator</p>
+<p>
+  <a href="https://lib.jimmysong.io/kubernetes-handbook/develop/operator/">https://lib.jimmysong.io/kubernetes-handbook/develop/operator/</a></p>
+</li>
+<li>
+<p>CRI (containerd)</p>
+</li>
+<li>
+<p>CNI (cilium, calico)</p>
+</li>
+<li>
+<p>CSI (ceph, pv, pvc)</p>
+</li>
+<li>
+<p>Prometheus</p>
+</li>
+<li>
+<p>CKA, CKAD</p>
+</li>
+</ul>
 <br/>
+<hr>
 <br/>
 <h2 id="linux">
   Linux
@@ -616,6 +663,12 @@ https://github.com/alex-shpak/hugo-book
   Kubernetes/Docker
   <a class="anchor" href="#kubernetesdocker">#</a>
 </h2>
+<h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<p>
+  <a href="https://lib.jimmysong.io/kubernetes-handbook/">Kubernetes 基础教程</a></p>
 </article>
  
       
@@ -625,9 +678,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/c0c45866664238a380f78c86fd0a86dd8eae2a6e" title='最后修改者 Nian Jiang | 2023-07-14 12:32:28' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/0310e69cf59f48f319b2c95a8e5ad3038e4bc3b4" title='最后修改者 Nian Jiang | 2023-07-21 15:02:59' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-07-14 12:32:28</span>
+      <span>2023-07-21 15:02:59</span>
     </a>
   </div>
 
@@ -670,10 +723,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#kubernetes-notes">Kubernetes Notes</a>
+    <li><a href="#kuberneteshttpskubernetesio-notes"><a href="https://kubernetes.io/">Kubernetes</a> Notes</a>
       <ul>
         <li><a href="#linux">Linux</a></li>
         <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
+        <li><a href="#reference">Reference</a></li>
       </ul>
     </li>
   </ul>

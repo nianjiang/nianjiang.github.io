@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Learning Notes for Cloud Native/CNCF # This is my learning Notes for Cloud Native, include Kubernetes/Istio/&hellip;
-Linux/Docker # Namespace, CGroup, UFS
+Linux &amp; Docker # Namespace, CGroup, UFS
 Debug in Docker https://training.play-with-docker.com/dev-stage2/
 Network &amp; security https://training.play-with-docker.com/ops-stage2/
+containerd
 Kubernetes # Istio # Prometheus # CNCF Others # Reference # Other # My Gitee page
 My Github page">
 <meta name="theme-color" content="#FFFFFF">
@@ -20,7 +21,7 @@ My Github page">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.4aa8b4a7f9796a3d4b0f68f7c6ea5bfb11c508f8b1f6aa4dec8462cd5d1712d3.js" integrity="sha256-Sqi0p/l5aj1LD2j3xupb&#43;xHFCPix9qpN7IRizV0XEtM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.763a55bb6caa6e8c678f73d54c7d6fa075c7b328c35c7a8e6a2d3896a2623d2f.js" integrity="sha256-djpVu2yqboxnj3PVTH1voHXHsyjDXHqOai04lqJiPS8=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/index.xml" title="Learning Notes" />
@@ -83,58 +84,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CRI/" class="">CRI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CNI/" class="">CNI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CSI/" class="">CSI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/operator/" class="">Operator</a>
-  
-
-        </li>
-      
     
   </ul>
 
@@ -203,11 +152,66 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/k8s/docker/" class="">Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/k8s/operator/" class="">Operator</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0737253f49be88bf138c5b1b57550b21" class="toggle"  />
+    <label for="section-0737253f49be88bf138c5b1b57550b21" class="flex justify-between">
+      <a href="/docs/istio/" class="">Istio</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
+    <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
+      <a href="/docs/Prometheus/" class="">Prometheus</a>
+    </label>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -587,11 +591,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#learning-notes-for-cloud-nativecncf">Learning Notes for Cloud Native/CNCF</a>
       <ul>
-        <li><a href="#linuxdocker">Linux/Docker</a></li>
-        <li><a href="#kubernetes">Kubernetes</a></li>
-        <li><a href="#istio">Istio</a></li>
+        <li><a href="#linuxhttpsgithubcomtorvaldslinux--dockerhttpswwwdockercom"><a href="https://github.com/torvalds/linux">Linux</a> &amp; <a href="https://www.docker.com/">Docker</a></a></li>
+        <li><a href="#kuberneteshttpskubernetesio"><a href="https://kubernetes.io/">Kubernetes</a></a></li>
+        <li><a href="#istiohttpsistioio"><a href="https://istio.io/">Istio</a></a></li>
         <li><a href="#prometheushttpsprometheusio"><a href="https://prometheus.io/">Prometheus</a></a></li>
-        <li><a href="#cncf-others">CNCF Others</a></li>
+        <li><a href="#cncfhttpslandscapecncfiofullscreenyes-others"><a href="https://landscape.cncf.io/?fullscreen=yes">CNCF</a> Others</a></li>
         <li><a href="#reference">Reference</a></li>
         <li><a href="#other">Other</a></li>
       </ul>
@@ -617,9 +621,11 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 <br/>
 <br/>
-<h2 id="linuxdocker">
-  Linux/Docker
-  <a class="anchor" href="#linuxdocker">#</a>
+<h2 id="linuxhttpsgithubcomtorvaldslinux--dockerhttpswwwdockercom">
+  
+  <a href="https://github.com/torvalds/linux">Linux</a> &amp; 
+  <a href="https://www.docker.com/">Docker</a>
+  <a class="anchor" href="#linuxhttpsgithubcomtorvaldslinux--dockerhttpswwwdockercom">#</a>
 </h2>
 <p>Namespace, CGroup, UFS</p>
 <p>Debug in Docker
@@ -628,33 +634,44 @@ https://github.com/alex-shpak/hugo-book
 <p>Network &amp; security
 
   <a href="https://training.play-with-docker.com/ops-stage2/">https://training.play-with-docker.com/ops-stage2/</a></p>
+<p>
+  <a href="https://containerd.io/">containerd</a></p>
 <br/>
-<h2 id="kubernetes">
-  Kubernetes
-  <a class="anchor" href="#kubernetes">#</a>
+<hr>
+<h2 id="kuberneteshttpskubernetesio">
+  
+  <a href="https://kubernetes.io/">Kubernetes</a>
+  <a class="anchor" href="#kuberneteshttpskubernetesio">#</a>
 </h2>
 <br/>
-<h2 id="istio">
-  Istio
-  <a class="anchor" href="#istio">#</a>
+<hr>
+<h2 id="istiohttpsistioio">
+  
+  <a href="https://istio.io/">Istio</a>
+  <a class="anchor" href="#istiohttpsistioio">#</a>
 </h2>
 <br/>
+<hr>
 <h2 id="prometheushttpsprometheusio">
   
   <a href="https://prometheus.io/">Prometheus</a>
   <a class="anchor" href="#prometheushttpsprometheusio">#</a>
 </h2>
 <br/>
-<h2 id="cncf-others">
-  CNCF Others
-  <a class="anchor" href="#cncf-others">#</a>
+<hr>
+<h2 id="cncfhttpslandscapecncfiofullscreenyes-others">
+  
+  <a href="https://landscape.cncf.io/?fullscreen=yes">CNCF</a> Others
+  <a class="anchor" href="#cncfhttpslandscapecncfiofullscreenyes-others">#</a>
 </h2>
 <br/>
+<hr>
 <h2 id="reference">
   Reference
   <a class="anchor" href="#reference">#</a>
 </h2>
 <br/>
+<hr>
 <h2 id="other">
   Other
   <a class="anchor" href="#other">#</a>
@@ -673,9 +690,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/cbd87ed8c199318c1af6f768f33b1c663e3d7d3b" title='最后修改者 Nian Jiang | 2023-07-12 18:24:15' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/0a79a99fb9dec7d1cecd67f99cb4061dbe20fd70" title='最后修改者 Nian Jiang | 2023-07-14 16:24:19' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-07-12 18:24:15</span>
+      <span>2023-07-14 16:24:19</span>
     </a>
   </div>
 
@@ -720,11 +737,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#learning-notes-for-cloud-nativecncf">Learning Notes for Cloud Native/CNCF</a>
       <ul>
-        <li><a href="#linuxdocker">Linux/Docker</a></li>
-        <li><a href="#kubernetes">Kubernetes</a></li>
-        <li><a href="#istio">Istio</a></li>
+        <li><a href="#linuxhttpsgithubcomtorvaldslinux--dockerhttpswwwdockercom"><a href="https://github.com/torvalds/linux">Linux</a> &amp; <a href="https://www.docker.com/">Docker</a></a></li>
+        <li><a href="#kuberneteshttpskubernetesio"><a href="https://kubernetes.io/">Kubernetes</a></a></li>
+        <li><a href="#istiohttpsistioio"><a href="https://istio.io/">Istio</a></a></li>
         <li><a href="#prometheushttpsprometheusio"><a href="https://prometheus.io/">Prometheus</a></a></li>
-        <li><a href="#cncf-others">CNCF Others</a></li>
+        <li><a href="#cncfhttpslandscapecncfiofullscreenyes-others"><a href="https://landscape.cncf.io/?fullscreen=yes">CNCF</a> Others</a></li>
         <li><a href="#reference">Reference</a></li>
         <li><a href="#other">Other</a></li>
       </ul>
