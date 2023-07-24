@@ -9,6 +9,19 @@ bookCollapseSection: true
 
 ---
 
+***Doubts***:
+
+- [Service vs Ingress](https://lib.jimmysong.io/kubernetes-handbook/service-discovery/)
+
+- []()
+
+- []()
+
+- []()
+
+
+---
+
 - Setup (minikube, SandBox)
 
     [minikube website](https://minikube.sigs.k8s.io/docs/start/)
