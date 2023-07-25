@@ -17,15 +17,7 @@ bookCollapseSection: true
 
 ## Traffic Management
 
-Understand how to expose services from the cluster.
 
-Understand how Istio knows where to route the traffic and how the traffic gets routed.
-
-Understand how to split traffic based on weight and other request properties.
-
-Understand how service resilience, failure injection, and circuit breaking features work.
-
-Understand how to bring external services to the mesh using the ServiceEntry resource.
 
 
 
