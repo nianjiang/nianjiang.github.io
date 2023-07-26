@@ -13,6 +13,9 @@ bookCollapseSection: true
 
 - [Service vs Ingress](https://lib.jimmysong.io/kubernetes-handbook/service-discovery/)
 
+- How do kubelet know the pod is started success? justify process/port/url.   
+How about POD life cycle?
+
 - []()
 
 - []()
