@@ -6,5 +6,19 @@
     <description>Recent content in Istio on Learning Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language><atom:link href="https://jnh.gitee.io/docs/istio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Traffic Management</title>
+      <link>https://jnh.gitee.io/docs/istio/TrafficManagement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jnh.gitee.io/docs/istio/TrafficManagement/</guid>
+      <description>Traffic Management # Goal # Understand how to expose services from the cluster.
+Understand how Istio knows where to route the traffic and how the traffic gets routed.
+Understand how to split traffic based on weight and other request properties.
+Understand how service resilience, failure injection, and circuit breaking features work.
+Understand how to bring external services to the mesh using the ServiceEntry resource.
+Other # Open Tunnel: minikube tunnel abc@local: ~&amp;gt; minikube tunnel ✅ Tunnel successfully started 📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible .</description>
+    </item>
+    
   </channel>
 </rss>

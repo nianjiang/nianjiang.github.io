@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Docker # Install
-https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
-Docker Group sudo usermod -aG docker $USER newgrp docker ">
+<meta name="description" content="Docker # Install Docker
+Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a&#43;r /etc/apt/keyrings/docker.gpg echo \ &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker" />
-<meta property="og:description" content=" Docker # Install
-https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
-Docker Group sudo usermod -aG docker $USER newgrp docker " />
+<meta property="og:description" content="Docker # Install Docker
+Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a&#43;r /etc/apt/keyrings/docker.gpg echo \ &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jnh.gitee.io/docs/k8s/docker/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-07-21T15:02:59+08:00" />
+<meta property="article:modified_time" content="2023-07-26T09:12:31+08:00" />
 <title>Docker | Learning Notes</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.763a55bb6caa6e8c678f73d54c7d6fa075c7b328c35c7a8e6a2d3896a2623d2f.js" integrity="sha256-djpVu2yqboxnj3PVTH1voHXHsyjDXHqOai04lqJiPS8=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.d5500d2f865283da77792c63508dfe8c5fc00c42c316179121271bff67a645bb.js" integrity="sha256-1VANL4ZSg9p3eSxjUI3&#43;jF/ADELDFheRIScb/2emRbs=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -190,6 +188,19 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/istio/TrafficManagement/" class="">Traffic Management</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -205,6 +216,27 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
     <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
       <a href="/docs/Prometheus/" class="">Prometheus</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fa153435e5b558683d2ba96ab8ca277b" class="toggle"  />
+    <label for="section-fa153435e5b558683d2ba96ab8ca277b" class="flex justify-between">
+      <a href="/docs/CNCF/" class="">CNCF</a>
     </label>
   
 
@@ -587,7 +619,15 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#docker">Docker</a></li>
+    <li><a href="#docker">Docker</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#reference">Reference</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -606,12 +646,30 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <ul>
 <li>
-<p>Install</p>
-<p>
-  <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script</a></p>
-<details open><summary>Docker Group</summary>
+<p>Install Docker</p>
+<details open><summary><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Install Docker</a></summary>
   <div class="markdown-inner">
-    <pre><code>sudo usermod -aG docker $USER
+    <pre><code>1. Set up the Repository
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+&quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+&quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
+sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+
+
+2. Install Docker
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker run hello-world
+
+verify:
+sudo docker run hello-world
 
 newgrp docker
 </code></pre>
@@ -619,8 +677,58 @@ newgrp docker
   </div>
 </details>
 
+<details open><summary>Create Docker Group</summary>
+  <div class="markdown-inner">
+    <pre><code>sudo usermod -aG docker $USER
+newgrp docker
+sudo service docker start
+</code></pre>
+
+  </div>
+</details>
+
+</li>
+<li>
+<p>Install Kubectl</p>
+<details open><summary>Install Kuberctl</summary>
+  <div class="markdown-inner">
+    <pre><code>curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+</code></pre>
+
+  </div>
+</details>
+
+</li>
+<li>
+<p>Install istio
+<details open><summary>Install Istio</summary>
+  <div class="markdown-inner">
+    <pre><code>curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.1 TARGET_ARCH=x86_64 sh -
+cd istio-1.18.1/bin
+sudo install -o root -g root -m 0755 istioctl /usr/local/bin/istioctl
+
+istioctl install --set profile=demo -y
+kubectl label namespace default istio-injection=enabled
+</code></pre>
+
+  </div>
+</details>
+</p>
 </li>
 </ul>
+<h3 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h3>
+<p>
+  <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Docker</a></p>
+<p>
+  <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/">Kubectl</a></p>
+<p>
+  <a href="https://istio.io/latest/docs/setup/getting-started/">Istio</a></p>
+<p>
+  <a href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a></p>
 </article>
  
       
@@ -630,9 +738,9 @@ newgrp docker
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/0310e69cf59f48f319b2c95a8e5ad3038e4bc3b4" title='最后修改者 Nian Jiang | 2023-07-21 15:02:59' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/137aa60a86484329d528b30242df0068e641ff91" title='最后修改者 Nian Jiang | 2023-07-26 09:12:31' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-07-21 15:02:59</span>
+      <span>2023-07-26 09:12:31</span>
     </a>
   </div>
 
@@ -675,7 +783,15 @@ newgrp docker
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#docker">Docker</a></li>
+    <li><a href="#docker">Docker</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#reference">Reference</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

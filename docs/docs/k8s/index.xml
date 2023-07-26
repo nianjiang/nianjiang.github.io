@@ -39,9 +39,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jnh.gitee.io/docs/k8s/docker/</guid>
-      <description> Docker # Install
-https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
-Docker Group sudo usermod -aG docker $USER newgrp docker </description>
+      <description>Docker # Install Docker
+Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a+r /etc/apt/keyrings/docker.gpg echo \ &amp;quot;deb [arch=&amp;quot;$(dpkg --print-architecture)&amp;quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &amp;quot;$(. /etc/os-release &amp;amp;&amp;amp; echo &amp;quot;$VERSION_CODENAME&amp;quot;)&amp;quot; stable&amp;quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.</description>
     </item>
     
     <item>

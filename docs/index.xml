@@ -57,6 +57,20 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>Traffic Management</title>
+      <link>https://jnh.gitee.io/docs/istio/TrafficManagement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jnh.gitee.io/docs/istio/TrafficManagement/</guid>
+      <description>Traffic Management # Goal # Understand how to expose services from the cluster.
+Understand how Istio knows where to route the traffic and how the traffic gets routed.
+Understand how to split traffic based on weight and other request properties.
+Understand how service resilience, failure injection, and circuit breaking features work.
+Understand how to bring external services to the mesh using the ServiceEntry resource.
+Other # Open Tunnel: minikube tunnel abc@local: ~&amp;gt; minikube tunnel ✅ Tunnel successfully started 📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible .</description>
+    </item>
+    
+    <item>
       <title>CNI</title>
       <link>https://jnh.gitee.io/docs/k8s/CNI/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -80,9 +94,8 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jnh.gitee.io/docs/k8s/docker/</guid>
-      <description> Docker # Install
-https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
-Docker Group sudo usermod -aG docker $USER newgrp docker </description>
+      <description>Docker # Install Docker
+Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a+r /etc/apt/keyrings/docker.gpg echo \ &amp;quot;deb [arch=&amp;quot;$(dpkg --print-architecture)&amp;quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &amp;quot;$(. /etc/os-release &amp;amp;&amp;amp; echo &amp;quot;$VERSION_CODENAME&amp;quot;)&amp;quot; stable&amp;quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.</description>
     </item>
     
     <item>

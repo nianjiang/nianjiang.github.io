@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Operator # ">
+<meta name="description" content="Traffic Management # Goal # Understand how to expose services from the cluster.
+Understand how Istio knows where to route the traffic and how the traffic gets routed.
+Understand how to split traffic based on weight and other request properties.
+Understand how service resilience, failure injection, and circuit breaking features work.
+Understand how to bring external services to the mesh using the ServiceEntry resource.
+Other # Open Tunnel: minikube tunnel abc@local: ~&gt; minikube tunnel ✅ Tunnel successfully started 📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible .">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content=" Operator # " />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Traffic Management" />
+<meta property="og:description" content="Traffic Management # Goal # Understand how to expose services from the cluster.
+Understand how Istio knows where to route the traffic and how the traffic gets routed.
+Understand how to split traffic based on weight and other request properties.
+Understand how service resilience, failure injection, and circuit breaking features work.
+Understand how to bring external services to the mesh using the ServiceEntry resource.
+Other # Open Tunnel: minikube tunnel abc@local: ~&gt; minikube tunnel ✅ Tunnel successfully started 📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jnh.gitee.io/docs/linux/operator/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://jnh.gitee.io/docs/istio/TrafficManagement/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-07-13T10:54:16+08:00" />
-<title>Operator | Learning Notes</title>
+<meta property="article:modified_time" content="2023-07-26T09:12:31+08:00" />
+<title>Traffic Management | Learning Notes</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.4aa8b4a7f9796a3d4b0f68f7c6ea5bfb11c508f8b1f6aa4dec8462cd5d1712d3.js" integrity="sha256-Sqi0p/l5aj1LD2j3xupb&#43;xHFCPix9qpN7IRizV0XEtM=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.d5500d2f865283da77792c63508dfe8c5fc00c42c316179121271bff67a645bb.js" integrity="sha256-1VANL4ZSg9p3eSxjUI3&#43;jF/ADELDFheRIScb/2emRbs=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -70,7 +80,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle" checked />
+    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle"  />
     <label for="section-6ae1a891fb3a3f71d71273fc61b29b76" class="flex justify-between">
       <a href="/docs/linux/" class="">Linux</a>
     </label>
@@ -78,58 +88,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CRI/" class="">CRI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CNI/" class="">CNI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/CSI/" class="">CSI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/linux/operator/" class="active">Operator</a>
-  
-
-        </li>
-      
     
   </ul>
 
@@ -198,11 +156,100 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="/docs/k8s/docker/" class="">Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="/docs/k8s/operator/" class="">Operator</a>
   
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0737253f49be88bf138c5b1b57550b21" class="toggle" checked />
+    <label for="section-0737253f49be88bf138c5b1b57550b21" class="flex justify-between">
+      <a href="/docs/istio/" class="">Istio</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/istio/TrafficManagement/" class="active">Traffic Management</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
+    <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
+      <a href="/docs/Prometheus/" class="">Prometheus</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fa153435e5b558683d2ba96ab8ca277b" class="toggle"  />
+    <label for="section-fa153435e5b558683d2ba96ab8ca277b" class="flex justify-between">
+      <a href="/docs/CNCF/" class="">CNCF</a>
+    </label>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -564,7 +611,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Operator</strong>
+  <strong>Traffic Management</strong>
 
   <label for="toc-control">
     
@@ -580,7 +627,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#operator">Operator</a></li>
+    <li><a href="#traffic-management">Traffic Management</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#other">Other</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -593,10 +650,59 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="operator">
-  Operator
-  <a class="anchor" href="#operator">#</a>
+  <article class="markdown"><h1 id="traffic-management">
+  Traffic Management
+  <a class="anchor" href="#traffic-management">#</a>
 </h1>
+<h3 id="goal">
+  Goal
+  <a class="anchor" href="#goal">#</a>
+</h3>
+<ul>
+<li>
+<p>Understand how to expose services from the cluster.</p>
+</li>
+<li>
+<p>Understand how Istio knows where to route the traffic and how the traffic gets routed.</p>
+</li>
+<li>
+<p>Understand how to split traffic based on weight and other request properties.</p>
+</li>
+<li>
+<p>Understand how service resilience, failure injection, and circuit breaking features work.</p>
+</li>
+<li>
+<p>Understand how to bring external services to the mesh using the ServiceEntry resource.</p>
+</li>
+</ul>
+<h3 id="other">
+  Other
+  <a class="anchor" href="#other">#</a>
+</h3>
+<ul>
+<li>Open Tunnel: <em><strong>minikube tunnel</strong></em></li>
+</ul>
+<pre tabindex="0"><code>abc@local: ~&gt; minikube tunnel
+✅  Tunnel successfully started
+
+📌  NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+❗  The service/ingress istio-ingressgateway requires privileged ports to be exposed: [80 443]
+🔑  sudo permission will be asked for it.
+🏃  Starting tunnel for service istio-ingressgateway.
+Password:
+</code></pre><h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<p>
+  <a href="https://istio.io/latest/docs/">Istio Docs</a></p>
+<p>
+  <a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&#43;LFS144x&#43;3T2022/home">《Introduction to Istio》</a>,
+
+  <a href="https://github.com/tetratelabs/cncf-istio-course?utm_source=cncf-course&amp;utm_medium=course&amp;utm_campaign=course">《Introduction to Istio》-Github</a></p>
+<p>
+  <a href="https://prometheus.io/">Prometheus</a></p>
 </article>
  
       
@@ -606,16 +712,16 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/a1705e5e44eb96a4bb27061af527c319467ccd9a" title='最后修改者 Nian Jiang | 2023-07-13 10:54:16' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/137aa60a86484329d528b30242df0068e641ff91" title='最后修改者 Nian Jiang | 2023-07-26 09:12:31' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-07-13 10:54:16</span>
+      <span>2023-07-26 09:12:31</span>
     </a>
   </div>
 
 
 
   <div>
-    <a class="flex align-center" href="https://gitee.com/jnh/jnh/edit/master/content/docs/linux/operator.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://gitee.com/jnh/jnh/edit/master/content/docs/istio/TrafficManagement.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -651,7 +757,17 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#operator">Operator</a></li>
+    <li><a href="#traffic-management">Traffic Management</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#other">Other</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
