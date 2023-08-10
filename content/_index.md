@@ -75,3 +75,22 @@ https://training.play-with-docker.com/ops-stage2/
 [My Github page](https://nianjiang.github.io/)
 
 <br/>
+
+https://github.com/fenixsoft/awesome-fenix
+
+
+https://wiki.eryajf.net/learning-weekly/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

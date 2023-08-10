@@ -47,3 +47,22 @@ bookCollapseSection: true
 
 [Grafana]()
 
+https://github.com/joseadanof/awesome-cloudnative-trainings
+
+https://u.geekbang.org/subject/cloudnative
+
+https://www.nobleprog.cn/service-mesh/peixun/beijing
+
+https://github.com/librant/learn
+
+https://github.com/shuxnhs/Mastering-ServiceMesh
+
+
+
+
+
+
+
+
+
+
