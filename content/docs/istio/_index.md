@@ -1,5 +1,5 @@
 ---
-weight: 50
+weight: 52
 title: "Istio"
 bookCollapseSection: true
 ---
