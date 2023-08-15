@@ -31,7 +31,7 @@ hugo server --minify
 
 
 
-[My Gitee page](https://jnh.gitee.io/)
+[My Gitee page](https://jnh.gitee.io/), [Update](https://gitee.com/jnh/jnh/pages)
 
 [My Github page](https://nianjiang.github.io/)
 
