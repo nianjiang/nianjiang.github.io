@@ -69,6 +69,8 @@ How about POD life cycle?
 
 [为Kubernetes集群部署一个ChatGPT机器人](https://www.bmabk.com/index.php/post/96754.html)
 
+[K8s Training](https://kubernetes.io/zh-cn/training/)
+
 []()
 
 https://github.com/0voice/k8s_awesome_document
