@@ -32,7 +32,7 @@ bookCollapseSection: true
 ## Reference
 
 [《Introduction to Istio》](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/home)
-[《Introduction to Istio》-Github](https://github.com/tetratelabs/cncf-istio-course?utm_source=cncf-course&utm_medium=course&utm_campaign=course)
+[《Introduction to Istio》-Github](https://gitee.com/jnh/cncf-istio-course)
 
 [Tetrate](https://academy.tetrate.io/enrollments)
 
