@@ -4,7 +4,21 @@ title: "Source Code"
 ---
 
 
-# Source Code
+## Questions:
+
+1. Istio Agent (pilit-agent)
+{{< details title="" open=false >}}
+![](https://courses.edx.org/assets/courseware/v1/21b8fe1c5f0ab462a08100e3f61d1ba0/asset-v1:LinuxFoundationX+LFS144x+3T2022+type@asset+block/ch5-cert-creation.png)
+
+[Reference](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@ce78a864b2b041d69231dfbc493003e8/block-v1:LinuxFoundationX+LFS144x+3T2022+type@vertical+block@a0eafac8e5bf4d21877a008135adea4f)
+{{< /details >}}
+
+
+
+
+
+
+## Source Code
 
 [Understanding the Sidecar Injection, Traffic Intercepting & Routing Process in Istio](https://jimmysong.io/en/blog/sidecar-injection-iptables-and-traffic-routing/)
 
@@ -38,6 +52,8 @@ title: "Source Code"
 
 [JimmySong](https://jimmysong.io/kubernetes-handbook/usecases/istio.html)
 
+[Become a Contributor](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX+LFS144x+3T2022+type@vertical+block@8d398ad8731c430a94322c363644a385)
+
 [Istio Pilot 源码分析（一）](https://zhuanlan.zhihu.com/p/234428285)
 
 [SourceGraph](https://sourcegraph.com/github.com/istio/istio)
@@ -55,6 +71,8 @@ title: "Source Code"
 [5.深入Istio源码：Pilot-agent作用及其源码分析](https://cloud.tencent.com/developer/column/80143)
 
 [小米信息部技术团队为你层层解析 Istio 源码](https://www.zhihu.com/column/sevenNt-istio)
+
+
 
 []()
 

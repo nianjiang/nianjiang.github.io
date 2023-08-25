@@ -8,7 +8,7 @@ bookCollapseSection: true
 # [Istio](https://istio.io/) Notes
 > This is my learning Notes for Istio
 
-
+[What is a service mesh?](https://tetrate.io/faq/what-is-a-service-mesh/)
 
 
 
@@ -36,9 +36,15 @@ bookCollapseSection: true
 
 [Tetrate](https://academy.tetrate.io/enrollments)
 
-[Istio](https://github.com/istio/istio)
+[Istio](https://github.com/istio/istio), 
+[Docs](https://istio.io/latest/docs/), 
+[Discussion Board](https://discuss.istio.io), 
+[Cheatsheet](https://istio-cheatsheet.tetratelabs.io/), 
 
-[Envoy](https://github.com/envoyproxy/envoy)
+[Collection of Istio articles and resources](https://github.com/askmeegs/learn-istio)
+
+
+[Envoy](https://github.com/envoyproxy/envoy), [Envoy fundamentals course](https://academy.tetrate.io/courses/envoy-fundamentals)
 
 [MOSN](https://mosn.io/)
 
@@ -62,9 +68,9 @@ https://github.com/shuxnhs/Mastering-ServiceMesh
 
 [istio operator](https://developer.cisco.com/codeexchange/github/repo/banzaicloud/istio-operator/)
 
-[]()
+[Tetrate Tech Talks](https://www.youtube.com/playlist?list=PLm51GPKRAmTlOkjWDJBQYtjcc9WPk4E4F)
 
-[]()
+[Istio Weekly](https://www.youtube.com/playlist?list=PLm51GPKRAmTnMzTf9N95w_yXo7izg80Jc)
 
 []()
 

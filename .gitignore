@@ -174,3 +174,4 @@ dmypy.json
 cython_debug/
 
 .hugo_build.lock
+content/docs/istio/a.yaml
