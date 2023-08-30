@@ -23,7 +23,7 @@ title: "Envoy"
 
 [Envoy fundamentals course - CN](https://academy.tetrate.io/courses/envoy-fundamentals-zh)
 
-[Docs](https://www.envoyproxy.io/docs/envoy/latest/)
+[Docs](https://www.envoyproxy.io/docs/envoy/latest/intro/intro)
 
 [理解 Iptables](https://jimmysong.io/blog/understanding-iptables/)
 
