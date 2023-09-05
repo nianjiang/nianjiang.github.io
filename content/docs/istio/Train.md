@@ -16,7 +16,7 @@ title: "Training"
 
 ### Reference
 
-[Couses](https://www.cncf.io/blog/2022/12/05/no-cost-istio-training-from-fundamentals-to-ambient-to-production-readiness/), [academy.solo.io](https://academy.solo.io/learn/catalog/view/2?ctldoc-catalog-0=v-%22name_asc%22)， [Youtube](https://www.youtube.com/@soloio_inc/playlists)
+[Couses](https://www.cncf.io/blog/2022/12/05/no-cost-istio-training-from-fundamentals-to-ambient-to-production-readiness/), [academy.solo.io](https://academy.solo.io/learn/mycourses)， [Youtube](https://www.youtube.com/@soloio_inc/playlists)
 
 [KodeKloud](https://kodekloud.com/lessons/labs-2/)
 
