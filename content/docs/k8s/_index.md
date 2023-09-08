@@ -65,6 +65,8 @@ How about POD life cycle?
 
 ## Reference
 
+[K8s Docs](https://kubernetes.io/docs/home/)
+
 [Kubernetes 基础教程](https://lib.jimmysong.io/kubernetes-handbook/)
 
 [为Kubernetes集群部署一个ChatGPT机器人](https://www.bmabk.com/index.php/post/96754.html)
@@ -76,6 +78,22 @@ How about POD life cycle?
 https://github.com/0voice/k8s_awesome_document
 
 https://github.com/krzko/awesome-cka
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
 
 
 
