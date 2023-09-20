@@ -12,9 +12,19 @@ bookCollapseSection: true
 
 [What is a service mesh?](https://tetrate.io/faq/what-is-a-service-mesh/)
 
-[What is Istio?](https://cloud.google.com/learn/what-is-istio）, [在 GKE 上安装 Istio](https://cloud.google.com/istio/docs/istio-on-gke/installing?hl=zh-cn)
+[What is Istio?](https://cloud.google.com/learn/what-is-istio),  [在 GKE 上安装 Istio](https://cloud.google.com/istio/docs/istio-on-gke/installing?hl=zh-cn)
 
 []()
+
+
+## Video
+
+[Istio in 5 minutes](https://www.youtube.com/watch?v=hkR1M6qwpnw&ab_channel=Istio)
+
+[What Envoy Hears When Istio Speaks](https://www.youtube.com/watch?v=nNTpfXSCLKs&ab_channel=Istio)
+
+[]()
+
 
 
 ## Observability
@@ -55,9 +65,7 @@ bookCollapseSection: true
 
 [Prometheus](https://prometheus.io/)
 
-[kiali]()
-
-[Grafana]()
+[Jaeger](https://www.jaegertracing.io/), [Kiali](https://kiali.io/), [Grafana](https://grafana.com/)
 
 [理解 Iptables](https://jimmysong.io/blog/understanding-iptables/)
 

@@ -40,7 +40,9 @@ title: "Docker"
     sudo service docker start
     {{< /details >}}
 
+- Install Minikube
 
+    [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 - Install Kubectl
 

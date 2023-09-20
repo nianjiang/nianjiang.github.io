@@ -13,9 +13,25 @@ title: "Source Code"
 [Reference](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@ce78a864b2b041d69231dfbc493003e8/block-v1:LinuxFoundationX+LFS144x+3T2022+type@vertical+block@a0eafac8e5bf4d21877a008135adea4f)
 {{< /details >}}
 
+## Learning
+
+
+[Istio-权威指南-Github](https://github.com/cloudnativebooks/istio-definitive-guide)
 
 
 
+
+## Issues:
+
+[Open Issues](https://github.com/istio/istio/issues?q=is%3Aopen+is%3Aissue+label%3A%22community%2Fhelp+wanted%22)
+
+[Docs](https://istio.io/latest/docs/)
+
+[Github](https://github.com/istio)
+
+[Youtube](https://www.youtube.com/@Istio)
+
+[Slack](https://istio.slack.com)
 
 
 ## Source Code
@@ -72,7 +88,17 @@ title: "Source Code"
 
 [小米信息部技术团队为你层层解析 Istio 源码](https://www.zhihu.com/column/sevenNt-istio)
 
+[]()
 
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
 
 []()
 
