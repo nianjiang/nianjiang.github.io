@@ -52,6 +52,8 @@ bookCollapseSection: true
 [《Introduction to Istio》](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/home)
 [《Introduction to Istio》-Github](https://gitee.com/jnh/cncf-istio-course)
 
+[solo.io](https://academy.solo.io)
+
 [Tetrate](https://academy.tetrate.io/enrollments)
 
 [Istio](https://github.com/istio/istio), 
