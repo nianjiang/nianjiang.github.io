@@ -30,6 +30,10 @@ How about POD life cycle?
     [minikube website](https://minikube.sigs.k8s.io/docs/start/)
     
     
+- PlayGround
+
+    [KillerCoda](https://killercoda.com/playgrounds)
+
 - Componets (Scheduler, Controller, ETCD, API, Kubelet)    
   
 - Operator
@@ -44,7 +48,7 @@ How about POD life cycle?
 
 - Prometheus
 
-- CKA, CKAD
+- [CKA](https://training.linuxfoundation.cn/certificates/1), CKAD
 
 
 <br/>
@@ -73,7 +77,7 @@ How about POD life cycle?
 
 [K8s Training](https://kubernetes.io/zh-cn/training/)
 
-[]()
+[老段 - CKA](https://www.rhce.cc/cka)
 
 https://github.com/0voice/k8s_awesome_document
 

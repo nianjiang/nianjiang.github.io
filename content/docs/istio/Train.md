@@ -3,7 +3,9 @@ weight: 100
 title: "Training"
 ---
 
+[Istio Certified Associate - ICA](https://training.linuxfoundation.cn/certificates/33)
 
+[Prometheus Certified Associate - PCA](https://training.linuxfoundation.cn/certificates/23)
 
 
 
