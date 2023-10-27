@@ -16,7 +16,7 @@ bookCollapseSection: true
 - How do kubelet know the pod is started success? justify process/port/url.   
 How about POD life cycle?
 
-- []()
+- [Prometheus Intro and Deep Dive - Richard Hartmann, Grafana Labs](https://www.youtube.com/watch?v=t3YFv20Ulnc&list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&index=56&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
 
 - []()
 

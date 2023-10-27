@@ -20,6 +20,11 @@ bookCollapseSection: true
 
 - Istioctl commands: 每条命了详解，跟code/function的关系
 
+## eBPF & Cilium
+
+[Cilium - Bill Mulligan, Isovalent & Jaff Cheng, Trip.com](https://www.youtube.com/watch?v=l4Fe2YdtfvU&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
+
+
 ## Video
 
 [Istio in 5 minutes](https://www.youtube.com/watch?v=hkR1M6qwpnw&ab_channel=Istio)

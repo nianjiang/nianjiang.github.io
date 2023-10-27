@@ -16,7 +16,7 @@ title: "Training"
 
 ### Reference
 
-[CKA](https://www.cncf.io/certification/cka/), [CKA-laoduan](https://training.linuxfoundation.cn/courses/44)
+[CKA](https://www.cncf.io/certification/cka/), [CKA-laoduan](https://training.linuxfoundation.cn/courses/44), [linuxfoundation](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
 
 [Kubernetes/K8s运维架构师实战集训营【中高级】](https://ke.qq.com/course/446949?quicklink=1#term_id=105525662)
 
