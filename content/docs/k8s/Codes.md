@@ -21,17 +21,46 @@ BookToC: false
 
 ## Customer Resource Definition (CRD)
 
+[]()
+
+[Writing Kubernetes Controllers from Peter J](https://www.youtube.com/watch?v=q7b23612pSc&ab_channel=PeterJausovec)
+
 [kubebuilder](https://book.kubebuilder.io)
 
 [Concepts -> Extending Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/)
 
 [Tasks -> Extend Kubernetes](https://kubernetes.io/docs/tasks/extend-kubernetes/)
 
+---
+
+[Tutorials](https://github.com/leovct/kube-operator-tutorial)
+
 [SIG-Scheduling Intro & Deep Dive](https://www.youtube.com/watch?v=mLsIcZyop5o&list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&index=63&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
 
 [What's New on Controller-Runtime of the Day -- Make Your Operator More Efficient - Siyu Wang, Alibaba Cloud](https://www.youtube.com/watch?v=4Bs9Pgn4z2w&list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&index=60&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D)
 
+[Kubernetes Operators: what are they? Some examples](https://www.cncf.io/blog/2022/06/15/kubernetes-operators-what-are-they-some-examples/)
+
+[]()
+
+[]()
+
+[]()
+
+
+
+
+https://docs.pingcap.com/zh/tidb-in-kubernetes/stable/architecture
+
+
+
+
+
 ## Code Learn Turorial
+
+https://bharatrajani.com/debugging-kubernetes-source-code-using-vscode/
+
+https://www.qikqiak.com/k8strain/operator/operator/
 
 [k8s Doc]()
 
