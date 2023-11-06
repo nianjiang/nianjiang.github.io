@@ -21,7 +21,7 @@ BookToC: false
 
 ## Customer Resource Definition (CRD)
 
-[]()
+[Kuberenetes Design&Architecture Pictures ](https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md)
 
 [Writing Kubernetes Controllers from Peter J](https://www.youtube.com/watch?v=q7b23612pSc&ab_channel=PeterJausovec)
 
