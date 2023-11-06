@@ -86,7 +86,7 @@ https://www.qikqiak.com/k8strain/operator/operator/
 
 [深究Kubernetes源码](https://space.bilibili.com/408458404/article)
 
-[]()
+[也谈云原生 - 系统设计漫谈](https://www.youtube.com/playlist?list=PL6_VNo5AuIreZ7PGxxIjcuZVME8-5tS7v)
 
 []()
 
