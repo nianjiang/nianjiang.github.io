@@ -19,6 +19,90 @@ BookToC: false
 | kubectl                    |   [cmd/kubectl/kubectl.go](https://github.com/kubernetes/kubernetes/blob/master/cmd/kubectl/kubectl.go)      |      [](https://github.com/kubernetes/kubernetes/blob/master/)      |              |
 
 
+## Commands
+{{< tabs "Commands" >}}
+
+{{< tab "kube-apiserver " >}} 
+kube-apiserver <br/>
+--advertise-address=172.20.0.2 <br/>
+--allow-privileged=true <br/>
+--authorization-mode=Node,RBAC <br/>
+--client-ca-file=/etc/kubernetes/pki/ca.crt <br/>
+--enable-admission-plugins=NodeRestriction <br/>
+--enable-bootstrap-token-auth=true <br/>
+--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt  <br/>
+--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 <br/>
+--kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt  <br/>
+--kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key <br/>
+--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname <br/>
+--proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key <br/>
+--requestheader-allowed-names=front-proxy-client <br/>
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt <br/>
+--requestheader-extra-headers-prefix=X-Remote-Extra- <br/>
+--requestheader-group-headers=X-Remote-Group <br/>
+--requestheader-username-headers=X-Remote-User <br/>
+--runtime-config= <br/>
+--secure-port=6443 <br/>
+--service-account-issuer=https://kubernetes.default.svc.cluster.local <br/>
+--service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key <br/>
+--service-cluster-ip-range=10.96.0.0/16 <br/>
+--tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key <br/>
+{{< /tab >}}
+
+{{< tab "kube-controller-manager " >}}
+kube-controller-manager <br/>
+--allocate-node-cidrs=true <br/>
+--authentication-kubeconfig=/etc/kubernetes/controller-manager.conf   <br/>
+--authorization-kubeconfig=/etc/kubernetes/controller-manager.conf <br/>
+--bind-address=127.0.0.1 <br/>
+--client-ca-file=/etc/kubernetes/pki/ca.crt <br/>
+--cluster-cidr=10.244.0.0/16 <br/>
+--cluster-name=kind <br/>
+--cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key <br/>
+--controllers=*,bootstrapsigner,tokencleaner <br/>
+--enable-hostpath-provisioner=true <br/>
+--kubeconfig=/etc/kubernetes/controller-manager.conf <br/>
+--leader-elect=true <br/>
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt <br/>
+--root-ca-file=/etc/kubernetes/pki/ca.crt <br/>
+--service-account-private-key-file=/etc/kubernetes/pki/sa.key <br/>
+--service-cluster-ip-range=10.96.0.0/16 <br/>
+--use-service-account-credentials=true <br/>
+{{< /tab >}}
+
+{{< tab "kube-scheduler" >}} 
+kube-scheduler <br/>
+--authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf <br/>
+--bind-address=127.0.0.1 <br/>
+--kubeconfig=/etc/kubernetes/scheduler.conf <br/>
+--leader-elect=true <br/>
+{{< /tab >}}
+
+{{< tab "etcd" >}} 
+etcd <br/>
+--advertise-client-urls=https://172.20.0.2:2379 <br/>
+--cert-file=/etc/kubernetes/pki/etcd/server.crt <br/>
+--client-cert-auth=true <br/>
+--data-dir=/var/lib/etcd <br/>
+--experimental-initial-corrupt-check <br/>
+{{< /tab >}}
+
+{{< tab "kubelet" >}} 
+/usr/bin/kubelet <br/>
+--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf <br/>
+--kubeconfig=/etc/kubernetes/kubelet.conf <br/>
+--config=/var/lib/kubelet/config.yaml <br/>
+--container-runtime-endpoin <br/>
+{{< /tab >}}
+
+{{< tab "kube-proxy" >}} 
+/usr/local/bin/kube-proxy <br/>
+--config=/var/lib/kube-proxy/config.conf <br/>
+--hostname-override=kind-control-plane <br/>
+{{< /tab >}}
+{{< /tabs >}}
+
+
 ## Customer Resource Definition (CRD)
 
 [Kuberenetes Design&Architecture Pictures ](https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md)
@@ -183,70 +267,17 @@ K8s Releases:
 
 
 
-kube-apiserver 
---advertise-address=172.20.0.2 
---allow-privileged=true 
---authorization-mode=Node,RBAC 
---client-ca-file=/etc/kubernetes/pki/ca.crt 
---enable-admission-plugins=NodeRestriction 
---enable-bootstrap-token-auth=true 
---etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt --etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 
---kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key 
---kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname 
---proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key 
---requestheader-allowed-names=front-proxy-client 
---requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt 
---requestheader-extra-headers-prefix=X-Remote-Extra- 
---requestheader-group-headers=X-Remote-Group 
---requestheader-username-headers=X-Remote-User 
---runtime-config= 
---secure-port=6443 
---service-account-issuer=https://kubernetes.default.svc.cluster.local 
---service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key 
---service-cluster-ip-range=10.96.0.0/16 
---tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
 
 
-kube-controller-manager 
---allocate-node-cidrs=true 
---authentication-kubeconfig=/etc/kubernetes/controller-manager.conf  --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf 
---bind-address=127.0.0.1 
---client-ca-file=/etc/kubernetes/pki/ca.crt 
---cluster-cidr=10.244.0.0/16 
---cluster-name=kind 
---cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key 
---controllers=*,bootstrapsigner,tokencleaner 
---enable-hostpath-provisioner=true 
---kubeconfig=/etc/kubernetes/controller-manager.conf 
---leader-elect=true 
---requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt 
---root-ca-file=/etc/kubernetes/pki/ca.crt 
---service-account-private-key-file=/etc/kubernetes/pki/sa.key 
---service-cluster-ip-range=10.96.0.0/16 
---use-service-account-credentials=true
 
 
-kube-scheduler 
---authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf 
---bind-address=127.0.0.1 
---kubeconfig=/etc/kubernetes/scheduler.conf 
---leader-elect=true
 
 
-etcd 
---advertise-client-urls=https://172.20.0.2:2379 
---cert-file=/etc/kubernetes/pki/etcd/server.crt 
---client-cert-auth=true 
---data-dir=/var/lib/etcd 
---experimental-initial-corrupt-check
 
 
-/usr/bin/kubelet 
---bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf 
---kubeconfig=/etc/kubernetes/kubelet.conf 
---config=/var/lib/kubelet/config.yaml 
---container-runtime-endpoin
 
-/usr/local/bin/kube-proxy 
---config=/var/lib/kube-proxy/config.conf 
---hostname-override=kind-control-plane
+
+
+
+
+
