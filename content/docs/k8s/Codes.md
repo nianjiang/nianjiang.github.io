@@ -131,16 +131,21 @@ etcd <br/>
 
 []()
 
-
-
-
 https://docs.pingcap.com/zh/tidb-in-kubernetes/stable/architecture
 
+
+## Aggregator Server
+
+[apiserver-builder](https://github.com/kubernetes-sigs/apiserver-builder-alpha)
+
+[]()
 
 
 
 
 ## Code Learn Turorial
+
+[k8s Dev Guide](https://github.com/kubernetes/community/blob/master/contributors/devel/README.md)
 
 [sig-k8s-source-code](https://jnh.gitbook.io/sig-k8s-source-code/)
 
@@ -174,13 +179,15 @@ https://www.qikqiak.com/k8strain/operator/operator/
 
 [也谈云原生 - 系统设计漫谈](https://www.youtube.com/playlist?list=PL6_VNo5AuIreZ7PGxxIjcuZVME8-5tS7v)
 
-[]()
+[倪朋飞](https://feisky.xyz/about/)
 
 []()
 
 []()
 
 []()
+
+https://www.jianshu.com/nb/51646191
 
 https://zhuanlan.zhihu.com/p/542730941
 
