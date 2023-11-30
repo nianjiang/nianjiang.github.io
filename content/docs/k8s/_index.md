@@ -34,6 +34,11 @@ How about POD life cycle?
 
     [KillerCoda](https://killercoda.com/playgrounds)
 
+
+- Kubernetes API
+
+    [Kubernetes API Resources Overview](https://able8.medium.com/kubernetes-api-resources-overview-db1294f7cfd6)
+
 - Componets (Scheduler, Controller, ETCD, API, Kubelet)    
   
 - Operator
@@ -71,25 +76,19 @@ How about POD life cycle?
 
 [K8s Docs](https://kubernetes.io/docs/home/)
 
-[kubernetes-yaml-templates](https://github.com/dennyzhang/kubernetes-yaml-templates)
+[kubernetes-yaml-templates](https://github.com/dennyzhang/kubernetes-yaml-templates) 🔥🔥🔥
 
-[Kubernetes 基础教程](https://lib.jimmysong.io/kubernetes-handbook/)
+[Kubernetes 基础教程](https://lib.jimmysong.io/kubernetes-handbook/) ‼️ 
 
-[为Kubernetes集群部署一个ChatGPT机器人](https://www.bmabk.com/index.php/post/96754.html)
-
-[K8s Training](https://kubernetes.io/zh-cn/training/)
-
-[老段 - CKA](https://www.rhce.cc/cka)
+[为Kubernetes集群部署一个ChatGPT机器人](https://www.bmabk.com/index.php/post/96754.html) 🏢
 
 https://github.com/0voice/k8s_awesome_document
 
-https://github.com/krzko/awesome-cka
-
 [k8s notes](https://awesome-kubernetes-notes.readthedocs.io/en/latest/index.html)
 
-[]()
+[最新 2023 年云原生Kubernetes 高级面试题大全](https://blog.csdn.net/qq_46654855/article/details/125612617?ops_request_misc=&request_id=&biz_id=102&utm_term=%E4%BA%91%E5%8E%9F%E7%94%9F%7Ckubernetes%7C2022%E5%B9%B4%E5%BA%95cks%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~sobaiduweb~default-6-125612617.nonecase&spm=1018.2226.3001.4450)
 
-[]()
+[huaweicloud-edu](https://edu.huaweicloud.com/)
 
 []()
 
