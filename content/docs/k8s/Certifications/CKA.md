@@ -223,7 +223,7 @@ These are the exam objectives you review and understand in order to pass the tes
 | 序号| [题目](https://blog.csdn.net/u014481728/article/details/133421594) | Note |
 | --------          | -------- | -------  | 
 | 第一题   |		[ RBAC访问控制	](https://blog.csdn.net/u014481728/article/details/133419851)			      |     |
-| 第二题   |		[ Node节点维护	](http://t.csdnimg.cn/rXcLE)			                                      |     |		
+| 第二题   |		[ Node节点维护	](https://blog.csdn.net/u014481728/article/details/133420018)			                                      |     |		
 | 第三题   |		[ K8S集群版本升级	](https://blog.csdn.net/u014481728/article/details/133420130)			     |     |		
 | 第四题   |		[ ETCD数据库备份及恢复	](https://blog.csdn.net/u014481728/article/details/133420272)		 |	    |
 | 第五题   |		[ NetworkPolicy网络策略	](https://blog.csdn.net/u014481728/article/details/133420363)	  |     |

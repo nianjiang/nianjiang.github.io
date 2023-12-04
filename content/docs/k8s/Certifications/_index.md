@@ -5,7 +5,7 @@ bookCollapseSection: true
 ---
 
 # [Kubernetes](https://kubernetes.io/) Notes
-> This is my learning Notes for CNCF Certifications (CKA/CKAD/CKS/PCA/...)
+> This is my learning Notes for CNCF Certifications (CKA/CKAD/CKS/Prometheus/Istio/Argo/Cilium/...)
 
 ---
 
