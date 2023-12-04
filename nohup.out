@@ -2058,3 +2058,15 @@ WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities-
 WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
 WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
 Total in 141 ms
+
+Change detected, rebuilding site.
+2023-12-04 17:03:56.242 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/_index.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 192 ms
+
+Change detected, rebuilding site.
+2023-12-04 17:04:22.242 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/_index.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 97 ms

@@ -55,6 +55,8 @@ How about POD life cycle?
 
 - [CKA](https://training.linuxfoundation.cn/certificates/1), CKAD
 
+- [Tekton](https://tekton.dev/), [Argo](https://argoproj.github.io/)
+
 
 <br/>
 
