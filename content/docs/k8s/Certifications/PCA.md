@@ -12,9 +12,11 @@ title: "PCA"
 
 [Chinese](https://training.linuxfoundation.cn/certificates/23)
 
-[]()
+[CNCF Project Desc](https://www.cncf.io/projects/prometheus/)
 
-[]()
+[Prometheus](https://prometheus.io/)
+
+[Github](https://github.com/prometheus/prometheus)
 
 
 ## Exam Objects

@@ -855,3 +855,1206 @@ WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found 
 WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
 WARN  Expand shortcode is deprecated. Use 'details' instead.
 Total in 162 ms
+
+Change detected, rebuilding site.
+2023-11-30 15:36:03.442 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 155 ms
+
+Change detected, rebuilding site.
+2023-11-30 15:37:16.944 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 114 ms
+
+Change detected, rebuilding site.
+2023-11-30 15:38:10.443 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKS.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 112 ms
+
+Change detected, rebuilding site.
+2023-11-30 15:38:54.442 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKS.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 109 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:17:29.327 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 106 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:20:20.830 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 108 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:45:41.280 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 208 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:46:18.781 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 166 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:47:49.281 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 174 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:54:24.285 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 385 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:54:42.292 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 202 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:55:00.297 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 174 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:55:49.800 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 170 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:58:05.300 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 164 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:58:23.803 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 185 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:59:28.816 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 263 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:59:45.300 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 224 ms
+
+Change detected, rebuilding site.
+2023-11-30 16:59:57.305 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 148 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:00:42.301 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 173 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:01:20.304 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 213 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:01:45.805 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 158 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:02:06.802 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 163 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:02:23.304 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 173 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:02:37.806 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 137 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:03:31.307 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 159 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:03:41.303 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 248 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:03:50.306 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 163 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:04:05.306 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 161 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:04:14.306 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 175 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:04:23.807 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 183 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:04:32.806 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 138 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:06:28.809 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 128 ms
+
+Change detected, rebuilding site.
+2023-11-30 17:07:39.318 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 160 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:35:31.793 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 259 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:35:40.786 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 123 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:36:37.785 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 135 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:37:15.787 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 121 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:37:46.283 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 116 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:38:04.785 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 119 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:47:05.333 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA copy.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 156 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:47:23.349 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+Source changed RENAME        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA copy.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 109 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:47:37.331 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 150 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:48:30.331 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 110 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:49:02.331 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 104 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:49:44.829 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 115 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:50:03.330 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 105 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:50:40.833 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA copy.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 118 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:51:06.829 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+Source changed RENAME        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA copy.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 109 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:51:22.833 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 122 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:51:57.329 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 117 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:52:09.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 106 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:52:24.830 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+Total in 97 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:52:51.331 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA copy.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 111 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:52:59.830 +0800
+Source changed CREATE        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+Source changed RENAME        "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA copy.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 119 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:53:30.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 129 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:53:49.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 110 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:54:01.829 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 108 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:54:17.832 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 116 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:55:50.331 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 183 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:56:58.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 196 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:57:36.827 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 138 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:58:00.329 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 116 ms
+
+Change detected, rebuilding site.
+2023-12-03 16:58:14.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 122 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:00:59.829 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 168 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:01:08.831 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 111 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:01:19.332 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 250 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:01:49.830 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 140 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:02:56.334 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 203 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:04:00.829 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 119 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:04:17.329 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 139 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:04:27.842 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 125 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:06:16.330 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 110 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:07:18.833 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 159 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:07:26.832 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 134 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:07:37.330 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 224 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:09:52.329 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 173 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:10:25.334 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 106 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:11:43.828 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 196 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:12:03.331 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 134 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:12:20.833 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 168 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:12:37.326 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 123 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:13:50.827 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKS.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 129 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:14:18.827 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 112 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:14:33.327 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 111 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:14:55.828 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 116 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:15:45.827 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 141 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:16:06.327 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 114 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:16:18.837 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/PCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 120 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:16:50.295 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 108 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:17:02.791 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 112 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:17:14.795 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 107 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:18:23.284 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 151 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:19:06.785 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 115 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:21:14.286 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CCA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 114 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:22:08.786 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/_index.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 99 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:23:29.781 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CKA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 115 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:51:05.059 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 178 ms
+
+Change detected, rebuilding site.
+2023-12-03 17:51:15.557 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/CAPA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 117 ms
+
+Change detected, rebuilding site.
+2023-12-04 10:11:29.257 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 266 ms
+
+Change detected, rebuilding site.
+2023-12-04 10:12:34.740 +0800
+Source changed WRITE         "/Users/jnh/workspaces/gitee/jnh/content/docs/k8s/Certifications/ICA.md"
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-setup---10' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#cluster-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#system-hardening---15' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#supply-chain-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+WARN  Page '/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20' not found in 'docs/k8s/Certifications/CKS.md'
+Total in 141 ms

@@ -3,7 +3,19 @@ weight: 50
 title: "CKA"
 ---
 
-# CKA
+# CKA (Certified Kubernetes Administrator)
+
+## Goal
+
+[English](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
+
+[Chinese](https://training.linuxfoundation.cn/certificates/1)
+
+[CNCF Project Desc](https://www.cncf.io/projects/kubernetes/)
+
+[Kubernetes](https://kubernetes.io/)
+
+[Github](https://github.com/kubernetes/kubernetes)
 
 
 ## CKA 2023 Exam Objectives
@@ -16,7 +28,7 @@ These are the exam objectives you review and understand in order to pass the tes
 
 --------------------------------------------------
 
-### [ Cluster Architecture, Installation, and Configuration](https://youtu.be/vS-wXo2qbPs) 25%
+### 🌈 [ Cluster Architecture, Installation, and Configuration](https://youtu.be/vS-wXo2qbPs) 25%
 
 1. [Manage role based access control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
     - [Lab: RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b)
@@ -76,7 +88,7 @@ These are the exam objectives you review and understand in order to pass the tes
   </p>
   </details> 
 
-### Workloads & Scheduling – 15%
+### 🌈 Workloads & Scheduling – 15%
 
 1. [Understand deployments and how to perform rolling update and rollbacks](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 2. Use [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) and [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) to configure applications
@@ -105,7 +117,7 @@ These are the exam objectives you review and understand in order to pass the tes
     - Non-k8s.io resource: CNCF Kubecon video: [An introduction to Helm - Bridget Kromhout, Microsoft & Marc Khouzam, City of Montreal](https://youtu.be/x2w6T0sE50w?list=PLj6h78yzYM2O1wlsM-Ma-RYhfT5LKq0XC)
    - Non-k8s.io resource: External resource: [templating-yaml-with-code](https://learnk8s.io/templating-yaml-with-code)
 
-### Services & Networking – 20% 
+### 🌈 Services & Networking – 20% 
 
 1. Understand [host networking configuration on the cluster nodes](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
 2. Understand connectivity between Pods
@@ -122,7 +134,7 @@ These are the exam objectives you review and understand in order to pass the tes
     - [Kubecon Eu 2020 Tutorial: Communication Is Key - Understanding Kubernetes Networking - Jeff Poole, Vivint Smart Home](https://youtu.be/InZVNuKY5GY?list=PLj6h78yzYM2O1wlsM-Ma-RYhfT5LKq0XC)
 
 
-### Storage – 10%
+### 🌈 Storage – 10%
 
 1. Understand [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 1. Understand [volume mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#volume-mode), [access modes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [reclaim policies](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy) for volumes
@@ -192,7 +204,7 @@ These are the exam objectives you review and understand in order to pass the tes
   </p>
   </details> 
 
-### Troubleshooting – 30%
+### 🌈 Troubleshooting – 30%
 
 1. [Evaluate cluster and node logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
 1. [Understand how to monitor applications](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
@@ -205,6 +217,52 @@ These are the exam objectives you review and understand in order to pass the tes
 
 
 ## Tips:
+
+
+## Mock Exams
+| 序号| [题目](https://blog.csdn.net/u014481728/article/details/133421594) | Note |
+| --------          | -------- | -------  | 
+| 第一题   |		[ RBAC访问控制	](https://blog.csdn.net/u014481728/article/details/133419851)			      |     |
+| 第二题   |		[ Node节点维护	](http://t.csdnimg.cn/rXcLE)			                                      |     |		
+| 第三题   |		[ K8S集群版本升级	](https://blog.csdn.net/u014481728/article/details/133420130)			     |     |		
+| 第四题   |		[ ETCD数据库备份及恢复	](https://blog.csdn.net/u014481728/article/details/133420272)		 |	    |
+| 第五题   |		[ NetworkPolicy网络策略	](https://blog.csdn.net/u014481728/article/details/133420363)	  |     |
+| 第六题   |		[ Service四层负载	](https://blog.csdn.net/u014481728/article/details/133420463)			    |     |
+| 第七题   |		[ Ingress七层负载	](https://blog.csdn.net/u014481728/article/details/133421265)			    |     |
+| 第八题   |		[ deployment扩容	](https://blog.csdn.net/u014481728/article/details/133421353)			   |     |
+| 第九题   |		[ 调度pod到指定节点	](https://blog.csdn.net/u014481728/article/details/133421425)		     |     |
+| 第十题   |		[ 统计Ready状态节点数量	](https://blog.csdn.net/u014481728/article/details/133421448)	   |     |
+| 第十一题 |		[ 创建多容器的pod	](https://blog.csdn.net/u014481728/article/details/133421471)			     |     |
+| 第十二题 |		[ 按要求创建PV	](https://blog.csdn.net/u014481728/article/details/133421487)			      |     |
+| 第十三题 |		[ 创建和使用PVC	](https://blog.csdn.net/u014481728/article/details/133421530)			      |     |
+| 第十四题 |		[ 监控pod的日志	](https://blog.csdn.net/u014481728/article/details/133421557)			      |     |
+| 第十五题 |		[ Sidecar代理	](https://blog.csdn.net/u014481728/article/details/133421561)			       |     |
+| 第十六题 |		[ 查看cpu使用率最高的pod	](https://blog.csdn.net/u014481728/article/details/133421578)	 |     |
+| 第十七题 |		[ 排查集群中故障节点	](https://blog.csdn.net/u014481728/article/details/133421584)		   |     |
+
+
+
+https://blog.csdn.net/weixin_45310323/article/details/132650026
+
+https://www.xjx100.cn/news/251445.html?action=onClick
+
+[互联网最全cka真题解析-2022.9.9](https://zhuanlan.zhihu.com/p/564737349)
+
+[😇91 道面试题](https://github.com/0voice/k8s_awesome_document#91-%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98)
+
+[cka Practice Test](https://github.com/krzko/awesome-cka#-practice-test)
+
+[k8s学习-CKA考试必过宝典](https://blog.csdn.net/lady_killer9/article/details/126559782)
+
+[CKA考试备战--每日一题](https://kuboard.cn/t/cka/daily.html)
+
+[CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises)
+
+[cka Exercises](https://gist.github.com/Appletone/fe95252d03378ce2d0c6cc200e4eadad)
+
+[CKA、CKAD考试经验](https://github.com/yuyicai/cka-ckad-exam-experience)
+
+
 
 
 ### Reference

@@ -14,9 +14,13 @@ title: "CKS"
 
 [Chinese](https://training.linuxfoundation.cn/certificates/16)
 
-[]()
+[CNCF Project Desc](https://www.cncf.io/projects/kubernetes/)
 
-[]()
+[Kubernetes](https://kubernetes.io/)
+
+[Github](https://github.com/kubernetes/kubernetes)
+
+
 
 ## Exam Objects
 
@@ -30,7 +34,7 @@ title: "CKS"
 
 ---
 
-### Cluster Setup - 10%
+### 🌈 Cluster Setup - 10%
 [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
 
 1. [Use Network security policies to restrict cluster level access](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
@@ -72,7 +76,7 @@ title: "CKS"
      </details>
 
 
-### Cluster Hardening - 15%
+### 🌈 Cluster Hardening - 15%
 
 1. [Restrict access to Kubernetes API](https://kubernetes.io/docs/reference/access-authn-authz/controlling-access/)
   - [Control anonymous requests to Kube-apiserver](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#anonymous-requests)
@@ -108,7 +112,7 @@ title: "CKS"
 
 4. [Update Kubernetes frequently](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)
 
-### System Hardening - 15%
+### 🌈 System Hardening - 15%
 
 1. Minimize host OS footprint (reduce attack surface)
 
@@ -154,7 +158,7 @@ title: "CKS"
    * [AppArmor](https://kubernetes.io/docs/tutorials/clusters/apparmor/)
    * [Seccomp](https://kubernetes.io/docs/tutorials/clusters/seccomp/)
 
-### Minimize Microservice Vulnerabilities - 20%
+### 🌈 Minimize Microservice Vulnerabilities - 20%
 
 1. Setup appropriate OS-level security domains
    - [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
@@ -165,7 +169,7 @@ title: "CKS"
 4. [Implement pod to pod encryption by use of mTLS](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
   - [ ] check if service mesh is part of the CKS exam
 
-### Supply Chain Security - 20%
+### 🌈 Supply Chain Security - 20%
 
 1. Minimize base image footprint
 
@@ -184,7 +188,7 @@ title: "CKS"
 5. [Scan images for known vulnerabilities](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#10-scan-images-and-run-ids)
     * [Aqua security Trivy]( https://github.com/aquasecurity/trivy)
     * [Anchore command line scans](https://github.com/anchore/anchore-cli#command-line-examples)
-### Monitoring, Logging and Runtime Security - 20%
+### 🌈 Monitoring, Logging and Runtime Security - 20%
 
 1. Perform behavioural analytics of syscall process and file activities at the host and container level to detect malicious activities
 	- [Falco installation guide](https://falco.org/docs/)

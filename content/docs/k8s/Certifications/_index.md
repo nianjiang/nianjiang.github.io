@@ -13,23 +13,6 @@ bookCollapseSection: true
   - [Killercoda](https://killercoda.com/playgrounds/scenario/kubernetes)
   - [Play with Kubernetes](https://labs.play-with-k8s.com/)
 
-## Website
-
-[CKA](https://www.cncf.io/certification/cka/)
-
-[linuxfoundation](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
 
 ## CKA Price
 |  CKA Type      | Price (¥)      | Price ($)         | Cyber Monday (11/27 - 12/8) | Note |
@@ -50,8 +33,9 @@ bookCollapseSection: true
 | CKA                                     |          |  $395   |   $198   |  ¥1415.7  |             |
 | CKS                                     |          |  $395   |   $198   |           | [LFS260](https://training.linuxfoundation.org/training/kubernetes-security-essentials-lfs260/#), [LFS260_CN](https://training.linuxfoundation.cn/courses/36)        |
 | PCA                                     |          |  $250   |   $125   |  ¥893.8   |             |
-| ICA (Istio Certified Associate)         |          |  $250   |   $125   |           |             |
-| CAPA (Certified Argo Project Associate) |          |  $250   |   $125   |           |             |
+| ICA (Istio Certified Associate)         |          |  $250   |   $125   |           | [ICA-CN](https://training.linuxfoundation.cn/certificates/33)  |
+| CAPA (Certified Argo Project Associate) |          |  $250   |   $125   |           | [CAPA-CN](https://training.linuxfoundation.cn/certificates/36)  |
+| CCA（Cilium Certified Associate） |          |  $250   |   $125   |           | [CCA-CN](https://training.linuxfoundation.cn/certificates/35)  |
 | CKA & CKS                               |          |         |   $253.75|  ¥1814.3  |  [CYBER23BUN](https://training.linuxfoundation.org/training/cka-cks-exam-bundle/)           |
 | CKA & CKS &PCA                          |          |         |   $379   |  ¥2709.9  |             |
 
