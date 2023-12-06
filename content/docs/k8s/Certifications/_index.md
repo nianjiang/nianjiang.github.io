@@ -14,7 +14,7 @@ bookCollapseSection: true
   - [Play with Kubernetes](https://labs.play-with-k8s.com/)
 
 
-## CKA Price
+## CKA Price (2023/12)
 |  CKA Type      | Price (¥)      | Price ($)         | Cyber Monday (11/27 - 12/8) | Note |
 | -------- | --------   | -------    | -------- | --------     |
 | CKA (EN)          |  ¥2824   | $395 |  $198 (¥1394)  |   [Link](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/) |
