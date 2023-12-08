@@ -1,6 +1,6 @@
 ---
 weight: 55
-title: "CCA"
+title: "CCA (Cilium)"
 ---
 
 # CCA（Cilium Certified Associate）
@@ -17,6 +17,22 @@ title: "CCA"
 [Cilium](https://cilium.io/)
 
 [Github](https://github.com/cilium/cilium)
+
+
+
+## First Read
+
+[CCA](https://www.youtube.com/watch?v=_eHt_LipuN8)
+
+[Cilium - Get Started](https://cilium.io/get-started/)
+
+[All About The New CNCF Cilium Certified Associate (CCA) Certification!](https://isovalent.com/blog/post/cilium-certified-associate-cca/)
+
+[]()
+
+[]()
+
+[]()
 
 
 ## Exam Objects

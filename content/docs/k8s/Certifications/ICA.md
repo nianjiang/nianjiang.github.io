@@ -1,6 +1,6 @@
 ---
 weight: 53
-title: "ICA"
+title: "ICA (Istio)"
 ---
 
 # ICA (Istio Certified Associate)
@@ -19,6 +19,32 @@ title: "ICA"
 [Github](https://github.com/istio/istio)
 
 [CNCF-ServiceMesh](https://landscape.cncf.io/guide#orchestration-management--service-mesh)
+
+
+## Read First
+
+https://learncloudnative.com/blog/2023-10-10-meshweek
+
+[solo-io](https://github.com/solo-io/mesh-week)
+
+[LFS144x](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio)
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
 
 
 ## Exam Objects
@@ -108,7 +134,7 @@ ICA认证考试包括这些一般领域及其在考试中的权重：
 
 [Linux Training (China)](https://training.linuxfoundation.cn/)
 
-[]()
+[FAQ](https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-ica)
 
 []()
 

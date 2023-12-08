@@ -10,7 +10,7 @@ bookCollapseSection: true
 
 [Linux on Github](https://github.com/torvalds/linux/tree/master)
 
-[]()
+[GitLab with Git Essentials](https://levelup.gitlab.com/courses/gitlab-with-git-essentials-s2)
 
 []()
 

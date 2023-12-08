@@ -20,7 +20,7 @@ title: "CKS"
 
 [Github](https://github.com/kubernetes/kubernetes)
 
-
+https://devopscube.com/cks-exam-guide-tips/
 
 ## Exam Objects
 

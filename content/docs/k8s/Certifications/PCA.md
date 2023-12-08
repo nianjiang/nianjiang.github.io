@@ -1,6 +1,6 @@
 ---
 weight: 52
-title: "PCA"
+title: "PCA (Prometheus)"
 ---
 
 # PCA (Prometheus Certified Associate)
@@ -17,6 +17,8 @@ title: "PCA"
 [Prometheus](https://prometheus.io/)
 
 [Github](https://github.com/prometheus/prometheus)
+
+
 
 
 ## Exam Objects
@@ -98,8 +100,6 @@ https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef
 
 ## Reference
 
-
-
 [CNCF Certifications](https://www.cncf.io/training/certification/)
 
 [CNCF Training & Certification](https://www.cncf.io/training/)
@@ -108,7 +108,7 @@ https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef
 
 [Linux Training (China)](https://training.linuxfoundation.cn/)
 
-[]()
+[FAQ](https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-pca)
 
 []()
 

@@ -1,6 +1,6 @@
 ---
 weight: 54
-title: "CAPA"
+title: "CAPA (Argo)"
 ---
 
 # CAPA (Certified Argo Project Associate)
@@ -10,6 +10,8 @@ title: "CAPA"
 
 [English](https://training.linuxfoundation.org/certification/certified-argo-project-associate-capa/)
 
+[]()
+
 [Chinese](https://training.linuxfoundation.cn/certificates/36)
 
 [CNCF Project Desc](https://www.cncf.io/projects/argo/)
@@ -17,6 +19,32 @@ title: "CAPA"
 [Argo](https://argoproj.github.io/)
 
 [Github](https://github.com/argoproj)
+
+
+
+## Read First
+
+[awesome-argo](https://github.com/akuity/awesome-argo)
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+
+
+
+## Exam Objects (English)
+
+- Argo Workflows: 36%
+- Argo CD: 34%
+- Argo Rollouts: 18%
+- Argo Events: 12%
 
 
 ## Exam Objects
@@ -87,6 +115,7 @@ Argo事件: 12%
 
 
 
+
 ## Reference
 
 [CNCF Certifications](https://www.cncf.io/training/certification/)
@@ -97,43 +126,11 @@ Argo事件: 12%
 
 [Linux Training (China)](https://training.linuxfoundation.cn/)
 
-[]()
+[GitOps with ArgoCD - Complete hands-on workshop](https://www.youtube.com/watch?v=5rwIIusbUWM)
 
-[]()
+[Certified GitOps Associate (CGOA)](https://training.linuxfoundation.org/certification/certified-gitops-associate-cgoa/)
 
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-## Reference
-
-
-
-[CNCF Certifications](https://www.cncf.io/training/certification/)
-
-[CNCF Training & Certification](https://www.cncf.io/training/)
-
-[Linux Training](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
-
-[Linux Training (China)](https://training.linuxfoundation.cn/)
-
-[]()
-
-[]()
-
-[]()
+[GitOps with Argo CD and Gloo Mesh (Part 1)](https://www.solo.io/blog/gitops-with-argo-cd-and-gloo-mesh-part-1/)
 
 []()
 

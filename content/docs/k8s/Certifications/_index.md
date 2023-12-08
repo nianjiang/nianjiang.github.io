@@ -30,7 +30,7 @@ bookCollapseSection: true
 
 | Certification Type| Price (¥)| Price ($)| Cyber Monday (11/27 - 12/4) | Cyber Monday Price (¥) | Note |
 | --------          | -------- | -------  | -------- | -------- | --------     |
-| CKA                                     |          |  $395   |   $198   |  ¥1415.7  |             |
+| CKA                                     |          |  $395   |   $198   |  ¥1415.7  |  CYBER23CC, CYBER23PB           |
 | CKS                                     |          |  $395   |   $198   |           | [LFS260](https://training.linuxfoundation.org/training/kubernetes-security-essentials-lfs260/#), [LFS260_CN](https://training.linuxfoundation.cn/courses/36)        |
 | PCA                                     |          |  $250   |   $125   |  ¥893.8   |             |
 | ICA (Istio Certified Associate)         |          |  $250   |   $125   |           | [ICA-CN](https://training.linuxfoundation.cn/certificates/33)  |
@@ -57,6 +57,8 @@ bookCollapseSection: true
 
 [ 👍 Awesome Cloud Native Trainings](https://github.com/joseadanof/awesome-cloudnative-trainings)
 
+[👍 Free-Certifications](https://github.com/cloudcommunity/Free-Certifications)
+
 [K8s Training](https://kubernetes.io/zh-cn/training/)
 
 [老段 - CKA](https://www.rhce.cc/cka)
@@ -80,8 +82,6 @@ https://github.com/krzko/awesome-cka
 [【2023购课送书】云原生K8s全栈架构师+CKA+CKS+Istio](https://ke.qq.com/course/package/41755)
 
 [Rowan Luo](https://youdianzhishi.com)， [Rowan Luo](https://github.com/xiaomabenten/blog/tree/master)
-
-[]()
 
 []()
 

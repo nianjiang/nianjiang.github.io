@@ -6,9 +6,11 @@ title: "Docker"
 
 # Docker
 
-- Install Docker
+## Install Tools
 
-    {{< details title="[Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)" open=true >}}
+###  Docker
+
+    {{< details title="[Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)" open=false >}}
     1. Set up the Repository
     sudo apt-get update
     sudo apt-get install ca-certificates curl gnupg
@@ -34,26 +36,26 @@ title: "Docker"
     newgrp docker
     {{< /details >}}
 
-    {{< details title="Create Docker Group" open=true >}}
+    {{< details title="Create Docker Group" open=false >}}
     sudo usermod -aG docker $USER
     newgrp docker
     sudo service docker start
     {{< /details >}}
 
-- Install Minikube
+###  [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
-    [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+    
 
-- Install Kubectl
+###  Kubectl
 
-    {{< details title="Install Kuberctl" open=true >}}
+    {{< details title="Install Kuberctl" open=false >}}
     curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
     {{< /details >}}
 
 
-- Install istio
-    {{< details title="Install Istio" open=true >}}
+###  istio
+    {{< details title="Install Istio" open=false >}}
     curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.1 TARGET_ARCH=x86_64 sh -
     cd istio-1.18.1/bin
     sudo install -o root -g root -m 0755 istioctl /usr/local/bin/istioctl
@@ -64,9 +66,45 @@ title: "Docker"
 
 
 
+## Configurations
 
+### [The mirrors for Docker images](https://www.cnblogs.com/wubolive/p/17317586.html)
+    {{< details title="gcr.io" open=false >}}
+    DaoCloud
+    源站：docker pull               k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+    改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+    {{< /details >}}
 
-### Reference
+    {{< details title="kubeadm config images list" open=false >}}
+    
+    docker pull   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4
+    docker pull   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4
+    docker pull   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4
+    docker pull   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4
+    docker pull   m.daocloud.io/registry.k8s.io/pause:3.9
+    docker pull   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0
+    docker pull   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1
+
+    docker tag   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4           registry.k8s.io/kube-apiserver:v1.28.4
+    docker tag   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4  registry.k8s.io/kube-controller-manager:v1.28.4
+    docker tag   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4           registry.k8s.io/kube-scheduler:v1.28.4      
+    docker tag   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4               registry.k8s.io/kube-proxy:v1.28.4
+    docker tag   m.daocloud.io/registry.k8s.io/pause:3.9                        registry.k8s.io/pause:3.9
+    docker tag   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0                     registry.k8s.io/etcd:3.5.9-0
+    docker tag   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1          registry.k8s.io/coredns/coredns:v1.10.1
+    {{< /details >}}
+
+ubuntu@c1:~$ kubeadm config images list
+registry.k8s.io/kube-apiserver:v1.28.4
+registry.k8s.io/kube-controller-manager:v1.28.4
+registry.k8s.io/kube-scheduler:v1.28.4
+registry.k8s.io/kube-proxy:v1.28.4
+registry.k8s.io/pause:3.9
+registry.k8s.io/etcd:3.5.9-0
+registry.k8s.io/coredns/coredns:v1.10.1
+ubuntu@c1:~$
+
+## Reference
 
 [Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
 
