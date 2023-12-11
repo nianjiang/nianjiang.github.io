@@ -240,8 +240,7 @@ These are the exam objectives you review and understand in order to pass the tes
 | 第十六题 |		[ 查看cpu使用率最高的pod	](https://blog.csdn.net/u014481728/article/details/133421578)	 |     |
 | 第十七题 |		[ 排查集群中故障节点	](https://blog.csdn.net/u014481728/article/details/133421584)		   |     |
 
-
-[👍 ](https://devopscube.com/cka-exam-study-guide/)
+[👍 CKA Certification Exam Guide For CKA Aspirants](https://devopscube.com/cka-exam-study-guide/)
 
 https://blog.csdn.net/weixin_45310323/article/details/132650026
 
@@ -251,17 +250,13 @@ https://www.xjx100.cn/news/251445.html?action=onClick
 
 [😇91 道面试题](https://github.com/0voice/k8s_awesome_document#91-%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98)
 
-[cka Practice Test](https://github.com/krzko/awesome-cka#-practice-test)
+[👍 cka Practice Test](https://github.com/krzko/awesome-cka#-practice-test)
 
 [k8s学习-CKA考试必过宝典](https://blog.csdn.net/lady_killer9/article/details/126559782)
 
-[CKA考试备战--每日一题](https://kuboard.cn/t/cka/daily.html)
-
-[CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises)
-
 [cka Exercises](https://gist.github.com/Appletone/fe95252d03378ce2d0c6cc200e4eadad)
 
-[CKA、CKAD考试经验](https://github.com/yuyicai/cka-ckad-exam-experience)
+[CKA、CKAD考试经验](https://github.com/yuyicai/cka-ckad-exam-experience), [CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises)
 
 
 
@@ -270,7 +265,7 @@ https://www.xjx100.cn/news/251445.html?action=onClick
 
 [CKA (Certified Kubernetes Administrator)](https://training.linuxfoundation.cn/certificates/1)
 
-[Kubernetes Shorts video series](https://www.youtube.com/playlist?list=PLy0Gle4XyvbGhGpX0CXAuiEsfL-MD-rND)
+[👍 Kubernetes Shorts video series](https://www.youtube.com/playlist?list=PLy0Gle4XyvbGhGpX0CXAuiEsfL-MD-rND)
 
 [Storge: Object vs Block vs FileSystem](https://aws.amazon.com/compare/the-difference-between-block-file-object-storage/)
 
