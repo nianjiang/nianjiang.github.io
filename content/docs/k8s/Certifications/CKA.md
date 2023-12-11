@@ -241,7 +241,7 @@ These are the exam objectives you review and understand in order to pass the tes
 | 第十七题 |		[ 排查集群中故障节点	](https://blog.csdn.net/u014481728/article/details/133421584)		   |     |
 
 
-https://devopscube.com/cka-exam-study-guide/
+[👍 ](https://devopscube.com/cka-exam-study-guide/)
 
 https://blog.csdn.net/weixin_45310323/article/details/132650026
 

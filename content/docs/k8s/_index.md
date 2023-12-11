@@ -37,6 +37,10 @@ How about POD life cycle?
 
 - Kubernetes API
 
+    [API-V1.28](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/)
+
+    [Kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+
     [Kubernetes API Resources Overview](https://able8.medium.com/kubernetes-api-resources-overview-db1294f7cfd6)
 
 - Componets (Scheduler, Controller, ETCD, API, Kubelet)    
@@ -92,7 +96,7 @@ https://github.com/0voice/k8s_awesome_document
 
 [huaweicloud-edu](https://edu.huaweicloud.com/)
 
-[]()
+[Kubetools - A Curated List of Kubernetes Tools](https://collabnix.github.io/kubetools/)
 
 []()
 
