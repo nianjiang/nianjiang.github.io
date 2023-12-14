@@ -44,6 +44,8 @@ bookCollapseSection: true
 
 [CNCF Training & Certification](https://www.cncf.io/training/)
 
+[❇️ Linux Training Portal](https://trainingportal.linuxfoundation.org)
+
 [Linux Training](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
 
 [Linux Training (China)](https://training.linuxfoundation.cn/)
