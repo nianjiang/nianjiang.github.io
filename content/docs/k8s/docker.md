@@ -1,72 +1,12 @@
 ---
-weight: 100
+weight: 102
 title: "Docker"
 ---
 
 
-# Docker
+# Tools (docker/containerd/...)
 
-## Install Tools
-
-###  Docker
-
-    {{< details title="[Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)" open=false >}}
-    1. Set up the Repository
-    sudo apt-get update
-    sudo apt-get install ca-certificates curl gnupg
-
-    sudo install -m 0755 -d /etc/apt/keyrings
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-    sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-    echo \
-    "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-
-    2. Install Docker
-    sudo apt-get update
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    sudo docker run hello-world
-
-    verify:
-    sudo docker run hello-world
-
-    newgrp docker
-    {{< /details >}}
-
-    {{< details title="Create Docker Group" open=false >}}
-    sudo usermod -aG docker $USER
-    newgrp docker
-    sudo service docker start
-    {{< /details >}}
-
-###  [Minikube](https://minikube.sigs.k8s.io/docs/start/)
-
-    
-
-###  Kubectl
-
-    {{< details title="Install Kuberctl" open=false >}}
-    curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
-    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-    {{< /details >}}
-
-
-###  istio
-    {{< details title="Install Istio" open=false >}}
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.1 TARGET_ARCH=x86_64 sh -
-    cd istio-1.18.1/bin
-    sudo install -o root -g root -m 0755 istioctl /usr/local/bin/istioctl
-
-    istioctl install --set profile=demo -y
-    kubectl label namespace default istio-injection=enabled
-    {{< /details >}}
-
-
-
-## Configurations
+## Install Tools/Configurations
 
 ### [The mirrors for Docker images](https://www.cnblogs.com/wubolive/p/17317586.html)
     {{< details title="gcr.io" open=false >}}
@@ -94,15 +34,41 @@ title: "Docker"
     docker tag   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1          registry.k8s.io/coredns/coredns:v1.10.1
     {{< /details >}}
 
-ubuntu@c1:~$ kubeadm config images list
-registry.k8s.io/kube-apiserver:v1.28.4
-registry.k8s.io/kube-controller-manager:v1.28.4
-registry.k8s.io/kube-scheduler:v1.28.4
-registry.k8s.io/kube-proxy:v1.28.4
-registry.k8s.io/pause:3.9
-registry.k8s.io/etcd:3.5.9-0
-registry.k8s.io/coredns/coredns:v1.10.1
-ubuntu@c1:~$
+
+### [Install containerd/runc/cni](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
+    {{< details title="gcr.io" open=false >}}
+    wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
+    sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
+
+    wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+    sudo mkdir -p /usr/local/lib/systemd/system
+    sudo cp containerd.service /usr/local/lib/systemd/system/
+    sudo systemctl daemon-reload
+    sudo systemctl enable --now containerd
+
+    wget https://github.com/opencontainers/runc/releases/download/v1.1.10/runc.amd64
+    sudo install -m 755 runc.amd64 /usr/local/sbin/runc
+
+    wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz
+    mkdir -p /opt/cni/bin
+    sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
+    {{< /details >}}
+[containerd](https://containerd.io/), [cri-o](https://cri-o.io/)
+
+
+### [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)
+
+    {{< details title="gcr.io" open=false >}}
+    ubuntu@c1:~$ kubeadm config images list
+    registry.k8s.io/kube-apiserver:v1.28.4
+    registry.k8s.io/kube-controller-manager:v1.28.4
+    registry.k8s.io/kube-scheduler:v1.28.4
+    registry.k8s.io/kube-proxy:v1.28.4
+    registry.k8s.io/pause:3.9
+    registry.k8s.io/etcd:3.5.9-0
+    registry.k8s.io/coredns/coredns:v1.10.1
+    ubuntu@c1:~$
+    {{< /details >}}
 
 ## Reference
 

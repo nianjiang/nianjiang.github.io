@@ -269,7 +269,7 @@ https://www.xjx100.cn/news/251445.html?action=onClick
 
 [Storge: Object vs Block vs FileSystem](https://aws.amazon.com/compare/the-difference-between-block-file-object-storage/)
 
-[]()
+[Killer Shell CKA](https://killercoda.com/killer-shell-cka)
 
 []()
 
