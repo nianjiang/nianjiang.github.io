@@ -17,16 +17,16 @@ bookCollapseSection: true
 ## Cloud Certification Price (2023/12)
 | Certification Type| Price (¥)      | Price ($)         | Cyber Monday (11/27 - 12/8) | Note |
 | --------          | --------   | -------    | -------- | --------     |
-| CKA (EN)          |  ¥2824   | $395 |  $198 (¥1394)  |   [Link](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/) |
-| CKA (EN) Coupon   |  ¥2400   | $335.75 |       |   SCOFFER15  DCUBEOFFER |
-| CKA (EN) & LFS258 |  ¥4254   | $595 |          |   [LFS258](https://training.linuxfoundation.org/training/kubernetes-fundamentals/) |
-| CKA (CN)          |  ¥2918   |      |   ¥1458  |   [Link](https://training.linuxfoundation.cn/certificates/1) |
-| CKA (CN) & LFS258 |  ¥4398   |      |   ¥1538  |   [LFS258](https://training.linuxfoundation.cn/courses/6)    |
-| CKS (CN)          |  ¥2918   |      |   ¥1458  |   [Link](https://training.linuxfoundation.cn/certificates/16) |
-| CKS (CN) & LFS260 |  ¥4398   |      |   ¥1538  |   [Link](https://training.linuxfoundation.cn/pack/21)  |
-| CKA (CN) & CKS    |          |      |   ¥1868  |   [Link](https://training.linuxfoundation.cn/pack/22) |
-| CKA (CN) & CKS &PCA   |      |      |   ¥2778  |   [Link](https://training.linuxfoundation.cn/pack/69) |
-| PCA               |  ¥1848   |      |   ¥918   |   [Link](https://training.linuxfoundation.cn/certificates/23) |
+| CKA (EN)          |  ¥2824   | $395   |  $198 (¥1394)  |   [Link](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/) |
+| CKA (EN) Coupon   |  ¥2400   |$335.75 |          |   SCOFFER15  DCUBEOFFER |
+| CKA (EN) & LFS258 |  ¥4254   | $595   |          |   [LFS258](https://training.linuxfoundation.org/training/kubernetes-fundamentals/) |
+| CKA (CN)          |  ¥2918   |        |   ¥1458  |   [Link](https://training.linuxfoundation.cn/certificates/1) |
+| CKA (CN) & LFS258 |  ¥4398   |        |   ¥1538  |   [LFS258](https://training.linuxfoundation.cn/courses/6)    |
+| CKS (CN)          |  ¥2918   |        |   ¥1458  |   [Link](https://training.linuxfoundation.cn/certificates/16) |
+| CKS (CN) & LFS260 |  ¥4398   |        |   ¥1538  |   [Link](https://training.linuxfoundation.cn/pack/21)  |
+| CKA (CN) & CKS    |          |        |   ¥1868  |   [Link](https://training.linuxfoundation.cn/pack/22) |
+| CKA (CN) & CKS &PCA   |      |        |   ¥2778  |   [Link](https://training.linuxfoundation.cn/pack/69) |
+| PCA               |  ¥1848   |        |   ¥918   |   [Link](https://training.linuxfoundation.cn/certificates/23) |
 
 | Certification Type| Price (¥)| Price ($)| Cyber Monday (11/27 - 12/4) | Cyber Monday Price (¥) | Note |
 | --------          | -------- | -------  | -------- | -------- | --------     |
