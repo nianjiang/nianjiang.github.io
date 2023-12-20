@@ -14,9 +14,9 @@ bookCollapseSection: true
   - [Play with Kubernetes](https://labs.play-with-k8s.com/)
 
 
-## CKA Price (2023/12)
-|  CKA Type      | Price (¥)      | Price ($)         | Cyber Monday (11/27 - 12/8) | Note |
-| -------- | --------   | -------    | -------- | --------     |
+## Cloud Certification Price (2023/12)
+| Certification Type| Price (¥)      | Price ($)         | Cyber Monday (11/27 - 12/8) | Note |
+| --------          | --------   | -------    | -------- | --------     |
 | CKA (EN)          |  ¥2824   | $395 |  $198 (¥1394)  |   [Link](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/) |
 | CKA (EN) Coupon   |  ¥2400   | $335.75 |       |   SCOFFER15  DCUBEOFFER |
 | CKA (EN) & LFS258 |  ¥4254   | $595 |          |   [LFS258](https://training.linuxfoundation.org/training/kubernetes-fundamentals/) |

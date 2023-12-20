@@ -265,7 +265,7 @@ https://www.xjx100.cn/news/251445.html?action=onClick
 
 [CKA (Certified Kubernetes Administrator)](https://training.linuxfoundation.cn/certificates/1)
 
-[👍 Kubernetes Shorts video series](https://www.youtube.com/playlist?list=PLy0Gle4XyvbGhGpX0CXAuiEsfL-MD-rND)
+[👍 Kubernetes Shorts video series](https://www.youtube.com/playlist?list=PLy0Gle4XyvbGhGpX0CXAuiEsfL-MD-rND), [Github](https://github.com/peterj/k8s-shorts-files), [Website](https://www.startkubernetes.com/)
 
 [Storge: Object vs Block vs FileSystem](https://aws.amazon.com/compare/the-difference-between-block-file-object-storage/)
 

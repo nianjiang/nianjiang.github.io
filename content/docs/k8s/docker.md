@@ -9,7 +9,7 @@ title: "Docker"
 ## Install Tools/Configurations
 
 ### [The mirrors for Docker images](https://www.cnblogs.com/wubolive/p/17317586.html)
-    {{< details title="gcr.io" open=false >}}
+    {{< details title="m.daocloud.io" open=false >}}
     DaoCloud
     源站：docker pull               k8s.gcr.io/metrics-server/metrics-server:v0.6.1
     改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
@@ -36,7 +36,7 @@ title: "Docker"
 
 
 ### [Install containerd/runc/cni](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
-    {{< details title="gcr.io" open=false >}}
+    {{< details title="" open=false >}}
     wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
     sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
 
@@ -58,7 +58,7 @@ title: "Docker"
 
 ### [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)
 
-    {{< details title="gcr.io" open=false >}}
+    {{< details title="" open=false >}}
     ubuntu@c1:~$ kubeadm config images list
     registry.k8s.io/kube-apiserver:v1.28.4
     registry.k8s.io/kube-controller-manager:v1.28.4

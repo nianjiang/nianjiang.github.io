@@ -29,13 +29,25 @@ title: "Install"
 
 ### Commands
 
-{{< expand "minikube/kind" >}}
+{{< expand "minikube" >}}
     minikube start  --kubernetes-version=v1.28.4
 
     minikube node add
 
     minikube config view kubernetes-version
 
+    #Open K8s Dashboard
+    minikube dashboard
+    http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+
+
+    
+    
+
+
+{{< /expand >}}
+
+{{< expand "kind" >}}
     kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
     kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
