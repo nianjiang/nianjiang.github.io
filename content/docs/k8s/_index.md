@@ -2,6 +2,9 @@
 weight: 51
 title: "K8S"
 bookCollapseSection: true
+customjs:
+ - http://code.jquery.com/jquery-1.4.2.min.js
+ - http://yourdomain.com/yourscript.js
 ---
 
 # [Kubernetes](https://kubernetes.io/) Notes
@@ -55,11 +58,7 @@ How about POD life cycle?
 
 - CSI (ceph, pv, pvc)
 
-- Prometheus
-
-- [CKA](https://training.linuxfoundation.cn/certificates/1), CKAD
-
-- [Tekton](https://tekton.dev/), [Argo](https://argoproj.github.io/)
+- Prometheus/Tekton/Argo
 
 
 <br/>
@@ -69,7 +68,9 @@ How about POD life cycle?
 
 <br/>
 
-## Linux
+## K8s Resource
+
+
 
 
 
