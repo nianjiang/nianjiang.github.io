@@ -271,7 +271,11 @@ https://www.xjx100.cn/news/251445.html?action=onClick
 
 [Killer Shell CKA](https://killercoda.com/killer-shell-cka)
 
-[]()
+### Reference2
+
+https://www.itexams.com/exam/CKA
+
+
 
 []()
 
