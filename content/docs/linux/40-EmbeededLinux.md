@@ -11,9 +11,9 @@ title: "Embeeded Linux"
 
 ![](https://developer.android.com/static/guide/platform/images/android-stack_2x.png)
 
-![123](../docs/pics/openHarmony-cn.png)
+![123](./pics/openHarmony-cn.png)
 
-<a href=""><img src="https://gitee.com/jnh/jnh/blob/master/docs/pics/openHarmony-cn.png" alt="open-Harmony-cn" border="0" style="width:100%;height:100%;"></a>
+<a href=""><img src="./pics/openHarmony-cn.png" alt="open-Harmony-cn" border="0" style="width:100%;height:100%;"></a>
 
 <br/>
 
