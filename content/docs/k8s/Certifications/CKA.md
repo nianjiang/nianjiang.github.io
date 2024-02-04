@@ -277,7 +277,7 @@ https://www.itexams.com/exam/CKA
 
 
 
-[]()
+[👍 cka-crash-course](https://github.com/bmuschko/cka-crash-course)
 
 []()
 

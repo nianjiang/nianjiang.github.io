@@ -5,11 +5,18 @@ title: "Install"
 
 ### Tools
 
-[minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
+|  Tools | Doc      | Github        | Note         |
+| -------- | --------   | -------    | --------     |
+| [minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)      | [Doc](https://minikube.sigs.k8s.io/docs/)    | [Github](https://github.com/kubernetes/minikube)     |    Run Kubernetes locally          |
+| [k3s](https://k3s.io/)                                                | [Doc](https://docs.k3s.io/)    | [Github](https://github.com/k3s-io/k3s/)     |   Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB. |
+| [kind](https://kind.sigs.k8s.io/)                                     | [Doc](https://kind.sigs.k8s.io/)    | [Github](https://github.com/kubernetes-sigs/kind/)     |   Kubernetes IN Docker - local clusters for testing Kubernetes           |
 
-[k3s](https://k3s.io/)
 
-[kind](https://kind.sigs.k8s.io/)
+
+
+
+
+
 
 [kwok](https://github.com/kubernetes-sigs/kwok/)
 
@@ -57,9 +64,9 @@ title: "Install"
 
 ### Reference
 
-[]()
+[k0s、MicroK8s、kind、k3s 和 Minikube](https://zhuanlan.zhihu.com/p/594206344)
 
-[]()
+[dockerhub: kindest/node](https://hub.docker.com/r/kindest/node/tags?page=1&ordering=name)
 
 []()
 
