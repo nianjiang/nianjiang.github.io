@@ -5,8 +5,26 @@ title: "CKS"
 
 # CKS (Certified Kubernetes Security Specialist)
 
+## 2024真题
+
+[CKS-2024 4月最新题库分享](https://zhuanlan.zhihu.com/p/694930399)
+
+[CKS教程 2024](https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B+2024&from_source=webtop_search&spm_id_from=333.788&search_source=2)
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
 
 ## CKS Goal
+
+[Kubernetes](https://kubernetes.io/docs/concepts/security/)
 
 [CNCF](https://www.cncf.io/training/certification/cks/)
 
@@ -15,8 +33,6 @@ title: "CKS"
 [Chinese](https://training.linuxfoundation.cn/certificates/16)
 
 [CNCF Project Desc](https://www.cncf.io/projects/kubernetes/)
-
-[Kubernetes](https://kubernetes.io/)
 
 [Github](https://github.com/kubernetes/kubernetes)
 
@@ -130,7 +146,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
    </details>
 
-2. Minimize IAM roles
+2. Using least-privilege identity and access management
    * [Access authentication and authorization](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
 3. Minimize external access to the network
 
@@ -155,19 +171,21 @@ https://devopscube.com/cks-exam-guide-tips/
     </details>
 
 4. Appropriately use kernel hardening tools such as AppArmor, seccomp
-   * [AppArmor](https://kubernetes.io/docs/tutorials/clusters/apparmor/)
-   * [Seccomp](https://kubernetes.io/docs/tutorials/clusters/seccomp/)
+   * [AppArmor](https://wiki.apparmor.net/)， [Turorial](https://kubernetes.io/docs/tutorials/clusters/apparmor/)
+   * [Seccomp](https://en.wikipedia.org/wiki/Seccomp)， [Turorial](https://kubernetes.io/docs/tutorials/clusters/seccomp/)
 
 ### 🌈 Minimize Microservice Vulnerabilities - 20%
 
-1. Setup appropriate OS-level security domains
+1. Use appropriate pod security standards
    - [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
    - [Open Policy Agent](https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/)
    - [Security Contexts](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 2. [Manage kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
-3. Use [container runtime](https://kubernetes.io/docs/concepts/containers/runtime-class/) sandboxes in multi-tenant environments (e.g. [gvisor, kata containers](https://github.com/kubernetes/enhancements/blob/5dcf841b85f49aa8290529f1957ab8bc33f8b855/keps/sig-node/585-runtime-class/README.md#examples))
-4. [Implement pod to pod encryption by use of mTLS](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
-  - [ ] check if service mesh is part of the CKS exam
+3. Understand and implement isolation techniques (multi-tenancy, sandbox containers, etc)
+   - Use [container runtime](https://kubernetes.io/docs/concepts/containers/runtime-class/) sandboxes in multi-tenant environments (e.g. [gvisor, kata containers](https://github.com/kubernetes/enhancements/blob/5dcf841b85f49aa8290529f1957ab8bc33f8b855/keps/sig-node/585-runtime-class/README.md#examples))
+4. Implement pod to pod encryption using Cilium
+   - [Implement pod to pod encryption by use of mTLS](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
+   - [ ] check if service mesh is part of the CKS exam
 
 ### 🌈 Supply Chain Security - 20%
 
@@ -182,22 +200,33 @@ https://devopscube.com/cks-exam-guide-tips/
 
    </details>
 
-2. Secure your supply chain: [whitelist allowed image registries](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/#why-do-i-need-admission-controllers), sign and validate images
+2. Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories)
+
+3. Secure your supply chain: [whitelist allowed image registries](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/#why-do-i-need-admission-controllers), sign and validate images
   * Using [ImagePolicyWebhook admission Controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)
-4. Use static analysis of user workloads (e.g. [kubernetes resources](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#7-statically-analyse-yaml), docker files)
-5. [Scan images for known vulnerabilities](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#10-scan-images-and-run-ids)
-    * [Aqua security Trivy]( https://github.com/aquasecurity/trivy)
-    * [Anchore command line scans](https://github.com/anchore/anchore-cli#command-line-examples)
+
+4. Preform static analysis of user workloads and container images (e.g. kubesec, kubelinter)
+
+
+  <details><summary>  Old </summary>
+
+  * [kubernetes resources](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#7-statically-analyse-yaml), docker files)
+  * [Scan images for known vulnerabilities](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#10-scan-images-and-run-ids)
+  * [Aqua security Trivy]( https://github.com/aquasecurity/trivy)
+  * [Anchore command line scans](https://github.com/anchore/anchore-cli#command-line-examples)
+
+  </details>
+
 ### 🌈 Monitoring, Logging and Runtime Security - 20%
 
-1. Perform behavioural analytics of syscall process and file activities at the host and container level to detect malicious activities
+1. Perform behavioural analytics to detect malicious activities
 	- [Falco installation guide](https://falco.org/docs/)
 	- [Sysdig Falco 101](https://learn.sysdig.com/falco-101)
 	- [Falco Helm Chart](https://github.com/falcosecurity/charts/tree/master/falco)
 	- [Falco Kubernetes helmchart](https://github.com/falcosecurity/charts)
 	- [Detect CVE-2020-8557 using Falco](https://falco.org/blog/detect-cve-2020-8557/)
 2. Detect threats within a physical infrastructure, apps, networks, data, users and workloads
-3. Detect all phases of attack regardless where it occurs and how it spreads
+3. Investigate and identify of attach and bad actors within the environment
 
    <details><summary>  Attack Phases </summary>
 
@@ -208,12 +237,12 @@ https://devopscube.com/cks-exam-guide-tips/
 
    </details>
 
-4. Perform deep analytical investigation and identification of bad actors within the environment
    - [Sysdig documentation](https://docs.sysdig.com/)
    - [Monitoring Kubernetes with sysdig](https://kubernetes.io/blog/2015/11/monitoring-kubernetes-with-sysdig/)
    - [CNCF Webinar: Getting started with container runtime security using Falco](https://youtu.be/VEFaGjfjfyc)
-5. [Ensure immutability of containers at runtime](https://kubernetes.io/blog/2018/03/principles-of-container-app-design/)
-6. [Use Audit Logs to monitor access](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
+
+4. [Ensure immutability of containers at runtime](https://kubernetes.io/blog/2018/03/principles-of-container-app-design/)
+5. [Use k8s Audit Logs to monitor access](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
 
 
 ## Mock Exams

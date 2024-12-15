@@ -5,17 +5,58 @@ title: "CKA"
 
 # CKA (Certified Kubernetes Administrator)
 
+## Pass CKA on 2024/12
+
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e117b668-5030-4e55-9b35-e51ef36ae922" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+
+
+## 2024真题 
+
+[2024 CKA考试](https://www.cnblogs.com/yangmeichong/p/17971901)
+
+[K8S认证 2024年CKA考题汇总（解析+答案）](https://blog.csdn.net/weixin_28314575/article/details/140860758)
+
+[【CKA&CKS认证】2024最详细CKA认证考试教程，手把手带你11小时轻松拿下CKA认证（kubernetes/k8s/CKA考试/CKA认证/CKA证书）](https://www.bilibili.com/video/BV1Kz421U7i2/?vd_source=8f134d86d2e1e426d0598d5ac4a9a760)
+
+[不再迷茫！2024年CKA真题全解，专家带你逐一击破考点！](https://www.bilibili.com/video/BV1um411f7Ns/?vd_source=8f134d86d2e1e426d0598d5ac4a9a760)
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+
+
+## Articles
+
+https://www.cnblogs.com/yangmeichong/p/17971901
+
+https://juejin.cn/post/7330079146515988519
+
+https://blog.csdn.net/weixin_53851491/article/details/137040823
+
 ## Goal
 
-[English](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
-
+[English](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/), 
 [Chinese](https://training.linuxfoundation.cn/certificates/1)
 
-[CNCF Project Desc](https://www.cncf.io/projects/kubernetes/)
-
-[Kubernetes](https://kubernetes.io/)
-
+[CNCF Project Desc](https://www.cncf.io/projects/kubernetes/), 
+[Kubernetes](https://kubernetes.io/), 
 [Github](https://github.com/kubernetes/kubernetes)
+
+[CKA-upcoming-2024/12](https://training.linuxfoundation.org/certified-kubernetes-administrator-cka-program-changes/?utm_campaign=2024%20CKS%20Program%20Changes&utm_medium=email&_hsenc=p2ANqtz-8F8d3ojSY8iMz9pkgsm5WigBytToaFuuOc_-DOjDEoWo5O0JRxs0kEmz1jR2pc2b51WPOlQT3XezlNoLA5Ck4XNdqkyw&_hsmi=323359340&utm_content=323359340&utm_source=hs_email#)
+
+[CNCF Curriculum](https://github.com/cncf/curriculum)
 
 
 ## CKA 2023 Exam Objectives
@@ -279,7 +320,7 @@ https://www.itexams.com/exam/CKA
 
 [👍 cka-crash-course](https://github.com/bmuschko/cka-crash-course)
 
-[]()
+[CKA Upcoming Program Changes --> 2024.11](https://training.linuxfoundation.org/certified-kubernetes-administrator-cka-program-changes/#)
 
 []()
 

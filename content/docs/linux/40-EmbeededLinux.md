@@ -9,15 +9,14 @@ title: "Embeeded Linux"
 
 ## [Android Architecture](https://developer.android.com/guide/platform)
 
-![](https://developer.android.com/static/guide/platform/images/android-stack_2x.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53510158904/in/dateposted/" title="android"><img src="https://live.staticflickr.com/65535/53510158904_52058b4d36_h.jpg" width="1087" height="1600" alt="android"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 
 <br/>
 
-## [Open Harmony Architecture](https://gitee.com/openharmony)
+## [Harmony Architecture](https://gitee.com/openharmony)
 
-![](https://i.postimg.cc/8cZBvPhP/open-Harmony-cn.png)
-
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53509821601/in/dateposted/" title="openHarmony-cn"><img src="https://live.staticflickr.com/65535/53509821601_bd3a7d4025_h.jpg" width="1600" height="777" alt="openHarmony-cn"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 <br/>
 
@@ -29,12 +28,11 @@ title: "Embeeded Linux"
 
 #### Reference
 
+[Yocto](https://www.yoctoproject.org/), [Wiki](https://en.wikipedia.org/wiki/Yocto_Project)
 
-[]()
+[Wiki-Real Time Operation System](https://en.wikipedia.org/wiki/Real-time_operating_system)
 
-[]()
-
-[]()
+[Wiki-澎湃OS](https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%B1%B3%E6%BE%8E%E6%B9%83OS)，[Xiaomi HyperOS](https://hyperos.mi.com/)
 
 []()
 

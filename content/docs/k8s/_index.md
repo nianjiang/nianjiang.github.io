@@ -40,7 +40,7 @@ How about POD life cycle?
 
 - Kubernetes API / Resources
 
-    [API-V1.28](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/)
+    [API-V1.31](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/)
 
     [Kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 
@@ -131,7 +131,9 @@ How about POD life cycle?
 |storageclasses                                                                                                                             |sc                                     |storage.k8s.io/v1                      |false        |StorageClass                     |create,delete,deletecollection,get,list,patch,update,watch|			|
 |volumeattachments                                                                                                                          |                                       |storage.k8s.io/v1                      |false        |VolumeAttachment                 |create,delete,deletecollection,get,list,patch,update,watch|			|
 
-[API-V1.29](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/)
+[API-V1.31](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/)
+
+[API-V1.28](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/)
 
 [TDoc](https://docs.qq.com/sheet/DVGJyRGRRYUpMRk9B?tab=BB08J2)
 

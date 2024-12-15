@@ -231,7 +231,11 @@ https://podsbook.com/posts/kubernetes/operator/#client-go
 
 [K8s Releases](https://github.com/kubernetes/sig-release/tree/master/releases):
 |  Release | Start      | End        | Note         |
-| -------- | --------   | -------    | --------     |
+| -------- | --------   | --------   | --------     |
+| 1.32     | 2024/12    |     |              |
+| 1.31     | 2024/08    | 2025/10    | [Release Doc](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/) |
+| 1.30     | 2024/04    | 2025/06    | [Release Doc](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/) |
+| -------- | --------   | --------   | --------     |
 | 1.29     | 2023/12    | 2025/02    | https://kubernetes.io/blog/2023/12/13/kubernetes-v1-29-release/  |
 | 1.28     | 2023/08    | 2024/10    | https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/  |
 | 1.27     | 2023/04    | 2024/06    |              |
