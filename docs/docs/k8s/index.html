@@ -1,859 +1,668 @@
-<!DOCTYPE html>
-<html lang="zh" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kubernetes Notes # This is my learning Notes for Kubernetes
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  
+  Kubernetes Notes
+  #
+
+
+This is my learning Notes for Kubernetes
+
+
+Doubts:
+
+
+
+  Service vs Ingress
+
+
+How do kubelet know the pod is started success? justify process/port/url.
+How about POD life cycle?
+
+
+
+  Prometheus Intro and Deep Dive - Richard Hartmann, Grafana Labs
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+Setup (minikube, SandBox)
+
+  minikube website
+
+
+PlayGround
+
+  KillerCoda
+
+
+Kubernetes API / Resources
+
+  API-V1.31
+
+  Kubectl
+
+  Kubernetes API Resources Overview
+
+
+Componets (Scheduler, Controller, ETCD, API, Kubelet)
+
+
+Operator
+
+  https://lib.jimmysong.io/kubernetes-handbook/develop/operator/
+
+
+CRI (containerd)
+
+
+CNI (cilium, calico)
+
+
+CSI (ceph, pv, pvc)
+
+
+Prometheus/Tekton/Argo
+
+
+
+
+
+
+  
+  K8s Resources
+  #
+
+
+  
+      
+          NAME
+          SHORTNAMES
+          APIVERSION
+          NAMESPACED
+          KIND
+          VERBS
+          CATEGORIES
+      
+  
+  
+      
+          bindings
+          
+          v1
+          true
+          Binding
+          create
+          
+      
+      
+          componentstatuses
+          cs
+          v1
+          false
+          ComponentStatus
+          get,list
+          
+      
+      
+          configmaps
+          cm
+          v1
+          true
+          ConfigMap
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          controllerrevisions
+          
+          apps/v1
+          true
+          ControllerRevision
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          daemonsets
+          ds
+          apps/v1
+          true
+          DaemonSet
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  deployments
+          deploy
+          apps/v1
+          true
+          Deployment
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          endpoints
+          ep
+          v1
+          true
+          Endpoints
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          events
+          ev
+          v1
+          true
+          Event
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          limitranges
+          limits
+          v1
+          true
+          LimitRange
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          namespaces
+          ns
+          v1
+          false
+          Namespace
+          create,delete,get,list,patch,update,watch
+          
+      
+      
+          nodes
+          no
+          v1
+          false
+          Node
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          persistentvolumeclaims
+          pvc
+          v1
+          true
+          PersistentVolumeClaim
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          persistentvolumes
+          pv
+          v1
+          false
+          PersistentVolume
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          
+  pods
+          po
+          v1
+          true
+          Pod
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  podtemplates
+          
+          v1
+          true
+          PodTemplate
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          
+  replicasets
+          rs
+          apps/v1
+          true
+          ReplicaSet
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  replicationcontrollers
+          rc
+          v1
+          true
+          ReplicationController
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  resourcequotas
+          quota
+          v1
+          true
+          ResourceQuota
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          secrets
+          
+          v1
+          true
+          Secret
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          serviceaccounts
+          sa
+          v1
+          true
+          ServiceAccount
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          services
+          svc
+          v1
+          true
+          Service
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          statefulsets
+          sts
+          apps/v1
+          true
+          StatefulSet
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          mutatingwebhookconfigurations
+          
+          admissionregistration.k8s.io/v1
+          false
+          MutatingWebhookConfiguration
+          create,delete,deletecollection,get,list,patch,update,watch
+          api-extensions
+      
+      
+          validatingwebhookconfigurations
+          
+          admissionregistration.k8s.io/v1
+          false
+          ValidatingWebhookConfiguration
+          create,delete,deletecollection,get,list,patch,update,watch
+          api-extensions
+      
+      
+          customresourcedefinitions
+          crd,crds
+          apiextensions.k8s.io/v1
+          false
+          CustomResourceDefinition
+          create,delete,deletecollection,get,list,patch,update,watch
+          api-extensions
+      
+      
+          apiservices
+          
+          apiregistration.k8s.io/v1
+          false
+          APIService
+          create,delete,deletecollection,get,list,patch,update,watch
+          api-extensions
+      
+      
+          selfsubjectreviews
+          
+          authentication.k8s.io/v1
+          false
+          SelfSubjectReview
+          create
+          
+      
+      
+          tokenreviews
+          
+          authentication.k8s.io/v1
+          false
+          TokenReview
+          create
+          
+      
+      
+          localsubjectaccessreviews
+          
+          authorization.k8s.io/v1
+          true
+          LocalSubjectAccessReview
+          create
+          
+      
+      
+          selfsubjectaccessreviews
+          
+          authorization.k8s.io/v1
+          false
+          SelfSubjectAccessReview
+          create
+          
+      
+      
+          selfsubjectrulesreviews
+          
+          authorization.k8s.io/v1
+          false
+          SelfSubjectRulesReview
+          create
+          
+      
+      
+          subjectaccessreviews
+          
+          authorization.k8s.io/v1
+          false
+          SubjectAccessReview
+          create
+          
+      
+      
+          horizontalpodautoscalers
+          hpa
+          autoscaling/v2
+          true
+          HorizontalPodAutoscaler
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  cronjobs
+          cj
+          batch/v1
+          true
+          CronJob
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          
+  jobs
+          
+          batch/v1
+          true
+          Job
+          create,delete,deletecollection,get,list,patch,update,watch
+          all
+      
+      
+          certificatesigningrequests
+          csr
+          certificates.k8s.io/v1
+          false
+          CertificateSigningRequest
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          leases
+          
+          coordination.k8s.io/v1
+          true
+          Lease
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          endpointslices
+          
+          discovery.k8s.io/v1
+          true
+          EndpointSlice
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          events
+          ev
+          events.k8s.io/v1
+          true
+          Event
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          flowschemas
+          
+          flowcontrol.apiserver.k8s.io/v1beta3
+          false
+          FlowSchema
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          prioritylevelconfigurations
+          
+          flowcontrol.apiserver.k8s.io/v1beta3
+          false
+          PriorityLevelConfiguration
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          nodes
+          
+          metrics.k8s.io/v1beta1
+          false
+          NodeMetrics
+          get,list
+          
+      
+      
+          pods
+          
+          metrics.k8s.io/v1beta1
+          true
+          PodMetrics
+          get,list
+          
+      
+      
+          ingressclasses
+          
+          networking.k8s.io/v1
+          false
+          IngressClass
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          ingresses
+          ing
+          networking.k8s.io/v1
+          true
+          Ingress
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          networkpolicies
+          netpol
+          networking.k8s.io/v1
+          true
+          NetworkPolicy
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          runtimeclasses
+          
+          node.k8s.io/v1
+          false
+          RuntimeClass
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          poddisruptionbudgets
+          pdb
+          policy/v1
+          true
+          PodDisruptionBudget
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          clusterrolebindings
+          
+          rbac.authorization.k8s.io/v1
+          false
+          ClusterRoleBinding
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          clusterroles
+          
+          rbac.authorization.k8s.io/v1
+          false
+          ClusterRole
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          rolebindings
+          
+          rbac.authorization.k8s.io/v1
+          true
+          RoleBinding
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          roles
+          
+          rbac.authorization.k8s.io/v1
+          true
+          Role
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          priorityclasses
+          pc
+          scheduling.k8s.io/v1
+          false
+          PriorityClass
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          csidrivers
+          
+          storage.k8s.io/v1
+          false
+          CSIDriver
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          csinodes
+          
+          storage.k8s.io/v1
+          false
+          CSINode
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          csistoragecapacities
+          
+          storage.k8s.io/v1
+          true
+          CSIStorageCapacity
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          storageclasses
+          sc
+          storage.k8s.io/v1
+          false
+          StorageClass
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+      
+          volumeattachments
+          
+          storage.k8s.io/v1
+          false
+          VolumeAttachment
+          create,delete,deletecollection,get,list,patch,update,watch
+          
+      
+  
+
+
+  API-V1.31"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/k8s/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="K8S"><meta property="og:description" content="Kubernetes Notes # This is my learning Notes for Kubernetes
 Doubts:
 Service vs Ingress
 How do kubelet know the pod is started success? justify process/port/url.
 How about POD life cycle?
+Prometheus Intro and Deep Dive - Richard Hartmann, Grafana Labs
 Setup (minikube, SandBox)
 minikube website
+PlayGround
+KillerCoda
+Kubernetes API / Resources
+API-V1.31
+Kubectl
+Kubernetes API Resources Overview
 Componets (Scheduler, Controller, ETCD, API, Kubelet)
 Operator
 https://lib.jimmysong.io/kubernetes-handbook/develop/operator/
 CRI (containerd)
 CNI (cilium, calico)
 CSI (ceph, pv, pvc)
-Prometheus
-CKA, CKAD
-Linux # Kubernetes/Docker # Reference # Kubernetes 基础教程
-为Kubernetes集群部署一个ChatGPT机器人
-K8s Training
-https://github.com/0voice/k8s_awesome_document
-https://github.com/krzko/awesome-cka">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="K8S" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jnh.gitee.io/docs/k8s/" />
-<title>K8S | Learning Notes</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.25b524aee42951afa88a6975283d6db14d90d143a2192196f14db9aae5587fbe.js" integrity="sha256-JbUkruQpUa&#43;oiml1KD1tsU2Q0UOiGSGW8U25quVYf74=" crossorigin="anonymous"></script>
-
-  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://jnh.gitee.io/docs/k8s/index.xml" title="Learning Notes" />
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-  
-</head>
-<body dir="ltr">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Learning Notes</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle"  />
-    <label for="section-6ae1a891fb3a3f71d71273fc61b29b76" class="flex justify-between">
-      <a href="/docs/linux/" class="">Linux</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2d21464784c99358edd6d2b29e92ed6f" class="toggle" checked />
-    <label for="section-2d21464784c99358edd6d2b29e92ed6f" class="flex justify-between">
-      <a href="/docs/k8s/" class="active">K8S</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CRI/" class="">CRI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CNI/" class="">CNI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CSI/" class="">CSI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/Security/" class="">Security</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/docker/" class="">Docker</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/operator/" class="">Operator</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-0737253f49be88bf138c5b1b57550b21" class="toggle"  />
-    <label for="section-0737253f49be88bf138c5b1b57550b21" class="flex justify-between">
-      <a href="/docs/istio/" class="">Istio</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/istio/TrafficManagement/" class="">Traffic Management</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/istio/SourceCode/" class="">Source Code</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
-    <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
-      <a href="/docs/Prometheus/" class="">Prometheus</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-fa153435e5b558683d2ba96ab8ca277b" class="toggle"  />
-    <label for="section-fa153435e5b558683d2ba96ab8ca277b" class="flex justify-between">
-      <a href="/docs/CNCF/" class="">CNCF</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <a href="/docs/example/" class="">Example Site</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/with-toc/" class="">With ToC</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle"  />
-    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
-      <a role="button" class="">Collapsed</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/collapsed/3rd-level/" class="">3rd Level</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <span>Shortcodes</span>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/columns/" class="">Columns</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/details/" class="">Details</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/expand/" class="">Expand</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/hints/" class="">Hints</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/katex/" class="">Katex</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
-    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
-      <a href="/docs/shortcodes/section/" class="">Section</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/tabs4/" class="">Tabs4</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-
-
-
-
-
-
-
-
-
-
-  
-<ul>
-  
-  <li>
-    <a href="/posts/"  >
-        Blog
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
-        Hugo Book
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://gitee.com/jnh/jnh"  target="_blank" rel="noopener">
-        Gitee
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://github.com/nianjiang/nianjiang.github.io"  target="_blank" rel="noopener">
-        Github
-      </a>
-  </li>
-  
-  <li>
-    <a href="/links"  target="_blank" rel="noopener">
-        常用导航
-      </a>
-  </li>
-  
-</ul>
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
- 
-      </div>
-    </aside>
-
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <strong>K8S</strong>
-
-  <label for="toc-control">
-    
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#kuberneteshttpskubernetesio-notes"><a href="https://kubernetes.io/">Kubernetes</a> Notes</a>
-      <ul>
-        <li><a href="#linux">Linux</a></li>
-        <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
-        <li><a href="#reference">Reference</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-  <article class="markdown"><h1 id="kuberneteshttpskubernetesio-notes">
-  
-  <a href="https://kubernetes.io/">Kubernetes</a> Notes
-  <a class="anchor" href="#kuberneteshttpskubernetesio-notes">#</a>
-</h1>
-<blockquote>
-<p>This is my learning Notes for Kubernetes</p>
-</blockquote>
-<hr>
-<p><em><strong>Doubts</strong></em>:</p>
-<ul>
-<li>
-<p>
-  <a href="https://lib.jimmysong.io/kubernetes-handbook/service-discovery/">Service vs Ingress</a></p>
-</li>
-<li>
-<p>How do kubelet know the pod is started success? justify process/port/url.<br>
-How about POD life cycle?</p>
-</li>
-<li>
-<p>
-  <a href="/"></a></p>
-</li>
-<li>
-<p>
-  <a href="/"></a></p>
-</li>
-<li>
-<p>
-  <a href="/"></a></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li>
-<p>Setup (minikube, SandBox)</p>
-<p>
-  <a href="https://minikube.sigs.k8s.io/docs/start/">minikube website</a></p>
-</li>
-<li>
-<p>Componets (Scheduler, Controller, ETCD, API, Kubelet)</p>
-</li>
-<li>
-<p>Operator</p>
-<p>
-  <a href="https://lib.jimmysong.io/kubernetes-handbook/develop/operator/">https://lib.jimmysong.io/kubernetes-handbook/develop/operator/</a></p>
-</li>
-<li>
-<p>CRI (containerd)</p>
-</li>
-<li>
-<p>CNI (cilium, calico)</p>
-</li>
-<li>
-<p>CSI (ceph, pv, pvc)</p>
-</li>
-<li>
-<p>Prometheus</p>
-</li>
-<li>
-<p>CKA, CKAD</p>
-</li>
-</ul>
-<br/>
-<hr>
-<br/>
-<h2 id="linux">
-  Linux
-  <a class="anchor" href="#linux">#</a>
-</h2>
-<br/>
-<h2 id="kubernetesdocker">
-  Kubernetes/Docker
-  <a class="anchor" href="#kubernetesdocker">#</a>
-</h2>
-<h2 id="reference">
-  Reference
-  <a class="anchor" href="#reference">#</a>
-</h2>
-<p>
-  <a href="https://lib.jimmysong.io/kubernetes-handbook/">Kubernetes 基础教程</a></p>
-<p>
-  <a href="https://www.bmabk.com/index.php/post/96754.html">为Kubernetes集群部署一个ChatGPT机器人</a></p>
-<p>
-  <a href="https://kubernetes.io/zh-cn/training/">K8s Training</a></p>
-<p>
-  <a href="/"></a></p>
-<p>
-  <a href="https://github.com/0voice/k8s_awesome_document">https://github.com/0voice/k8s_awesome_document</a></p>
-<p>
-  <a href="https://github.com/krzko/awesome-cka">https://github.com/krzko/awesome-cka</a></p>
-</article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/2c31c0a74603678942654107e24f494c5df11f9c" title='最后修改者 Nian Jiang | 2023-08-15 15:49:05' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-08-15 15:49:05</span>
-    </a>
-  </div>
-
-
-
-  <div>
-    <a class="flex align-center" href="https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/_index.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>编辑本页</span>
-    </a>
-  </div>
-
-
-</div>
-
-
-
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
-
-
- 
-        
-      </footer>
-
-      
-  
-  <div class="book-comments">
-
-</div>
-  
- 
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
-
-    
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#kuberneteshttpskubernetesio-notes"><a href="https://kubernetes.io/">Kubernetes</a> Notes</a>
-      <ul>
-        <li><a href="#linux">Linux</a></li>
-        <li><a href="#kubernetesdocker">Kubernetes/Docker</a></li>
-        <li><a href="#reference">Reference</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
- 
-      </div>
-    </aside>
-    
-  </main>
-
-  
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
+Prometheus/Tekton/Argo
+K8s Resources # NAME SHORTNAMES APIVERSION NAMESPACED KIND VERBS CATEGORIES bindings v1 true Binding create componentstatuses cs v1 false ComponentStatus get,list configmaps cm v1 true ConfigMap create,delete,deletecollection,get,list,patch,update,watch controllerrevisions apps/v1 true ControllerRevision create,delete,deletecollection,get,list,patch,update,watch daemonsets ds apps/v1 true DaemonSet create,delete,deletecollection,get,list,patch,update,watch all deployments deploy apps/v1 true Deployment create,delete,deletecollection,get,list,patch,update,watch all endpoints ep v1 true Endpoints create,delete,deletecollection,get,list,patch,update,watch events ev v1 true Event create,delete,deletecollection,get,list,patch,update,watch limitranges limits v1 true LimitRange create,delete,deletecollection,get,list,patch,update,watch namespaces ns v1 false Namespace create,delete,get,list,patch,update,watch nodes no v1 false Node create,delete,deletecollection,get,list,patch,update,watch persistentvolumeclaims pvc v1 true PersistentVolumeClaim create,delete,deletecollection,get,list,patch,update,watch persistentvolumes pv v1 false PersistentVolume create,delete,deletecollection,get,list,patch,update,watch pods po v1 true Pod create,delete,deletecollection,get,list,patch,update,watch all podtemplates v1 true PodTemplate create,delete,deletecollection,get,list,patch,update,watch replicasets rs apps/v1 true ReplicaSet create,delete,deletecollection,get,list,patch,update,watch all replicationcontrollers rc v1 true ReplicationController create,delete,deletecollection,get,list,patch,update,watch all resourcequotas quota v1 true ResourceQuota create,delete,deletecollection,get,list,patch,update,watch secrets v1 true Secret create,delete,deletecollection,get,list,patch,update,watch serviceaccounts sa v1 true ServiceAccount create,delete,deletecollection,get,list,patch,update,watch services svc v1 true Service create,delete,deletecollection,get,list,patch,update,watch all statefulsets sts apps/v1 true StatefulSet create,delete,deletecollection,get,list,patch,update,watch all mutatingwebhookconfigurations admissionregistration.k8s.io/v1 false MutatingWebhookConfiguration create,delete,deletecollection,get,list,patch,update,watch api-extensions validatingwebhookconfigurations admissionregistration.k8s.io/v1 false ValidatingWebhookConfiguration create,delete,deletecollection,get,list,patch,update,watch api-extensions customresourcedefinitions crd,crds apiextensions.k8s.io/v1 false CustomResourceDefinition create,delete,deletecollection,get,list,patch,update,watch api-extensions apiservices apiregistration.k8s.io/v1 false APIService create,delete,deletecollection,get,list,patch,update,watch api-extensions selfsubjectreviews authentication.k8s.io/v1 false SelfSubjectReview create tokenreviews authentication.k8s.io/v1 false TokenReview create localsubjectaccessreviews authorization.k8s.io/v1 true LocalSubjectAccessReview create selfsubjectaccessreviews authorization.k8s.io/v1 false SelfSubjectAccessReview create selfsubjectrulesreviews authorization.k8s.io/v1 false SelfSubjectRulesReview create subjectaccessreviews authorization.k8s.io/v1 false SubjectAccessReview create horizontalpodautoscalers hpa autoscaling/v2 true HorizontalPodAutoscaler create,delete,deletecollection,get,list,patch,update,watch all cronjobs cj batch/v1 true CronJob create,delete,deletecollection,get,list,patch,update,watch all jobs batch/v1 true Job create,delete,deletecollection,get,list,patch,update,watch all certificatesigningrequests csr certificates.k8s.io/v1 false CertificateSigningRequest create,delete,deletecollection,get,list,patch,update,watch leases coordination.k8s.io/v1 true Lease create,delete,deletecollection,get,list,patch,update,watch endpointslices discovery.k8s.io/v1 true EndpointSlice create,delete,deletecollection,get,list,patch,update,watch events ev events.k8s.io/v1 true Event create,delete,deletecollection,get,list,patch,update,watch flowschemas flowcontrol.apiserver.k8s.io/v1beta3 false FlowSchema create,delete,deletecollection,get,list,patch,update,watch prioritylevelconfigurations flowcontrol.apiserver.k8s.io/v1beta3 false PriorityLevelConfiguration create,delete,deletecollection,get,list,patch,update,watch nodes metrics.k8s.io/v1beta1 false NodeMetrics get,list pods metrics.k8s.io/v1beta1 true PodMetrics get,list ingressclasses networking.k8s.io/v1 false IngressClass create,delete,deletecollection,get,list,patch,update,watch ingresses ing networking.k8s.io/v1 true Ingress create,delete,deletecollection,get,list,patch,update,watch networkpolicies netpol networking.k8s.io/v1 true NetworkPolicy create,delete,deletecollection,get,list,patch,update,watch runtimeclasses node.k8s.io/v1 false RuntimeClass create,delete,deletecollection,get,list,patch,update,watch poddisruptionbudgets pdb policy/v1 true PodDisruptionBudget create,delete,deletecollection,get,list,patch,update,watch clusterrolebindings rbac.authorization.k8s.io/v1 false ClusterRoleBinding create,delete,deletecollection,get,list,patch,update,watch clusterroles rbac.authorization.k8s.io/v1 false ClusterRole create,delete,deletecollection,get,list,patch,update,watch rolebindings rbac.authorization.k8s.io/v1 true RoleBinding create,delete,deletecollection,get,list,patch,update,watch roles rbac.authorization.k8s.io/v1 true Role create,delete,deletecollection,get,list,patch,update,watch priorityclasses pc scheduling.k8s.io/v1 false PriorityClass create,delete,deletecollection,get,list,patch,update,watch csidrivers storage.k8s.io/v1 false CSIDriver create,delete,deletecollection,get,list,patch,update,watch csinodes storage.k8s.io/v1 false CSINode create,delete,deletecollection,get,list,patch,update,watch csistoragecapacities storage.k8s.io/v1 true CSIStorageCapacity create,delete,deletecollection,get,list,patch,update,watch storageclasses sc storage.k8s.io/v1 false StorageClass create,delete,deletecollection,get,list,patch,update,watch volumeattachments storage.k8s.io/v1 false VolumeAttachment create,delete,deletecollection,get,list,patch,update,watch API-V1.31"><meta property="og:locale" content="zh"><meta property="og:type" content="website"><title>K8S | Learning Notes</title>
+<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz+OQteg=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/zh.search.min.6f7ae1c43906b581166e7ae2eaf8d8dd4ab6e8db5b8d41770b75fabb3e155692.js integrity="sha256-b3rhxDkGtYEWbnri6vjY3Uq26NtbjUF3C3X6uz4VVpI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=http://localhost:1313/docs/k8s/index.xml title="Learning Notes"></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><input type=checkbox id=section-5c9d349e35dbf7bf43984b14419fb5fc class=toggle>
+<label for=section-5c9d349e35dbf7bf43984b14419fb5fc class="flex justify-between"><a href=/docs/linux/>Linux</a></label><ul><li><a href=/docs/linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/linux/BPF/>eBPF</a></li></ul></li><li><input type=checkbox id=section-3f3cfdecc97f2ea37071f8786b4bf409 class=toggle checked>
+<label for=section-3f3cfdecc97f2ea37071f8786b4bf409 class="flex justify-between"><a href=/docs/k8s/ class=active>K8S</a></label><ul><li><a href=/docs/k8s/CRI/>CRI</a></li><li><a href=/docs/k8s/CSI/>CSI</a></li><li><a href=/docs/k8s/CNI/>CNI</a></li><li><a href=/docs/k8s/CNI-eBPF/>eBPF</a></li><li><a href=/docs/k8s/Security/>Security</a></li><li><input type=checkbox id=section-7588803f33f00c59c193df37c1a581e8 class=toggle>
+<label for=section-7588803f33f00c59c193df37c1a581e8 class="flex justify-between"><a href=/docs/k8s/DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/k8s/DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/k8s/DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/k8s/DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/k8s/DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><input type=checkbox id=section-b26e609d75d46bb3b000b9da3b077efb class=toggle>
+<label for=section-b26e609d75d46bb3b000b9da3b077efb class="flex justify-between"><a href=/docs/k8s/Certifications/>Certifications</a></label><ul><li><a href=/docs/k8s/Certifications/CKA/>CKA</a></li><li><a href=/docs/k8s/Certifications/CKS/>CKS</a></li><li><a href=/docs/k8s/Certifications/PCA/>PCA (Prometheus)</a></li><li><a href=/docs/k8s/Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/k8s/Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/k8s/Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/k8s/Certifications/question/>Questions</a></li></ul></li><li><a href=/docs/k8s/Codes/>Codes</a></li><li><a href=/docs/k8s/Install/>Install</a></li><li><a href=/docs/k8s/docker/>Docker</a></li><li><a href=/docs/k8s/operator/>Operator</a></li></ul></li><li><input type=checkbox id=section-771950d51afd75b86f6cbb9d613d2636 class=toggle>
+<label for=section-771950d51afd75b86f6cbb9d613d2636 class="flex justify-between"><a href=/docs/istio/>Istio</a></label><ul><li><a href=/docs/istio/Envoy/>Envoy</a></li><li><a href=/docs/istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/istio/SourceCode/>Source Code</a></li><li><a href=/docs/istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-f9df0e4ced09b96aaea1814dd17677c5 class=toggle>
+<label for=section-f9df0e4ced09b96aaea1814dd17677c5 class="flex justify-between"><a href=/docs/Telemetry/>Observability & Analysis</a></label><ul></ul></li><li><input type=checkbox id=section-d81b7a3c2698e83baa6ff10bc4977840 class=toggle>
+<label for=section-d81b7a3c2698e83baa6ff10bc4977840 class="flex justify-between"><a href=/docs/AI/>AI</a></label><ul><li><a href=/docs/AI/20-map/>Learning Map</a></li><li><a href=/docs/AI/21-note/>Learning Note</a></li></ul></li><li><input type=checkbox id=section-fe309e934eab8e5ba259bbae52e89a51 class=toggle>
+<label for=section-fe309e934eab8e5ba259bbae52e89a51 class="flex justify-between"><a href=/docs/CNCF/>CNCF</a></label><ul></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu>
+</label><strong>K8S</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#kuberneteshttpskubernetesio-notes><a href=https://kubernetes.io/>Kubernetes</a> Notes</a><ul><li><a href=#k8s-resourceshttpwwwmtitekcomtutorialskuberneteskubectl_cli_api_resourcesphp><a href=http://www.mtitek.com/tutorials/kubernetes/kubectl_cli_api_resources.php>K8s Resources</a></a></li><li><a href=#kubernetesdocker>Kubernetes/Docker</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=kuberneteshttpskubernetesio-notes><a href=https://kubernetes.io/>Kubernetes</a> Notes
+<a class=anchor href=#kuberneteshttpskubernetesio-notes>#</a></h1><blockquote><p>This is my learning Notes for Kubernetes</p></blockquote><hr><p><em><strong>Doubts</strong></em>:</p><ul><li><p><a href=https://lib.jimmysong.io/kubernetes-handbook/service-discovery/>Service vs Ingress</a></p></li><li><p>How do kubelet know the pod is started success? justify process/port/url.<br>How about POD life cycle?</p></li><li><p><a href="https://www.youtube.com/watch?v=t3YFv20Ulnc&amp;list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&amp;index=56&amp;ab_channel=CNCF%5BCloudNativeComputingFoundation%5D">Prometheus Intro and Deep Dive - Richard Hartmann, Grafana Labs</a></p></li><li><p><a href=/></a></p></li><li><p><a href=/></a></p></li></ul><hr><ul><li><p>Setup (minikube, SandBox)</p><p><a href=https://minikube.sigs.k8s.io/docs/start/>minikube website</a></p></li><li><p>PlayGround</p><p><a href=https://killercoda.com/playgrounds>KillerCoda</a></p></li><li><p>Kubernetes API / Resources</p><p><a href=https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/>API-V1.31</a></p><p><a href=https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>Kubectl</a></p><p><a href=https://able8.medium.com/kubernetes-api-resources-overview-db1294f7cfd6>Kubernetes API Resources Overview</a></p></li><li><p>Componets (Scheduler, Controller, ETCD, API, Kubelet)</p></li><li><p>Operator</p><p><a href=https://lib.jimmysong.io/kubernetes-handbook/develop/operator/>https://lib.jimmysong.io/kubernetes-handbook/develop/operator/</a></p></li><li><p>CRI (containerd)</p></li><li><p>CNI (cilium, calico)</p></li><li><p>CSI (ceph, pv, pvc)</p></li><li><p>Prometheus/Tekton/Argo</p></li></ul><br><hr><br><h2 id=k8s-resourceshttpwwwmtitekcomtutorialskuberneteskubectl_cli_api_resourcesphp><a href=http://www.mtitek.com/tutorials/kubernetes/kubectl_cli_api_resources.php>K8s Resources</a>
+<a class=anchor href=#k8s-resourceshttpwwwmtitekcomtutorialskuberneteskubectl_cli_api_resourcesphp>#</a></h2><table><thead><tr><th>NAME</th><th>SHORTNAMES</th><th>APIVERSION</th><th>NAMESPACED</th><th>KIND</th><th>VERBS</th><th>CATEGORIES</th></tr></thead><tbody><tr><td>bindings</td><td></td><td>v1</td><td>true</td><td>Binding</td><td>create</td><td></td></tr><tr><td>componentstatuses</td><td>cs</td><td>v1</td><td>false</td><td>ComponentStatus</td><td>get,list</td><td></td></tr><tr><td>configmaps</td><td>cm</td><td>v1</td><td>true</td><td>ConfigMap</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>controllerrevisions</td><td></td><td>apps/v1</td><td>true</td><td>ControllerRevision</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>daemonsets</td><td>ds</td><td>apps/v1</td><td>true</td><td>DaemonSet</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/>deployments</a></td><td>deploy</td><td>apps/v1</td><td>true</td><td>Deployment</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td>endpoints</td><td>ep</td><td>v1</td><td>true</td><td>Endpoints</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>events</td><td>ev</td><td>v1</td><td>true</td><td>Event</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>limitranges</td><td>limits</td><td>v1</td><td>true</td><td>LimitRange</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>namespaces</td><td>ns</td><td>v1</td><td>false</td><td>Namespace</td><td>create,delete,get,list,patch,update,watch</td><td></td></tr><tr><td>nodes</td><td>no</td><td>v1</td><td>false</td><td>Node</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>persistentvolumeclaims</td><td>pvc</td><td>v1</td><td>true</td><td>PersistentVolumeClaim</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>persistentvolumes</td><td>pv</td><td>v1</td><td>false</td><td>PersistentVolume</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/>pods</a></td><td>po</td><td>v1</td><td>true</td><td>Pod</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-template-v1/>podtemplates</a></td><td></td><td>v1</td><td>true</td><td>PodTemplate</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/replica-set-v1/>replicasets</a></td><td>rs</td><td>apps/v1</td><td>true</td><td>ReplicaSet</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/replication-controller-v1/>replicationcontrollers</a></td><td>rc</td><td>v1</td><td>true</td><td>ReplicationController</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/policy-resources/resource-quota-v1/>resourcequotas</a></td><td>quota</td><td>v1</td><td>true</td><td>ResourceQuota</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>secrets</td><td></td><td>v1</td><td>true</td><td>Secret</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>serviceaccounts</td><td>sa</td><td>v1</td><td>true</td><td>ServiceAccount</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>services</td><td>svc</td><td>v1</td><td>true</td><td>Service</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td>statefulsets</td><td>sts</td><td>apps/v1</td><td>true</td><td>StatefulSet</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td>mutatingwebhookconfigurations</td><td></td><td>admissionregistration.k8s.io/v1</td><td>false</td><td>MutatingWebhookConfiguration</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>api-extensions</td></tr><tr><td>validatingwebhookconfigurations</td><td></td><td>admissionregistration.k8s.io/v1</td><td>false</td><td>ValidatingWebhookConfiguration</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>api-extensions</td></tr><tr><td>customresourcedefinitions</td><td>crd,crds</td><td>apiextensions.k8s.io/v1</td><td>false</td><td>CustomResourceDefinition</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>api-extensions</td></tr><tr><td>apiservices</td><td></td><td>apiregistration.k8s.io/v1</td><td>false</td><td>APIService</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>api-extensions</td></tr><tr><td>selfsubjectreviews</td><td></td><td>authentication.k8s.io/v1</td><td>false</td><td>SelfSubjectReview</td><td>create</td><td></td></tr><tr><td>tokenreviews</td><td></td><td>authentication.k8s.io/v1</td><td>false</td><td>TokenReview</td><td>create</td><td></td></tr><tr><td>localsubjectaccessreviews</td><td></td><td>authorization.k8s.io/v1</td><td>true</td><td>LocalSubjectAccessReview</td><td>create</td><td></td></tr><tr><td>selfsubjectaccessreviews</td><td></td><td>authorization.k8s.io/v1</td><td>false</td><td>SelfSubjectAccessReview</td><td>create</td><td></td></tr><tr><td>selfsubjectrulesreviews</td><td></td><td>authorization.k8s.io/v1</td><td>false</td><td>SelfSubjectRulesReview</td><td>create</td><td></td></tr><tr><td>subjectaccessreviews</td><td></td><td>authorization.k8s.io/v1</td><td>false</td><td>SubjectAccessReview</td><td>create</td><td></td></tr><tr><td>horizontalpodautoscalers</td><td>hpa</td><td>autoscaling/v2</td><td>true</td><td>HorizontalPodAutoscaler</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/cron-job-v1/>cronjobs</a></td><td>cj</td><td>batch/v1</td><td>true</td><td>CronJob</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td><a href=https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/job-v1/>jobs</a></td><td></td><td>batch/v1</td><td>true</td><td>Job</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td>all</td></tr><tr><td>certificatesigningrequests</td><td>csr</td><td>certificates.k8s.io/v1</td><td>false</td><td>CertificateSigningRequest</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>leases</td><td></td><td>coordination.k8s.io/v1</td><td>true</td><td>Lease</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>endpointslices</td><td></td><td>discovery.k8s.io/v1</td><td>true</td><td>EndpointSlice</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>events</td><td>ev</td><td>events.k8s.io/v1</td><td>true</td><td>Event</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>flowschemas</td><td></td><td>flowcontrol.apiserver.k8s.io/v1beta3</td><td>false</td><td>FlowSchema</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>prioritylevelconfigurations</td><td></td><td>flowcontrol.apiserver.k8s.io/v1beta3</td><td>false</td><td>PriorityLevelConfiguration</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>nodes</td><td></td><td>metrics.k8s.io/v1beta1</td><td>false</td><td>NodeMetrics</td><td>get,list</td><td></td></tr><tr><td>pods</td><td></td><td>metrics.k8s.io/v1beta1</td><td>true</td><td>PodMetrics</td><td>get,list</td><td></td></tr><tr><td>ingressclasses</td><td></td><td>networking.k8s.io/v1</td><td>false</td><td>IngressClass</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>ingresses</td><td>ing</td><td>networking.k8s.io/v1</td><td>true</td><td>Ingress</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>networkpolicies</td><td>netpol</td><td>networking.k8s.io/v1</td><td>true</td><td>NetworkPolicy</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>runtimeclasses</td><td></td><td>node.k8s.io/v1</td><td>false</td><td>RuntimeClass</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>poddisruptionbudgets</td><td>pdb</td><td>policy/v1</td><td>true</td><td>PodDisruptionBudget</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>clusterrolebindings</td><td></td><td>rbac.authorization.k8s.io/v1</td><td>false</td><td>ClusterRoleBinding</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>clusterroles</td><td></td><td>rbac.authorization.k8s.io/v1</td><td>false</td><td>ClusterRole</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>rolebindings</td><td></td><td>rbac.authorization.k8s.io/v1</td><td>true</td><td>RoleBinding</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>roles</td><td></td><td>rbac.authorization.k8s.io/v1</td><td>true</td><td>Role</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>priorityclasses</td><td>pc</td><td>scheduling.k8s.io/v1</td><td>false</td><td>PriorityClass</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>csidrivers</td><td></td><td>storage.k8s.io/v1</td><td>false</td><td>CSIDriver</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>csinodes</td><td></td><td>storage.k8s.io/v1</td><td>false</td><td>CSINode</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>csistoragecapacities</td><td></td><td>storage.k8s.io/v1</td><td>true</td><td>CSIStorageCapacity</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>storageclasses</td><td>sc</td><td>storage.k8s.io/v1</td><td>false</td><td>StorageClass</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr><tr><td>volumeattachments</td><td></td><td>storage.k8s.io/v1</td><td>false</td><td>VolumeAttachment</td><td>create,delete,deletecollection,get,list,patch,update,watch</td><td></td></tr></tbody></table><p><a href=https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.31/>API-V1.31</a></p><p><a href=https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/>API-V1.28</a></p><p><a href="https://docs.qq.com/sheet/DVGJyRGRRYUpMRk9B?tab=BB08J2">TDoc</a></p><br><h2 id=kubernetesdocker>Kubernetes/Docker
+<a class=anchor href=#kubernetesdocker>#</a></h2><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=https://kubernetes.io/docs/home/>K8s Docs</a></p><p><a href=https://github.com/dennyzhang/kubernetes-yaml-templates>kubernetes-yaml-templates</a> 🔥🔥🔥</p><p><a href=https://lib.jimmysong.io/kubernetes-handbook/>Kubernetes 基础教程</a> ‼️</p><p><a href=https://www.bmabk.com/index.php/post/96754.html>为Kubernetes集群部署一个ChatGPT机器人</a> 🏢</p><p><a href=https://github.com/0voice/k8s_awesome_document>https://github.com/0voice/k8s_awesome_document</a></p><p><a href=https://awesome-kubernetes-notes.readthedocs.io/en/latest/index.html>k8s notes</a></p><p><a href="https://blog.csdn.net/qq_46654855/article/details/125612617?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E4%BA%91%E5%8E%9F%E7%94%9F%7Ckubernetes%7C2022%E5%B9%B4%E5%BA%95cks%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~sobaiduweb~default-6-125612617.nonecase&amp;spm=1018.2226.3001.4450">最新 2023 年云原生Kubernetes 高级面试题大全</a></p><p><a href=https://edu.huaweicloud.com/>huaweicloud-edu</a></p><p><a href=https://collabnix.github.io/kubetools/>Kubetools - A Curated List of Kubernetes Tools</a></p><p><a href=https://testerhome.com/lessons/100033242>字节跳动容器化场景下的性能优化实践</a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/f0572976a338e173341b70e4c0cb022e17fe1ce1 title='最后修改者 Nian Jiang | 2024-12-15 15:54:24' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>2024-12-15 15:54:24</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/_index.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#kuberneteshttpskubernetesio-notes><a href=https://kubernetes.io/>Kubernetes</a> Notes</a><ul><li><a href=#k8s-resourceshttpwwwmtitekcomtutorialskuberneteskubectl_cli_api_resourcesphp><a href=http://www.mtitek.com/tutorials/kubernetes/kubectl_cli_api_resources.php>K8s Resources</a></a></li><li><a href=#kubernetesdocker>Kubernetes/Docker</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main></body></html>

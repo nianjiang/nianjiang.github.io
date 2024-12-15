@@ -1,10 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on Learning Notes</title>
-    <link>https://jnh.gitee.io/docs/linux/</link>
-    <description>Recent content in Linux on Learning Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://jnh.gitee.io/docs/linux/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Learning Notes</title><link>http://localhost:1313/docs/linux/</link><description>Recent content in Linux on Learning Notes</description><generator>Hugo</generator><language>zh</language><atom:link href="http://localhost:1313/docs/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-EmbeededLinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-EmbeededLinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
+ 
+ &lt;a href="https://en.wikipedia.org/wiki/Linux_on_embedded_systems">Embeeded Linux&lt;/a>
+ &lt;a class="anchor" href="#embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">#&lt;/a>
+&lt;/h1>
+&lt;br/>
+&lt;h2 id="android-architecturehttpsdeveloperandroidcomguideplatform">
+ 
+ &lt;a href="https://developer.android.com/guide/platform">Android Architecture&lt;/a>
+ &lt;a class="anchor" href="#android-architecturehttpsdeveloperandroidcomguideplatform">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53510158904/in/dateposted/" title="android">&lt;img src="https://live.staticflickr.com/65535/53510158904_52058b4d36_h.jpg" width="1087" height="1600" alt="android"/>&lt;/a>&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>&lt;/p>
+&lt;br/>
+&lt;h2 id="harmony-architecturehttpsgiteecomopenharmony">
+ 
+ &lt;a href="https://gitee.com/openharmony">Harmony Architecture&lt;/a>
+ &lt;a class="anchor" href="#harmony-architecturehttpsgiteecomopenharmony">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53509821601/in/dateposted/" title="openHarmony-cn">&lt;img src="https://live.staticflickr.com/65535/53509821601_bd3a7d4025_h.jpg" width="1600" height="777" alt="openHarmony-cn"/>&lt;/a>&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>&lt;/p>
+&lt;br/>
+&lt;h2 id="ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">
+ 
+ &lt;a href="https://medium.com/@ganeshrajugalla/ios-ios-introduction-and-structure-fdd7ecf08c4c">IOS Architecture&lt;/a>
+ &lt;a class="anchor" href="#ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p>
+&lt;br/>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>
+ &lt;a href="https://www.yoctoproject.org/">Yocto&lt;/a>, 
+ &lt;a href="https://en.wikipedia.org/wiki/Yocto_Project">Wiki&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://en.wikipedia.org/wiki/Real-time_operating_system">Wiki-Real Time Operation System&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%B1%B3%E6%BE%8E%E6%B9%83OS">Wiki-澎湃OS&lt;/a>，
+ &lt;a href="https://hyperos.mi.com/">Xiaomi HyperOS&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/linux/BPF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/BPF/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
+ 
+ &lt;a href="https://en.wikipedia.org/wiki/Berkeley_Packet_Filter">BPF&lt;/a>
+ &lt;a class="anchor" href="#bpfhttpsenwikipediaorgwikiberkeley_packet_filter">#&lt;/a>
+&lt;/h1>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>
+ &lt;a href="https://docs.kernel.org/bpf/index.html">BPF Documentation&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://ebpf.io/">eBPF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cilium.io/">Cilium&lt;/a>, 
+ &lt;a href="https://github.com/cilium">Github&lt;/a>, 
+ &lt;a href="https://cilium.io/enterprise/#trainings">Trainings&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/iovisor/bcc">BCC - BPF Compiler Collection&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item></channel></rss>

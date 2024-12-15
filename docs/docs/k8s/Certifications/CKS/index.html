@@ -1,0 +1,164 @@
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  CKS (Certified Kubernetes Security Specialist)
+  #
+
+
+  2024真题
+  #
+
+
+  CKS-2024 4月最新题库分享
+
+  CKS教程 2024
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  CKS Goal
+  #
+
+
+  Kubernetes
+
+  CNCF
+
+  English
+
+  Chinese
+
+  CNCF Project Desc
+
+  Github
+
+  https://devopscube.com/cks-exam-guide-tips/
+
+  Exam Objects
+  #
+
+
+ 
+  Cluster Setup - 10%
+ 
+  Cluster Hardening - 15%
+ 
+  System Hardening - 15%
+ 
+  Minimize Microservice Vulnerabilities - 20%
+ 
+  Supply Chain Security - 20%
+ 
+  Monitoring, Logging and Runtime Security - 20%
+
+
+
+  🌈 Cluster Setup - 10%
+  #
+
+
+  Securing a Cluster
+
+
+
+  Use Network security policies to restrict cluster level access
+
+
+
+  Use CIS benchmark to review the security configuration of Kubernetes components  (etcd, kubelet, kubedns, kubeapi)"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/k8s/Certifications/CKS/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="CKS"><meta property="og:description" content="CKS (Certified Kubernetes Security Specialist) # 2024真题 # CKS-2024 4月最新题库分享
+CKS教程 2024
+CKS Goal # Kubernetes
+CNCF
+English
+Chinese
+CNCF Project Desc
+Github
+https://devopscube.com/cks-exam-guide-tips/
+Exam Objects # Cluster Setup - 10% Cluster Hardening - 15% System Hardening - 15% Minimize Microservice Vulnerabilities - 20% Supply Chain Security - 20% Monitoring, Logging and Runtime Security - 20% 🌈 Cluster Setup - 10% # Securing a Cluster
+Use Network security policies to restrict cluster level access
+Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet, kubedns, kubeapi)"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-12-15T15:54:24+08:00"><title>CKS | Learning Notes</title>
+<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz+OQteg=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/zh.search.min.6f7ae1c43906b581166e7ae2eaf8d8dd4ab6e8db5b8d41770b75fabb3e155692.js integrity="sha256-b3rhxDkGtYEWbnri6vjY3Uq26NtbjUF3C3X6uz4VVpI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><input type=checkbox id=section-5c9d349e35dbf7bf43984b14419fb5fc class=toggle>
+<label for=section-5c9d349e35dbf7bf43984b14419fb5fc class="flex justify-between"><a href=/docs/linux/>Linux</a></label><ul><li><a href=/docs/linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/linux/BPF/>eBPF</a></li></ul></li><li><input type=checkbox id=section-3f3cfdecc97f2ea37071f8786b4bf409 class=toggle checked>
+<label for=section-3f3cfdecc97f2ea37071f8786b4bf409 class="flex justify-between"><a href=/docs/k8s/>K8S</a></label><ul><li><a href=/docs/k8s/CRI/>CRI</a></li><li><a href=/docs/k8s/CSI/>CSI</a></li><li><a href=/docs/k8s/CNI/>CNI</a></li><li><a href=/docs/k8s/CNI-eBPF/>eBPF</a></li><li><a href=/docs/k8s/Security/>Security</a></li><li><input type=checkbox id=section-7588803f33f00c59c193df37c1a581e8 class=toggle>
+<label for=section-7588803f33f00c59c193df37c1a581e8 class="flex justify-between"><a href=/docs/k8s/DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/k8s/DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/k8s/DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/k8s/DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/k8s/DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><input type=checkbox id=section-b26e609d75d46bb3b000b9da3b077efb class=toggle checked>
+<label for=section-b26e609d75d46bb3b000b9da3b077efb class="flex justify-between"><a href=/docs/k8s/Certifications/>Certifications</a></label><ul><li><a href=/docs/k8s/Certifications/CKA/>CKA</a></li><li><a href=/docs/k8s/Certifications/CKS/ class=active>CKS</a></li><li><a href=/docs/k8s/Certifications/PCA/>PCA (Prometheus)</a></li><li><a href=/docs/k8s/Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/k8s/Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/k8s/Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/k8s/Certifications/question/>Questions</a></li></ul></li><li><a href=/docs/k8s/Codes/>Codes</a></li><li><a href=/docs/k8s/Install/>Install</a></li><li><a href=/docs/k8s/docker/>Docker</a></li><li><a href=/docs/k8s/operator/>Operator</a></li></ul></li><li><input type=checkbox id=section-771950d51afd75b86f6cbb9d613d2636 class=toggle>
+<label for=section-771950d51afd75b86f6cbb9d613d2636 class="flex justify-between"><a href=/docs/istio/>Istio</a></label><ul><li><a href=/docs/istio/Envoy/>Envoy</a></li><li><a href=/docs/istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/istio/SourceCode/>Source Code</a></li><li><a href=/docs/istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-f9df0e4ced09b96aaea1814dd17677c5 class=toggle>
+<label for=section-f9df0e4ced09b96aaea1814dd17677c5 class="flex justify-between"><a href=/docs/Telemetry/>Observability & Analysis</a></label><ul></ul></li><li><input type=checkbox id=section-d81b7a3c2698e83baa6ff10bc4977840 class=toggle>
+<label for=section-d81b7a3c2698e83baa6ff10bc4977840 class="flex justify-between"><a href=/docs/AI/>AI</a></label><ul><li><a href=/docs/AI/20-map/>Learning Map</a></li><li><a href=/docs/AI/21-note/>Learning Note</a></li></ul></li><li><input type=checkbox id=section-fe309e934eab8e5ba259bbae52e89a51 class=toggle>
+<label for=section-fe309e934eab8e5ba259bbae52e89a51 class="flex justify-between"><a href=/docs/CNCF/>CNCF</a></label><ul></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu>
+</label><strong>CKS</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#cks-certified-kubernetes-security-specialist>CKS (Certified Kubernetes Security Specialist)</a><ul><li><a href=#2024真题>2024真题</a></li><li><a href=#cks-goal>CKS Goal</a></li><li><a href=#exam-objects>Exam Objects</a><ul><li><a href=#-cluster-setup---10>🌈 Cluster Setup - 10%</a></li><li><a href=#-cluster-hardening---15>🌈 Cluster Hardening - 15%</a></li><li><a href=#-system-hardening---15>🌈 System Hardening - 15%</a></li><li><a href=#-minimize-microservice-vulnerabilities---20>🌈 Minimize Microservice Vulnerabilities - 20%</a></li><li><a href=#-supply-chain-security---20>🌈 Supply Chain Security - 20%</a></li><li><a href=#-monitoring-logging-and-runtime-security---20>🌈 Monitoring, Logging and Runtime Security - 20%</a></li></ul></li><li><a href=#mock-exams>Mock Exams</a><ul><li><a href=#reference>Reference</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=cks-certified-kubernetes-security-specialist>CKS (Certified Kubernetes Security Specialist)
+<a class=anchor href=#cks-certified-kubernetes-security-specialist>#</a></h1><h2 id=2024真题>2024真题
+<a class=anchor href=#2024%e7%9c%9f%e9%a2%98>#</a></h2><p><a href=https://zhuanlan.zhihu.com/p/694930399>CKS-2024 4月最新题库分享</a></p><p><a href="https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B+2024&amp;from_source=webtop_search&amp;spm_id_from=333.788&amp;search_source=2">CKS教程 2024</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><h2 id=cks-goal>CKS Goal
+<a class=anchor href=#cks-goal>#</a></h2><p><a href=https://kubernetes.io/docs/concepts/security/>Kubernetes</a></p><p><a href=https://www.cncf.io/training/certification/cks/>CNCF</a></p><p><a href=https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/#>English</a></p><p><a href=https://training.linuxfoundation.cn/certificates/16>Chinese</a></p><p><a href=https://www.cncf.io/projects/kubernetes/>CNCF Project Desc</a></p><p><a href=https://github.com/kubernetes/kubernetes>Github</a></p><p><a href=https://devopscube.com/cks-exam-guide-tips/>https://devopscube.com/cks-exam-guide-tips/</a></p><h2 id=exam-objects>Exam Objects
+<a class=anchor href=#exam-objects>#</a></h2><ul><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#cluster-setup---10>Cluster Setup - 10%</a></li><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#cluster-hardening---15>Cluster Hardening - 15%</a></li><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#system-hardening---15>System Hardening - 15%</a></li><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20>Minimize Microservice Vulnerabilities - 20%</a></li><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#supply-chain-security---20>Supply Chain Security - 20%</a></li><li><input checked disabled type=checkbox>
+<a href=/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20>Monitoring, Logging and Runtime Security - 20%</a></li></ul><hr><h3 id=-cluster-setup---10>🌈 Cluster Setup - 10%
+<a class=anchor href=#-cluster-setup---10>#</a></h3><p><a href=https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/>Securing a Cluster</a></p><ol><li><p><a href=https://kubernetes.io/docs/concepts/services-networking/network-policies/>Use Network security policies to restrict cluster level access</a></p></li><li><p><a href=https://www.cisecurity.org/benchmark/kubernetes/>Use CIS benchmark to review the security configuration of Kubernetes components</a> (etcd, kubelet, kubedns, kubeapi)</p><ul><li><a href=https://github.com/aquasecurity/kube-bench>Kube-bench</a> - Checks whether Kubernetes is deployed securely by running the checks documented ain the CIS Kubernetes Benchmark.</li></ul></li><li><p>Properly set up
+<a href=https://kubernetes.io/docs/concepts/services-networking/ingress/#tls>Ingress objects with security control</a></p></li><li><p><a href=https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/#restricting-cloud-metadata-api-access>Protect node metadata and endpoints</a></p><details><summary>Using Kubernetes network policy to restrict pods access to cloud metadata</summary><ul><li>This example assumes AWS cloud, and metadata IP address is 169.254.169.254 should be blocked while all other external addresses are not.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>NetworkPolicy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>deny-only-cloud-metadata-access</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>podSelector</span>: {}
+</span></span><span style=display:flex><span>  <span style=color:#f92672>policyTypes</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>Egress</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>egress</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>to</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>ipBlock</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>cidr</span>: <span style=color:#ae81ff>0.0.0.0</span><span style=color:#ae81ff>/0</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>except</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>169.254.169.254</span><span style=color:#ae81ff>/32</span>
+</span></span></code></pre></div></details></li><li><p><a href=https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#accessing-the-dashboard-ui>Minimize use of, and access to, GUI elements</a></p></li><li><p><a href=https://github.com/kubernetes/kubernetes/releases>Verify platform binaries before deploying</a></p><details><summary>Kubernetes binaries can be verified by their digest **sha512 hash**</summary><ul><li>Checking the Kubernetes release page for the specific release</li><li>Checking the change log for the
+<a href=https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.19.md#downloads-for-v1191>images and their digests</a></li></ul></details></li></ol><h3 id=-cluster-hardening---15>🌈 Cluster Hardening - 15%
+<a class=anchor href=#-cluster-hardening---15>#</a></h3><ol><li><a href=https://kubernetes.io/docs/reference/access-authn-authz/controlling-access/>Restrict access to Kubernetes API</a></li></ol><ul><li><a href=https://kubernetes.io/docs/reference/access-authn-authz/authentication/#anonymous-requests>Control anonymous requests to Kube-apiserver</a></li><li><a href=https://kubernetes.io/docs/concepts/security/controlling-access/#api-server-ports-and-ips>Non secure access to the kube-apiserver</a></li></ul><ol start=2><li><p><a href=https://kubernetes.io/docs/reference/access-authn-authz/rbac/>Use Role-Based Access Controls to minimize exposure</a></p><ul><li><a href=https://rbac.dev/>Handy site collects together articles, tools and the official documentation all in one place</a></li><li><a href=https://docs.bitnami.com/tutorials/simplify-kubernetes-resource-access-rbac-impersonation/>Simplify Kubernetes Resource Access Control using RBAC Impersonation</a></li></ul></li><li><p>Exercise caution in using service accounts e.g.
+<a href=https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>disable defaults</a>, minimize permissions on newly created ones</p><details><summary>Opt out of automounting API credentials for a service account</summary><h4 id=opt-out-at-service-account-scope>Opt out at service account scope
+<a class=anchor href=#opt-out-at-service-account-scope>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>ServiceAccount</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>build-robot</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>automountServiceAccountToken</span>: <span style=color:#66d9ef>false</span>
+</span></span></code></pre></div><h4 id=opt-out-at-pod-scope>Opt out at pod scope
+<a class=anchor href=#opt-out-at-pod-scope>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>cks-pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>serviceAccountName</span>: <span style=color:#ae81ff>default</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>automountServiceAccountToken</span>: <span style=color:#66d9ef>false</span>
+</span></span></code></pre></div></details></li><li><p><a href=https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/>Update Kubernetes frequently</a></p></li></ol><h3 id=-system-hardening---15>🌈 System Hardening - 15%
+<a class=anchor href=#-system-hardening---15>#</a></h3><ol><li><p>Minimize host OS footprint (reduce attack surface)</p><details><summary>Reduce host attack surface</summary><ul><li><a href=https://kubernetes.io/docs/tutorials/clusters/seccomp/>seccomp which stands for secure computing was originally intended as a means of safely running untrusted compute-bound programs</a></li><li><a href=https://kubernetes.io/docs/tutorials/clusters/apparmor/>AppArmor can be configured for any application to reduce its potential host attack surface and provide greater in-depth defense.</a></li><li><a href=https://kubernetes.io/docs/concepts/security/pod-security-admission/>PSA enforces</a></li><li>Apply host updates</li><li>Install minimal required OS fingerprint</li><li>Identify and address open ports</li><li>Remove unnecessary packages</li><li>Protect access to data with permissions<ul><li><a href=https://kubernetes.io/docs/concepts/policy/pod-security-policy/#volumes-and-file-systems>Restirct allowed hostpaths</a></li></ul></li></ul></details></li><li><p>Using least-privilege identity and access management</p><ul><li><a href=https://kubernetes.io/docs/reference/access-authn-authz/authentication/>Access authentication and authorization</a></li></ul></li><li><p>Minimize external access to the network</p><details><summary>if it means deny external traffic to outside the cluster?!!</summary><ul><li>not tested, however, the thinking is that all pods can talk to all pods in all name spaces but not to the outside of the cluster!!!</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>networking.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>NetworkPolicy</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>deny-external-egress</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>podSelector</span>: {}
+</span></span><span style=display:flex><span>  <span style=color:#f92672>policyTypes</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#ae81ff>Egress</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>egress</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>to</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>namespaceSelector</span>: {}
+</span></span></code></pre></div></details></li><li><p>Appropriately use kernel hardening tools such as AppArmor, seccomp</p><ul><li><a href=https://wiki.apparmor.net/>AppArmor</a>，
+<a href=https://kubernetes.io/docs/tutorials/clusters/apparmor/>Turorial</a></li><li><a href=https://en.wikipedia.org/wiki/Seccomp>Seccomp</a>，
+<a href=https://kubernetes.io/docs/tutorials/clusters/seccomp/>Turorial</a></li></ul></li></ol><h3 id=-minimize-microservice-vulnerabilities---20>🌈 Minimize Microservice Vulnerabilities - 20%
+<a class=anchor href=#-minimize-microservice-vulnerabilities---20>#</a></h3><ol><li>Use appropriate pod security standards<ul><li><a href=https://kubernetes.io/docs/concepts/policy/pod-security-policy/>Pod Security Policies</a></li><li><a href=https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/>Open Policy Agent</a></li><li><a href=https://kubernetes.io/docs/tasks/configure-pod-container/security-context/>Security Contexts</a></li></ul></li><li><a href=https://kubernetes.io/docs/concepts/configuration/secret/>Manage kubernetes secrets</a></li><li>Understand and implement isolation techniques (multi-tenancy, sandbox containers, etc)<ul><li>Use
+<a href=https://kubernetes.io/docs/concepts/containers/runtime-class/>container runtime</a> sandboxes in multi-tenant environments (e.g.
+<a href=https://github.com/kubernetes/enhancements/blob/5dcf841b85f49aa8290529f1957ab8bc33f8b855/keps/sig-node/585-runtime-class/README.md#examples>gvisor, kata containers</a>)</li></ul></li><li>Implement pod to pod encryption using Cilium<ul><li><a href=https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/>Implement pod to pod encryption by use of mTLS</a></li><li><input disabled type=checkbox> check if service mesh is part of the CKS exam</li></ul></li></ol><h3 id=-supply-chain-security---20>🌈 Supply Chain Security - 20%
+<a class=anchor href=#-supply-chain-security---20>#</a></h3><ol><li><p>Minimize base image footprint</p><details><summary>Minimize base Image</summary><ul><li>Use distroless, UBI minimal, Alpine, or relavent to your app nodejs, python but the minimal build.</li><li>Do not include uncessary software not required for container during runtime e.g build tools and utilities, troubleshooting and debug binaries.<ul><li><a href=https://learnk8s.io/blog/smaller-docker-images>Learnk8s: 3 simple tricks for smaller Docker images</a></li><li><a href=https://cloud.google.com/blog/products/gcp/7-best-practices-for-building-containers>GKE 7 best practices for building containers</a></li></ul></li></ul></details></li><li><p>Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories)</p></li><li><p>Secure your supply chain:
+<a href=https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/#why-do-i-need-admission-controllers>whitelist allowed image registries</a>, sign and validate images</p></li></ol><ul><li>Using
+<a href=https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook>ImagePolicyWebhook admission Controller</a></li></ul><ol start=4><li>Preform static analysis of user workloads and container images (e.g. kubesec, kubelinter)</li></ol><details><summary>Old</summary><ul><li><a href=https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#7-statically-analyse-yaml>kubernetes resources</a>, docker files)</li><li><a href=https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/#10-scan-images-and-run-ids>Scan images for known vulnerabilities</a></li><li><a href=https://github.com/aquasecurity/trivy>Aqua security Trivy</a></li><li><a href=https://github.com/anchore/anchore-cli#command-line-examples>Anchore command line scans</a></li></ul></details><h3 id=-monitoring-logging-and-runtime-security---20>🌈 Monitoring, Logging and Runtime Security - 20%
+<a class=anchor href=#-monitoring-logging-and-runtime-security---20>#</a></h3><ol><li><p>Perform behavioural analytics to detect malicious activities</p><ul><li><a href=https://falco.org/docs/>Falco installation guide</a></li><li><a href=https://learn.sysdig.com/falco-101>Sysdig Falco 101</a></li><li><a href=https://github.com/falcosecurity/charts/tree/master/falco>Falco Helm Chart</a></li><li><a href=https://github.com/falcosecurity/charts>Falco Kubernetes helmchart</a></li><li><a href=https://falco.org/blog/detect-cve-2020-8557/>Detect CVE-2020-8557 using Falco</a></li></ul></li><li><p>Detect threats within a physical infrastructure, apps, networks, data, users and workloads</p></li><li><p>Investigate and identify of attach and bad actors within the environment</p><details><summary>Attack Phases</summary><ul><li><a href=https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/>Kubernetes attack martix Microsoft blog</a></li><li><a href=https://sysdig.com/blog/mitre-attck-framework-for-container-runtime-security-with-sysdig-falco/>MITRE attack framwork using Falco</a></li><li><a href=/>Lightboard video: Kubernetes attack matrix - 3 steps to mitigating the MITRE ATT&amp;CK Techniques</a></li><li><a href=https://www.cncf.io/webinars/mitigating-kubernetes-attacks/>CNCF Webinar: Mitigating Kubernetes attacks</a></li></ul></details><ul><li><a href=https://docs.sysdig.com/>Sysdig documentation</a></li><li><a href=https://kubernetes.io/blog/2015/11/monitoring-kubernetes-with-sysdig/>Monitoring Kubernetes with sysdig</a></li><li><a href=https://youtu.be/VEFaGjfjfyc>CNCF Webinar: Getting started with container runtime security using Falco</a></li></ul></li><li><p><a href=https://kubernetes.io/blog/2018/03/principles-of-container-app-design/>Ensure immutability of containers at runtime</a></p></li><li><p><a href=https://kubernetes.io/docs/tasks/debug-application-cluster/audit/>Use k8s Audit Logs to monitor access</a></p></li></ol><h2 id=mock-exams>Mock Exams
+<a class=anchor href=#mock-exams>#</a></h2><p><a href=https://killercoda.com/killer-shell-cks>https://killercoda.com/killer-shell-cks</a></p><p><a href=https://github.com/moabukar/CKS-Exercises-Certified-Kubernetes-Security-Specialist>https://github.com/moabukar/CKS-Exercises-Certified-Kubernetes-Security-Specialist</a></p><p><a href="https://blog.csdn.net/weixin_45651006/article/details/134135587?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170115845816800186569672%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=170115845816800186569672&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-3-134135587-null-null.nonecase&amp;utm_term=%E4%BA%91%E5%8E%9F%E7%94%9F%7Ckubernetes%7C2022%E5%B9%B4%E5%BA%95cks%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90&amp;spm=1018.2226.3001.4450">CKS真题分析-2023年度</a></p><p><a href=https://blog.csdn.net/alwaysbefine/article/details/128689488>云原生|kubernetes|2022年底cks真题解析（1-10）</a></p><p><a href=https://blog.csdn.net/alwaysbefine/article/details/128717226>云原生|kubernetes|2022年底cks真题解析（11-16</a></p><p><a href=https://www.hao.kim/cks/page/2>CKS 题库</a></p><p><a href=https://www.cnblogs.com/huss2016/p/17055905.html>https://www.cnblogs.com/huss2016/p/17055905.html</a></p><p><a href=http://www.dtcms.com/a/696.html>http://www.dtcms.com/a/696.html</a></p><p><a href=/></a></p><p><a href=/></a></p><h3 id=reference>Reference
+<a class=anchor href=#reference>#</a></h3><p><a href=https://www.cncf.io/training/certification/>CNCF Certifications</a></p><p><a href=https://www.cncf.io/training/>CNCF Training & Certification</a></p><p><a href=https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/>Linux Training</a></p><p><a href=https://training.linuxfoundation.cn/>Linux Training (China)</a></p><p><a href=https://github.com/vedmichv/CKS-Certified-Kubernetes-Security-Specialist>https://github.com/vedmichv/CKS-Certified-Kubernetes-Security-Specialist</a></p><p><a href=https://landscape.cncf.io/guide#provisioning--security-compliance>CNCF Landscape for Security</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/f0572976a338e173341b70e4c0cb022e17fe1ce1 title='最后修改者 Nian Jiang | 2024-12-15 15:54:24' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>2024-12-15 15:54:24</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/Certifications/CKS.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#cks-certified-kubernetes-security-specialist>CKS (Certified Kubernetes Security Specialist)</a><ul><li><a href=#2024真题>2024真题</a></li><li><a href=#cks-goal>CKS Goal</a></li><li><a href=#exam-objects>Exam Objects</a><ul><li><a href=#-cluster-setup---10>🌈 Cluster Setup - 10%</a></li><li><a href=#-cluster-hardening---15>🌈 Cluster Hardening - 15%</a></li><li><a href=#-system-hardening---15>🌈 System Hardening - 15%</a></li><li><a href=#-minimize-microservice-vulnerabilities---20>🌈 Minimize Microservice Vulnerabilities - 20%</a></li><li><a href=#-supply-chain-security---20>🌈 Supply Chain Security - 20%</a></li><li><a href=#-monitoring-logging-and-runtime-security---20>🌈 Monitoring, Logging and Runtime Security - 20%</a></li></ul></li><li><a href=#mock-exams>Mock Exams</a><ul><li><a href=#reference>Reference</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>

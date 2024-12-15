@@ -1,299 +1,2077 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Introduction on Learning Notes</title>
-    <link>https://jnh.gitee.io/</link>
-    <description>Recent content in Introduction on Learning Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://jnh.gitee.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>With ToC</title>
-      <link>https://jnh.gitee.io/docs/example/table-of-contents/with-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/example/table-of-contents/with-toc/</guid>
-      <description>Caput vino delphine in tamen vias # Cognita laeva illo fracta # Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
-Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit Natus quaerere # Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
-    </item>
-    
-    <item>
-      <title>Without ToC</title>
-      <link>https://jnh.gitee.io/docs/example/table-of-contents/without-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/example/table-of-contents/without-toc/</guid>
-      <description>At me ipso nepotibus nunc celebratior genus # Tanto oblite # Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://jnh.gitee.io/posts/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/posts/creating-a-new-theme/</guid>
-      <description>Introduction # This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://jnh.gitee.io/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/posts/migrate-from-jekyll/</guid>
-      <description>Move static content to static # Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>CRI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CRI/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/CRI/</guid>
-      <description> CRI # </description>
-    </item>
-    
-    <item>
-      <title>CNI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CNI/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/CNI/</guid>
-      <description> CNI # </description>
-    </item>
-    
-    <item>
-      <title>CSI</title>
-      <link>https://jnh.gitee.io/docs/k8s/CSI/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/CSI/</guid>
-      <description> CSI # </description>
-    </item>
-    
-    <item>
-      <title>Traffic Management</title>
-      <link>https://jnh.gitee.io/docs/istio/TrafficManagement/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/istio/TrafficManagement/</guid>
-      <description>Traffic Management # Goal # Understand how to expose services from the cluster.
-Understand how Istio knows where to route the traffic and how the traffic gets routed.
-Understand how to split traffic based on weight and other request properties.
-Understand how service resilience, failure injection, and circuit breaking features work.
-Understand how to bring external services to the mesh using the ServiceEntry resource.
-Other # Open Tunnel: minikube tunnel abc@local: ~&amp;gt; minikube tunnel ✅ Tunnel successfully started 📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible .</description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://jnh.gitee.io/docs/k8s/Security/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/Security/</guid>
-      <description>Kubernetes Security # https://www.anquanke.com/post/id/287522</description>
-    </item>
-    
-    <item>
-      <title>Source Code</title>
-      <link>https://jnh.gitee.io/docs/istio/SourceCode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/istio/SourceCode/</guid>
-      <description>Source Code # Understanding the Sidecar Injection, Traffic Intercepting &amp;amp; Routing Process in Istio
-Architecture
-Istio Reference Architecture
-Using the Code Base
-istio: pilot-discovery源码调用图
-Istio 知识图谱
-Istio Pilot 源码分析（一）
-！pilot-discovery服务发现和配置中心
-istio之pilot-agent 源码分析
-Istio源码系列
-istio源码分析——pilot-agent如何管理envoy生命周期
-Introduction to Istio access control
-Reference # Github
-JimmySong
-Istio Pilot 源码分析（一）
-SourceGraph
-Istio学习笔记
-架构解析
-Istio中文手册
-Istio Pilot 源码分析（三）
-敖小剑
-5.深入Istio源码：Pilot-agent作用及其源码分析
-小米信息部技术团队为你层层解析 Istio 源码</description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://jnh.gitee.io/docs/k8s/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/docker/</guid>
-      <description>Docker # Install Docker
-Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a+r /etc/apt/keyrings/docker.gpg echo \ &amp;quot;deb [arch=&amp;quot;$(dpkg --print-architecture)&amp;quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &amp;quot;$(. /etc/os-release &amp;amp;&amp;amp; echo &amp;quot;$VERSION_CODENAME&amp;quot;)&amp;quot; stable&amp;quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://jnh.gitee.io/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://jnh.gitee.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo # Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs # Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/example/collapsed/3rd-level/4th-level/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/example/collapsed/3rd-level/4th-level/</guid>
-      <description>4th Level of Menu # Caesorum illa tu sentit micat vestes papyriferi # Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/example/hidden/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/example/hidden/</guid>
-      <description>This page is hidden in menu # Quondam non pater est dignior ille Eurotas # Latent te facies # Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
-Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor Cum honorum Latona # O fallor in sustinui iussorum equidem.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/k8s/operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/k8s/operator/</guid>
-      <description> Operator # </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/buttons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/buttons/</guid>
-      <description> Buttons # Buttons are styled links that can lead to local page or external link.
-Example # {{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}} Get Home Contribute </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/columns/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/columns/</guid>
-      <description>Columns # Columns help organize shorter pieces of content horizontally for readability.
-{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example # Left Content # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/details/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/details/</guid>
-      <description> Details # Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.
-Example # {{&amp;lt; details &amp;#34;Title&amp;#34; [open] &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} {{&amp;lt; details title=&amp;#34;Title&amp;#34; open=true &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} Title Markdown content # Lorem markdownum insigne&amp;hellip; </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/expand/</guid>
-      <description>Expand # Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
-Example # Default # {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} 展开 ↕ Markdown content # Lorem markdownum insigne&amp;hellip; With Custom Label # {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Custom Label ... Markdown content # Lorem markdownum insigne.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/hints/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/hints/</guid>
-      <description>Hints # Hint shortcode can be used as hint/alerts/notification block.
-There are 3 colors to choose: info, warning and danger.
-{{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example # Markdown content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa Markdown content</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/katex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/katex/</guid>
-      <description>KaTeX # KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
-Example # {{&amp;lt;/* katex [display] [class=&amp;#34;text-center&amp;#34;] */&amp;gt;}} f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi {{&amp;lt;/* /katex */&amp;gt;}} \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Display Mode Example # Here is some inline example: \(\pi(x)\) , rendered in the same line. And below is display example, having display: block \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\] Text continues here.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/mermaid/</guid>
-      <description>Mermaid Chart # MermaidJS is library for generating svg charts and diagrams from text.
-Override Mermaid Initialization Config
-To override the initialization config for Mermaid, create a mermaid.json file in your assets folder!
-Example # {{&amp;lt;/* mermaid [class=&amp;#34;text-center&amp;#34;]*/&amp;gt;}} stateDiagram-v2 State1: The state with a note note right of State1 Important information! You can write notes. end note State1 --&amp;gt; State2 note left of State2 : This is the note to the left.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/section/first-page/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/section/first-page/</guid>
-      <description>First page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/section/second-page/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/section/second-page/</guid>
-      <description>Second Page # Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnh.gitee.io/docs/shortcodes/tabs4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jnh.gitee.io/docs/shortcodes/tabs4/</guid>
-      <description>Tabs # Tabs let you organize content by context, for example installation instructions for each supported platform.
-{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example # MacOS MacOS # This is tab MacOS content.
-Lorem markdownum insigne. Olympo signis Delphis!</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on Learning Notes</title><link>http://localhost:1313/</link><description>Recent content in Introduction on Learning Notes</description><generator>Hugo</generator><language>zh</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a New Theme</title><link>http://localhost:1313/posts/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">
+ Introduction
+ &lt;a class="anchor" href="#introduction">#&lt;/a>
+&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>http://localhost:1313/posts/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">
+ Move static content to &lt;code>static&lt;/code>
+ &lt;a class="anchor" href="#move-static-content-to-static">#&lt;/a>
+&lt;/h2>
+&lt;p>Jekyll has a rule that any directory not starting with &lt;code>_&lt;/code> will be copied as-is to the &lt;code>_site&lt;/code> output. Hugo keeps all static content under &lt;code>static&lt;/code>. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pre>
+&lt;p>should become&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ static/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pre>
+&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Learning Map</title><link>http://localhost:1313/docs/AI/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/AI/20-map/</guid><description>&lt;h2 id="maps">
+ Maps:
+ &lt;a class="anchor" href="#maps">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="快速入门ai领域的思维导图深度学习自学入门">
+ 快速入门AI领域的思维导图（深度学习自学入门）
+ &lt;a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8ai%e9%a2%86%e5%9f%9f%e7%9a%84%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e8%87%aa%e5%ad%a6%e5%85%a5%e9%97%a8">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;img src="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp" alt="" />&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/AI/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/AI/21-note/</guid><description>&lt;h2 id="notes">
+ Notes:
+ &lt;a class="anchor" href="#notes">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="aimachine-learning-toolkit-for-kubernetes">
+ AI/Machine Learning Toolkit for Kubernetes
+ &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Toolkit&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://www.cncf.io/projects/kubeflow/">Kubeflow&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://www.kubeflow.org/">website&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://www.kubeflow.org/docs/started/">Doc&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;!--
+| []() | [website]() | [Doc]() | [Github]() | |
+-->
+&lt;h3 id="图片">
+ 图片
+ &lt;a class="anchor" href="#%e5%9b%be%e7%89%87">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://zh.wikipedia.org/wiki/Stable_Diffusion">Stable Diffusion&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://docs.comfy.org/get_started/gettingstarted">ComfyUI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://landscape.cncf.io/?group=cnai&amp;amp;view-mode=card&amp;amp;classify=category&amp;amp;sort-by=name&amp;amp;sort-direction=asc#cnai--automl">CNAI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://jimmysong.io/en/blog/cloud-native-ai-whitepaper/">Cloud Native AI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.youtube.com/playlist?list=PLj6h78yzYM2PWGv34W6w5ssq1b1meRmY7">Cloud Native AI Day Europe 2024&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-EmbeededLinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-EmbeededLinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
+ 
+ &lt;a href="https://en.wikipedia.org/wiki/Linux_on_embedded_systems">Embeeded Linux&lt;/a>
+ &lt;a class="anchor" href="#embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">#&lt;/a>
+&lt;/h1>
+&lt;br/>
+&lt;h2 id="android-architecturehttpsdeveloperandroidcomguideplatform">
+ 
+ &lt;a href="https://developer.android.com/guide/platform">Android Architecture&lt;/a>
+ &lt;a class="anchor" href="#android-architecturehttpsdeveloperandroidcomguideplatform">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53510158904/in/dateposted/" title="android">&lt;img src="https://live.staticflickr.com/65535/53510158904_52058b4d36_h.jpg" width="1087" height="1600" alt="android"/>&lt;/a>&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>&lt;/p>
+&lt;br/>
+&lt;h2 id="harmony-architecturehttpsgiteecomopenharmony">
+ 
+ &lt;a href="https://gitee.com/openharmony">Harmony Architecture&lt;/a>
+ &lt;a class="anchor" href="#harmony-architecturehttpsgiteecomopenharmony">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/200085779@N08/53509821601/in/dateposted/" title="openHarmony-cn">&lt;img src="https://live.staticflickr.com/65535/53509821601_bd3a7d4025_h.jpg" width="1600" height="777" alt="openHarmony-cn"/>&lt;/a>&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>&lt;/p>
+&lt;br/>
+&lt;h2 id="ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">
+ 
+ &lt;a href="https://medium.com/@ganeshrajugalla/ios-ios-introduction-and-structure-fdd7ecf08c4c">IOS Architecture&lt;/a>
+ &lt;a class="anchor" href="#ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p>
+&lt;br/>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>
+ &lt;a href="https://www.yoctoproject.org/">Yocto&lt;/a>, 
+ &lt;a href="https://en.wikipedia.org/wiki/Yocto_Project">Wiki&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://en.wikipedia.org/wiki/Real-time_operating_system">Wiki-Real Time Operation System&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%B1%B3%E6%BE%8E%E6%B9%83OS">Wiki-澎湃OS&lt;/a>，
+ &lt;a href="https://hyperos.mi.com/">Xiaomi HyperOS&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>CKA</title><link>http://localhost:1313/docs/k8s/Certifications/CKA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/CKA/</guid><description>&lt;h1 id="cka-certified-kubernetes-administrator">
+ CKA (Certified Kubernetes Administrator)
+ &lt;a class="anchor" href="#cka-certified-kubernetes-administrator">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="pass-cka-on-202412">
+ Pass CKA on 2024/12
+ &lt;a class="anchor" href="#pass-cka-on-202412">#&lt;/a>
+&lt;/h2>
+&lt;div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e117b668-5030-4e55-9b35-e51ef36ae922" data-share-badge-host="https://www.credly.com">&lt;/div>&lt;script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js">&lt;/script>
+&lt;h2 id="2024真题">
+ 2024真题
+ &lt;a class="anchor" href="#2024%e7%9c%9f%e9%a2%98">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cnblogs.com/yangmeichong/p/17971901">2024 CKA考试&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/weixin_28314575/article/details/140860758">K8S认证 2024年CKA考题汇总（解析+答案）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.bilibili.com/video/BV1Kz421U7i2/?vd_source=8f134d86d2e1e426d0598d5ac4a9a760">【CKA&amp;amp;CKS认证】2024最详细CKA认证考试教程，手把手带你11小时轻松拿下CKA认证（kubernetes/k8s/CKA考试/CKA认证/CKA证书）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.bilibili.com/video/BV1um411f7Ns/?vd_source=8f134d86d2e1e426d0598d5ac4a9a760">不再迷茫！2024年CKA真题全解，专家带你逐一击破考点！&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="articles">
+ Articles
+ &lt;a class="anchor" href="#articles">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cnblogs.com/yangmeichong/p/17971901">https://www.cnblogs.com/yangmeichong/p/17971901&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://juejin.cn/post/7330079146515988519">https://juejin.cn/post/7330079146515988519&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/weixin_53851491/article/details/137040823">https://blog.csdn.net/weixin_53851491/article/details/137040823&lt;/a>&lt;/p>
+&lt;h2 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/">English&lt;/a>,
+
+ &lt;a href="https://training.linuxfoundation.cn/certificates/1">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/kubernetes/">CNCF Project Desc&lt;/a>,
+
+ &lt;a href="https://kubernetes.io/">Kubernetes&lt;/a>,
+
+ &lt;a href="https://github.com/kubernetes/kubernetes">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certified-kubernetes-administrator-cka-program-changes/?utm_campaign=2024%20CKS%20Program%20Changes&amp;amp;utm_medium=email&amp;amp;_hsenc=p2ANqtz-8F8d3ojSY8iMz9pkgsm5WigBytToaFuuOc_-DOjDEoWo5O0JRxs0kEmz1jR2pc2b51WPOlQT3XezlNoLA5Ck4XNdqkyw&amp;amp;_hsmi=323359340&amp;amp;utm_content=323359340&amp;amp;utm_source=hs_email#">CKA-upcoming-2024/12&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/cncf/curriculum">CNCF Curriculum&lt;/a>&lt;/p>
+&lt;h2 id="cka-2023-exam-objectives">
+ CKA 2023 Exam Objectives
+ &lt;a class="anchor" href="#cka-2023-exam-objectives">#&lt;/a>
+&lt;/h2>
+&lt;p>These are the exam objectives you review and understand in order to pass the test.&lt;/p>
+&lt;ul>
+&lt;li>
+ &lt;a href="https://github.com/cncf/curriculum">CNCF Exam Curriculum repository &lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;hr>
+&lt;h3 id="--cluster-architecture-installation-and-configurationhttpsyoutubevs-wxo2qbps-25">
+ 🌈 
+ &lt;a href="https://youtu.be/vS-wXo2qbPs"> Cluster Architecture, Installation, and Configuration&lt;/a> 25%
+ &lt;a class="anchor" href="#--cluster-architecture-installation-and-configurationhttpsyoutubevs-wxo2qbps-25">#&lt;/a>
+&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Manage role based access control&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>
+ &lt;a href="https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b">Lab: RBAC with Kubernetes in Minikube&lt;/a>&lt;/li>
+&lt;li>
+&lt;div class="book-expand">
+ &lt;label>
+ &lt;div class="book-expand-head flex justify-between">
+ &lt;span>RBAC vs ABAC&lt;/span>
+ &lt;span>↕&lt;/span>
+ &lt;/div>
+ &lt;input type="checkbox" class="hidden" />
+ &lt;div class="book-expand-content markdown-inner">
+ &lt;pre>&lt;code> Role-based access control (RBAC), 2 parts: role and roleBinding
+
+ Attribute-based access control (ABAC), only 1 file: ABAC permission file.
+ https://kubernetes.io/docs/reference/access-authn-authz/abac/
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+ &lt;/label>
+&lt;/div>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/">Use kubeadm to install a basic cluster&lt;/a>&lt;/p></description></item><item><title>CRI</title><link>http://localhost:1313/docs/k8s/CRI/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/CRI/</guid><description>&lt;h1 id="cri">
+ CRI
+ &lt;a class="anchor" href="#cri">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/concepts/architecture/cri/">CRI&lt;/a>, 
+ &lt;a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/">Container-Runtimes&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">OCI - Open Container Initiative&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.aquasec.com/cloud-native-academy/container-security/container-runtime-interface/">Container Runtime Interface (CRI): Past, Present, and Future&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/containerd/containerd/blob/main/docs/cri/architecture.md">containerd - Architecture&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/linux/BPF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/BPF/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
+ 
+ &lt;a href="https://en.wikipedia.org/wiki/Berkeley_Packet_Filter">BPF&lt;/a>
+ &lt;a class="anchor" href="#bpfhttpsenwikipediaorgwikiberkeley_packet_filter">#&lt;/a>
+&lt;/h1>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>
+ &lt;a href="https://docs.kernel.org/bpf/index.html">BPF Documentation&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://ebpf.io/">eBPF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cilium.io/">Cilium&lt;/a>, 
+ &lt;a href="https://github.com/cilium">Github&lt;/a>, 
+ &lt;a href="https://cilium.io/enterprise/#trainings">Trainings&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/iovisor/bcc">BCC - BPF Compiler Collection&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Knative</title><link>http://localhost:1313/docs/k8s/DevSecOps/50-Knative/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/50-Knative/</guid><description>&lt;h1 id="knativehttpsknativedevdocs">
+ 
+ &lt;a href="https://knative.dev/docs/">Knative&lt;/a>
+ &lt;a class="anchor" href="#knativehttpsknativedevdocs">#&lt;/a>
+&lt;/h1>
+&lt;p>run minikube tunnel&lt;/p>
+&lt;blockquote>
+&lt;p>minikube tunnel &amp;ndash;profile knative&lt;/p>
+&lt;/blockquote>
+&lt;p>
+ &lt;a href="http://hello.default.127.0.0.1.sslip.io/">http://hello.default.127.0.0.1.sslip.io/&lt;/a>&lt;/p>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://knative.dev/docs/">Docs&lt;/a>, 
+ &lt;a href="https://github.com/knative">Github&lt;/a>, 
+ &lt;a href="https://www.cncf.io/projects/knative/">CNCF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/luanpeng825485697/article/details/106964317/">https://blog.csdn.net/luanpeng825485697/article/details/106964317/&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/u013794243/article/details/128195067">https://blog.csdn.net/u013794243/article/details/128195067&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/knative-extensions/net-kourier">kourier (Knative Ingress)&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://en.wikipedia.org/wiki/Serverless_computing">Serverless Computing&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>CKS</title><link>http://localhost:1313/docs/k8s/Certifications/CKS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/CKS/</guid><description>&lt;h1 id="cks-certified-kubernetes-security-specialist">
+ CKS (Certified Kubernetes Security Specialist)
+ &lt;a class="anchor" href="#cks-certified-kubernetes-security-specialist">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="2024真题">
+ 2024真题
+ &lt;a class="anchor" href="#2024%e7%9c%9f%e9%a2%98">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://zhuanlan.zhihu.com/p/694930399">CKS-2024 4月最新题库分享&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B&amp;#43;2024&amp;amp;from_source=webtop_search&amp;amp;spm_id_from=333.788&amp;amp;search_source=2">CKS教程 2024&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="cks-goal">
+ CKS Goal
+ &lt;a class="anchor" href="#cks-goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/concepts/security/">Kubernetes&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/training/certification/cks/">CNCF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/#">English&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/16">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/kubernetes/">CNCF Project Desc&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/kubernetes/kubernetes">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://devopscube.com/cks-exam-guide-tips/">https://devopscube.com/cks-exam-guide-tips/&lt;/a>&lt;/p>
+&lt;h2 id="exam-objects">
+ Exam Objects
+ &lt;a class="anchor" href="#exam-objects">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#cluster-setup---10">Cluster Setup - 10%&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#cluster-hardening---15">Cluster Hardening - 15%&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#system-hardening---15">System Hardening - 15%&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20">Minimize Microservice Vulnerabilities - 20%&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#supply-chain-security---20">Supply Chain Security - 20%&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 
+ &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20">Monitoring, Logging and Runtime Security - 20%&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-cluster-setup---10">
+ 🌈 Cluster Setup - 10%
+ &lt;a class="anchor" href="#-cluster-setup---10">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/">Securing a Cluster&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/">Use Network security policies to restrict cluster level access&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+ &lt;a href="https://www.cisecurity.org/benchmark/kubernetes/">Use CIS benchmark to review the security configuration of Kubernetes components&lt;/a> (etcd, kubelet, kubedns, kubeapi)&lt;/p></description></item><item><title>Tekton</title><link>http://localhost:1313/docs/k8s/DevSecOps/51-Tekton/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/51-Tekton/</guid><description>&lt;h1 id="tektonhttpstektondev">
+ 
+ &lt;a href="https://tekton.dev/">Tekton&lt;/a>
+ &lt;a class="anchor" href="#tektonhttpstektondev">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://tekton.dev/docs/">Docs&lt;/a>, 
+ &lt;a href="https://github.com/tektoncd">Github&lt;/a>, 
+ &lt;a href="https://www.redhat.com/en/blog/tekton-vs-jenkins-whats-better-cicd-pipelines-red-hat-openshift">Tekton vs. Jenkins&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://medium.com/techbeatly/mastering-tekton-your-guide-to-cloud-native-ci-cd-workflows-bd858c29cca6">Mastering Tekton: Your Guide to Cloud-Native CI/CD Workflows&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.bilibili.com/read/cv25465590/">我在B站学云原生 | 下一代CI/CD工具，Tekton入门部署指南&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://www.uml.org.cn/yunjisuan/202306214.asp">Kubernetes 原生 CI/CD 构建框架 Tekton 详解&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://hub.tekton.dev/">Tekton Hub&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Argo</title><link>http://localhost:1313/docs/k8s/DevSecOps/52-Argo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/52-Argo/</guid><description>&lt;h1 id="argohttpsargoprojgithubio">
+ 
+ &lt;a href="https://argoproj.github.io/">Argo&lt;/a>
+ &lt;a class="anchor" href="#argohttpsargoprojgithubio">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>http://localhost:1313/docs/k8s/Certifications/PCA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/PCA/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
+ PCA (Prometheus Certified Associate)
+ &lt;a class="anchor" href="#pca-prometheus-certified-associate">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="pca-goal">
+ PCA Goal
+ &lt;a class="anchor" href="#pca-goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cncf.io/training/certification/pca/">English&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/23">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/prometheus/">CNCF Project Desc&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://prometheus.io/">Prometheus&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/prometheus/prometheus">Github&lt;/a>&lt;/p>
+&lt;h2 id="exam-objects">
+ Exam Objects
+ &lt;a class="anchor" href="#exam-objects">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="-observability-concepts-18">
+ 📋 Observability Concepts 18%
+ &lt;a class="anchor" href="#-observability-concepts-18">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="nbsp-nbsp-nbsp-metricshttpsprometheusiodocsintroductionoverviewwhat-are-metrics">
+       
+ &lt;a href="https://prometheus.io/docs/introduction/overview/#what-are-metrics">Metrics&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-metricshttpsprometheusiodocsintroductionoverviewwhat-are-metrics">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-understand-logs-and-eventshttpswwwhoneycombiobloghow-are-structured-logs-different-from-events">
+       
+ &lt;a href="https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events">Understand logs and events&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-understand-logs-and-eventshttpswwwhoneycombiobloghow-are-structured-logs-different-from-events">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-tracing-and-spanshttpsdocssplunkcomobservabilityapmapm-spans-tracestraces-spanshtmltextwhat20are20traces20and20spanssingle20operation20within20a20trace">
+       
+ &lt;a href="https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.">Tracing and Spans&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-tracing-and-spanshttpsdocssplunkcomobservabilityapmapm-spans-tracestraces-spanshtmltextwhat20are20traces20and20spanssingle20operation20within20a20trace">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-push-vs-pullhttpsprometheusiodocsintroductionfaqwhy-do-you-pull-rather-than-push">
+       
+ &lt;a href="https://prometheus.io/docs/introduction/faq/#why-do-you-pull-rather-than-push">Push vs Pull&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-push-vs-pullhttpsprometheusiodocsintroductionfaqwhy-do-you-pull-rather-than-push">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-service-discoveryhttpswwwyoutubecomwatchvpzfuwbflxyct339s">
+       
+ &lt;a href="https://www.youtube.com/watch?v=PzFUwBflXYc&amp;amp;t=339s">Service Discovery&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-service-discoveryhttpswwwyoutubecomwatchvpzfuwbflxyct339s">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-basics-of-slos-slas-and-slishttpscloudgooglecomblogproductsdevops-sresre-fundamentals-slis-slas-and-slos">
+       
+ &lt;a href="https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos">Basics of SLOs, SLAs, and SLIs&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-basics-of-slos-slas-and-slishttpscloudgooglecomblogproductsdevops-sresre-fundamentals-slis-slas-and-slos">#&lt;/a>
+&lt;/h4>
+&lt;h3 id="-prometheus-fundamentals-20">
+ 📋 Prometheus Fundamentals 20%
+ &lt;a class="anchor" href="#-prometheus-fundamentals-20">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="nbsp-nbsp-nbsp-system-architecturehttpsprometheusiodocsintroductionoverviewarchitecture">
+       
+ &lt;a href="https://prometheus.io/docs/introduction/overview/#architecture">System Architecture&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-system-architecturehttpsprometheusiodocsintroductionoverviewarchitecture">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-configurationhttpsprometheusiodocsprometheuslatestconfigurationconfiguration-and-scrapinghttpswwworeillycomlibraryviewprometheus-up9781492034131ch01htmlidm45497381503248">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration">Configuration&lt;/a> and 
+ &lt;a href="https://www.oreilly.com/library/view/prometheus-up/9781492034131/ch01.html#idm45497381503248">Scraping&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-configurationhttpsprometheusiodocsprometheuslatestconfigurationconfiguration-and-scrapinghttpswwworeillycomlibraryviewprometheus-up9781492034131ch01htmlidm45497381503248">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-understanding-prometheus-limitationshttpsyoutubem0jgwltc60qt282">
+       
+ &lt;a href="https://youtu.be/m0JgWlTc60Q?t=282">Understanding Prometheus Limitations&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-understanding-prometheus-limitationshttpsyoutubem0jgwltc60qt282">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-data-model-and-labelshttpsprometheusiodocsconceptsdata_model">
+       
+ &lt;a href="https://prometheus.io/docs/concepts/data_model">Data Model and Labels&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-data-model-and-labelshttpsprometheusiodocsconceptsdata_model">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-exposition-formathttpsprometheusiodocsinstrumentingexposition_formatsexposition-formats">
+       
+ &lt;a href="https://prometheus.io/docs/instrumenting/exposition_formats/#exposition-formats">Exposition Format&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-exposition-formathttpsprometheusiodocsinstrumentingexposition_formatsexposition-formats">#&lt;/a>
+&lt;/h4>
+&lt;h3 id="-promql-28">
+ 📋 PromQL 28%
+ &lt;a class="anchor" href="#-promql-28">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="nbsp-nbsp-nbsp-selecting-datahttpspromlabscomblog20200702selecting-data-in-promql">
+       
+ &lt;a href="https://promlabs.com/blog/2020/07/02/selecting-data-in-promql">Selecting Data&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-selecting-datahttpspromlabscomblog20200702selecting-data-in-promql">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-rateshttpsprometheusiodocsprometheuslatestqueryingfunctionsrate-and-derivativeshttpsprometheusiodocsprometheuslatestqueryingfunctionsderiv">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/functions/#rate">Rates&lt;/a> and 
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/functions/#deriv">Derivatives&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-rateshttpsprometheusiodocsprometheuslatestqueryingfunctionsrate-and-derivativeshttpsprometheusiodocsprometheuslatestqueryingfunctionsderiv">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-aggregating-over-timehttpsprometheusiodocsprometheuslatestqueryingfunctionsaggregation_over_time">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/functions/#aggregation_over_time">Aggregating over time&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-aggregating-over-timehttpsprometheusiodocsprometheuslatestqueryingfunctionsaggregation_over_time">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-aggregating-over-dimensionshttpsprometheusiodocsprometheuslatestqueryingoperatorsaggregation-operators">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators">Aggregating over dimensions&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-aggregating-over-dimensionshttpsprometheusiodocsprometheuslatestqueryingoperatorsaggregation-operators">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-binary-operatorshttpsprometheusiodocsprometheuslatestqueryingoperatorsbinary-operators">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/operators/#binary-operators">Binary operators&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-binary-operatorshttpsprometheusiodocsprometheuslatestqueryingoperatorsbinary-operators">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-histogramshttpsprometheusiodocspracticeshistograms">
+       
+ &lt;a href="https://prometheus.io/docs/practices/histograms">Histograms&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-histogramshttpsprometheusiodocspracticeshistograms">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-timestamp-metricshttpsprometheusiodocsprometheuslatestqueryingfunctionstimestamp">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/querying/functions/#timestamp">Timestamp Metrics&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-timestamp-metricshttpsprometheusiodocsprometheuslatestqueryingfunctionstimestamp">#&lt;/a>
+&lt;/h4>
+&lt;h3 id="-instrumentation-and-exporters-16">
+ 📋 Instrumentation and Exporters 16%
+ &lt;a class="anchor" href="#-instrumentation-and-exporters-16">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="nbsp-nbsp-nbsp-client-librarieshttpsprometheusiodocsinstrumentingclientlibsclient-libraries">
+       
+ &lt;a href="https://prometheus.io/docs/instrumenting/clientlibs/#client-libraries">Client Libraries&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-client-librarieshttpsprometheusiodocsinstrumentingclientlibsclient-libraries">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-instrumentationhttpsprometheusiodocspracticesinstrumentation">
+       
+ &lt;a href="https://prometheus.io/docs/practices/instrumentation">Instrumentation&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-instrumentationhttpsprometheusiodocspracticesinstrumentation">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-exportershttpsprometheusiodocsinstrumentingexporters">
+       
+ &lt;a href="https://prometheus.io/docs/instrumenting/exporters">Exporters&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-exportershttpsprometheusiodocsinstrumentingexporters">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-structuring-and-naming-metricshttpsprometheusiodocspracticesnamingmetric-names">
+       
+ &lt;a href="https://prometheus.io/docs/practices/naming/#metric-names">Structuring and naming metrics&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-structuring-and-naming-metricshttpsprometheusiodocspracticesnamingmetric-names">#&lt;/a>
+&lt;/h4>
+&lt;h3 id="-alerting--dashboarding-18">
+ 📋 Alerting &amp;amp; Dashboarding 18%
+ &lt;a class="anchor" href="#-alerting--dashboarding-18">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="nbsp-nbsp-nbsp-dashboarding-basicshttpswwworeillycomlibraryviewprometheus-up9781492034131ch06htmlgrafana_chapter">
+       
+ &lt;a href="https://www.oreilly.com/library/view/prometheus-up/9781492034131/ch06.html#grafana_chapter">Dashboarding basics&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-dashboarding-basicshttpswwworeillycomlibraryviewprometheus-up9781492034131ch06htmlgrafana_chapter">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-configuring-alerting-ruleshttpsprometheusiodocsprometheuslatestconfigurationalerting_rulestextalerting20rules20are20configured20insame20way20as20recording20rulestextthe20optional20for20clause20causesas20firing20for20this20element">
+       
+ &lt;a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/#:~:text=Alerting%20rules%20are%20configured%20in,same%20way%20as%20recording%20rules.&amp;amp;text=The%20optional%20for%20clause%20causes,as%20firing%20for%20this%20element.">Configuring Alerting rules&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-configuring-alerting-ruleshttpsprometheusiodocsprometheuslatestconfigurationalerting_rulestextalerting20rules20are20configured20insame20way20as20recording20rulestextthe20optional20for20clause20causesas20firing20for20this20element">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-understand-and-use-alertmanagerhttpsprometheusiodocsalertinglatestalertmanageralertmanager">
+       
+ &lt;a href="https://prometheus.io/docs/alerting/latest/alertmanager/#alertmanager">Understand and Use Alertmanager&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-understand-and-use-alertmanagerhttpsprometheusiodocsalertinglatestalertmanageralertmanager">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="nbsp-nbsp-nbsp-alerting-basics-when-what-and-whyhttpsprometheusiodocspracticesalertingalerting">
+       
+ &lt;a href="https://prometheus.io/docs/practices/alerting/#alerting">Alerting basics (when, what, and why)&lt;/a>
+ &lt;a class="anchor" href="#nbsp-nbsp-nbsp-alerting-basics-when-what-and-whyhttpsprometheusiodocspracticesalertingalerting">#&lt;/a>
+&lt;/h4>
+&lt;h2 id="mock-exams">
+ Mock Exams
+ &lt;a class="anchor" href="#mock-exams">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef">https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef&lt;/a>&lt;/p></description></item><item><title>ICA (Istio)</title><link>http://localhost:1313/docs/k8s/Certifications/ICA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/ICA/</guid><description>&lt;h1 id="ica-istio-certified-associate">
+ ICA (Istio Certified Associate)
+ &lt;a class="anchor" href="#ica-istio-certified-associate">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certification/istio-certified-associate-ica/">English&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/33">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/istio/">CNCF Project Desc&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://istio.io/">Istio&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/istio/istio">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://landscape.cncf.io/guide#orchestration-management--service-mesh">CNCF-ServiceMesh&lt;/a>&lt;/p>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://learncloudnative.com/blog/2023-10-10-meshweek">https://learncloudnative.com/blog/2023-10-10-meshweek&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/solo-io/mesh-week">solo-io&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio">LFS144x&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="exam-objects">
+ Exam Objects
+ &lt;a class="anchor" href="#exam-objects">#&lt;/a>
+&lt;/h2>
+&lt;p>ICA认证考试包括这些一般领域及其在考试中的权重：&lt;/p>
+&lt;p>● 安装、升级和配置：7%&lt;/p>
+&lt;p>● 流量管理：40%&lt;/p>
+&lt;p>● 弹性和故障注入：20%&lt;/p>
+&lt;p>● 保护工作负载：20%&lt;/p>
+&lt;p>● 高级场景：13%&lt;/p>
+&lt;hr>
+&lt;p>安装、升级和配置：7%&lt;/p>
+&lt;p>● 使用IstioCLI安装基本集群&lt;/p>
+&lt;p>● 使用IstioOperatorAPI定制Istio安装&lt;/p>
+&lt;p>● 使用覆盖来管理Istio组件设置&lt;/p>
+&lt;p>流量管理：40%&lt;/p>
+&lt;p>● 控制服务网格内的网络流量&lt;/p>
+&lt;p>● 配置边车注入&lt;/p>
+&lt;p>● 使用Gateway资源配置入口和出口流量&lt;/p>
+&lt;p>● 了解如何使用ServiceEntry资源向内部服务注册中心添加条目&lt;/p>
+&lt;p>● 使用DestinationRule定义流量策略&lt;/p>
+&lt;p>● 配置流量镜像功能&lt;/p>
+&lt;p>弹性和故障注入：20%&lt;/p>
+&lt;p>● 配置断路器(带或不带离群值检测)&lt;/p>
+&lt;p>● 使用弹性特性&lt;/p>
+&lt;p>● 创建故障注入&lt;/p>
+&lt;p>固定工作负载：20%&lt;/p>
+&lt;p>● 了解Istio安全特性&lt;/p>
+&lt;p>● 在mesh中为HTTP/TCP流量建立Istio授权&lt;/p>
+&lt;p>● 在网格、命名空间和工作负载级别配置相互TLS&lt;/p>
+&lt;p>高级场景：13%&lt;/p>
+&lt;p>● 了解如何将非kubernetes工作负载装载到网格&lt;/p>
+&lt;p>● 排除配置问题&lt;/p>
+&lt;h2 id="mock-exams">
+ Mock Exams
+ &lt;a class="anchor" href="#mock-exams">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cncf.io/training/certification/">CNCF Certifications&lt;/a>&lt;/p></description></item><item><title>CAPA (Argo)</title><link>http://localhost:1313/docs/k8s/Certifications/CAPA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/CAPA/</guid><description>&lt;h1 id="capa-certified-argo-project-associate">
+ CAPA (Certified Argo Project Associate)
+ &lt;a class="anchor" href="#capa-certified-argo-project-associate">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certification/certified-argo-project-associate-capa/">English&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/36">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/argo/">CNCF Project Desc&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://argoproj.github.io/">Argo&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/argoproj">Github&lt;/a>&lt;/p>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/akuity/awesome-argo">awesome-argo&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="exam-objects-english">
+ Exam Objects (English)
+ &lt;a class="anchor" href="#exam-objects-english">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Argo Workflows: 36%&lt;/li>
+&lt;li>Argo CD: 34%&lt;/li>
+&lt;li>Argo Rollouts: 18%&lt;/li>
+&lt;li>Argo Events: 12%&lt;/li>
+&lt;/ul>
+&lt;h2 id="exam-objects">
+ Exam Objects
+ &lt;a class="anchor" href="#exam-objects">#&lt;/a>
+&lt;/h2>
+&lt;p>CAPA考试包括这些一般领域及其在考试中的权重：&lt;/p>
+&lt;p>● Argo工作流程： 36%&lt;/p>
+&lt;p>● Argo CD：34%&lt;/p>
+&lt;p>● Argo Rollouts：18%&lt;/p>
+&lt;p>● Argo事件: 12%&lt;/p>
+&lt;hr>
+&lt;p>详细内容：&lt;/p>
+&lt;p>Argo工作流程： 36%&lt;/p>
+&lt;p>● 了解Argo工作流程基础&lt;/p>
+&lt;p>● 生成和使用工件&lt;/p>
+&lt;p>● 了解Argo工作流模板&lt;/p>
+&lt;p>● 理解Argo工作流规范&lt;/p>
+&lt;p>● 使用DAG(有向无环图)&lt;/p>
+&lt;p>● 使用Argo工作流运行数据处理作业&lt;/p>
+&lt;p>Argo CD：34%&lt;/p>
+&lt;p>● 了解Argo CD基础&lt;/p></description></item><item><title>CCA (Cilium)</title><link>http://localhost:1313/docs/k8s/Certifications/CCA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/CCA/</guid><description>&lt;h1 id="ccacilium-certified-associate">
+ CCA（Cilium Certified Associate）
+ &lt;a class="anchor" href="#ccacilium-certified-associate">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.org/certification/cilium-certified-associate-cca/">English&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/35">Chinese&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/cilium/">CNCF Project Desc&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cilium.io/">Cilium&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/cilium/cilium">Github&lt;/a>&lt;/p>
+&lt;h2 id="first-read">
+ First Read
+ &lt;a class="anchor" href="#first-read">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.youtube.com/watch?v=_eHt_LipuN8">CCA&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cilium.io/get-started/">Cilium - Get Started&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://isovalent.com/blog/post/cilium-certified-associate-cca/">All About The New CNCF Cilium Certified Associate (CCA) Certification!&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="exam-objects">
+ Exam Objects
+ &lt;a class="anchor" href="#exam-objects">#&lt;/a>
+&lt;/h2>
+&lt;p>CCA考试包括这些一般领域及其在考试中的权重：&lt;/p>
+&lt;p>● 架构： 20%&lt;/p>
+&lt;p>● 网络政策：18%&lt;/p>
+&lt;p>● 服务网格：16%&lt;/p>
+&lt;p>● 网络可观测性：10%&lt;/p>
+&lt;p>● 安装与配置&lt;/p>
+&lt;p>● 集群网&lt;/p>
+&lt;p>● eBPF&lt;/p>
+&lt;p>● BGP与外部组网&lt;/p>
+&lt;hr>
+&lt;p>架构：20%&lt;/p>
+&lt;p>● 了解Cilium在Kubernetes环境中的作用&lt;/p>
+&lt;p>● Cilium结构&lt;/p>
+&lt;p>● IP地址管理(IPAM)与Cilium&lt;/p>
+&lt;p>● Cilium成分的作用&lt;/p>
+&lt;p>● Datapath模型&lt;/p>
+&lt;p>网络政策：18%&lt;/p>
+&lt;p>● 解释Cilium网络政策和意图&lt;/p>
+&lt;p>● 了解Cilium基于身份的网络安全模型&lt;/p>
+&lt;p>● 策略实施模式&lt;/p>
+&lt;p>● 策略规则结构&lt;/p>
+&lt;p>● Kubernetes网络策略与Cilium网络策略&lt;/p></description></item><item><title>CSI</title><link>http://localhost:1313/docs/k8s/CSI/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/CSI/</guid><description>&lt;h1 id="csi">
+ CSI
+ &lt;a class="anchor" href="#csi">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="need-read-first">
+ Need Read First
+ &lt;a class="anchor" href="#need-read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://ceph.io/en/users/getting-started/">https://ceph.io/en/users/getting-started/&lt;/a>&lt;/p>
+&lt;h2 id="csi-drivershttpskubernetes-csigithubiodocsdrivershtml">
+ 
+ &lt;a href="https://kubernetes-csi.github.io/docs/drivers.html">CSI Drivers&lt;/a>
+ &lt;a class="anchor" href="#csi-drivershttpskubernetes-csigithubiodocsdrivershtml">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Name&lt;/th>
+ &lt;th>CSI Driver Name&lt;/th>
+ &lt;th>Compatible with CSI Version(s)&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Persistence (Beyond Pod Lifetime)&lt;/th>
+ &lt;th>Supported Access Modes&lt;/th>
+ &lt;th>Dynamic Provisioning&lt;/th>
+ &lt;th>Other Features&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://github.com/ceph/ceph-csi">CephFS&lt;/a>&lt;/td>
+ &lt;td>&lt;code>cephfs.csi.ceph.com&lt;/code>&lt;/td>
+ &lt;td>v0.3, &amp;gt;=v1.0.0&lt;/td>
+ &lt;td>A Container Storage Interface (CSI) Driver for CephFS&lt;/td>
+ &lt;td>Persistent&lt;/td>
+ &lt;td>Read/Write Multiple Pods&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Expansion, Snapshot, Cloning&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://github.com/ceph/ceph-csi">Ceph RBD&lt;/a>&lt;/td>
+ &lt;td>&lt;code>rbd.csi.ceph.com&lt;/code>&lt;/td>
+ &lt;td>v0.3, &amp;gt;=v1.0.0&lt;/td>
+ &lt;td>A Container Storage Interface (CSI) Driver for Ceph RBD&lt;/td>
+ &lt;td>Persistent&lt;/td>
+ &lt;td>Read/Write Single Pod&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Raw Block, Snapshot, Expansion, Topology, Cloning,In-tree plugin migration&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, 
+ &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>Envoy</title><link>http://localhost:1313/docs/istio/Envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/Envoy/</guid><description>&lt;h2 id="questions">
+ Questions:
+ &lt;a class="anchor" href="#questions">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://www.envoyproxy.io/docs/envoy/latest/">Docs&lt;/a>, 
+ &lt;a href="https://github.com/envoyproxy/envoy">Envoy&lt;/a>, 
+ &lt;a href="https://gitee.com/mirrors/Envoy">Gitee Mirror&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration">xDS&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://academy.tetrate.io/courses/envoy-fundamentals">Envoy fundamentals course&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://academy.tetrate.io/courses/envoy-fundamentals-zh">Envoy fundamentals course - CN&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://jimmysong.io/blog/understanding-iptables/">理解 Iptables&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Questions</title><link>http://localhost:1313/docs/k8s/Certifications/question/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Certifications/question/</guid><description>&lt;h1 id="kubenests-questions">
+ Kubenests Questions
+ &lt;a class="anchor" href="#kubenests-questions">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="heading">
+ 
+ &lt;a class="anchor" href="#heading">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/u014481728/article/details/133421594">2023年CKA考题汇总&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/weixin_45310323/article/details/132650026">https://blog.csdn.net/weixin_45310323/article/details/132650026&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.xjx100.cn/news/251445.html?action=onClick">https://www.xjx100.cn/news/251445.html?action=onClick&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://zhuanlan.zhihu.com/p/564737349">互联网最全cka真题解析-2022.9.9&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/0voice/k8s_awesome_document#91-%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98">😇91 道面试题&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/krzko/awesome-cka#-practice-test">cka Practice Test&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/lady_killer9/article/details/126559782">k8s学习-CKA考试必过宝典&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://kuboard.cn/t/cka/daily.html">CKA考试备战&amp;ndash;每日一题&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/dgkanatsios/CKAD-exercises">CKAD-exercises&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://gist.github.com/Appletone/fe95252d03378ce2d0c6cc200e4eadad">cka Exercises&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/yuyicai/cka-ckad-exam-experience">CKA、CKAD考试经验&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>http://localhost:1313/docs/istio/TrafficManagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/TrafficManagement/</guid><description>&lt;h1 id="traffic-management">
+ Traffic Management
+ &lt;a class="anchor" href="#traffic-management">#&lt;/a>
+&lt;/h1>
+&lt;h3 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Understand how to expose services from the cluster.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how Istio knows where to route the traffic and how the traffic gets routed.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how to split traffic based on weight and other request properties.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how service resilience, failure injection, and circuit breaking features work.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how to bring external services to the mesh using the ServiceEntry resource.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="other">
+ Other
+ &lt;a class="anchor" href="#other">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Open Tunnel: &lt;em>&lt;strong>minikube tunnel&lt;/strong>&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>abc@local: ~&amp;gt; minikube tunnel
+✅ Tunnel successfully started
+
+📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+❗ The service/ingress istio-ingressgateway requires privileged ports to be exposed: [80 443]
+🔑 sudo permission will be asked for it.
+🏃 Starting tunnel for service istio-ingressgateway.
+Password:
+&lt;/code>&lt;/pre>&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>http://localhost:1313/docs/k8s/CNI/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/CNI/</guid><description>&lt;h1 id="cni">
+ CNI
+ &lt;a class="anchor" href="#cni">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cni.dev/">CNI&lt;/a>, 
+ &lt;a href="https://github.com/containernetworking/cni">CNI-Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/kubernetes/community/tree/master/sig-network">sig-network&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/k8s/CNI-eBPF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/CNI-eBPF/</guid><description>&lt;h1 id="ebpf--cilium">
+ eBPF &amp;amp; Cilium
+ &lt;a class="anchor" href="#ebpf--cilium">#&lt;/a>
+&lt;/h1>
+&lt;p>
+ &lt;a href="https://ebpf.io/">eBPF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cilium.io/">Cilium&lt;/a>, 
+ &lt;a href="https://github.com/cilium">Github&lt;/a>, 
+ &lt;a href="https://cilium.io/enterprise/#trainings">Trainings&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Kubeflow</title><link>http://localhost:1313/docs/k8s/DevSecOps/80-Kubeflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/80-Kubeflow/</guid><description>&lt;h1 id="kubeflowhttpswwwkubefloworg">
+ 
+ &lt;a href="https://www.kubeflow.org/">Kubeflow&lt;/a>
+ &lt;a class="anchor" href="#kubeflowhttpswwwkubefloworg">#&lt;/a>
+&lt;/h1>
+&lt;blockquote>
+&lt;p>Machine Learning Toolkit for Kubernetes.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/kubeflow/">CNCF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.kubeflow.org/">Kubeflow&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>http://localhost:1313/docs/k8s/Security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Security/</guid><description>&lt;h1 id="kubernetes-security">
+ Kubernetes Security
+ &lt;a class="anchor" href="#kubernetes-security">#&lt;/a>
+&lt;/h1>
+&lt;p>
+ &lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>http://localhost:1313/docs/istio/SourceCode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/SourceCode/</guid><description>&lt;h2 id="questions">
+ Questions:
+ &lt;a class="anchor" href="#questions">#&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>Istio Agent (pilit-agent)
+&lt;details >&lt;summary>&lt;/summary>
+ &lt;div class="markdown-inner">
+ &lt;p>
+ &lt;img src="https://courses.edx.org/assets/courseware/v1/21b8fe1c5f0ab462a08100e3f61d1ba0/asset-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@asset&amp;#43;block/ch5-cert-creation.png" alt="" />&lt;/p>
+&lt;p>
+ &lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@ce78a864b2b041d69231dfbc493003e8/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@a0eafac8e5bf4d21877a008135adea4f">Reference&lt;/a>&lt;/p>
+
+ &lt;/div>
+&lt;/details>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="learning">
+ Learning
+ &lt;a class="anchor" href="#learning">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/cloudnativebooks/istio-definitive-guide">Istio-权威指南-Github&lt;/a>&lt;/p>
+&lt;h2 id="issues">
+ Issues:
+ &lt;a class="anchor" href="#issues">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/istio/istio/issues?q=is%3Aopen&amp;#43;is%3Aissue&amp;#43;label%3A%22community%2Fhelp&amp;#43;wanted%22">Open Issues&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://istio.io/latest/docs/">Docs&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/istio">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.youtube.com/@Istio">Youtube&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://istio.slack.com">Slack&lt;/a>&lt;/p>
+&lt;h2 id="source-code">
+ Source Code
+ &lt;a class="anchor" href="#source-code">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://jimmysong.io/en/blog/sidecar-injection-iptables-and-traffic-routing/">Understanding the Sidecar Injection, Traffic Intercepting &amp;amp; Routing Process in Istio&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://istio.io/latest/docs/ops/deployment/architecture/">Architecture&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://tanzu.vmware.com/developer/guides/service-routing-istio-refarch/">Istio Reference Architecture&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/istio/istio/wiki/Using-the-Code-Base">Using the Code Base&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.processon.com/view/606d2167637689306d532b1f">istio: pilot-discovery源码调用图&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.zhaohuabing.com/post/2020-04-02-istio-mindmap/">Istio 知识图谱&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cloudnative.to/blog/istio-pilot/">Istio Pilot 源码分析（一）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/jukylin/blog/blob/master/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E2%80%94%E2%80%94pilot-discovery%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83.md">！pilot-discovery服务发现和配置中心&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.haohtml.com/archives/32563">istio之pilot-agent 源码分析&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.cn18k.com/2019/02/08/istio-source-pilot/">Istio源码系列&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://note.wcoder.com/golang/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E2%80%94%E2%80%94pilot-agent%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86envoy%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md">istio源码分析——pilot-agent如何管理envoy生命周期&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://banzaicloud.com/blog/istio-authorization-policies/">Introduction to Istio access control&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://github.com/istio/istio">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://jimmysong.io/kubernetes-handbook/usecases/istio.html">JimmySong&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://zhuanlan.zhihu.com/p/234428285">Istio Pilot 源码分析（一）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://sourcegraph.com/github.com/istio/istio">SourceGraph&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://skyao.io/learning-istio/introduction/architecture.html">Istio学习笔记&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://www.zhaowenyu.com/istio-doc/concepts/architecture-overview.html">架构解析&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://doc.cncf.vip/istio-handbook/gai-nian-yuan-li/service-mesh-architectures">Istio中文手册&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://haidong.dev/Pilot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%EF%BC%88%E4%B8%89%EF%BC%89/">Istio Pilot 源码分析（三）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://skyao.io/post/201804-istio-mixer-cache-concepts/">敖小剑&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://cloud.tencent.com/developer/column/80143">5.深入Istio源码：Pilot-agent作用及其源码分析&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.zhihu.com/column/sevenNt-istio">小米信息部技术团队为你层层解析 Istio 源码&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Training</title><link>http://localhost:1313/docs/istio/Train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/Train/</guid><description>&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://training.linuxfoundation.cn/certificates/23">Prometheus Certified Associate - PCA&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://www.cncf.io/blog/2022/12/05/no-cost-istio-training-from-fundamentals-to-ambient-to-production-readiness/">Couses&lt;/a>, 
+ &lt;a href="https://academy.solo.io/learn/mycourses">academy.solo.io&lt;/a>， 
+ &lt;a href="https://www.youtube.com/@soloio_inc/playlists">Youtube&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://kodekloud.com/lessons/labs-2/">KodeKloud&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.classcentral.com/subject/istio?lang=english">Class Central&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://ke.qq.com/course/5962510?quicklink=1#term_id=106185423">Istio认证课程-CIAT&lt;/a>， 
+ &lt;a href="https://k.jb51.cc/0324433.html">Istio认证课程-CIAT&lt;/a>，
+ &lt;a href="https://www.rhce.cc/istio">老段工作室&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://edu.csdn.net/course/detail/35483">istio入门到精通【400节大课】&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://ke.qq.com/course/4874263?quicklink=1#term_id=105045225">全功能云原生平台实战系列之Istio、Knative、Tekton/ArgoCD&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://edu.51cto.com/course/21430.html">Istio 服务网格入门实战【新版本】&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.kubernetes.org.cn/service-mesh-peixun">Service Mesh（Istio）实战培训&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.youtube.com/watch?v=YDgkRaSv4Z8&amp;amp;t=20s&amp;amp;ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">Service Mesh Istio 核心概念解读&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://jimmysong.io/notice/certified-istio-administrator/">Istio 认证管理员考试&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://edu.huaweicloud.com/courses">华为云课堂&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://edu.aliyun.com/course/316178">KubeVela 对接 Istio实现应用灰度发布实践&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>http://localhost:1313/docs/k8s/Codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Codes/</guid><description>&lt;h2 id="codes-structure">
+ Codes Structure:
+ &lt;a class="anchor" href="#codes-structure">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Command Name for k8s components&lt;/th>
+ &lt;th>Cobra Client&lt;/th>
+ &lt;th>Real Code&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>kube-apiserver&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/apiserver.go">cmd/kube-apiserver/apiserver.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/app/server.go">cmd/kube-apiserver/app/server.go&lt;/a>&lt;/td>
+ &lt;td>kubeAPIServer, APIExtensionsServer, AggregatorServer&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>kube-controller-manager&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-controller-manager/controller-manager.go">cmd/kube-controller-manager/controller-manager.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>kube-scheduler&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-scheduler/scheduler.go">cmd/kube-scheduler/scheduler.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go">pkg/scheduler/scheduler.go&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Etcd&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Cloud Controller Manager&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/cloud-controller-manager/main.go">cmd/cloud-controller-manager/main.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>kubelet&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubelet/kubelet.go">cmd/kubelet/kubelet.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/kubelet.go">pkg/kubelet/kubelet.go&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>kube-proxy&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-proxy/proxy.go">cmd/kube-proxy/proxy.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/service.go">pkg/proxy/service.go&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>kubectl&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubectl/kubectl.go">cmd/kubectl/kubectl.go&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="commands">
+ Commands
+ &lt;a class="anchor" href="#commands">#&lt;/a>
+&lt;/h2>
+
+
+
+
+&lt;div class="book-tabs">&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-0" checked="checked" />
+ &lt;label for="tabs-Commands-0">kube-apiserver &lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">kube-apiserver &lt;br/>
+&amp;ndash;advertise-address=172.20.0.2 &lt;br/>
+&amp;ndash;allow-privileged=true &lt;br/>
+&amp;ndash;authorization-mode=Node,RBAC &lt;br/>
+&amp;ndash;client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
+&amp;ndash;enable-admission-plugins=NodeRestriction &lt;br/>
+&amp;ndash;enable-bootstrap-token-auth=true &lt;br/>
+&amp;ndash;etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt &amp;ndash;etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt &lt;br/>
+&amp;ndash;etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key &amp;ndash;etcd-servers=https://127.0.0.1:2379 &lt;br/>
+&amp;ndash;kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt &lt;br/>
+&amp;ndash;kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key &lt;br/>
+&amp;ndash;kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname &lt;br/>
+&amp;ndash;proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt &amp;ndash;proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key &lt;br/>
+&amp;ndash;requestheader-allowed-names=front-proxy-client &lt;br/>
+&amp;ndash;requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/>
+&amp;ndash;requestheader-extra-headers-prefix=X-Remote-Extra- &lt;br/>
+&amp;ndash;requestheader-group-headers=X-Remote-Group &lt;br/>
+&amp;ndash;requestheader-username-headers=X-Remote-User &lt;br/>
+&amp;ndash;runtime-config= &lt;br/>
+&amp;ndash;secure-port=6443 &lt;br/>
+&amp;ndash;service-account-issuer=https://kubernetes.default.svc.cluster.local &lt;br/>
+&amp;ndash;service-account-key-file=/etc/kubernetes/pki/sa.pub &amp;ndash;service-account-signing-key-file=/etc/kubernetes/pki/sa.key &lt;br/>
+&amp;ndash;service-cluster-ip-range=10.96.0.0/16 &lt;br/>
+&amp;ndash;tls-cert-file=/etc/kubernetes/pki/apiserver.crt &amp;ndash;tls-private-key-file=/etc/kubernetes/pki/apiserver.key &lt;br/>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-1" />
+ &lt;label for="tabs-Commands-1">kube-controller-manager &lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">kube-controller-manager &lt;br/>
+&amp;ndash;allocate-node-cidrs=true &lt;br/>
+&amp;ndash;authentication-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
+&amp;ndash;authorization-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
+&amp;ndash;bind-address=127.0.0.1 &lt;br/>
+&amp;ndash;client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
+&amp;ndash;cluster-cidr=10.244.0.0/16 &lt;br/>
+&amp;ndash;cluster-name=kind &lt;br/>
+&amp;ndash;cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt &amp;ndash;cluster-signing-key-file=/etc/kubernetes/pki/ca.key &lt;br/>
+&amp;ndash;controllers=*,bootstrapsigner,tokencleaner &lt;br/>
+&amp;ndash;enable-hostpath-provisioner=true &lt;br/>
+&amp;ndash;kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
+&amp;ndash;leader-elect=true &lt;br/>
+&amp;ndash;requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/>
+&amp;ndash;root-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
+&amp;ndash;service-account-private-key-file=/etc/kubernetes/pki/sa.key &lt;br/>
+&amp;ndash;service-cluster-ip-range=10.96.0.0/16 &lt;br/>
+&amp;ndash;use-service-account-credentials=true &lt;br/>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-2" />
+ &lt;label for="tabs-Commands-2">kube-scheduler&lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">kube-scheduler &lt;br/>
+&amp;ndash;authentication-kubeconfig=/etc/kubernetes/scheduler.conf &amp;ndash;authorization-kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/>
+&amp;ndash;bind-address=127.0.0.1 &lt;br/>
+&amp;ndash;kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/>
+&amp;ndash;leader-elect=true &lt;br/>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-3" />
+ &lt;label for="tabs-Commands-3">etcd&lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">etcd &lt;br/>
+&amp;ndash;advertise-client-urls=https://172.20.0.2:2379 &lt;br/>
+&amp;ndash;cert-file=/etc/kubernetes/pki/etcd/server.crt &lt;br/>
+&amp;ndash;client-cert-auth=true &lt;br/>
+&amp;ndash;data-dir=/var/lib/etcd &lt;br/>
+&amp;ndash;experimental-initial-corrupt-check &lt;br/>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-4" />
+ &lt;label for="tabs-Commands-4">kubelet&lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">/usr/bin/kubelet &lt;br/>
+&amp;ndash;bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf &lt;br/>
+&amp;ndash;kubeconfig=/etc/kubernetes/kubelet.conf &lt;br/>
+&amp;ndash;config=/var/lib/kubelet/config.yaml &lt;br/>
+&amp;ndash;container-runtime-endpoin &lt;br/>&lt;/div>&lt;input type="radio" class="toggle" name="tabs-Commands" id="tabs-Commands-5" />
+ &lt;label for="tabs-Commands-5">kube-proxy&lt;/label>
+ &lt;div class="book-tabs-content markdown-inner">/usr/local/bin/kube-proxy &lt;br/>
+&amp;ndash;config=/var/lib/kube-proxy/config.conf &lt;br/>
+&amp;ndash;hostname-override=kind-control-plane &lt;br/>&lt;/div>&lt;/div>
+
+&lt;h2 id="customer-resource-definition-crd">
+ Customer Resource Definition (CRD)
+ &lt;a class="anchor" href="#customer-resource-definition-crd">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>http://localhost:1313/docs/k8s/Install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/Install/</guid><description>&lt;h3 id="tools">
+ Tools
+ &lt;a class="anchor" href="#tools">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tools&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://kubernetes.io/docs/tutorials/hello-minikube/">minikube&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://minikube.sigs.k8s.io/docs/">Doc&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes/minikube">Github&lt;/a>&lt;/td>
+ &lt;td>Run Kubernetes locally&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://k3s.io/">k3s&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://docs.k3s.io/">Doc&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/k3s-io/k3s/">Github&lt;/a>&lt;/td>
+ &lt;td>Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://kind.sigs.k8s.io/">kind&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://kind.sigs.k8s.io/">Doc&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubernetes-sigs/kind/">Github&lt;/a>&lt;/td>
+ &lt;td>Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>
+ &lt;a href="https://github.com/kubernetes-sigs/kwok/">kwok&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint">kubectl&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md">crictl&lt;/a>, 
+ &lt;a href="https://docs.podman.io/en/latest/Introduction.html">podman&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h3 id="commands">
+ Commands
+ &lt;a class="anchor" href="#commands">#&lt;/a>
+&lt;/h3>
+
+&lt;div class="book-expand">
+ &lt;label>
+ &lt;div class="book-expand-head flex justify-between">
+ &lt;span>minikube&lt;/span>
+ &lt;span>↕&lt;/span>
+ &lt;/div>
+ &lt;input type="checkbox" class="hidden" />
+ &lt;div class="book-expand-content markdown-inner">
+ &lt;pre>&lt;code>minikube start --kubernetes-version=v1.28.4
+
+minikube node add
+
+minikube config view kubernetes-version
+
+#Open K8s Dashboard
+minikube dashboard
+http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+ &lt;/label>
+&lt;/div>
+
+
+&lt;div class="book-expand">
+ &lt;label>
+ &lt;div class="book-expand-head flex justify-between">
+ &lt;span>kind&lt;/span>
+ &lt;span>↕&lt;/span>
+ &lt;/div>
+ &lt;input type="checkbox" class="hidden" />
+ &lt;div class="book-expand-content markdown-inner">
+ &lt;pre>&lt;code>kind create cluster --image=kindest/node:v1.28.0 -n kind2
+
+kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+ &lt;/label>
+&lt;/div>
+
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>http://localhost:1313/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
+ Tools (docker/containerd/&amp;hellip;)
+ &lt;a class="anchor" href="#tools-dockercontainerd">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="install-toolsconfigurations">
+ Install Tools/Configurations
+ &lt;a class="anchor" href="#install-toolsconfigurations">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html">
+ 
+ &lt;a href="https://www.cnblogs.com/wubolive/p/17317586.html">The mirrors for Docker images&lt;/a>
+ &lt;a class="anchor" href="#the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html">#&lt;/a>
+&lt;/h3>
+&lt;pre>&lt;code>&lt;details >&lt;summary>m.daocloud.io&lt;/summary>
+ &lt;div class="markdown-inner">
+ &lt;pre>&lt;code>DaoCloud
+源站：docker pull k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+&lt;/details>
+
+
+&lt;details >&lt;summary>kubeadm config images list&lt;/summary>
+ &lt;div class="markdown-inner">
+ &lt;pre>&lt;code>docker pull m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4
+docker pull m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4
+docker pull m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4
+docker pull m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4
+docker pull m.daocloud.io/registry.k8s.io/pause:3.9
+docker pull m.daocloud.io/registry.k8s.io/etcd:3.5.9-0
+docker pull m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1
+
+docker tag m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4 registry.k8s.io/kube-apiserver:v1.28.4
+docker tag m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4 registry.k8s.io/kube-controller-manager:v1.28.4
+docker tag m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4 registry.k8s.io/kube-scheduler:v1.28.4 
+docker tag m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4 registry.k8s.io/kube-proxy:v1.28.4
+docker tag m.daocloud.io/registry.k8s.io/pause:3.9 registry.k8s.io/pause:3.9
+docker tag m.daocloud.io/registry.k8s.io/etcd:3.5.9-0 registry.k8s.io/etcd:3.5.9-0
+docker tag m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1 registry.k8s.io/coredns/coredns:v1.10.1
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+&lt;/details>
+
+&lt;/code>&lt;/pre>
+&lt;h3 id="install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd">
+ 
+ &lt;a href="https://github.com/containerd/containerd/blob/main/docs/getting-started.md">Install containerd/runc/cni&lt;/a>
+ &lt;a class="anchor" href="#install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd">#&lt;/a>
+&lt;/h3>
+&lt;pre>&lt;code>&lt;details >&lt;summary>&lt;/summary>
+ &lt;div class="markdown-inner">
+ &lt;pre>&lt;code>wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
+sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
+
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+sudo mkdir -p /usr/local/lib/systemd/system
+sudo cp containerd.service /usr/local/lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now containerd
+
+wget https://github.com/opencontainers/runc/releases/download/v1.1.10/runc.amd64
+sudo install -m 755 runc.amd64 /usr/local/sbin/runc
+
+wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz
+mkdir -p /opt/cni/bin
+sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
+&lt;/code>&lt;/pre>
+
+ &lt;/div>
+&lt;/details>
+
+&lt;/code>&lt;/pre>
+&lt;p>
+ &lt;a href="https://containerd.io/">containerd&lt;/a>, 
+ &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>http://localhost:1313/posts/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent 
+ &lt;a href="https://golang.org/">Go&lt;/a> 
+ &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in Go templates.&lt;/p>
+&lt;p>This document is a brief primer on using Go templates. The 
+ &lt;a href="https://golang.org/pkg/html/template/">Go docs&lt;/a>
+provide more details.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>http://localhost:1313/posts/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">
+ Step 1. Install Hugo
+ &lt;a class="anchor" href="#step-1-install-hugo">#&lt;/a>
+&lt;/h2>
+&lt;p>Go to 
+ &lt;a href="https://github.com/spf13/hugo/releases">Hugo releases&lt;/a> and download the
+appropriate version for your OS and architecture.&lt;/p>
+&lt;p>Save it somewhere specific as we will be using it in the next step.&lt;/p>
+&lt;p>More complete instructions are available at 
+ &lt;a href="https://gohugo.io/getting-started/installing/">Install Hugo&lt;/a>&lt;/p>
+&lt;h2 id="step-2-build-the-docs">
+ Step 2. Build the Docs
+ &lt;a class="anchor" href="#step-2-build-the-docs">#&lt;/a>
+&lt;/h2>
+&lt;p>Hugo has its own example site which happens to also be the documentation site
+you are reading right now.&lt;/p>
+&lt;p>Follow the following steps:&lt;/p></description></item><item><title/><link>http://localhost:1313/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
+ Operator
+ &lt;a class="anchor" href="#operator">#&lt;/a>
+&lt;/h1></description></item></channel></rss>

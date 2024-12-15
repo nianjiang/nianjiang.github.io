@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DevSecOps on Learning Notes</title><link>http://localhost:1313/docs/k8s/DevSecOps/</link><description>Recent content in DevSecOps on Learning Notes</description><generator>Hugo</generator><language>zh</language><atom:link href="http://localhost:1313/docs/k8s/DevSecOps/index.xml" rel="self" type="application/rss+xml"/><item><title>Knative</title><link>http://localhost:1313/docs/k8s/DevSecOps/50-Knative/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/50-Knative/</guid><description>&lt;h1 id="knativehttpsknativedevdocs">
+ 
+ &lt;a href="https://knative.dev/docs/">Knative&lt;/a>
+ &lt;a class="anchor" href="#knativehttpsknativedevdocs">#&lt;/a>
+&lt;/h1>
+&lt;p>run minikube tunnel&lt;/p>
+&lt;blockquote>
+&lt;p>minikube tunnel &amp;ndash;profile knative&lt;/p>
+&lt;/blockquote>
+&lt;p>
+ &lt;a href="http://hello.default.127.0.0.1.sslip.io/">http://hello.default.127.0.0.1.sslip.io/&lt;/a>&lt;/p>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://knative.dev/docs/">Docs&lt;/a>, 
+ &lt;a href="https://github.com/knative">Github&lt;/a>, 
+ &lt;a href="https://www.cncf.io/projects/knative/">CNCF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/luanpeng825485697/article/details/106964317/">https://blog.csdn.net/luanpeng825485697/article/details/106964317/&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://blog.csdn.net/u013794243/article/details/128195067">https://blog.csdn.net/u013794243/article/details/128195067&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://github.com/knative-extensions/net-kourier">kourier (Knative Ingress)&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://en.wikipedia.org/wiki/Serverless_computing">Serverless Computing&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Tekton</title><link>http://localhost:1313/docs/k8s/DevSecOps/51-Tekton/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/51-Tekton/</guid><description>&lt;h1 id="tektonhttpstektondev">
+ 
+ &lt;a href="https://tekton.dev/">Tekton&lt;/a>
+ &lt;a class="anchor" href="#tektonhttpstektondev">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://tekton.dev/docs/">Docs&lt;/a>, 
+ &lt;a href="https://github.com/tektoncd">Github&lt;/a>, 
+ &lt;a href="https://www.redhat.com/en/blog/tekton-vs-jenkins-whats-better-cicd-pipelines-red-hat-openshift">Tekton vs. Jenkins&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://medium.com/techbeatly/mastering-tekton-your-guide-to-cloud-native-ci-cd-workflows-bd858c29cca6">Mastering Tekton: Your Guide to Cloud-Native CI/CD Workflows&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.bilibili.com/read/cv25465590/">我在B站学云原生 | 下一代CI/CD工具，Tekton入门部署指南&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://www.uml.org.cn/yunjisuan/202306214.asp">Kubernetes 原生 CI/CD 构建框架 Tekton 详解&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://hub.tekton.dev/">Tekton Hub&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Argo</title><link>http://localhost:1313/docs/k8s/DevSecOps/52-Argo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/52-Argo/</guid><description>&lt;h1 id="argohttpsargoprojgithubio">
+ 
+ &lt;a href="https://argoproj.github.io/">Argo&lt;/a>
+ &lt;a class="anchor" href="#argohttpsargoprojgithubio">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Kubeflow</title><link>http://localhost:1313/docs/k8s/DevSecOps/80-Kubeflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/DevSecOps/80-Kubeflow/</guid><description>&lt;h1 id="kubeflowhttpswwwkubefloworg">
+ 
+ &lt;a href="https://www.kubeflow.org/">Kubeflow&lt;/a>
+ &lt;a class="anchor" href="#kubeflowhttpswwwkubefloworg">#&lt;/a>
+&lt;/h1>
+&lt;blockquote>
+&lt;p>Machine Learning Toolkit for Kubernetes.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="read-first">
+ Read First
+ &lt;a class="anchor" href="#read-first">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h2 id="tutorials">
+ Tutorials
+ &lt;a class="anchor" href="#tutorials">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>
+ &lt;a href="https://www.cncf.io/projects/kubeflow/">CNCF&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.kubeflow.org/">Kubeflow&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item></channel></rss>

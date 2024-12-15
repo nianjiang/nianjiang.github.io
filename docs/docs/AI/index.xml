@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Learning Notes</title><link>http://localhost:1313/docs/AI/</link><description>Recent content in AI on Learning Notes</description><generator>Hugo</generator><language>zh</language><atom:link href="http://localhost:1313/docs/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning Map</title><link>http://localhost:1313/docs/AI/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/AI/20-map/</guid><description>&lt;h2 id="maps">
+ Maps:
+ &lt;a class="anchor" href="#maps">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="快速入门ai领域的思维导图深度学习自学入门">
+ 快速入门AI领域的思维导图（深度学习自学入门）
+ &lt;a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8ai%e9%a2%86%e5%9f%9f%e7%9a%84%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e8%87%aa%e5%ad%a6%e5%85%a5%e9%97%a8">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;img src="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp" alt="" />&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/AI/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/AI/21-note/</guid><description>&lt;h2 id="notes">
+ Notes:
+ &lt;a class="anchor" href="#notes">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="aimachine-learning-toolkit-for-kubernetes">
+ AI/Machine Learning Toolkit for Kubernetes
+ &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Toolkit&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="https://www.cncf.io/projects/kubeflow/">Kubeflow&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://www.kubeflow.org/">website&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://www.kubeflow.org/docs/started/">Doc&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;!--
+| []() | [website]() | [Doc]() | [Github]() | |
+-->
+&lt;h3 id="图片">
+ 图片
+ &lt;a class="anchor" href="#%e5%9b%be%e7%89%87">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://zh.wikipedia.org/wiki/Stable_Diffusion">Stable Diffusion&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://docs.comfy.org/get_started/gettingstarted">ComfyUI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>
+ &lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://landscape.cncf.io/?group=cnai&amp;amp;view-mode=card&amp;amp;classify=category&amp;amp;sort-by=name&amp;amp;sort-direction=asc#cnai--automl">CNAI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://jimmysong.io/en/blog/cloud-native-ai-whitepaper/">Cloud Native AI&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="https://www.youtube.com/playlist?list=PLj6h78yzYM2PWGv34W6w5ssq1b1meRmY7">Cloud Native AI Day Europe 2024&lt;/a>&lt;/p>
+&lt;p>
+ &lt;a href="http://localhost:1313/">&lt;/a>&lt;/p></description></item></channel></rss>

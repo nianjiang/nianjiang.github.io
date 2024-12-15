@@ -1,4 +1,4 @@
-baseURL: 'https://jnh.gitee.io/'
+baseURL: 'https://nianjiang.github.io/'
 title: 'Learning Notes'
 theme: 'hugo-book'
 
@@ -119,6 +119,6 @@ params:
 
   utteranc:
     enable: true
-    repo: "jnh/jnh" ##换成自己得
+    repo: "nianjiang/nianjiang.github.io" ##换成自己得
     issueTerm: "pathname"
     theme: "github-light"

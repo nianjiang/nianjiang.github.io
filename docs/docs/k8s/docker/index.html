@@ -1,847 +1,147 @@
-<!DOCTYPE html>
-<html lang="zh" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Docker # Install Docker
-Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a&#43;r /etc/apt/keyrings/docker.gpg echo \ &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Docker" />
-<meta property="og:description" content="Docker # Install Docker
-Install Docker 1. Set up the Repository sudo apt-get update sudo apt-get install ca-certificates curl gnupg sudo install -m 0755 -d /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg sudo chmod a&#43;r /etc/apt/keyrings/docker.gpg echo \ &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \ &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \ sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null 2. Install Docker sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jnh.gitee.io/docs/k8s/docker/" /><meta property="article:section" content="docs" />
-
-<meta property="article:modified_time" content="2023-08-10T10:27:22+08:00" />
-<title>Docker | Learning Notes</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
-  <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/zh.search.min.25b524aee42951afa88a6975283d6db14d90d143a2192196f14db9aae5587fbe.js" integrity="sha256-JbUkruQpUa&#43;oiml1KD1tsU2Q0UOiGSGW8U25quVYf74=" crossorigin="anonymous"></script>
-
-  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-  
-</head>
-<body dir="ltr">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Learning Notes</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle"  />
-    <label for="section-6ae1a891fb3a3f71d71273fc61b29b76" class="flex justify-between">
-      <a href="/docs/linux/" class="">Linux</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2d21464784c99358edd6d2b29e92ed6f" class="toggle" checked />
-    <label for="section-2d21464784c99358edd6d2b29e92ed6f" class="flex justify-between">
-      <a href="/docs/k8s/" class="">K8S</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CRI/" class="">CRI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CNI/" class="">CNI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/CSI/" class="">CSI</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/Security/" class="">Security</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/docker/" class="active">Docker</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/k8s/operator/" class="">Operator</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-0737253f49be88bf138c5b1b57550b21" class="toggle"  />
-    <label for="section-0737253f49be88bf138c5b1b57550b21" class="flex justify-between">
-      <a href="/docs/istio/" class="">Istio</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/istio/TrafficManagement/" class="">Traffic Management</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/istio/SourceCode/" class="">Source Code</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-753665e91a918a680b2e12427102b0ea" class="toggle"  />
-    <label for="section-753665e91a918a680b2e12427102b0ea" class="flex justify-between">
-      <a href="/docs/Prometheus/" class="">Prometheus</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-fa153435e5b558683d2ba96ab8ca277b" class="toggle"  />
-    <label for="section-fa153435e5b558683d2ba96ab8ca277b" class="flex justify-between">
-      <a href="/docs/CNCF/" class="">CNCF</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <a href="/docs/example/" class="">Example Site</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/with-toc/" class="">With ToC</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle"  />
-    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
-      <a role="button" class="">Collapsed</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/collapsed/3rd-level/" class="">3rd Level</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li class="book-section-flat" >
-          
-  
-  
-
-  
-    <span>Shortcodes</span>
-  
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Tools (docker/containerd/&mldr;)
+  #
 
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/shortcodes/columns/" class="">Columns</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
 
-  
-    <a href="/docs/shortcodes/details/" class="">Details</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
+  Install Tools/Configurations
+  #
 
-  
-    <a href="/docs/shortcodes/expand/" class="">Expand</a>
-  
 
-        </li>
-      
-    
-      
-        <li>
-          
   
-  
+  The mirrors for Docker images
+  #
 
-  
-    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+m.daocloud.io
   
+    DaoCloud
+源站：docker pull               k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
 
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
 
   
-    <a href="/docs/shortcodes/katex/" class="">Katex</a>
-  
 
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
 
-  
-    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
-  
 
-        </li>
-      
-    
-      
-        <li>
-          
+kubeadm config images list
   
-  
+    docker pull   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/pause:3.9
+docker pull   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0
+docker pull   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1
 
-  
-    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
-    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
-      <a href="/docs/shortcodes/section/" class="">Section</a>
-    </label>
-  
+docker tag   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4           registry.k8s.io/kube-apiserver:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4  registry.k8s.io/kube-controller-manager:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4           registry.k8s.io/kube-scheduler:v1.28.4      
+docker tag   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4               registry.k8s.io/kube-proxy:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/pause:3.9                        registry.k8s.io/pause:3.9
+docker tag   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0                     registry.k8s.io/etcd:3.5.9-0
+docker tag   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1          registry.k8s.io/coredns/coredns:v1.10.1
 
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
 
-  
-    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
   
 
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
 
-  
-    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
-  
 
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
 
-  
-    <a href="/docs/shortcodes/tabs4/" class="">Tabs4</a>
   
+  Install containerd/runc/cni
+  #
 
-        </li>
-      
-    
-  </ul>
 
-        </li>
-      
-    
-  </ul>
-
-
-
-
-
-
-
-
-
-
-
-  
-<ul>
-  
-  <li>
-    <a href="/posts/"  >
-        Blog
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
-        Hugo Book
-      </a>
-  </li>
-  
-  <li>
-    <a href="https://gitee.com/jnh/jnh"  target="_blank" rel="noopener">
-        Gitee
-      </a>
-  </li>
   
-  <li>
-    <a href="https://github.com/nianjiang/nianjiang.github.io"  target="_blank" rel="noopener">
-        Github
-      </a>
-  </li>
-  
-  <li>
-    <a href="/links"  target="_blank" rel="noopener">
-        常用导航
-      </a>
-  </li>
-  
-</ul>
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
- 
-      </div>
-    </aside>
-
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
-  </label>
+    wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
+sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
 
-  <strong>Docker</strong>
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+sudo mkdir -p /usr/local/lib/systemd/system
+sudo cp containerd.service /usr/local/lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now containerd
 
-  <label for="toc-control">
-    
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
+wget https://github.com/opencontainers/runc/releases/download/v1.1.10/runc.amd64
+sudo install -m 755 runc.amd64 /usr/local/sbin/runc
 
+wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz
+mkdir -p /opt/cni/bin
+sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
 
-  
-  <aside class="hidden clearfix">
-    
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#docker">Docker</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#reference">Reference</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-  <article class="markdown"><h1 id="docker">
-  Docker
-  <a class="anchor" href="#docker">#</a>
-</h1>
-<ul>
-<li>
-<p>Install Docker</p>
-<details open><summary><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Install Docker</a></summary>
-  <div class="markdown-inner">
-    <pre><code>1. Set up the Repository
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-echo \
-&quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-&quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
-sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-
-
-2. Install Docker
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo docker run hello-world
-
-verify:
-sudo docker run hello-world
-
-newgrp docker
-</code></pre>
-
-  </div>
-</details>
-
-<details open><summary>Create Docker Group</summary>
-  <div class="markdown-inner">
-    <pre><code>sudo usermod -aG docker $USER
-newgrp docker
-sudo service docker start
-</code></pre>
-
-  </div>
-</details>
-
-</li>
-<li>
-<p>Install Kubectl</p>
-<details open><summary>Install Kuberctl</summary>
-  <div class="markdown-inner">
-    <pre><code>curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-</code></pre>
-
-  </div>
-</details>
-
-</li>
-<li>
-<p>Install istio
-<details open><summary>Install Istio</summary>
-  <div class="markdown-inner">
-    <pre><code>curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.18.1 TARGET_ARCH=x86_64 sh -
-cd istio-1.18.1/bin
-sudo install -o root -g root -m 0755 istioctl /usr/local/bin/istioctl
-
-istioctl install --set profile=demo -y
-kubectl label namespace default istio-injection=enabled
-</code></pre>
-
-  </div>
-</details>
-</p>
-</li>
-</ul>
-<h3 id="reference">
-  Reference
-  <a class="anchor" href="#reference">#</a>
-</h3>
-<p>
-  <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Docker</a></p>
-<p>
-  <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/">Kubectl</a></p>
-<p>
-  <a href="https://istio.io/latest/docs/setup/getting-started/">Istio</a></p>
-<p>
-  <a href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a></p>
-<p>
-  <a href="https://github.com/cubxxw/awesome-cloud-native">https://github.com/cubxxw/awesome-cloud-native</a></p>
-</article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-  <div><a class="flex align-center" href="https://gitee.com/jnh/jnh/commit/276c18fc8978c12766a2711ee9060e5b522900fa" title='最后修改者 Nian Jiang | 2023-08-10 10:27:22' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-08-10 10:27:22</span>
-    </a>
-  </div>
-
-
-
-  <div>
-    <a class="flex align-center" href="https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/docker.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>编辑本页</span>
-    </a>
-  </div>
-
-
-</div>
-
-
-
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
-
-
- 
-        
-      </footer>
-
-      
-  
-  <div class="book-comments">
-
-</div>
-  
- 
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
-
-    
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        
-  
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#docker">Docker</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#reference">Reference</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
- 
-      </div>
-    </aside>
-    
-  </main>
 
   
-</body>
-</html>
-
-
-
-
-
-
-
-
 
 
 
 
+  containerd, 
+  cri-o"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/k8s/docker/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="Docker"><meta property="og:description" content="Tools (docker/containerd/…) # Install Tools/Configurations # The mirrors for Docker images # m.daocloud.io DaoCloud 源站：docker pull k8s.gcr.io/metrics-server/metrics-server:v0.6.1 改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1 kubeadm config images list docker pull m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4 docker pull m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4 docker pull m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4 docker pull m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4 docker pull m.daocloud.io/registry.k8s.io/pause:3.9 docker pull m.daocloud.io/registry.k8s.io/etcd:3.5.9-0 docker pull m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1 docker tag m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4 registry.k8s.io/kube-apiserver:v1.28.4 docker tag m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4 registry.k8s.io/kube-controller-manager:v1.28.4 docker tag m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4 registry.k8s.io/kube-scheduler:v1.28.4 docker tag m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4 registry.k8s.io/kube-proxy:v1.28.4 docker tag m.daocloud.io/registry.k8s.io/pause:3.9 registry.k8s.io/pause:3.9 docker tag m.daocloud.io/registry.k8s.io/etcd:3.5.9-0 registry.k8s.io/etcd:3.5.9-0 docker tag m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1 registry.k8s.io/coredns/coredns:v1.10.1 Install containerd/runc/cni # wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service sudo mkdir -p /usr/local/lib/systemd/system sudo cp containerd.service /usr/local/lib/systemd/system/ sudo systemctl daemon-reload sudo systemctl enable --now containerd wget https://github.com/opencontainers/runc/releases/download/v1.1.10/runc.amd64 sudo install -m 755 runc.amd64 /usr/local/sbin/runc wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz mkdir -p /opt/cni/bin sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz containerd, cri-o"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-12-20T09:15:49+08:00"><title>Docker | Learning Notes</title>
+<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz+OQteg=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/zh.search.min.6f7ae1c43906b581166e7ae2eaf8d8dd4ab6e8db5b8d41770b75fabb3e155692.js integrity="sha256-b3rhxDkGtYEWbnri6vjY3Uq26NtbjUF3C3X6uz4VVpI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><input type=checkbox id=section-5c9d349e35dbf7bf43984b14419fb5fc class=toggle>
+<label for=section-5c9d349e35dbf7bf43984b14419fb5fc class="flex justify-between"><a href=/docs/linux/>Linux</a></label><ul><li><a href=/docs/linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/linux/BPF/>eBPF</a></li></ul></li><li><input type=checkbox id=section-3f3cfdecc97f2ea37071f8786b4bf409 class=toggle checked>
+<label for=section-3f3cfdecc97f2ea37071f8786b4bf409 class="flex justify-between"><a href=/docs/k8s/>K8S</a></label><ul><li><a href=/docs/k8s/CRI/>CRI</a></li><li><a href=/docs/k8s/CSI/>CSI</a></li><li><a href=/docs/k8s/CNI/>CNI</a></li><li><a href=/docs/k8s/CNI-eBPF/>eBPF</a></li><li><a href=/docs/k8s/Security/>Security</a></li><li><input type=checkbox id=section-7588803f33f00c59c193df37c1a581e8 class=toggle>
+<label for=section-7588803f33f00c59c193df37c1a581e8 class="flex justify-between"><a href=/docs/k8s/DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/k8s/DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/k8s/DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/k8s/DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/k8s/DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><input type=checkbox id=section-b26e609d75d46bb3b000b9da3b077efb class=toggle>
+<label for=section-b26e609d75d46bb3b000b9da3b077efb class="flex justify-between"><a href=/docs/k8s/Certifications/>Certifications</a></label><ul><li><a href=/docs/k8s/Certifications/CKA/>CKA</a></li><li><a href=/docs/k8s/Certifications/CKS/>CKS</a></li><li><a href=/docs/k8s/Certifications/PCA/>PCA (Prometheus)</a></li><li><a href=/docs/k8s/Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/k8s/Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/k8s/Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/k8s/Certifications/question/>Questions</a></li></ul></li><li><a href=/docs/k8s/Codes/>Codes</a></li><li><a href=/docs/k8s/Install/>Install</a></li><li><a href=/docs/k8s/docker/ class=active>Docker</a></li><li><a href=/docs/k8s/operator/>Operator</a></li></ul></li><li><input type=checkbox id=section-771950d51afd75b86f6cbb9d613d2636 class=toggle>
+<label for=section-771950d51afd75b86f6cbb9d613d2636 class="flex justify-between"><a href=/docs/istio/>Istio</a></label><ul><li><a href=/docs/istio/Envoy/>Envoy</a></li><li><a href=/docs/istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/istio/SourceCode/>Source Code</a></li><li><a href=/docs/istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-f9df0e4ced09b96aaea1814dd17677c5 class=toggle>
+<label for=section-f9df0e4ced09b96aaea1814dd17677c5 class="flex justify-between"><a href=/docs/Telemetry/>Observability & Analysis</a></label><ul></ul></li><li><input type=checkbox id=section-d81b7a3c2698e83baa6ff10bc4977840 class=toggle>
+<label for=section-d81b7a3c2698e83baa6ff10bc4977840 class="flex justify-between"><a href=/docs/AI/>AI</a></label><ul><li><a href=/docs/AI/20-map/>Learning Map</a></li><li><a href=/docs/AI/21-note/>Learning Note</a></li></ul></li><li><input type=checkbox id=section-fe309e934eab8e5ba259bbae52e89a51 class=toggle>
+<label for=section-fe309e934eab8e5ba259bbae52e89a51 class="flex justify-between"><a href=/docs/CNCF/>CNCF</a></label><ul></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu>
+</label><strong>Docker</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#tools-dockercontainerd>Tools (docker/containerd/&mldr;)</a><ul><li><a href=#install-toolsconfigurations>Install Tools/Configurations</a><ul><li><a href=#the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html><a href=https://www.cnblogs.com/wubolive/p/17317586.html>The mirrors for Docker images</a></a></li><li><a href=#install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd><a href=https://github.com/containerd/containerd/blob/main/docs/getting-started.md>Install containerd/runc/cni</a></a></li><li><a href=#kubeadmhttpskubernetesiodocsreferencesetup-toolskubeadm><a href=https://kubernetes.io/docs/reference/setup-tools/kubeadm/>kubeadm</a></a></li></ul></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=tools-dockercontainerd>Tools (docker/containerd/&mldr;)
+<a class=anchor href=#tools-dockercontainerd>#</a></h1><h2 id=install-toolsconfigurations>Install Tools/Configurations
+<a class=anchor href=#install-toolsconfigurations>#</a></h2><h3 id=the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html><a href=https://www.cnblogs.com/wubolive/p/17317586.html>The mirrors for Docker images</a>
+<a class=anchor href=#the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html>#</a></h3><pre><code><details><summary>m.daocloud.io</summary>
+  <div class=markdown-inner>
+    <pre><code>DaoCloud
+源站：docker pull               k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
+</code></pre></div></details><details><summary>kubeadm config images list</summary><div class=markdown-inner><pre><code>docker pull   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4
+docker pull   m.daocloud.io/registry.k8s.io/pause:3.9
+docker pull   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0
+docker pull   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1
+
+docker tag   m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4           registry.k8s.io/kube-apiserver:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/kube-controller-manager:v1.28.4  registry.k8s.io/kube-controller-manager:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/kube-scheduler:v1.28.4           registry.k8s.io/kube-scheduler:v1.28.4      
+docker tag   m.daocloud.io/registry.k8s.io/kube-proxy:v1.28.4               registry.k8s.io/kube-proxy:v1.28.4
+docker tag   m.daocloud.io/registry.k8s.io/pause:3.9                        registry.k8s.io/pause:3.9
+docker tag   m.daocloud.io/registry.k8s.io/etcd:3.5.9-0                     registry.k8s.io/etcd:3.5.9-0
+docker tag   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1          registry.k8s.io/coredns/coredns:v1.10.1
+</code></pre></div></details></code></pre><h3 id=install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd><a href=https://github.com/containerd/containerd/blob/main/docs/getting-started.md>Install containerd/runc/cni</a>
+<a class=anchor href=#install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd>#</a></h3><pre><code><details><summary></summary>
+  <div class=markdown-inner>
+    <pre><code>wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
+sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
+
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+sudo mkdir -p /usr/local/lib/systemd/system
+sudo cp containerd.service /usr/local/lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now containerd
+
+wget https://github.com/opencontainers/runc/releases/download/v1.1.10/runc.amd64
+sudo install -m 755 runc.amd64 /usr/local/sbin/runc
+
+wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz
+mkdir -p /opt/cni/bin
+sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
+</code></pre></div></details></code></pre><p><a href=https://containerd.io/>containerd</a>,
+<a href=https://cri-o.io/>cri-o</a></p><h3 id=kubeadmhttpskubernetesiodocsreferencesetup-toolskubeadm><a href=https://kubernetes.io/docs/reference/setup-tools/kubeadm/>kubeadm</a>
+<a class=anchor href=#kubeadmhttpskubernetesiodocsreferencesetup-toolskubeadm>#</a></h3><pre><code><details><summary></summary>
+  <div class=markdown-inner>
+    <pre><code>ubuntu@c1:~$ kubeadm config images list
+registry.k8s.io/kube-apiserver:v1.28.4
+registry.k8s.io/kube-controller-manager:v1.28.4
+registry.k8s.io/kube-scheduler:v1.28.4
+registry.k8s.io/kube-proxy:v1.28.4
+registry.k8s.io/pause:3.9
+registry.k8s.io/etcd:3.5.9-0
+registry.k8s.io/coredns/coredns:v1.10.1
+ubuntu@c1:~$
+</code></pre></div></details></code></pre><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script>Docker</a></p><p><a href=https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/>Kubectl</a></p><p><a href=https://istio.io/latest/docs/setup/getting-started/>Istio</a></p><p><a href=https://minikube.sigs.k8s.io/docs/start/>Minikube</a></p><p><a href=https://github.com/cubxxw/awesome-cloud-native>https://github.com/cubxxw/awesome-cloud-native</a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/c9c7864b51e30009821dfc2522a5a8783f35fcd6 title='最后修改者 Nian Jiang | 2023-12-20 09:15:49' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>2023-12-20 09:15:49</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/docker.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#tools-dockercontainerd>Tools (docker/containerd/&mldr;)</a><ul><li><a href=#install-toolsconfigurations>Install Tools/Configurations</a><ul><li><a href=#the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html><a href=https://www.cnblogs.com/wubolive/p/17317586.html>The mirrors for Docker images</a></a></li><li><a href=#install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd><a href=https://github.com/containerd/containerd/blob/main/docs/getting-started.md>Install containerd/runc/cni</a></a></li><li><a href=#kubeadmhttpskubernetesiodocsreferencesetup-toolskubeadm><a href=https://kubernetes.io/docs/reference/setup-tools/kubeadm/>kubeadm</a></a></li></ul></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main></body></html>

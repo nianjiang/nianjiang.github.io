@@ -1,4 +1,4 @@
-module gitee.com/jnh/jnh
+module github.com/nianjiang/nianjiang.github.io
 
 go 1.20
 
