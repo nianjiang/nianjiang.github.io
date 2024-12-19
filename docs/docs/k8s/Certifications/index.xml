@@ -82,15 +82,8 @@
 &lt;ul>
 &lt;li>
  &lt;a href="https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b">Lab: RBAC with Kubernetes in Minikube&lt;/a>&lt;/li>
-&lt;li>
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>RBAC vs ABAC&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;li>&lt;details >&lt;summary>RBAC vs ABAC&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code> Role-based access control (RBAC), 2 parts: role and roleBinding
 
  Attribute-based access control (ABAC), only 1 file: ABAC permission file.
@@ -98,8 +91,7 @@
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 &lt;/li>
 &lt;/ul>
 &lt;/li>

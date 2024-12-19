@@ -73,12 +73,12 @@ These are the exam objectives you review and understand in order to pass the tes
 
 1. [Manage role based access control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
     - [Lab: RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b)
-    - {{< expand "RBAC vs ABAC" >}}
+    - {{< details "RBAC vs ABAC" >}}
         Role-based access control (RBAC), 2 parts: role and roleBinding
 
         Attribute-based access control (ABAC), only 1 file: ABAC permission file.
         https://kubernetes.io/docs/reference/access-authn-authz/abac/
-      {{< /expand >}}
+      {{< /details >}}
 1. [Use kubeadm to install a basic cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
     - [Lab: Install Kubernetes On Ubuntu](https://phoenixnap.com/kb/install-kubernetes-on-ubuntu)
 1. [Manage a highly available Kubernetes cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
@@ -143,12 +143,12 @@ These are the exam objectives you review and understand in order to pass the tes
  - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
  - [Statefulsets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
  - [Daemonset](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
-      {{< expand "Daemonset Node Selector and Schduler" >}}
+      {{< details "Daemonset Node Selector and Schduler" >}}
         .spec.template.spec.nodeSelector
         .spec.template.spec.affinity
 
         .spec.template.spec.schedulerName
-      {{< /expand >}}
+      {{< /details >}}
 5. Understand [how resource limits can affect Pod scheduling](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#how-pods-with-resource-requests-are-scheduled)
 6. Awareness of manifest management and common templating tools
   * [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/)

@@ -284,15 +284,8 @@ With Jekyll, something that looked like&lt;/p>
 &lt;ul>
 &lt;li>
  &lt;a href="https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b">Lab: RBAC with Kubernetes in Minikube&lt;/a>&lt;/li>
-&lt;li>
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>RBAC vs ABAC&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;li>&lt;details >&lt;summary>RBAC vs ABAC&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code> Role-based access control (RBAC), 2 parts: role and roleBinding
 
  Attribute-based access control (ABAC), only 1 file: ABAC permission file.
@@ -300,8 +293,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -1921,15 +1913,8 @@ Password:
  Commands
  &lt;a class="anchor" href="#commands">#&lt;/a>
 &lt;/h3>
-
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>minikube&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;details >&lt;summary>minikube&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code>minikube start --kubernetes-version=v1.28.4
 
 minikube node add
@@ -1942,26 +1927,17 @@ http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kube
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 
-
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>kind&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;details >&lt;summary>kind&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code>kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 
 &lt;h3 id="reference">
  Reference

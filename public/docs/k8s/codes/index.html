@@ -1,0 +1,218 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Codes Structure:
+  #
+
+
+  
+      
+          Command Name for k8s components
+          Cobra Client
+          Real Code
+          Note
+      
+  
+  
+      
+          kube-apiserver
+          cmd/kube-apiserver/apiserver.go
+          cmd/kube-apiserver/app/server.go
+          kubeAPIServer, APIExtensionsServer, AggregatorServer
+      
+      
+          kube-controller-manager
+          cmd/kube-controller-manager/controller-manager.go
+          
+          
+      
+      
+          kube-scheduler
+          cmd/kube-scheduler/scheduler.go
+          pkg/scheduler/scheduler.go
+          
+      
+      
+          Etcd
+          
+          
+          
+      
+      
+          Cloud Controller Manager
+          cmd/cloud-controller-manager/main.go
+          
+          
+      
+      
+          
+          
+          
+          
+      
+      
+          kubelet
+          cmd/kubelet/kubelet.go
+          pkg/kubelet/kubelet.go
+          
+      
+      
+          kube-proxy
+          cmd/kube-proxy/proxy.go
+          pkg/proxy/service.go
+          
+      
+      
+          
+          
+          
+          
+      
+      
+          kubectl
+          cmd/kubectl/kubectl.go
+          
+          
+      
+  
+
+
+  Commands
+  #
+
+
+
+
+
+
+kube-apiserver 
+ 
+kube-apiserver 
+--advertise-address=172.20.0.2 
+--allow-privileged=true 
+--authorization-mode=Node,RBAC 
+--client-ca-file=/etc/kubernetes/pki/ca.crt 
+--enable-admission-plugins=NodeRestriction 
+--enable-bootstrap-token-auth=true 
+--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt  
+--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 
+--kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt  
+--kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key 
+--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname 
+--proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key 
+--requestheader-allowed-names=front-proxy-client 
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt 
+--requestheader-extra-headers-prefix=X-Remote-Extra- 
+--requestheader-group-headers=X-Remote-Group 
+--requestheader-username-headers=X-Remote-User 
+--runtime-config= 
+--secure-port=6443 
+--service-account-issuer=https://kubernetes.default.svc.cluster.local 
+--service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key 
+--service-cluster-ip-range=10.96.0.0/16 
+--tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key 
+
+
+
+
+
+kube-controller-manager 
+
+kube-controller-manager 
+--allocate-node-cidrs=true 
+--authentication-kubeconfig=/etc/kubernetes/controller-manager.conf   
+--authorization-kubeconfig=/etc/kubernetes/controller-manager.conf 
+--bind-address=127.0.0.1 
+--client-ca-file=/etc/kubernetes/pki/ca.crt 
+--cluster-cidr=10.244.0.0/16 
+--cluster-name=kind 
+--cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key 
+--controllers=*,bootstrapsigner,tokencleaner 
+--enable-hostpath-provisioner=true 
+--kubeconfig=/etc/kubernetes/controller-manager.conf 
+--leader-elect=true 
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt 
+--root-ca-file=/etc/kubernetes/pki/ca.crt 
+--service-account-private-key-file=/etc/kubernetes/pki/sa.key 
+--service-cluster-ip-range=10.96.0.0/16 
+--use-service-account-credentials=true 
+
+
+
+
+
+kube-scheduler
+ 
+kube-scheduler 
+--authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf 
+--bind-address=127.0.0.1 
+--kubeconfig=/etc/kubernetes/scheduler.conf 
+--leader-elect=true 
+
+
+
+
+
+etcd
+ 
+etcd 
+--advertise-client-urls=https://172.20.0.2:2379 
+--cert-file=/etc/kubernetes/pki/etcd/server.crt 
+--client-cert-auth=true 
+--data-dir=/var/lib/etcd 
+--experimental-initial-corrupt-check 
+
+
+
+
+
+kubelet
+ 
+/usr/bin/kubelet 
+--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf 
+--kubeconfig=/etc/kubernetes/kubelet.conf 
+--config=/var/lib/kubelet/config.yaml 
+--container-runtime-endpoin 
+
+
+
+
+
+kube-proxy
+ 
+/usr/local/bin/kube-proxy 
+--config=/var/lib/kube-proxy/config.conf 
+--hostname-override=kind-control-plane 
+
+
+
+
+
+
+  Customer Resource Definition (CRD)
+  #
+
+Kuberenetes Design&amp;Architecture Pictures "><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/k8s/codes/"><meta property="og:site_name" content="My New Hugo Site"><meta property="og:title" content="Codes"><meta property="og:description" content="Codes Structure: # Command Name for k8s components Cobra Client Real Code Note kube-apiserver cmd/kube-apiserver/apiserver.go cmd/kube-apiserver/app/server.go kubeAPIServer, APIExtensionsServer, AggregatorServer kube-controller-manager cmd/kube-controller-manager/controller-manager.go kube-scheduler cmd/kube-scheduler/scheduler.go pkg/scheduler/scheduler.go Etcd Cloud Controller Manager cmd/cloud-controller-manager/main.go kubelet cmd/kubelet/kubelet.go pkg/kubelet/kubelet.go kube-proxy cmd/kube-proxy/proxy.go pkg/proxy/service.go kubectl cmd/kubectl/kubectl.go Commands # kube-apiserver kube-apiserver --advertise-address=172.20.0.2 --allow-privileged=true --authorization-mode=Node,RBAC --client-ca-file=/etc/kubernetes/pki/ca.crt --enable-admission-plugins=NodeRestriction --enable-bootstrap-token-auth=true --etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt --etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 --kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key --requestheader-allowed-names=front-proxy-client --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt --requestheader-extra-headers-prefix=X-Remote-Extra- --requestheader-group-headers=X-Remote-Group --requestheader-username-headers=X-Remote-User --runtime-config= --secure-port=6443 --service-account-issuer=https://kubernetes.default.svc.cluster.local --service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key --service-cluster-ip-range=10.96.0.0/16 --tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key kube-controller-manager kube-controller-manager --allocate-node-cidrs=true --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf --bind-address=127.0.0.1 --client-ca-file=/etc/kubernetes/pki/ca.crt --cluster-cidr=10.244.0.0/16 --cluster-name=kind --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key --controllers=*,bootstrapsigner,tokencleaner --enable-hostpath-provisioner=true --kubeconfig=/etc/kubernetes/controller-manager.conf --leader-elect=true --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt --root-ca-file=/etc/kubernetes/pki/ca.crt --service-account-private-key-file=/etc/kubernetes/pki/sa.key --service-cluster-ip-range=10.96.0.0/16 --use-service-account-credentials=true kube-scheduler kube-scheduler --authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf --bind-address=127.0.0.1 --kubeconfig=/etc/kubernetes/scheduler.conf --leader-elect=true etcd etcd --advertise-client-urls=https://172.20.0.2:2379 --cert-file=/etc/kubernetes/pki/etcd/server.crt --client-cert-auth=true --data-dir=/var/lib/etcd --experimental-initial-corrupt-check kubelet /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoin kube-proxy /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=kind-control-plane Customer Resource Definition (CRD) # Kuberenetes Design&amp;Architecture Pictures"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Codes | My New Hugo Site</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/k8s/codes/><link rel=stylesheet href=/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.467cda377333ffc97669d2d75c964d69b27ba575f4ead37065576dba41864240.js integrity="sha256-RnzaN3Mz/8l2adLXXJZNabJ7pXX06tNwZVdtukGGQkA=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>My New Hugo Site</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-5c9d349e35dbf7bf43984b14419fb5fc class=toggle>
+<label for=section-5c9d349e35dbf7bf43984b14419fb5fc class="flex justify-between"><a href=/docs/linux/>Linux</a></label><ul><li><a href=/docs/linux/40-embeededlinux/>Embeeded Linux</a></li><li><a href=/docs/linux/bpf/>eBPF</a></li></ul></li><li><input type=checkbox id=section-3f3cfdecc97f2ea37071f8786b4bf409 class=toggle checked>
+<label for=section-3f3cfdecc97f2ea37071f8786b4bf409 class="flex justify-between"><a href=/docs/k8s/>K8S</a></label><ul><li><a href=/docs/k8s/cri/>CRI</a></li><li><a href=/docs/k8s/csi/>CSI</a></li><li><a href=/docs/k8s/cni/>CNI</a></li><li><a href=/docs/k8s/cni-ebpf/>eBPF</a></li><li><a href=/docs/k8s/security/>Security</a></li><li><input type=checkbox id=section-7588803f33f00c59c193df37c1a581e8 class=toggle>
+<label for=section-7588803f33f00c59c193df37c1a581e8 class="flex justify-between"><a href=/docs/k8s/devsecops/>DevSecOps</a></label><ul><li><a href=/docs/k8s/devsecops/50-knative/>Knative</a></li><li><a href=/docs/k8s/devsecops/51-tekton/>Tekton</a></li><li><a href=/docs/k8s/devsecops/52-argo/>Argo</a></li><li><a href=/docs/k8s/devsecops/80-kubeflow/>Kubeflow</a></li></ul></li><li><input type=checkbox id=section-b26e609d75d46bb3b000b9da3b077efb class=toggle>
+<label for=section-b26e609d75d46bb3b000b9da3b077efb class="flex justify-between"><a href=/docs/k8s/certifications/>Certifications</a></label><ul><li><a href=/docs/k8s/certifications/cka/>CKA</a></li><li><a href=/docs/k8s/certifications/cks/>CKS</a></li><li><a href=/docs/k8s/certifications/pca/>PCA (Prometheus)</a></li><li><a href=/docs/k8s/certifications/ica/>ICA (Istio)</a></li><li><a href=/docs/k8s/certifications/capa/>CAPA (Argo)</a></li><li><a href=/docs/k8s/certifications/cca/>CCA (Cilium)</a></li><li><a href=/docs/k8s/certifications/question/>Questions</a></li></ul></li><li><a href=/docs/k8s/codes/ class=active>Codes</a></li><li><a href=/docs/k8s/install/>Install</a></li><li><a href=/docs/k8s/docker/>Docker</a></li><li><a href=/docs/k8s/operator/>Operator</a></li></ul></li><li><input type=checkbox id=section-771950d51afd75b86f6cbb9d613d2636 class=toggle>
+<label for=section-771950d51afd75b86f6cbb9d613d2636 class="flex justify-between"><a href=/docs/istio/>Istio</a></label><ul><li><a href=/docs/istio/envoy/>Envoy</a></li><li><a href=/docs/istio/trafficmanagement/>Traffic Management</a></li><li><a href=/docs/istio/sourcecode/>Source Code</a></li><li><a href=/docs/istio/train/>Training</a></li></ul></li><li><input type=checkbox id=section-f9df0e4ced09b96aaea1814dd17677c5 class=toggle>
+<label for=section-f9df0e4ced09b96aaea1814dd17677c5 class="flex justify-between"><a href=/docs/telemetry/>Observability & Analysis</a></label><ul></ul></li><li><input type=checkbox id=section-d81b7a3c2698e83baa6ff10bc4977840 class=toggle>
+<label for=section-d81b7a3c2698e83baa6ff10bc4977840 class="flex justify-between"><a href=/docs/ai/>AI</a></label><ul><li><a href=/docs/ai/20-map/>Learning Map</a></li><li><a href=/docs/ai/21-note/>Learning Note</a></li></ul></li><li><input type=checkbox id=section-fe309e934eab8e5ba259bbae52e89a51 class=toggle>
+<label for=section-fe309e934eab8e5ba259bbae52e89a51 class="flex justify-between"><a href=/docs/cncf/>CNCF</a></label><ul></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Codes</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h2 id=codes-structure>Codes Structure:
+<a class=anchor href=#codes-structure>#</a></h2><table><thead><tr><th>Command Name for k8s components</th><th>Cobra Client</th><th>Real Code</th><th>Note</th></tr></thead><tbody><tr><td>kube-apiserver</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/apiserver.go>cmd/kube-apiserver/apiserver.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/app/server.go>cmd/kube-apiserver/app/server.go</a></td><td>kubeAPIServer, APIExtensionsServer, AggregatorServer</td></tr><tr><td>kube-controller-manager</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-controller-manager/controller-manager.go>cmd/kube-controller-manager/controller-manager.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/></a></td><td></td></tr><tr><td>kube-scheduler</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-scheduler/scheduler.go>cmd/kube-scheduler/scheduler.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go>pkg/scheduler/scheduler.go</a></td><td></td></tr><tr><td>Etcd</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/></a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/></a></td><td></td></tr><tr><td>Cloud Controller Manager</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/cloud-controller-manager/main.go>cmd/cloud-controller-manager/main.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/></a></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>kubelet</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kubelet/kubelet.go>cmd/kubelet/kubelet.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/kubelet.go>pkg/kubelet/kubelet.go</a></td><td></td></tr><tr><td>kube-proxy</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-proxy/proxy.go>cmd/kube-proxy/proxy.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/service.go>pkg/proxy/service.go</a></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>kubectl</td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/cmd/kubectl/kubectl.go>cmd/kubectl/kubectl.go</a></td><td><a href=https://github.com/kubernetes/kubernetes/blob/master/></a></td><td></td></tr></tbody></table><h2 id=commands>Commands
+<a class=anchor href=#commands>#</a></h2><div class=book-tabs><input type=radio class=toggle name=tabs-0 id=tabs-0-0 checked>
+<label for=tabs-0-0>kube-apiserver</label><div class="book-tabs-content markdown-inner">kube-apiserver<br>--advertise-address=172.20.0.2<br>--allow-privileged=true<br>--authorization-mode=Node,RBAC<br>--client-ca-file=/etc/kubernetes/pki/ca.crt<br>--enable-admission-plugins=NodeRestriction<br>--enable-bootstrap-token-auth=true<br>--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt<br>--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379<br>--kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt<br>--kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key<br>--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname<br>--proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key<br>--requestheader-allowed-names=front-proxy-client<br>--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt<br>--requestheader-extra-headers-prefix=X-Remote-Extra-<br>--requestheader-group-headers=X-Remote-Group<br>--requestheader-username-headers=X-Remote-User<br>--runtime-config=<br>--secure-port=6443<br>--service-account-issuer=https://kubernetes.default.svc.cluster.local<br>--service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key<br>--service-cluster-ip-range=10.96.0.0/16<br>--tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key<br></div><input type=radio class=toggle name=tabs-0 id=tabs-0-1>
+<label for=tabs-0-1>kube-controller-manager</label><div class="book-tabs-content markdown-inner">kube-controller-manager<br>--allocate-node-cidrs=true<br>--authentication-kubeconfig=/etc/kubernetes/controller-manager.conf<br>--authorization-kubeconfig=/etc/kubernetes/controller-manager.conf<br>--bind-address=127.0.0.1<br>--client-ca-file=/etc/kubernetes/pki/ca.crt<br>--cluster-cidr=10.244.0.0/16<br>--cluster-name=kind<br>--cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key<br>--controllers=*,bootstrapsigner,tokencleaner<br>--enable-hostpath-provisioner=true<br>--kubeconfig=/etc/kubernetes/controller-manager.conf<br>--leader-elect=true<br>--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt<br>--root-ca-file=/etc/kubernetes/pki/ca.crt<br>--service-account-private-key-file=/etc/kubernetes/pki/sa.key<br>--service-cluster-ip-range=10.96.0.0/16<br>--use-service-account-credentials=true<br></div><input type=radio class=toggle name=tabs-0 id=tabs-0-2>
+<label for=tabs-0-2>kube-scheduler</label><div class="book-tabs-content markdown-inner">kube-scheduler<br>--authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf<br>--bind-address=127.0.0.1<br>--kubeconfig=/etc/kubernetes/scheduler.conf<br>--leader-elect=true<br></div><input type=radio class=toggle name=tabs-0 id=tabs-0-3>
+<label for=tabs-0-3>etcd</label><div class="book-tabs-content markdown-inner">etcd<br>--advertise-client-urls=https://172.20.0.2:2379<br>--cert-file=/etc/kubernetes/pki/etcd/server.crt<br>--client-cert-auth=true<br>--data-dir=/var/lib/etcd<br>--experimental-initial-corrupt-check<br></div><input type=radio class=toggle name=tabs-0 id=tabs-0-4>
+<label for=tabs-0-4>kubelet</label><div class="book-tabs-content markdown-inner">/usr/bin/kubelet<br>--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf<br>--kubeconfig=/etc/kubernetes/kubelet.conf<br>--config=/var/lib/kubelet/config.yaml<br>--container-runtime-endpoin<br></div><input type=radio class=toggle name=tabs-0 id=tabs-0-5>
+<label for=tabs-0-5>kube-proxy</label><div class="book-tabs-content markdown-inner">/usr/local/bin/kube-proxy<br>--config=/var/lib/kube-proxy/config.conf<br>--hostname-override=kind-control-plane<br></div></div><h2 id=customer-resource-definition-crd>Customer Resource Definition (CRD)
+<a class=anchor href=#customer-resource-definition-crd>#</a></h2><p><a href=https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md>Kuberenetes Design&amp;Architecture Pictures</a></p><p><a href="https://www.youtube.com/watch?v=q7b23612pSc&amp;ab_channel=PeterJausovec">Writing Kubernetes Controllers from Peter J</a></p><p><a href=https://book.kubebuilder.io>kubebuilder</a></p><p><a href=https://kubernetes.io/docs/concepts/extend-kubernetes/>Concepts -> Extending Kubernetes</a></p><p><a href=https://kubernetes.io/docs/tasks/extend-kubernetes/>Tasks -> Extend Kubernetes</a></p><hr><p><a href=https://github.com/leovct/kube-operator-tutorial>Tutorials</a></p><p><a href="https://www.youtube.com/watch?v=mLsIcZyop5o&amp;list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&amp;index=63&amp;ab_channel=CNCF%5BCloudNativeComputingFoundation%5D">SIG-Scheduling Intro & Deep Dive</a></p><p><a href="https://www.youtube.com/watch?v=4Bs9Pgn4z2w&amp;list=PLj6h78yzYM2OJcjIuAsbbhXAaDrAnuKRB&amp;index=60&amp;ab_channel=CNCF%5BCloudNativeComputingFoundation%5D">What&rsquo;s New on Controller-Runtime of the Day &ndash; Make Your Operator More Efficient - Siyu Wang, Alibaba Cloud</a></p><p><a href=https://www.cncf.io/blog/2022/06/15/kubernetes-operators-what-are-they-some-examples/>Kubernetes Operators: what are they? Some examples</a></p><p><a href=https://space.bilibili.com/628384319/channel/series>Nginx Community</a></p><p><a href></a></p><p><a href></a></p><p><a href=https://docs.pingcap.com/zh/tidb-in-kubernetes/stable/architecture>https://docs.pingcap.com/zh/tidb-in-kubernetes/stable/architecture</a></p><h2 id=aggregator-server>Aggregator Server
+<a class=anchor href=#aggregator-server>#</a></h2><p><a href=https://github.com/kubernetes-sigs/apiserver-builder-alpha>apiserver-builder</a></p><p><a href></a></p><h2 id=code-learn-turorial>Code Learn Turorial
+<a class=anchor href=#code-learn-turorial>#</a></h2><p><a href=https://github.com/kubernetes/community/blob/master/contributors/devel/README.md>k8s Dev Guide</a></p><p><a href=https://jnh.gitbook.io/sig-k8s-source-code/>sig-k8s-source-code</a></p><p><a href=https://bharatrajani.com/debugging-kubernetes-source-code-using-vscode/>https://bharatrajani.com/debugging-kubernetes-source-code-using-vscode/</a></p><p><a href=https://www.qikqiak.com/k8strain/operator/operator/>https://www.qikqiak.com/k8strain/operator/operator/</a></p><p><a href>k8s Doc</a></p><p><a href="https://www.youtube.com/watch?v=F8dZMKP6xyg&amp;ab_channel=AntsAreEverywhere">Let&rsquo;s read the Kubernetes source code(Youtube)</a></p><p><a href=https://lailin.xyz/post/operator-01-overview.html>Operator概述: 如何对 Kubernetes 进行扩展</a></p><p><a href=https://dev.to/rahulku48837211/how-to-build-and-run-k8s-locally-5e3m>How to build and run Kubernetes locally</a></p><p><a href=https://www.ziji.work/kubernetes/kube-apiserver-design-and-implementation-design-and-implementation.html>kube-apiserver的设计与实现</a></p><p><a href=https://cloudnative.to/blog/apiserver-handler-register/>Kubernetes API Server handler 注册过程分析</a></p><p><a href=https://isekiro.com/categories/kubernetes%E6%BA%90%E7%A0%81/>Kubernetes源码</a></p><p><a href=https://qiankunli.github.io/2019/01/05/kubernetes_source_apiserver.html>Kubernetes源码分析——apiserver</a></p><p><a href="https://www.oreilly.com/library/view/managing-kubernetes/9781492033905/?_gl=1*1yu4goh*_ga*NTQ1OTQ5OTcyLjE2OTc0NDYzMDQ.*_ga_092EL089CH*MTY5NzQ1MDUxMS4yLjEuMTY5NzQ1MDUzNS4zNi4wLjA.">Managing Kubernetes</a></p><p><a href=https://www.modb.pro/db/617592>新高度 Kubernetes实战与源码剖析实战</a></p><p><a href=https://www.zhihu.com/column/c_1195294063723929600>kubernetes 源码分析</a></p><p><a href=https://space.bilibili.com/408458404/article>深究Kubernetes源码</a></p><p><a href="https://www.youtube.com/playlist?list=PL6_VNo5AuIreZ7PGxxIjcuZVME8-5tS7v">也谈云原生 - 系统设计漫谈</a></p><p><a href=https://feisky.xyz/about/>倪朋飞</a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href=https://www.jianshu.com/nb/51646191>https://www.jianshu.com/nb/51646191</a></p><p><a href=https://zhuanlan.zhihu.com/p/542730941>https://zhuanlan.zhihu.com/p/542730941</a></p><p><a href=https://www.51cto.com/article/749490.html>https://www.51cto.com/article/749490.html</a></p><p><a href=https://blog.csdn.net/fengcai_ke/article/details/126695585>https://blog.csdn.net/fengcai_ke/article/details/126695585</a></p><p><a href=https://www.oomspot.com/post/mafenxikubeapiserverzhongapiserverservicedeshixian>https://www.oomspot.com/post/mafenxikubeapiserverzhongapiserverservicedeshixian</a></p><p><a href=https://andblog.cn/3203>https://andblog.cn/3203</a></p><p><a href=http://www.zlprogram.com/Show/74/DF178041.shtml>http://www.zlprogram.com/Show/74/DF178041.shtml</a></p><p><a href=https://www.cnblogs.com/yangyuliufeng/p/14217887.html>https://www.cnblogs.com/yangyuliufeng/p/14217887.html</a></p><p><a href=https://podsbook.com/posts/kubernetes/operator/#client-go>https://podsbook.com/posts/kubernetes/operator/#client-go</a></p><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=https://github.com/kubernetes/kubernetes/tree/master/pkg>k8s Github</a></p><p></p><p><a href=https://github.com/kubernetes/sig-release/tree/master/releases>K8s Releases</a>:</p><table><thead><tr><th>Release</th><th>Start</th><th>End</th><th>Note</th></tr></thead><tbody><tr><td>1.32</td><td>2024/12</td><td></td><td></td></tr><tr><td>1.31</td><td>2024/08</td><td>2025/10</td><td><a href=https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/>Release Doc</a></td></tr><tr><td>1.30</td><td>2024/04</td><td>2025/06</td><td><a href=https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/>Release Doc</a></td></tr><tr><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td></tr><tr><td>1.29</td><td>2023/12</td><td>2025/02</td><td><a href=https://kubernetes.io/blog/2023/12/13/kubernetes-v1-29-release/>https://kubernetes.io/blog/2023/12/13/kubernetes-v1-29-release/</a></td></tr><tr><td>1.28</td><td>2023/08</td><td>2024/10</td><td><a href=https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/>https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/</a></td></tr><tr><td>1.27</td><td>2023/04</td><td>2024/06</td><td></td></tr><tr><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td></tr><tr><td>1.26</td><td>2022/12</td><td>2024/02</td><td></td></tr><tr><td>1.25</td><td>2022/08</td><td>2023/10</td><td></td></tr><tr><td>1.24</td><td>2022/05</td><td>2023/07</td><td></td></tr><tr><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td><td>&mdash;&mdash;&ndash;</td></tr><tr><td>1.23</td><td>2021/12</td><td>2023/02</td><td></td></tr><tr><td>1.14</td><td>2019/03</td><td>2019/12</td><td></td></tr><tr><td>1.0</td><td>2015/07/10</td><td></td><td>Original Release</td></tr></tbody></table><p><a href=https://github.com/kubernetes/sig-release/tree/master/releases>Release</a> ,
+<a href=https://en.wikipedia.org/wiki/Kubernetes>Wiki</a>,
+<a href=https://kubernetes.io/docs/home/supported-doc-versions/>Snapshot</a></p><h3 id=reference-1>Reference
+<a class=anchor href=#reference-1>#</a></h3><p><a href=https://nsddd.notion.site/CloudNative-Kubernetes-2f278e98ed274999829333272415c72d>CloudNative & Kubernetes 学习资源整理</a></p><p><a href="https://palpark.me/resources?specialty=Kubernetes">Palpark</a></p><p><a href=https://zhuanlan.zhihu.com/p/568485172>Template</a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

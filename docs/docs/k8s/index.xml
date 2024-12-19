@@ -445,15 +445,8 @@
  Commands
  &lt;a class="anchor" href="#commands">#&lt;/a>
 &lt;/h3>
-
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>minikube&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;details >&lt;summary>minikube&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code>minikube start --kubernetes-version=v1.28.4
 
 minikube node add
@@ -466,26 +459,17 @@ http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kube
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 
-
-&lt;div class="book-expand">
- &lt;label>
- &lt;div class="book-expand-head flex justify-between">
- &lt;span>kind&lt;/span>
- &lt;span>↕&lt;/span>
- &lt;/div>
- &lt;input type="checkbox" class="hidden" />
- &lt;div class="book-expand-content markdown-inner">
+&lt;details >&lt;summary>kind&lt;/summary>
+ &lt;div class="markdown-inner">
  &lt;pre>&lt;code>kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
 &lt;/code>&lt;/pre>
 
  &lt;/div>
- &lt;/label>
-&lt;/div>
+&lt;/details>
 
 &lt;h3 id="reference">
  Reference

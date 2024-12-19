@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Istio on My New Hugo Site</title><link>http://localhost:1313/docs/istio/</link><description>Recent content in Istio on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/istio/index.xml" rel="self" type="application/rss+xml"/><item><title>Envoy</title><link>http://localhost:1313/docs/istio/envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/envoy/</guid><description>&lt;h2 id="questions">
+ Questions:
+ &lt;a class="anchor" href="#questions">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://www.envoyproxy.io/docs/envoy/latest/">Docs&lt;/a>, &lt;a href="https://github.com/envoyproxy/envoy">Envoy&lt;/a>, &lt;a href="https://gitee.com/mirrors/Envoy">Gitee Mirror&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration">xDS&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://academy.tetrate.io/courses/envoy-fundamentals">Envoy fundamentals course&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://academy.tetrate.io/courses/envoy-fundamentals-zh">Envoy fundamentals course - CN&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jimmysong.io/blog/understanding-iptables/">理解 Iptables&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>http://localhost:1313/docs/istio/trafficmanagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/trafficmanagement/</guid><description>&lt;h1 id="traffic-management">
+ Traffic Management
+ &lt;a class="anchor" href="#traffic-management">#&lt;/a>
+&lt;/h1>
+&lt;h3 id="goal">
+ Goal
+ &lt;a class="anchor" href="#goal">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Understand how to expose services from the cluster.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how Istio knows where to route the traffic and how the traffic gets routed.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how to split traffic based on weight and other request properties.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how service resilience, failure injection, and circuit breaking features work.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Understand how to bring external services to the mesh using the ServiceEntry resource.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="other">
+ Other
+ &lt;a class="anchor" href="#other">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Open Tunnel: &lt;em>&lt;strong>minikube tunnel&lt;/strong>&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>abc@local: ~&amp;gt; minikube tunnel
+✅ Tunnel successfully started
+
+📌 NOTE: Please do not close this terminal as this process must stay alive for the tunnel to be accessible ...
+
+❗ The service/ingress istio-ingressgateway requires privileged ports to be exposed: [80 443]
+🔑 sudo permission will be asked for it.
+🏃 Starting tunnel for service istio-ingressgateway.
+Password:
+&lt;/code>&lt;/pre>&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>http://localhost:1313/docs/istio/sourcecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/sourcecode/</guid><description>&lt;h2 id="questions">
+ Questions:
+ &lt;a class="anchor" href="#questions">#&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>Istio Agent (pilit-agent)
+&lt;details >&lt;summary>&lt;/summary>
+ &lt;div class="markdown-inner">
+ 
+![](https://courses.edx.org/assets/courseware/v1/21b8fe1c5f0ab462a08100e3f61d1ba0/asset-v1:LinuxFoundationX+LFS144x+3T2022+type@asset+block/ch5-cert-creation.png)
+
+[Reference](https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS144x+3T2022/block-v1:LinuxFoundationX+LFS144x+3T2022+type@sequential+block@ce78a864b2b041d69231dfbc493003e8/block-v1:LinuxFoundationX+LFS144x+3T2022+type@vertical+block@a0eafac8e5bf4d21877a008135adea4f)
+
+ &lt;/div>
+&lt;/details>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="learning">
+ Learning
+ &lt;a class="anchor" href="#learning">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://github.com/cloudnativebooks/istio-definitive-guide">Istio-权威指南-Github&lt;/a>&lt;/p>
+&lt;h2 id="issues">
+ Issues:
+ &lt;a class="anchor" href="#issues">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://github.com/istio/istio/issues?q=is%3Aopen&amp;#43;is%3Aissue&amp;#43;label%3A%22community%2Fhelp&amp;#43;wanted%22">Open Issues&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://istio.io/latest/docs/">Docs&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/istio">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/@Istio">Youtube&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://istio.slack.com">Slack&lt;/a>&lt;/p>
+&lt;h2 id="source-code">
+ Source Code
+ &lt;a class="anchor" href="#source-code">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://jimmysong.io/en/blog/sidecar-injection-iptables-and-traffic-routing/">Understanding the Sidecar Injection, Traffic Intercepting &amp;amp; Routing Process in Istio&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://istio.io/latest/docs/ops/deployment/architecture/">Architecture&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://tanzu.vmware.com/developer/guides/service-routing-istio-refarch/">Istio Reference Architecture&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/istio/istio/wiki/Using-the-Code-Base">Using the Code Base&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.processon.com/view/606d2167637689306d532b1f">istio: pilot-discovery源码调用图&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.zhaohuabing.com/post/2020-04-02-istio-mindmap/">Istio 知识图谱&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://cloudnative.to/blog/istio-pilot/">Istio Pilot 源码分析（一）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/jukylin/blog/blob/master/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E2%80%94%E2%80%94pilot-discovery%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83.md">！pilot-discovery服务发现和配置中心&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://blog.haohtml.com/archives/32563">istio之pilot-agent 源码分析&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.cn18k.com/2019/02/08/istio-source-pilot/">Istio源码系列&lt;/a>&lt;/p>
+&lt;p>&lt;a href="http://note.wcoder.com/golang/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/istio%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E2%80%94%E2%80%94pilot-agent%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86envoy%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md">istio源码分析——pilot-agent如何管理envoy生命周期&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://banzaicloud.com/blog/istio-authorization-policies/">Introduction to Istio access control&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/istio/istio">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jimmysong.io/kubernetes-handbook/usecases/istio.html">JimmySong&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p></description></item><item><title>Training</title><link>http://localhost:1313/docs/istio/train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/train/</guid><description>&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/23">Prometheus Certified Associate - PCA&lt;/a>&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://www.cncf.io/blog/2022/12/05/no-cost-istio-training-from-fundamentals-to-ambient-to-production-readiness/">Couses&lt;/a>, &lt;a href="https://academy.solo.io/learn/mycourses">academy.solo.io&lt;/a>， &lt;a href="https://www.youtube.com/@soloio_inc/playlists">Youtube&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://kodekloud.com/lessons/labs-2/">KodeKloud&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.classcentral.com/subject/istio?lang=english">Class Central&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://ke.qq.com/course/5962510?quicklink=1#term_id=106185423">Istio认证课程-CIAT&lt;/a>， &lt;a href="https://k.jb51.cc/0324433.html">Istio认证课程-CIAT&lt;/a>，&lt;a href="https://www.rhce.cc/istio">老段工作室&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.csdn.net/course/detail/35483">istio入门到精通【400节大课】&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://ke.qq.com/course/4874263?quicklink=1#term_id=105045225">全功能云原生平台实战系列之Istio、Knative、Tekton/ArgoCD&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.51cto.com/course/21430.html">Istio 服务网格入门实战【新版本】&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.kubernetes.org.cn/service-mesh-peixun">Service Mesh（Istio）实战培训&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=YDgkRaSv4Z8&amp;amp;t=20s&amp;amp;ab_channel=%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1">Service Mesh Istio 核心概念解读&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jimmysong.io/notice/certified-istio-administrator/">Istio 认证管理员考试&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.huaweicloud.com/courses">华为云课堂&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.aliyun.com/course/316178">KubeVela 对接 Istio实现应用灰度发布实践&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item></channel></rss>

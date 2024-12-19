@@ -62,16 +62,9 @@
   Commands
   #
 
-
-
+minikube
   
-    
-      minikube
-      ↕
-    
-    
-    
-      minikube start  --kubernetes-version=v1.28.4
+    minikube start  --kubernetes-version=v1.28.4
 
 minikube node add
 
@@ -82,25 +75,16 @@ minikube dashboard
 http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
 
 
-    
   
 
 
-
-
+kind
   
-    
-      kind
-      ↕
-    
-    
-    
-      kind create cluster --image=kindest/node:v1.28.0 -n kind2
+    kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
 
 
-    
   
 
 
@@ -112,8 +96,8 @@ kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
   k0s、MicroK8s、kind、k3s 和 Minikube"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/k8s/Install/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="Install"><meta property="og:description" content="Tools # Tools Doc Github Note minikube Doc Github Run Kubernetes locally k3s Doc Github Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB. kind Doc Github Kubernetes IN Docker - local clusters for testing Kubernetes kwok
 kubectl
 crictl, podman
-Commands # minikube ↕ minikube start --kubernetes-version=v1.28.4 minikube node add minikube config view kubernetes-version #Open K8s Dashboard minikube dashboard http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default kind ↕ kind create cluster --image=kindest/node:v1.28.0 -n kind2 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4 Reference # k0s、MicroK8s、kind、k3s 和 Minikube"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-02-04T16:52:28+08:00"><title>Install | Learning Notes</title>
-<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz+OQteg=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/zh.search.min.6f7ae1c43906b581166e7ae2eaf8d8dd4ab6e8db5b8d41770b75fabb3e155692.js integrity="sha256-b3rhxDkGtYEWbnri6vjY3Uq26NtbjUF3C3X6uz4VVpI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+Commands # minikube minikube start --kubernetes-version=v1.28.4 minikube node add minikube config view kubernetes-version #Open K8s Dashboard minikube dashboard http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default kind kind create cluster --image=kindest/node:v1.28.0 -n kind2 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4 Reference # k0s、MicroK8s、kind、k3s 和 Minikube"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-02-04T16:52:28+08:00"><title>Install | Learning Notes</title>
+<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz+OQteg=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/zh.search.min.430cd80c14f4b84df12207c48fe57e0298a46a6ebf5307d50f571bf4a05151d2.js integrity="sha256-QwzYDBT0uE3xIgfEj+V+Apikam6/UwfVD1cb9KBRUdI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><input type=checkbox id=section-5c9d349e35dbf7bf43984b14419fb5fc class=toggle>
 <label for=section-5c9d349e35dbf7bf43984b14419fb5fc class="flex justify-between"><a href=/docs/linux/>Linux</a></label><ul><li><a href=/docs/linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/linux/BPF/>eBPF</a></li></ul></li><li><input type=checkbox id=section-3f3cfdecc97f2ea37071f8786b4bf409 class=toggle checked>
 <label for=section-3f3cfdecc97f2ea37071f8786b4bf409 class="flex justify-between"><a href=/docs/k8s/>K8S</a></label><ul><li><a href=/docs/k8s/CRI/>CRI</a></li><li><a href=/docs/k8s/CSI/>CSI</a></li><li><a href=/docs/k8s/CNI/>CNI</a></li><li><a href=/docs/k8s/CNI-eBPF/>eBPF</a></li><li><a href=/docs/k8s/Security/>Security</a></li><li><input type=checkbox id=section-7588803f33f00c59c193df37c1a581e8 class=toggle>
@@ -127,8 +111,7 @@ Commands # minikube ↕ minikube start --kubernetes-version=v1.28.4 minikube nod
 <label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#tools>Tools</a></li><li><a href=#commands>Commands</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h3 id=tools>Tools
 <a class=anchor href=#tools>#</a></h3><table><thead><tr><th>Tools</th><th>Doc</th><th>Github</th><th>Note</th></tr></thead><tbody><tr><td><a href=https://kubernetes.io/docs/tutorials/hello-minikube/>minikube</a></td><td><a href=https://minikube.sigs.k8s.io/docs/>Doc</a></td><td><a href=https://github.com/kubernetes/minikube>Github</a></td><td>Run Kubernetes locally</td></tr><tr><td><a href=https://k3s.io/>k3s</a></td><td><a href=https://docs.k3s.io/>Doc</a></td><td><a href=https://github.com/k3s-io/k3s/>Github</a></td><td>Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB.</td></tr><tr><td><a href=https://kind.sigs.k8s.io/>kind</a></td><td><a href=https://kind.sigs.k8s.io/>Doc</a></td><td><a href=https://github.com/kubernetes-sigs/kind/>Github</a></td><td>Kubernetes IN Docker - local clusters for testing Kubernetes</td></tr></tbody></table><p><a href=https://github.com/kubernetes-sigs/kwok/>kwok</a></p><p><a href=https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint>kubectl</a></p><p><a href=https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md>crictl</a>,
 <a href=https://docs.podman.io/en/latest/Introduction.html>podman</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><h3 id=commands>Commands
-<a class=anchor href=#commands>#</a></h3><div class=book-expand><label><div class="book-expand-head flex justify-between"><span>minikube</span>
-<span>↕</span></div><input type=checkbox class=hidden><div class="book-expand-content markdown-inner"><pre><code>minikube start  --kubernetes-version=v1.28.4
+<a class=anchor href=#commands>#</a></h3><details><summary>minikube</summary><div class=markdown-inner><pre><code>minikube start  --kubernetes-version=v1.28.4
 
 minikube node add
 
@@ -137,11 +120,10 @@ minikube config view kubernetes-version
 #Open K8s Dashboard
 minikube dashboard
 http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
-</code></pre></div></label></div><div class=book-expand><label><div class="book-expand-head flex justify-between"><span>kind</span>
-<span>↕</span></div><input type=checkbox class=hidden><div class="book-expand-content markdown-inner"><pre><code>kind create cluster --image=kindest/node:v1.28.0 -n kind2
+</code></pre></div></details><details><summary>kind</summary><div class=markdown-inner><pre><code>kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
 kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
-</code></pre></div></label></div><h3 id=reference>Reference
+</code></pre></div></details><h3 id=reference>Reference
 <a class=anchor href=#reference>#</a></h3><p><a href=https://zhuanlan.zhihu.com/p/594206344>k0s、MicroK8s、kind、k3s 和 Minikube</a></p><p><a href="https://hub.docker.com/r/kindest/node/tags?page=1&amp;ordering=name">dockerhub: kindest/node</a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/3c5a24b04a1337ec2d0eecbef2ba68c2fe8783c2 title='最后修改者 Nian Jiang | 2024-02-04 16:52:28' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
 <span>2024-02-04 16:52:28</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/k8s/Install.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
 <span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#tools>Tools</a></li><li><a href=#commands>Commands</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>

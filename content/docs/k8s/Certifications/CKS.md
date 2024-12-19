@@ -11,16 +11,21 @@ title: "CKS"
 
 [CKS教程 2024](https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B+2024&from_source=webtop_search&spm_id_from=333.788&search_source=2)
 
-[]()
+[CKS Exam 2024: Major Updates & What You Need to Know](https://www.youtube.com/watch?v=3YWLuidA2JI)
+
+[Kubernetes CKS Full Course Theory + Practice + Browser Scenarios](https://www.youtube.com/watch?v=d9xfB5qaOfg&t=67s)
+
+[How to Pass CKS (Certified Kubernetes Security Specialist) Exam](https://medium.com/@nvsajeeva/how-to-pass-cks-certified-kubernetes-security-specialist-exam-56fe04f42094)
 
 []()
 
 []()
 
-[]()
+## CKS Simulator
 
-[]()
+[Killer Shell CKS](https://killercoda.com/killer-shell-cks)
 
+[CKS-2](https://killercoda.com/ronnyardi)
 
 ## CKS Goal
 
@@ -40,9 +45,9 @@ https://devopscube.com/cks-exam-guide-tips/
 
 ## Exam Objects
 
-  - [X] [Cluster Setup - 10%](/docs/k8s/Certifications/CKS/#cluster-setup---10)
+  - [X] [Cluster Setup - 15%](/docs/k8s/Certifications/CKS/#cluster-setup---15)
   - [X] [Cluster Hardening - 15%](/docs/k8s/Certifications/CKS/#cluster-hardening---15)
-  - [X] [System Hardening - 15%](/docs/k8s/Certifications/CKS/#system-hardening---15)
+  - [X] [System Hardening - 10%](/docs/k8s/Certifications/CKS/#system-hardening---10)
   - [X] [Minimize Microservice Vulnerabilities - 20%](/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20)
   - [X] [Supply Chain Security - 20%](/docs/k8s/Certifications/CKS/#supply-chain-security---20)
   - [X] [Monitoring, Logging and Runtime Security - 20%](/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20)
@@ -50,7 +55,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
 ---
 
-### 🌈 Cluster Setup - 10%
+### 🌈 Cluster Setup - 15%
 [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
 
 1. [Use Network security policies to restrict cluster level access](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
@@ -128,7 +133,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
 4. [Update Kubernetes frequently](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)
 
-### 🌈 System Hardening - 15%
+### 🌈 System Hardening - 10%
 
 1. Minimize host OS footprint (reduce attack surface)
 
@@ -281,15 +286,15 @@ https://github.com/vedmichv/CKS-Certified-Kubernetes-Security-Specialist
 
 [CNCF Landscape for Security](https://landscape.cncf.io/guide#provisioning--security-compliance)
 
-[]()
+[CKS-Certified-Kubernetes-Security-Specialist](https://github.com/teckbootcamps/CKS-Certified-Kubernetes-Security-Specialist)
 
-[]()
+[ViktorUJ/cks](https://github.com/ViktorUJ/cks)
 
-[]()
+[Github topic: kubernetes-security](https://github.com/topics/kubernetes-security)
 
-[]()
+[CKS-Certified-Kubernetes-Security-Specialist](https://github.com/teckbootcamps/CKS-Certified-Kubernetes-Security-Specialist)
 
-[]()
+[cks-short-tips](https://github.com/schnatterer/cks-short-tips)
 
 []()
 
