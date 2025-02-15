@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on My New Hugo Site</title><link>http://localhost:1313/docs/ai/ai/</link><description>Recent content in AI on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/ai/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning Map</title><link>http://localhost:1313/docs/ai/ai/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/ai/20-map/</guid><description>&lt;h2 id="maps">
+ Maps:
+ &lt;a class="anchor" href="#maps">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="快速入门ai领域的思维导图深度学习自学入门">
+ 快速入门AI领域的思维导图（深度学习自学入门）
+ &lt;a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8ai%e9%a2%86%e5%9f%9f%e7%9a%84%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e8%87%aa%e5%ad%a6%e5%85%a5%e9%97%a8">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;img src="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp" alt="" />&lt;/p>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/ai/ai/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/ai/21-note/</guid><description>&lt;h2 id="notes">
+ Notes:
+ &lt;a class="anchor" href="#notes">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="aimachine-learning-toolkit-for-kubernetes">
+ AI/Machine Learning Toolkit for Kubernetes
+ &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Toolkit&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="https://www.cncf.io/projects/kubeflow/">Kubeflow&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://www.kubeflow.org/">website&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://www.kubeflow.org/docs/started/">Doc&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="nvidia">
+ NVIDIA/&amp;hellip;
+ &lt;a class="anchor" href="#nvidia">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://www.bilibili.com/video/BV1hQDGYWEMN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760&amp;amp;p=2">2024吃透AI大模型（LLM+RAG系统+GPT-4o+OpenAI）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.ibm.com/topics?topic=all&amp;amp;page=1">IBM-Explainers&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/zh-cn/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">Microsoft Certified: Azure AI Fundamentals&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.huaweicloud.com/training/aie.html">华为认证人工智能工程师&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.cn/training/">Nvidia Training-CN&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.com/en-us/training/">Nvidia Training&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="deepseekhttpswwwdeepseekcom">
+ &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
+ &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://chat.deepseek.com/">chat&lt;/a>， &lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>， &lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="trainings">
+ Trainings
+ &lt;a class="anchor" href="#trainings">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main">👍 Microsoft/generative-ai-for-beginners&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://medium.com/nlplanet/the-basic-concepts-and-terms-you-need-to-know-for-ai-and-ml-28eb07fd6c49">The Basic Concepts and Terms You Need to Know for AI and ML&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/ai/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/ai/22-llmrag/</guid><description>&lt;h2 id="notes">
+ Notes:
+ &lt;a class="anchor" href="#notes">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="aimachine-learning-toolkit-for-kubernetes">
+ AI/Machine Learning Toolkit for Kubernetes
+ &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Toolkit&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="https://www.cncf.io/projects/kubeflow/">Kubeflow&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://www.kubeflow.org/">website&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://www.kubeflow.org/docs/started/">Doc&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="">&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="nvidia">
+ NVIDIA/&amp;hellip;
+ &lt;a class="anchor" href="#nvidia">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://www.bilibili.com/video/BV1hQDGYWEMN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760&amp;amp;p=2">2024吃透AI大模型（LLM+RAG系统+GPT-4o+OpenAI）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.ibm.com/topics?topic=all&amp;amp;page=1">IBM-Explainers&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/zh-cn/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">Microsoft Certified: Azure AI Fundamentals&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.huaweicloud.com/training/aie.html">华为认证人工智能工程师&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.cn/training/">Nvidia Training-CN&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.com/en-us/training/">Nvidia Training&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="deepseekhttpswwwdeepseekcom">
+ &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
+ &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://chat.deepseek.com/">chat&lt;/a>， &lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>， &lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="trainings">
+ Trainings
+ &lt;a class="anchor" href="#trainings">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main">👍 Microsoft/generative-ai-for-beginners&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://medium.com/nlplanet/the-basic-concepts-and-terms-you-need-to-know-for-ai-and-ml-28eb07fd6c49">The Basic Concepts and Terms You Need to Know for AI and ML&lt;/a>&lt;/p></description></item></channel></rss>

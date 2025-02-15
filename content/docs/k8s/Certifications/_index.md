@@ -12,6 +12,8 @@ bookCollapseSection: true
 ## Online Environments:
   - [Killercoda](https://killercoda.com/playgrounds/scenario/kubernetes)
   - [Play with Kubernetes](https://labs.play-with-k8s.com/)
+  - [👍 kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+  - [killer.sh](https://killer.sh/)
 
 
 ## Cloud Certification Price (2023/12)

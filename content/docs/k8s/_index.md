@@ -10,6 +10,15 @@ customjs:
 # [Kubernetes](https://kubernetes.io/) Notes
 > This is my learning Notes for Kubernetes
 
+
+## Resources
+
+[Kubernetes Interview Question 2024](https://www.youtube.com/watch?v=zW_8klyZOa0&list=PL9JhaNh5QrVkxnIvn2HRNQe_MnWuXnXEs)
+
+[]()
+
+[]()
+
 ---
 
 ***Doubts***:

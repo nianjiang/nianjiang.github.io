@@ -59,52 +59,29 @@
  CKS (Certified Kubernetes Security Specialist)
  &lt;a class="anchor" href="#cks-certified-kubernetes-security-specialist">#&lt;/a>
 &lt;/h1>
+&lt;h2 id="cks-courses">
+ CKS Courses
+ &lt;a class="anchor" href="#cks-courses">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://medium.com/@nvsajeeva/how-to-pass-cks-certified-kubernetes-security-specialist-exam-56fe04f42094">How to Pass CKS (Certified Kubernetes Security Specialist) Exam&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.bilibili.com/video/BV1o94y137Bu/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760">Kubernetes认证安全专家（CKS）课程简介及考试介绍&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.bilibili.com/video/BV1Rs421T7AC/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760">LFOSSA源来如此公开课 | 构筑云原生安全防线：CKS认证实战指南&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=_l232KiJHNA">CKS Study Guide 2024 - PASS your Certified Kubernetes Security Specialist Exam&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/teckbootcamps/CKS-Certified-Kubernetes-Security-Specialist">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=d9xfB5qaOfg&amp;amp;t=67s">Kubernetes CKS Full Course Theory + Practice + Browser Scenarios&lt;/a>, &lt;a href="https://github.com/killer-sh/cks-course-environment/blob/master/Scenarios.md">Test&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B&amp;#43;2024&amp;amp;from_source=webtop_search&amp;amp;spm_id_from=333.788&amp;amp;search_source=2">CKS教程 2024&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=3YWLuidA2JI">CKS Exam 2024: Major Updates &amp;amp; What You Need to Know&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.youtube.com/results?search_query=cks">Youtube&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/kodekloudhub/certified-kubernetes-security-specialist-cks-course">kodekloudhub&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;h2 id="2024真题">
  2024真题
  &lt;a class="anchor" href="#2024%e7%9c%9f%e9%a2%98">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/694930399">CKS-2024 4月最新题库分享&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B&amp;#43;2024&amp;amp;from_source=webtop_search&amp;amp;spm_id_from=333.788&amp;amp;search_source=2">CKS教程 2024&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=3YWLuidA2JI">CKS Exam 2024: Major Updates &amp;amp; What You Need to Know&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=d9xfB5qaOfg&amp;amp;t=67s">Kubernetes CKS Full Course Theory + Practice + Browser Scenarios&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://medium.com/@nvsajeeva/how-to-pass-cks-certified-kubernetes-security-specialist-exam-56fe04f42094">How to Pass CKS (Certified Kubernetes Security Specialist) Exam&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;h2 id="cks-simulator">
- CKS Simulator
- &lt;a class="anchor" href="#cks-simulator">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://killercoda.com/killer-shell-cks">Killer Shell CKS&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://killercoda.com/ronnyardi">CKS-2&lt;/a>&lt;/p>
-&lt;h2 id="cks-goal">
- CKS Goal
- &lt;a class="anchor" href="#cks-goal">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://kubernetes.io/docs/concepts/security/">Kubernetes&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.cncf.io/training/certification/cks/">CNCF&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/#">English&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/16">Chinese&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.cncf.io/projects/kubernetes/">CNCF Project Desc&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/kubernetes/kubernetes">Github&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://devopscube.com/cks-exam-guide-tips/">https://devopscube.com/cks-exam-guide-tips/&lt;/a>&lt;/p>
-&lt;h2 id="exam-objects">
- Exam Objects
- &lt;a class="anchor" href="#exam-objects">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#cluster-setup---15">Cluster Setup - 15%&lt;/a>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#cluster-hardening---15">Cluster Hardening - 15%&lt;/a>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#system-hardening---10">System Hardening - 10%&lt;/a>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#minimize-microservice-vulnerabilities---20">Minimize Microservice Vulnerabilities - 20%&lt;/a>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#supply-chain-security---20">Supply Chain Security - 20%&lt;/a>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="http://localhost:1313/docs/k8s/Certifications/CKS/#monitoring-logging-and-runtime-security---20">Monitoring, Logging and Runtime Security - 20%&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h3 id="-cluster-setup---15">
- 🌈 Cluster Setup - 15%
- &lt;a class="anchor" href="#-cluster-setup---15">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/">Securing a Cluster&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>http://localhost:1313/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>http://localhost:1313/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
  PCA (Prometheus Certified Associate)
  &lt;a class="anchor" href="#pca-prometheus-certified-associate">#&lt;/a>
 &lt;/h1>

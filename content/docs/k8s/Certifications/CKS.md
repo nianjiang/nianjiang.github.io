@@ -5,27 +5,68 @@ title: "CKS"
 
 # CKS (Certified Kubernetes Security Specialist)
 
-## 2024真题
-
-[CKS-2024 4月最新题库分享](https://zhuanlan.zhihu.com/p/694930399)
-
-[CKS教程 2024](https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B+2024&from_source=webtop_search&spm_id_from=333.788&search_source=2)
-
-[CKS Exam 2024: Major Updates & What You Need to Know](https://www.youtube.com/watch?v=3YWLuidA2JI)
-
-[Kubernetes CKS Full Course Theory + Practice + Browser Scenarios](https://www.youtube.com/watch?v=d9xfB5qaOfg&t=67s)
+## CKS Courses
 
 [How to Pass CKS (Certified Kubernetes Security Specialist) Exam](https://medium.com/@nvsajeeva/how-to-pass-cks-certified-kubernetes-security-specialist-exam-56fe04f42094)
 
 []()
 
+[Kubernetes认证安全专家（CKS）课程简介及考试介绍](https://www.bilibili.com/video/BV1o94y137Bu/?spm_id_from=333.337.search-card.all.click&vd_source=8f134d86d2e1e426d0598d5ac4a9a760)
+
+[LFOSSA源来如此公开课 | 构筑云原生安全防线：CKS认证实战指南](https://www.bilibili.com/video/BV1Rs421T7AC/?spm_id_from=333.337.search-card.all.click&vd_source=8f134d86d2e1e426d0598d5ac4a9a760)
+
+[CKS Study Guide 2024 - PASS your Certified Kubernetes Security Specialist Exam](https://www.youtube.com/watch?v=_l232KiJHNA)
+
+[Github](https://github.com/teckbootcamps/CKS-Certified-Kubernetes-Security-Specialist)
+
+[Kubernetes CKS Full Course Theory + Practice + Browser Scenarios](https://www.youtube.com/watch?v=d9xfB5qaOfg&t=67s), [Test](https://github.com/killer-sh/cks-course-environment/blob/master/Scenarios.md)
+
+[CKS教程 2024](https://search.bilibili.com/all?keyword=CKS%E6%95%99%E7%A8%8B+2024&from_source=webtop_search&spm_id_from=333.788&search_source=2)
+
+[CKS Exam 2024: Major Updates & What You Need to Know](https://www.youtube.com/watch?v=3YWLuidA2JI)
+
+[Youtube](https://www.youtube.com/results?search_query=cks)
+
+[kodekloudhub](https://github.com/kodekloudhub/certified-kubernetes-security-specialist-cks-course)
+
 []()
+
+[]()
+
+[]()
+
+
+## 2024真题
+
+[]()
+
+[CKS-2024 12月](https://blog.csdn.net/weixin_50902636/category_12852360.html)
+
+[CKS-2024 10月题库](https://blog.csdn.net/agjllxchjy/article/details/143716906)
+
+[CKS-2024 10月](https://www.j0nathan1ei.xyz/p/cks-%E8%80%83%E8%AF%95%E8%AE%B0%E5%BD%95/)
+
+[CKS-2024 04月题库](https://zhuanlan.zhihu.com/p/694930399)
+
+[]()
+
+[]()
+
+[]()
+
+## CKS真题讲解
+
+[CKS 备考](https://www.bilibili.com/video/BV1WM4y1k75Q?spm_id_from=333.788.videopod.sections&vd_source=8f134d86d2e1e426d0598d5ac4a9a760)
+
+[CKS 16道试题专家详解](https://space.bilibili.com/3494356700891514/upload/video)
 
 ## CKS Simulator
 
 [Killer Shell CKS](https://killercoda.com/killer-shell-cks)
 
 [CKS-2](https://killercoda.com/ronnyardi)
+
+[Mocker](https://github.com/ViktorUJ/cks/tree/master)
 
 ## CKS Goal
 
@@ -86,8 +127,7 @@ https://devopscube.com/cks-exam-guide-tips/
       ```
     </details>
 
-5. [Minimize use of, and access to, GUI elements](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#accessing-the-dashboard-ui)
-6. [Verify platform binaries before deploying](https://github.com/kubernetes/kubernetes/releases)
+5. [Verify platform binaries before deploying](https://github.com/kubernetes/kubernetes/releases)
 
      <details><summary>  Kubernetes binaries can be verified by their digest **sha512 hash**  </summary>
 
@@ -96,6 +136,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
      </details>
 
+    ** [Minimize use of, and access to, GUI elements](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/#accessing-the-dashboard-ui) **
 
 ### 🌈 Cluster Hardening - 15%
 
@@ -207,10 +248,12 @@ https://devopscube.com/cks-exam-guide-tips/
 
 2. Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories)
 
+   [syft](https://github.com/anchore/syft)
+
 3. Secure your supply chain: [whitelist allowed image registries](https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/#why-do-i-need-admission-controllers), sign and validate images
   * Using [ImagePolicyWebhook admission Controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)
 
-4. Preform static analysis of user workloads and container images (e.g. kubesec, kubelinter)
+4. Preform static analysis of user workloads and container images (e.g. [kubesec](https://github.com/controlplaneio/kubesec), [kubelinter](https://docs.kubelinter.io/))
 
 
   <details><summary>  Old </summary>
@@ -224,7 +267,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
 ### 🌈 Monitoring, Logging and Runtime Security - 20%
 
-1. Perform behavioural analytics to detect malicious activities
+1. Perform behavioural analytics to detect malicious activities: [Falco](https://github.com/falcosecurity/falco)
 	- [Falco installation guide](https://falco.org/docs/)
 	- [Sysdig Falco 101](https://learn.sysdig.com/falco-101)
 	- [Falco Helm Chart](https://github.com/falcosecurity/charts/tree/master/falco)
@@ -242,7 +285,7 @@ https://devopscube.com/cks-exam-guide-tips/
 
    </details>
 
-   - [Sysdig documentation](https://docs.sysdig.com/)
+   - [Sysdig Github](https://github.com/draios)
    - [Monitoring Kubernetes with sysdig](https://kubernetes.io/blog/2015/11/monitoring-kubernetes-with-sysdig/)
    - [CNCF Webinar: Getting started with container runtime security using Falco](https://youtu.be/VEFaGjfjfyc)
 
