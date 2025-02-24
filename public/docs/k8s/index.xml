@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8S on My New Hugo Site</title><link>http://localhost:1313/docs/k8s/</link><description>Recent content in K8S on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>CRI</title><link>http://localhost:1313/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cri/</guid><description>&lt;h1 id="cri">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8S on My New Hugo Site</title><link>https://example.org/docs/k8s/</link><description>Recent content in K8S on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/docs/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>CRI</title><link>https://example.org/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cri/</guid><description>&lt;h1 id="cri">
  CRI
  &lt;a class="anchor" href="#cri">#&lt;/a>
 &lt;/h1>
@@ -33,7 +33,7 @@
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>CSI</title><link>http://localhost:1313/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/csi/</guid><description>&lt;h1 id="csi">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>CSI</title><link>https://example.org/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/csi/</guid><description>&lt;h1 id="csi">
  CSI
  &lt;a class="anchor" href="#csi">#&lt;/a>
 &lt;/h1>
@@ -86,7 +86,7 @@
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>http://localhost:1313/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni/</guid><description>&lt;h1 id="cni">
+&lt;p>&lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>https://example.org/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cni/</guid><description>&lt;h1 id="cni">
  CNI
  &lt;a class="anchor" href="#cni">#&lt;/a>
 &lt;/h1>
@@ -121,7 +121,7 @@
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>https://example.org/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium">
  eBPF &amp;amp; Cilium
  &lt;a class="anchor" href="#ebpf--cilium">#&lt;/a>
 &lt;/h1>
@@ -130,11 +130,11 @@
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>http://localhost:1313/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>https://example.org/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security">
  Kubernetes Security
  &lt;a class="anchor" href="#kubernetes-security">#&lt;/a>
 &lt;/h1>
-&lt;p>&lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>http://localhost:1313/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure">
+&lt;p>&lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>https://example.org/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure">
  Codes Structure:
  &lt;a class="anchor" href="#codes-structure">#&lt;/a>
 &lt;/h2>
@@ -326,7 +326,7 @@ etcd &lt;br/>
  Customer Resource Definition (CRD)
  &lt;a class="anchor" href="#customer-resource-definition-crd">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>http://localhost:1313/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/install/</guid><description>&lt;h3 id="tools">
+&lt;p>&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>https://example.org/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/install/</guid><description>&lt;h3 id="tools">
  Tools
  &lt;a class="anchor" href="#tools">#&lt;/a>
 &lt;/h3>
@@ -403,7 +403,7 @@ etcd &lt;br/>
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>http://localhost:1313/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>https://example.org/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
  Tools (docker/containerd/&amp;hellip;)
  &lt;a class="anchor" href="#tools-dockercontainerd">#&lt;/a>
 &lt;/h1>
@@ -477,7 +477,7 @@ sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
 &lt;/details>
 
 &lt;/code>&lt;/pre>
-&lt;p>&lt;a href="https://containerd.io/">containerd&lt;/a>, &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title/><link>http://localhost:1313/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
+&lt;p>&lt;a href="https://containerd.io/">containerd&lt;/a>, &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title/><link>https://example.org/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
  Operator
  &lt;a class="anchor" href="#operator">#&lt;/a>
 &lt;/h1></description></item></channel></rss>

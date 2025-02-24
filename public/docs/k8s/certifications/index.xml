@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certifications on My New Hugo Site</title><link>http://localhost:1313/docs/k8s/certifications/</link><description>Recent content in Certifications on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/k8s/certifications/index.xml" rel="self" type="application/rss+xml"/><item><title>CKA</title><link>http://localhost:1313/docs/k8s/certifications/cka/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cka/</guid><description>&lt;h1 id="cka-certified-kubernetes-administrator">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certifications on My New Hugo Site</title><link>https://example.org/docs/k8s/certifications/</link><description>Recent content in Certifications on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/docs/k8s/certifications/index.xml" rel="self" type="application/rss+xml"/><item><title>CKA</title><link>https://example.org/docs/k8s/certifications/cka/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cka/</guid><description>&lt;h1 id="cka-certified-kubernetes-administrator">
  CKA (Certified Kubernetes Administrator)
  &lt;a class="anchor" href="#cka-certified-kubernetes-administrator">#&lt;/a>
 &lt;/h1>
@@ -55,7 +55,7 @@
 &lt;/h3>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Manage role based access control&lt;/a>&lt;/p></description></item><item><title>CKS</title><link>http://localhost:1313/docs/k8s/certifications/cks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cks/</guid><description>&lt;h1 id="cks-certified-kubernetes-security-specialist">
+&lt;p>&lt;a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Manage role based access control&lt;/a>&lt;/p></description></item><item><title>CKS</title><link>https://example.org/docs/k8s/certifications/cks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cks/</guid><description>&lt;h1 id="cks-certified-kubernetes-security-specialist">
  CKS (Certified Kubernetes Security Specialist)
  &lt;a class="anchor" href="#cks-certified-kubernetes-security-specialist">#&lt;/a>
 &lt;/h1>
@@ -81,7 +81,7 @@
  2024真题
  &lt;a class="anchor" href="#2024%e7%9c%9f%e9%a2%98">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>http://localhost:1313/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>https://example.org/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
  PCA (Prometheus Certified Associate)
  &lt;a class="anchor" href="#pca-prometheus-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -226,7 +226,7 @@
  Mock Exams
  &lt;a class="anchor" href="#mock-exams">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef">https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef&lt;/a>&lt;/p></description></item><item><title>ICA (Istio)</title><link>http://localhost:1313/docs/k8s/certifications/ica/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/ica/</guid><description>&lt;h1 id="ica-istio-certified-associate">
+&lt;p>&lt;a href="https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef">https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef&lt;/a>&lt;/p></description></item><item><title>ICA (Istio)</title><link>https://example.org/docs/k8s/certifications/ica/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/ica/</guid><description>&lt;h1 id="ica-istio-certified-associate">
  ICA (Istio Certified Associate)
  &lt;a class="anchor" href="#ica-istio-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -278,7 +278,7 @@
 &lt;p>● 使用DestinationRule定义流量策略&lt;/p>
 &lt;p>● 配置流量镜像功能&lt;/p>
 &lt;p>弹性和故障注入：20%&lt;/p>
-&lt;p>● 配置断路器(带或不带离群值检测)&lt;/p></description></item><item><title>CAPA (Argo)</title><link>http://localhost:1313/docs/k8s/certifications/capa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/capa/</guid><description>&lt;h1 id="capa-certified-argo-project-associate">
+&lt;p>● 配置断路器(带或不带离群值检测)&lt;/p></description></item><item><title>CAPA (Argo)</title><link>https://example.org/docs/k8s/certifications/capa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/capa/</guid><description>&lt;h1 id="capa-certified-argo-project-associate">
  CAPA (Certified Argo Project Associate)
  &lt;a class="anchor" href="#capa-certified-argo-project-associate">#&lt;/a>
 &lt;/h1>
@@ -326,7 +326,7 @@
 &lt;p>Argo工作流程： 36%&lt;/p>
 &lt;p>● 了解Argo工作流程基础&lt;/p>
 &lt;p>● 生成和使用工件&lt;/p>
-&lt;p>● 了解Argo工作流模板&lt;/p></description></item><item><title>CCA (Cilium)</title><link>http://localhost:1313/docs/k8s/certifications/cca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cca/</guid><description>&lt;h1 id="ccacilium-certified-associate">
+&lt;p>● 了解Argo工作流模板&lt;/p></description></item><item><title>CCA (Cilium)</title><link>https://example.org/docs/k8s/certifications/cca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cca/</guid><description>&lt;h1 id="ccacilium-certified-associate">
  CCA（Cilium Certified Associate）
  &lt;a class="anchor" href="#ccacilium-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -368,7 +368,7 @@
 &lt;p>● Cilium结构&lt;/p>
 &lt;p>● IP地址管理(IPAM)与Cilium&lt;/p>
 &lt;p>● Cilium成分的作用&lt;/p>
-&lt;p>● Datapath模型&lt;/p></description></item><item><title>Questions</title><link>http://localhost:1313/docs/k8s/certifications/question/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/question/</guid><description>&lt;h1 id="kubenests-questions">
+&lt;p>● Datapath模型&lt;/p></description></item><item><title>Questions</title><link>https://example.org/docs/k8s/certifications/question/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/question/</guid><description>&lt;h1 id="kubenests-questions">
  Kubenests Questions
  &lt;a class="anchor" href="#kubenests-questions">#&lt;/a>
 &lt;/h1>
