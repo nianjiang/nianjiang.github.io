@@ -18,6 +18,7 @@ title: "DeepSeek"
 | Tools | Website     |  Note |
 | --------          | --------    | --------     |
 | [DeepSeek Chat](https://chat.deepseek.com/) |      |   |
+| [SCNet](https://chat.scnet.cn/) |      |   |
 | [SiliconFlow](https://cloud.siliconflow.cn/playground/chat) |      |   |
 | [volcenginer](https://console.volcengine.com/ark/region:ark+cn-beijing/experience/chat) |      |   |
 | [Tencent](https://ide.cloud.tencent.com/dashboard/gpu-workspace?fromSource=gwzcw.9299775.9299775.9299775) |  [T.Cloud](https://cloud.tencent.com/)    | DeepSeek-R1-Distill-Qwen-32B 免费体验  |

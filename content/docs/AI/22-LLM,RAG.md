@@ -20,11 +20,15 @@ title: "LLM & RAG"
 
 ### LLM (Large Language Model)
 
-[]()
+[What are large language models (LLMs)?](https://www.ibm.com/think/topics/large-language-models)
+
+[WIKI](https://en.wikipedia.org/wiki/Large_language_model)
+
+[Introduction to Large Language Models](https://developers.google.com/machine-learning/resources/intro-llms)
 
 []()
 
-[]()
+what is Transformer / GPT?
 
 
 ---
@@ -48,7 +52,7 @@ title: "LLM & RAG"
 
 [Conda](https://github.com/conda/conda)
 
-[]()
+[Google Machine Learning Education](https://developers.google.com/machine-learning)
 
 []()
 

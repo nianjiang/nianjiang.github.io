@@ -73,36 +73,176 @@ With Jekyll, something that looked like&lt;/p>
 &lt;/table>
 &lt;!-- raw HTML omitted -->
 &lt;!-- raw HTML omitted -->
-&lt;h3 id="图片">
- 图片
- &lt;a class="anchor" href="#%e5%9b%be%e7%89%87">#&lt;/a>
+&lt;h3 id="nvidia">
+ NVIDIA/&amp;hellip;
+ &lt;a class="anchor" href="#nvidia">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://zh.wikipedia.org/wiki/Stable_Diffusion">Stable Diffusion&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://docs.comfy.org/get_started/gettingstarted">ComfyUI&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.bilibili.com/video/BV1hQDGYWEMN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760&amp;amp;p=2">2024吃透AI大模型（LLM+RAG系统+GPT-4o+OpenAI）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.ibm.com/topics?topic=all&amp;amp;page=1">IBM-Explainers&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/zh-cn/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">Microsoft Certified: Azure AI Fundamentals&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://edu.huaweicloud.com/training/aie.html">华为认证人工智能工程师&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.cn/training/">Nvidia Training-CN&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.nvidia.com/en-us/training/">Nvidia Training&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="deepseekhttpswwwdeepseekcom">
+ &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
+ &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://chat.deepseek.com/">chat&lt;/a>， &lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>， &lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="trainings">
+ Trainings
+ &lt;a class="anchor" href="#trainings">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main">👍 Microsoft/generative-ai-for-beginners&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://medium.com/nlplanet/the-basic-concepts-and-terms-you-need-to-know-for-ai-and-ml-28eb07fd6c49">The Basic Concepts and Terms You Need to Know for AI and ML&lt;/a>&lt;/p></description></item><item><title>LLM &amp; RAG</title><link>http://localhost:1313/docs/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/22-llmrag/</guid><description>&lt;h2 id="notes">
+ Notes:
+ &lt;a class="anchor" href="#notes">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="rag-retrieval-augmented-generation">
+ RAG (Retrieval Augmented Generation)
+ &lt;a class="anchor" href="#rag-retrieval-augmented-generation">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://www.ibm.com/think/topics/retrieval-augmented-generation">What is RAG?&lt;/a>,&lt;a href="https://www.youtube.com/watch?v=00Q0G84kq3M">RAG VS Fine Tuning&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="llm-large-language-model">
+ LLM (Large Language Model)
+ &lt;a class="anchor" href="#llm-large-language-model">#&lt;/a>
+&lt;/h3>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="tools-table">
+ Tools table
+ &lt;a class="anchor" href="#tools-table">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Toolkit&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Doc&lt;/th>
+ &lt;th>Github&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="">LangChain&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="python.langchain.com">Official&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://python.langchain.com/docs/introduction/">Doc&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/langchain-ai/langchain">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://www.ibm.com/think/topics/llamaindex">LlamaIndex&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://docs.llamaindex.ai/en/stable/">Official&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://docs.llamaindex.ai/en/stable/">Doc&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/run-llama/llama_index">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="">RagFlow&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://ragflow.io/">Official&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://ragflow.io/docs/dev/category/guides">Doc&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/infiniflow/ragflow">Github&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;h3 id="reference">
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://landscape.cncf.io/?group=cnai&amp;amp;view-mode=card&amp;amp;classify=category&amp;amp;sort-by=name&amp;amp;sort-direction=asc#cnai--automl">CNAI&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://jimmysong.io/en/blog/cloud-native-ai-whitepaper/">Cloud Native AI&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.youtube.com/playlist?list=PLj6h78yzYM2PWGv34W6w5ssq1b1meRmY7">Cloud Native AI Day Europe 2024&lt;/a>&lt;/p></description></item><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
+&lt;p>&lt;a href="https://github.com/langchain-ai/langchain">LangChain&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/conda/conda">Conda&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>DeepSeek</title><link>http://localhost:1313/docs/ai/23-deepseek/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/23-deepseek/</guid><description>&lt;h2 id="deepseekhttpswwwdeepseekcom">
+ &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
+ &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>，&lt;a href="https://pan.baidu.com/s/1mZD2GTcsSNT9u3KRbg3ehw?pwd=rugh">PDF&lt;/a>&lt;/p>
+&lt;h3 id="heading">
+ 
+ &lt;a class="anchor" href="#heading">#&lt;/a>
+&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tools&lt;/th>
+ &lt;th>Website&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="https://chat.deepseek.com/">DeepSeek Chat&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://ide.cloud.tencent.com/dashboard/gpu-workspace?fromSource=gwzcw.9299775.9299775.9299775">Tencent&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://cloud.tencent.com/">T.Cloud&lt;/a>&lt;/td>
+ &lt;td>DeepSeek-R1-Distill-Qwen-32B 免费体验&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="llm-large-language-model">
+ LLM (Large Language Model)
+ &lt;a class="anchor" href="#llm-large-language-model">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h3 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://huggingface.co/models">Hugging Face&lt;/a>，&lt;a href="https://modelscope.cn/home">ModelScope&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://gpt-tokenizer.dev/">gpt-tokenizer&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
  &lt;a href="https://en.wikipedia.org/wiki/Linux_on_embedded_systems">Embeeded Linux&lt;/a>
  &lt;a class="anchor" href="#embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">#&lt;/a>
 &lt;/h1>
