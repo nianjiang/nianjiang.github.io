@@ -55,11 +55,9 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --theme hugo-book         
+        #run: hugo --gc --minify --theme hugo-book --baseURL "${{ steps.pages.outputs.base_url }}/"   
+        run: hugo --gc --minify --theme hugo-book --cleanDestinationDir # 这里我加了附加参数，可以不需要
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
