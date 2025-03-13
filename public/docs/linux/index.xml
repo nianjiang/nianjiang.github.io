@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on My New Hugo Site</title><link>https://example.org/docs/linux/</link><description>Recent content in Linux on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/docs/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Embeeded Linux</title><link>https://example.org/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on My New Hugo Site</title><link>http://localhost:1313/docs/linux/</link><description>Recent content in Linux on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
  &lt;a href="https://en.wikipedia.org/wiki/Linux_on_embedded_systems">Embeeded Linux&lt;/a>
  &lt;a class="anchor" href="#embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">#&lt;/a>
 &lt;/h1>
@@ -19,7 +19,7 @@
  &lt;a href="https://medium.com/@ganeshrajugalla/ios-ios-introduction-and-structure-fdd7ecf08c4c">IOS Architecture&lt;/a>
  &lt;a class="anchor" href="#ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p></description></item><item><title>eBPF</title><link>https://example.org/docs/linux/bpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/linux/bpf/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
+&lt;p>&lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/linux/50-bpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/50-bpf/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
  &lt;a href="https://en.wikipedia.org/wiki/Berkeley_Packet_Filter">BPF&lt;/a>
  &lt;a class="anchor" href="#bpfhttpsenwikipediaorgwikiberkeley_packet_filter">#&lt;/a>
 &lt;/h1>
@@ -31,6 +31,39 @@
 &lt;p>&lt;a href="https://ebpf.io/">eBPF&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://cilium.io/">Cilium&lt;/a>, &lt;a href="https://github.com/cilium">Github&lt;/a>, &lt;a href="https://cilium.io/enterprise/#trainings">Trainings&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://github.com/iovisor/bcc">BCC - BPF Compiler Collection&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Interview</title><link>http://localhost:1313/docs/linux/60-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/60-interview/</guid><description>&lt;h1 id="heading">
+ 
+ &lt;a class="anchor" href="#heading">#&lt;/a>
+&lt;/h1>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>&lt;a href="https://github.com/0voice/linux_kernel_wiki/blob/main/README.md">《Linux内核精通》&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>

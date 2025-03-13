@@ -34,15 +34,19 @@ title: "Learning Note"
 
 ---
 
-### [Deepseek](https://www.deepseek.com/)
+### Map
 
-[Github](https://github.com/deepseek-ai)
+[初学者怎么入门大语言模型（LLM）？](https://www.zhihu.com/question/644285055/answer/19105760471)
 
-[OpenAI VS DeepSeek](https://zhuanlan.zhihu.com/p/20498436722)
+[[LLM教程] 大语言模型：全方位入门](https://zhuanlan.zhihu.com/p/696128856)
 
-[清华大学：DeepSeek从入门到精通（2025）](https://haokan.baidu.com/v?pd=wisenatural&vid=6706304160610646328)
+[【附教程】大语言模型(LLM)入门学习路线图](https://www.bilibili.com/opus/932698847561383973)
 
- [chat](https://chat.deepseek.com/)， [SiliconFlow](https://cloud.siliconflow.cn/playground/chat)， [volcenginer](https://console.volcengine.com/ark/region:ark+cn-beijing/experience/chat)
+[Andrew Ng - 吴恩达](https://www.andrewng.org/courses/)
+
+[]()
+
+[]()
 
 ---
 

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on My New Hugo Site</title><link>https://example.org/</link><description>Recent content in Introduction on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a New Theme</title><link>https://example.org/posts/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://example.org/posts/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on My New Hugo Site</title><link>http://localhost:1313/</link><description>Recent content in Introduction on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a New Theme</title><link>http://localhost:1313/posts/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">
  Introduction
  &lt;a class="anchor" href="#introduction">#&lt;/a>
 &lt;/h2>
 &lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
-&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://example.org/posts/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://example.org/posts/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">
+&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>http://localhost:1313/posts/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">
  Move static content to &lt;code>static&lt;/code>
  &lt;a class="anchor" href="#move-static-content-to-static">#&lt;/a>
 &lt;/h2>
@@ -19,7 +19,40 @@ With Jekyll, something that looked like&lt;/p>
  ▾ images/
  logo.png
 &lt;/code>&lt;/pre>
-&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Learning Map</title><link>https://example.org/docs/ai/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/ai/20-map/</guid><description>&lt;h2 id="maps">
+&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Golang</title><link>http://localhost:1313/docs/programming/11_cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/programming/11_cni/</guid><description>&lt;h1 id="golang">
+ Golang
+ &lt;a class="anchor" href="#golang">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://go.dev/">Golang&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://time.geekbang.org/course/detail/100024001-85955">Go 语言从入门到实战&lt;/a>, &lt;a href="https://time.geekbang.org/column/article/294905?cid=100061801">Go 并发编程实战课&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Learning Map</title><link>http://localhost:1313/docs/ai/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/20-map/</guid><description>&lt;h2 id="maps">
  Maps:
  &lt;a class="anchor" href="#maps">#&lt;/a>
 &lt;/h2>
@@ -36,7 +69,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>https://example.org/docs/ai/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/ai/21-note/</guid><description>&lt;h2 id="notes">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/ai/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/21-note/</guid><description>&lt;h2 id="notes">
  Notes:
  &lt;a class="anchor" href="#notes">#&lt;/a>
 &lt;/h2>
@@ -84,22 +117,23 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="https://www.nvidia.cn/training/">Nvidia Training-CN&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://www.nvidia.com/en-us/training/">Nvidia Training&lt;/a>&lt;/p>
 &lt;hr>
-&lt;h3 id="deepseekhttpswwwdeepseekcom">
- &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
- &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
+&lt;h3 id="map">
+ Map
+ &lt;a class="anchor" href="#map">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://chat.deepseek.com/">chat&lt;/a>， &lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>， &lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.zhihu.com/question/644285055/answer/19105760471">初学者怎么入门大语言模型（LLM）？&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/696128856">[LLM教程] 大语言模型：全方位入门&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.bilibili.com/opus/932698847561383973">【附教程】大语言模型(LLM)入门学习路线图&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.andrewng.org/courses/">Andrew Ng - 吴恩达&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="trainings">
  Trainings
  &lt;a class="anchor" href="#trainings">#&lt;/a>
 &lt;/h3>
 &lt;p>&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main">👍 Microsoft/generative-ai-for-beginners&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://medium.com/nlplanet/the-basic-concepts-and-terms-you-need-to-know-for-ai-and-ml-28eb07fd6c49">The Basic Concepts and Terms You Need to Know for AI and ML&lt;/a>&lt;/p></description></item><item><title>LLM &amp; RAG</title><link>https://example.org/docs/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/ai/22-llmrag/</guid><description>&lt;h2 id="notes">
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p></description></item><item><title>LLM &amp; RAG</title><link>http://localhost:1313/docs/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/22-llmrag/</guid><description>&lt;h2 id="notes">
  Notes:
  &lt;a class="anchor" href="#notes">#&lt;/a>
 &lt;/h2>
@@ -166,7 +200,7 @@ With Jekyll, something that looked like&lt;/p>
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://github.com/langchain-ai/langchain">LangChain&lt;/a>&lt;/p></description></item><item><title>DeepSeek</title><link>https://example.org/docs/ai/23-deepseek/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/ai/23-deepseek/</guid><description>&lt;h2 id="deepseekhttpswwwdeepseekcom">
+&lt;p>&lt;a href="https://github.com/langchain-ai/langchain">LangChain&lt;/a>&lt;/p></description></item><item><title>DeepSeek</title><link>http://localhost:1313/docs/ai/23-deepseek/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/23-deepseek/</guid><description>&lt;h2 id="deepseekhttpswwwdeepseekcom">
  &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
  &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
 &lt;/h2>
@@ -244,7 +278,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Embeeded Linux</title><link>https://example.org/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Embeeded Linux</title><link>http://localhost:1313/docs/linux/40-embeededlinux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/40-embeededlinux/</guid><description>&lt;h1 id="embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">
  &lt;a href="https://en.wikipedia.org/wiki/Linux_on_embedded_systems">Embeeded Linux&lt;/a>
  &lt;a class="anchor" href="#embeeded-linuxhttpsenwikipediaorgwikilinux_on_embedded_systems">#&lt;/a>
 &lt;/h1>
@@ -265,7 +299,7 @@ With Jekyll, something that looked like&lt;/p>
  &lt;a href="https://medium.com/@ganeshrajugalla/ios-ios-introduction-and-structure-fdd7ecf08c4c">IOS Architecture&lt;/a>
  &lt;a class="anchor" href="#ios-architecturehttpsmediumcomganeshrajugallaios-ios-introduction-and-structure-fdd7ecf08c4c">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p></description></item><item><title>CKA</title><link>https://example.org/docs/k8s/certifications/cka/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cka/</guid><description>&lt;h1 id="cka-certified-kubernetes-administrator">
+&lt;p>&lt;img src="https://miro.medium.com/v2/resize:fit:1188/format:webp/1*xlAAFqm-3S8AaC1Zo-WO_g.png" alt="" />&lt;/p></description></item><item><title>CKA</title><link>http://localhost:1313/docs/k8s/certifications/cka/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cka/</guid><description>&lt;h1 id="cka-certified-kubernetes-administrator">
  CKA (Certified Kubernetes Administrator)
  &lt;a class="anchor" href="#cka-certified-kubernetes-administrator">#&lt;/a>
 &lt;/h1>
@@ -322,7 +356,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;/h3>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Manage role based access control&lt;/a>&lt;/p></description></item><item><title>CRI</title><link>https://example.org/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cri/</guid><description>&lt;h1 id="cri">
+&lt;p>&lt;a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Manage role based access control&lt;/a>&lt;/p></description></item><item><title>CRI</title><link>http://localhost:1313/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cri/</guid><description>&lt;h1 id="cri">
  CRI
  &lt;a class="anchor" href="#cri">#&lt;/a>
 &lt;/h1>
@@ -357,7 +391,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>https://example.org/docs/linux/bpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/linux/bpf/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/linux/50-bpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/50-bpf/</guid><description>&lt;h1 id="bpfhttpsenwikipediaorgwikiberkeley_packet_filter">
  &lt;a href="https://en.wikipedia.org/wiki/Berkeley_Packet_Filter">BPF&lt;/a>
  &lt;a class="anchor" href="#bpfhttpsenwikipediaorgwikiberkeley_packet_filter">#&lt;/a>
 &lt;/h1>
@@ -381,7 +415,40 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Knative</title><link>https://example.org/docs/k8s/devsecops/50-knative/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/devsecops/50-knative/</guid><description>&lt;h1 id="knativehttpsknativedevdocs">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Interview</title><link>http://localhost:1313/docs/linux/60-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/linux/60-interview/</guid><description>&lt;h1 id="heading">
+ 
+ &lt;a class="anchor" href="#heading">#&lt;/a>
+&lt;/h1>
+&lt;h4 id="reference">
+ Reference
+ &lt;a class="anchor" href="#reference">#&lt;/a>
+&lt;/h4>
+&lt;p>&lt;a href="https://github.com/0voice/linux_kernel_wiki/blob/main/README.md">《Linux内核精通》&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Knative</title><link>http://localhost:1313/docs/k8s/devsecops/50-knative/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/devsecops/50-knative/</guid><description>&lt;h1 id="knativehttpsknativedevdocs">
  &lt;a href="https://knative.dev/docs/">Knative&lt;/a>
  &lt;a class="anchor" href="#knativehttpsknativedevdocs">#&lt;/a>
 &lt;/h1>
@@ -436,7 +503,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>CKS</title><link>https://example.org/docs/k8s/certifications/cks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cks/</guid><description>&lt;h1 id="cks-certified-kubernetes-security-specialist">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>CKS</title><link>http://localhost:1313/docs/k8s/certifications/cks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cks/</guid><description>&lt;h1 id="cks-certified-kubernetes-security-specialist">
  CKS (Certified Kubernetes Security Specialist)
  &lt;a class="anchor" href="#cks-certified-kubernetes-security-specialist">#&lt;/a>
 &lt;/h1>
@@ -462,7 +529,7 @@ With Jekyll, something that looked like&lt;/p>
  2024真题
  &lt;a class="anchor" href="#2024%e7%9c%9f%e9%a2%98">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Tekton</title><link>https://example.org/docs/k8s/devsecops/51-tekton/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/devsecops/51-tekton/</guid><description>&lt;h1 id="tektonhttpstektondev">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Tekton</title><link>http://localhost:1313/docs/k8s/devsecops/51-tekton/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/devsecops/51-tekton/</guid><description>&lt;h1 id="tektonhttpstektondev">
  &lt;a href="https://tekton.dev/">Tekton&lt;/a>
  &lt;a class="anchor" href="#tektonhttpstektondev">#&lt;/a>
 &lt;/h1>
@@ -510,7 +577,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Argo</title><link>https://example.org/docs/k8s/devsecops/52-argo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/devsecops/52-argo/</guid><description>&lt;h1 id="argohttpsargoprojgithubio">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Argo</title><link>http://localhost:1313/docs/k8s/devsecops/52-argo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/devsecops/52-argo/</guid><description>&lt;h1 id="argohttpsargoprojgithubio">
  &lt;a href="https://argoproj.github.io/">Argo&lt;/a>
  &lt;a class="anchor" href="#argohttpsargoprojgithubio">#&lt;/a>
 &lt;/h1>
@@ -553,7 +620,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>https://example.org/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>PCA (Prometheus)</title><link>http://localhost:1313/docs/k8s/certifications/pca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/pca/</guid><description>&lt;h1 id="pca-prometheus-certified-associate">
  PCA (Prometheus Certified Associate)
  &lt;a class="anchor" href="#pca-prometheus-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -698,7 +765,7 @@ With Jekyll, something that looked like&lt;/p>
  Mock Exams
  &lt;a class="anchor" href="#mock-exams">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef">https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef&lt;/a>&lt;/p></description></item><item><title>ICA (Istio)</title><link>https://example.org/docs/k8s/certifications/ica/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/ica/</guid><description>&lt;h1 id="ica-istio-certified-associate">
+&lt;p>&lt;a href="https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef">https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef&lt;/a>&lt;/p></description></item><item><title>ICA (Istio)</title><link>http://localhost:1313/docs/k8s/certifications/ica/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/ica/</guid><description>&lt;h1 id="ica-istio-certified-associate">
  ICA (Istio Certified Associate)
  &lt;a class="anchor" href="#ica-istio-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -750,7 +817,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>● 使用DestinationRule定义流量策略&lt;/p>
 &lt;p>● 配置流量镜像功能&lt;/p>
 &lt;p>弹性和故障注入：20%&lt;/p>
-&lt;p>● 配置断路器(带或不带离群值检测)&lt;/p></description></item><item><title>CAPA (Argo)</title><link>https://example.org/docs/k8s/certifications/capa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/capa/</guid><description>&lt;h1 id="capa-certified-argo-project-associate">
+&lt;p>● 配置断路器(带或不带离群值检测)&lt;/p></description></item><item><title>CAPA (Argo)</title><link>http://localhost:1313/docs/k8s/certifications/capa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/capa/</guid><description>&lt;h1 id="capa-certified-argo-project-associate">
  CAPA (Certified Argo Project Associate)
  &lt;a class="anchor" href="#capa-certified-argo-project-associate">#&lt;/a>
 &lt;/h1>
@@ -798,7 +865,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>Argo工作流程： 36%&lt;/p>
 &lt;p>● 了解Argo工作流程基础&lt;/p>
 &lt;p>● 生成和使用工件&lt;/p>
-&lt;p>● 了解Argo工作流模板&lt;/p></description></item><item><title>CCA (Cilium)</title><link>https://example.org/docs/k8s/certifications/cca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/cca/</guid><description>&lt;h1 id="ccacilium-certified-associate">
+&lt;p>● 了解Argo工作流模板&lt;/p></description></item><item><title>CCA (Cilium)</title><link>http://localhost:1313/docs/k8s/certifications/cca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/cca/</guid><description>&lt;h1 id="ccacilium-certified-associate">
  CCA（Cilium Certified Associate）
  &lt;a class="anchor" href="#ccacilium-certified-associate">#&lt;/a>
 &lt;/h1>
@@ -840,7 +907,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>● Cilium结构&lt;/p>
 &lt;p>● IP地址管理(IPAM)与Cilium&lt;/p>
 &lt;p>● Cilium成分的作用&lt;/p>
-&lt;p>● Datapath模型&lt;/p></description></item><item><title>CSI</title><link>https://example.org/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/csi/</guid><description>&lt;h1 id="csi">
+&lt;p>● Datapath模型&lt;/p></description></item><item><title>CSI</title><link>http://localhost:1313/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/csi/</guid><description>&lt;h1 id="csi">
  CSI
  &lt;a class="anchor" href="#csi">#&lt;/a>
 &lt;/h1>
@@ -893,7 +960,7 @@ With Jekyll, something that looked like&lt;/p>
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>Envoy</title><link>https://example.org/docs/istio/envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/envoy/</guid><description>&lt;h2 id="questions">
+&lt;p>&lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>Envoy</title><link>http://localhost:1313/docs/istio/envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/envoy/</guid><description>&lt;h2 id="questions">
  Questions:
  &lt;a class="anchor" href="#questions">#&lt;/a>
 &lt;/h2>
@@ -910,7 +977,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Questions</title><link>https://example.org/docs/k8s/certifications/question/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/certifications/question/</guid><description>&lt;h1 id="kubenests-questions">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Questions</title><link>http://localhost:1313/docs/k8s/certifications/question/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/certifications/question/</guid><description>&lt;h1 id="kubenests-questions">
  Kubenests Questions
  &lt;a class="anchor" href="#kubenests-questions">#&lt;/a>
 &lt;/h1>
@@ -960,7 +1027,7 @@ With Jekyll, something that looked like&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>https://example.org/docs/istio/trafficmanagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/trafficmanagement/</guid><description>&lt;h1 id="traffic-management">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>http://localhost:1313/docs/istio/trafficmanagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/trafficmanagement/</guid><description>&lt;h1 id="traffic-management">
  Traffic Management
  &lt;a class="anchor" href="#traffic-management">#&lt;/a>
 &lt;/h1>
@@ -1005,7 +1072,7 @@ Password:
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>https://example.org/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cni/</guid><description>&lt;h1 id="cni">
+&lt;p>&lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>http://localhost:1313/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni/</guid><description>&lt;h1 id="cni">
  CNI
  &lt;a class="anchor" href="#cni">#&lt;/a>
 &lt;/h1>
@@ -1040,7 +1107,7 @@ Password:
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>https://example.org/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium">
  eBPF &amp;amp; Cilium
  &lt;a class="anchor" href="#ebpf--cilium">#&lt;/a>
 &lt;/h1>
@@ -1049,7 +1116,7 @@ Password:
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Kubeflow</title><link>https://example.org/docs/k8s/devsecops/80-kubeflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/devsecops/80-kubeflow/</guid><description>&lt;h1 id="kubeflowhttpswwwkubefloworg">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Kubeflow</title><link>http://localhost:1313/docs/k8s/devsecops/80-kubeflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/devsecops/80-kubeflow/</guid><description>&lt;h1 id="kubeflowhttpswwwkubefloworg">
  &lt;a href="https://www.kubeflow.org/">Kubeflow&lt;/a>
  &lt;a class="anchor" href="#kubeflowhttpswwwkubefloworg">#&lt;/a>
 &lt;/h1>
@@ -1099,11 +1166,11 @@ Password:
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>https://example.org/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>http://localhost:1313/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security">
  Kubernetes Security
  &lt;a class="anchor" href="#kubernetes-security">#&lt;/a>
 &lt;/h1>
-&lt;p>&lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>https://example.org/docs/istio/sourcecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/sourcecode/</guid><description>&lt;h2 id="questions">
+&lt;p>&lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>http://localhost:1313/docs/istio/sourcecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/sourcecode/</guid><description>&lt;h2 id="questions">
  Questions:
  &lt;a class="anchor" href="#questions">#&lt;/a>
 &lt;/h2>
@@ -1156,7 +1223,7 @@ Password:
 &lt;/h3>
 &lt;p>&lt;a href="https://github.com/istio/istio">Github&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jimmysong.io/kubernetes-handbook/usecases/istio.html">JimmySong&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p></description></item><item><title>Training</title><link>https://example.org/docs/istio/train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/train/</guid><description>&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p></description></item><item><title>Training</title><link>http://localhost:1313/docs/istio/train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/train/</guid><description>&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/23">Prometheus Certified Associate - PCA&lt;/a>&lt;/p>
 &lt;h3 id="reference">
  Reference
@@ -1182,7 +1249,7 @@ Password:
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>https://example.org/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>http://localhost:1313/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure">
  Codes Structure:
  &lt;a class="anchor" href="#codes-structure">#&lt;/a>
 &lt;/h2>
@@ -1374,7 +1441,7 @@ etcd &lt;br/>
  Customer Resource Definition (CRD)
  &lt;a class="anchor" href="#customer-resource-definition-crd">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>https://example.org/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/install/</guid><description>&lt;h3 id="tools">
+&lt;p>&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>http://localhost:1313/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/install/</guid><description>&lt;h3 id="tools">
  Tools
  &lt;a class="anchor" href="#tools">#&lt;/a>
 &lt;/h3>
@@ -1451,7 +1518,7 @@ etcd &lt;br/>
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h3>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>https://example.org/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>http://localhost:1313/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
  Tools (docker/containerd/&amp;hellip;)
  &lt;a class="anchor" href="#tools-dockercontainerd">#&lt;/a>
 &lt;/h1>
@@ -1525,14 +1592,14 @@ sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
 &lt;/details>
 
 &lt;/code>&lt;/pre>
-&lt;p>&lt;a href="https://containerd.io/">containerd&lt;/a>, &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://example.org/posts/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://example.org/posts/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+&lt;p>&lt;a href="https://containerd.io/">containerd&lt;/a>, &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>http://localhost:1313/posts/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website. If you have used other
 template systems from different languages or frameworks you will find a lot of
 similarities in Go templates.&lt;/p>
 &lt;p>This document is a brief primer on using Go templates. The &lt;a href="https://golang.org/pkg/html/template/">Go docs&lt;/a>
-provide more details.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>https://example.org/posts/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://example.org/posts/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">
+provide more details.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>http://localhost:1313/posts/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">
  Step 1. Install Hugo
  &lt;a class="anchor" href="#step-1-install-hugo">#&lt;/a>
 &lt;/h2>
@@ -1546,7 +1613,7 @@ appropriate version for your OS and architecture.&lt;/p>
 &lt;/h2>
 &lt;p>Hugo has its own example site which happens to also be the documentation site
 you are reading right now.&lt;/p>
-&lt;p>Follow the following steps:&lt;/p></description></item><item><title/><link>https://example.org/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
+&lt;p>Follow the following steps:&lt;/p></description></item><item><title/><link>http://localhost:1313/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
  Operator
  &lt;a class="anchor" href="#operator">#&lt;/a>
 &lt;/h1></description></item></channel></rss>

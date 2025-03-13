@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Istio on My New Hugo Site</title><link>https://example.org/docs/istio/</link><description>Recent content in Istio on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://example.org/docs/istio/index.xml" rel="self" type="application/rss+xml"/><item><title>Envoy</title><link>https://example.org/docs/istio/envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/envoy/</guid><description>&lt;h2 id="questions">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Istio on My New Hugo Site</title><link>http://localhost:1313/docs/istio/</link><description>Recent content in Istio on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/istio/index.xml" rel="self" type="application/rss+xml"/><item><title>Envoy</title><link>http://localhost:1313/docs/istio/envoy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/envoy/</guid><description>&lt;h2 id="questions">
  Questions:
  &lt;a class="anchor" href="#questions">#&lt;/a>
 &lt;/h2>
@@ -15,7 +15,7 @@
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>https://example.org/docs/istio/trafficmanagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/trafficmanagement/</guid><description>&lt;h1 id="traffic-management">
+&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Traffic Management</title><link>http://localhost:1313/docs/istio/trafficmanagement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/trafficmanagement/</guid><description>&lt;h1 id="traffic-management">
  Traffic Management
  &lt;a class="anchor" href="#traffic-management">#&lt;/a>
 &lt;/h1>
@@ -60,7 +60,7 @@ Password:
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>https://example.org/docs/istio/sourcecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/sourcecode/</guid><description>&lt;h2 id="questions">
+&lt;p>&lt;a href="https://istio.io/latest/docs/">Istio Docs&lt;/a>&lt;/p></description></item><item><title>Source Code</title><link>http://localhost:1313/docs/istio/sourcecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/sourcecode/</guid><description>&lt;h2 id="questions">
  Questions:
  &lt;a class="anchor" href="#questions">#&lt;/a>
 &lt;/h2>
@@ -113,7 +113,7 @@ Password:
 &lt;/h3>
 &lt;p>&lt;a href="https://github.com/istio/istio">Github&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://jimmysong.io/kubernetes-handbook/usecases/istio.html">JimmySong&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p></description></item><item><title>Training</title><link>https://example.org/docs/istio/train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.org/docs/istio/train/</guid><description>&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learning.edx.org/course/course-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@sequential&amp;#43;block@44fcbbce8e5b428ca695bbda5316cd7d/block-v1:LinuxFoundationX&amp;#43;LFS144x&amp;#43;3T2022&amp;#43;type@vertical&amp;#43;block@8d398ad8731c430a94322c363644a385">Become a Contributor&lt;/a>&lt;/p></description></item><item><title>Training</title><link>http://localhost:1313/docs/istio/train/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/istio/train/</guid><description>&lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/33">Istio Certified Associate - ICA&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://training.linuxfoundation.cn/certificates/23">Prometheus Certified Associate - PCA&lt;/a>&lt;/p>
 &lt;h3 id="reference">
  Reference
