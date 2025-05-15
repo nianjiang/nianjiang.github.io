@@ -19,17 +19,23 @@ With Jekyll, something that looked like&lt;/p>
  ▾ images/
  logo.png
 &lt;/code>&lt;/pre>
-&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Golang</title><link>http://localhost:1313/docs/programming/11_cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/programming/11_cni/</guid><description>&lt;h1 id="golang">
+&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Golang</title><link>http://localhost:1313/docs/programming/11_golang/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/programming/11_golang/</guid><description>&lt;h1 id="golang">
  Golang
  &lt;a class="anchor" href="#golang">#&lt;/a>
 &lt;/h1>
-&lt;h2 id="reference">
+&lt;h3 id="topics">
+ Topics
+ &lt;a class="anchor" href="#topics">#&lt;/a>
+&lt;/h3>
+&lt;p>channel VS thread&lt;/p>
+&lt;p>gorouting&lt;/p>
+&lt;h3 id="reference">
  Reference
  &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://go.dev/">Golang&lt;/a>&lt;/p>
+&lt;/h3>
+&lt;p>&lt;a href="https://go.dev/">go.dev&lt;/a>， &lt;a href="https://go.dev/doc/">Doc&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://time.geekbang.org/course/detail/100024001-85955">Go 语言从入门到实战&lt;/a>, &lt;a href="https://time.geekbang.org/column/article/294905?cid=100061801">Go 并发编程实战课&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.runoob.com/go/go-tutorial.html">Go | 菜鸟教程&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="">&lt;/a>&lt;/p>
