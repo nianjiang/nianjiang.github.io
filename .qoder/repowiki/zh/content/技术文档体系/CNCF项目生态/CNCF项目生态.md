@@ -4,13 +4,18 @@
 **本文引用的文件**   
 - [README.md](file://README.md)
 - [config.yaml](file://config.yaml)
-- [hugo.toml](file://hugo.toml)
 - [content/docs/70-CNCF/_index.md](file://content/docs/70-CNCF/_index.md)
 - [content/docs/70-CNCF/40Observe.md](file://content/docs/70-CNCF/40Observe.md)
 - [content/docs/70-CNCF/50Logging.md](file://content/docs/70-CNCF/50Logging.md)
 - [content/docs/70-CNCF/80_Redis.md](file://content/docs/70-CNCF/80_Redis.md)
 - [content/docs/70-CNCF/90_Iac.md](file://content/docs/70-CNCF/90_Iac.md)
 </cite>
+
+## 更新摘要
+**变更内容**   
+- 新增CNCF项目生态文档，涵盖可观测性、日志收集、Redis缓存和基础设施即代码等云原生技术栈
+- 构建了完整的企业级云原生平台架构指南
+- 提供了从架构设计到落地实施的全链路参考
 
 ## 目录
 1. [简介](#简介)
@@ -28,12 +33,12 @@
 本仓库以Hugo静态站点为载体，系统化沉淀CNCF生态在企业级云原生平台中的实践与指南。内容聚焦四大关键领域：可观测性（Prometheus、Grafana、分布式追踪）、日志收集（Fluentd、Loki、ELK Stack）、缓存系统（Redis在高并发场景的应用模式与集群架构），以及基础设施即代码（Terraform、Ansible）。目标是为企业团队提供从架构设计到落地实施的全链路参考，帮助构建稳定、高效、可演进的云原生平台。
 
 ## 项目结构
-仓库采用“按主题分章节”的内容组织方式，核心文档位于 content/docs/70-CNCF 目录下，围绕可观测性、日志、缓存与IaC展开；站点配置与生成脚本位于根目录的配置文件与GitHub Actions工作流中。
+仓库采用"按主题分章节"的内容组织方式，核心文档位于 content/docs/70-CNCF 目录下，围绕可观测性、日志、缓存与IaC展开；站点配置与生成脚本位于根目录的配置文件与GitHub Actions工作流中。
 
 ```mermaid
 graph TB
 A["仓库根目录"] --> B["content/docs/70-CNCF<br/>CNCF主题文档"]
-A --> C["config.yaml / hugo.toml<br/>站点配置"]
+A --> C["config.yaml<br/>站点配置"]
 A --> D[".github/workflows/hugo.yaml<br/>CI构建流程"]
 B --> B1["40Observe.md<br/>可观测性"]
 B --> B2["50Logging.md<br/>日志收集"]
@@ -49,13 +54,10 @@ B --> B5["_index.md<br/>目录索引"]
 - [content/docs/70-CNCF/80_Redis.md](file://content/docs/70-CNCF/80_Redis.md)
 - [content/docs/70-CNCF/90_Iac.md](file://content/docs/70-CNCF/90_Iac.md)
 - [config.yaml](file://config.yaml)
-- [hugo.toml](file://hugo.toml)
-- [.github/workflows/hugo.yaml](file://.github/workflows/hugo.yaml)
 
 章节来源
 - [README.md](file://README.md)
 - [config.yaml](file://config.yaml)
-- [hugo.toml](file://hugo.toml)
 - [content/docs/70-CNCF/_index.md](file://content/docs/70-CNCF/_index.md)
 
 ## 核心组件
@@ -350,7 +352,7 @@ IA --> CACHE
 - [content/docs/70-CNCF/90_Iac.md](file://content/docs/70-CNCF/90_Iac.md)
 
 ## 结论
-通过构建统一的指标、日志与追踪体系，结合Redis高并发缓存与Terraform/Ansible的IaC能力，企业可以打造具备高可用、可扩展与易运维的云原生平台。建议在演进过程中坚持“可观测先行、日志规范化、缓存分层、IaC驱动”的原则，逐步完善SLO治理与成本优化，持续提升交付质量与稳定性。
+通过构建统一的指标、日志与追踪体系，结合Redis高并发缓存与Terraform/Ansible的IaC能力，企业可以打造具备高可用、可扩展与易运维的云原生平台。建议在演进过程中坚持"可观测先行、日志规范化、缓存分层、IaC驱动"的原则，逐步完善SLO治理与成本优化，持续提升交付质量与稳定性。
 
 ## 附录
 - 术语表

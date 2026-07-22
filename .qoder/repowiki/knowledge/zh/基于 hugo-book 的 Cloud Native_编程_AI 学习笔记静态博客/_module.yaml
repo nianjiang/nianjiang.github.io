@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: Hugo Book 个人技术博客站点
+title: 基于 hugo-book 的 Cloud Native/编程/AI 学习笔记静态博客
 scope:
     - .github/
     - .gitee/

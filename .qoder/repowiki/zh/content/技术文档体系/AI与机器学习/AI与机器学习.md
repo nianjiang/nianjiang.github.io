@@ -10,6 +10,12 @@
 - [content/docs/60-AI/80-Hello-Agents.md](file://content/docs/60-AI/80-Hello-Agents.md)
 </cite>
 
+## 更新摘要
+**所做更改**   
+- 新增了完整的AI与机器学习文档体系，涵盖MLOps实践、大语言模型RAG技术、DeepSeek和Qwen模型应用以及AI Agent开发
+- 构建了系统化的技术文档架构，从基础概念到生产环境最佳实践
+- 提供了端到端的架构图和详细的组件分析
+
 ## 目录
 1. [简介](#简介)
 2. [项目结构](#项目结构)
@@ -62,7 +68,7 @@ A --> F["content/docs/60-AI/80-Hello-Agents.md"]
 - [content/docs/60-AI/80-Hello-Agents.md](file://content/docs/60-AI/80-Hello-Agents.md)
 
 ## 架构总览
-下图展示一个典型的“RAG + LLM + Agent”端到端架构，结合MLOps实现持续交付与监控。
+下图展示一个典型的"RAG + LLM + Agent"端到端架构，结合MLOps实现持续交付与监控。
 
 ```mermaid
 graph TB
@@ -262,8 +268,6 @@ MON --> LLM
   - 超时与重试、熔断与降级、幂等设计。
   - 全链路追踪与慢查询定位。
 
-[本节为通用指导，不直接分析具体文件]
-
 ## 故障排查指南
 - 常见问题：
   - 检索召回率低：检查分块策略、Embedding模型、相似度阈值与重排逻辑。
@@ -286,8 +290,6 @@ MON --> LLM
 
 ## 结论
 通过将MLOps、RAG、主流大模型与Agent开发有机结合，可以构建高可用、可扩展且可控的AI应用体系。在生产环境中，应重点关注性能优化、成本控制与安全合规，建立完善的监控与回滚机制，确保系统在演进过程中保持稳定与高效。
-
-[本节为总结性内容，不直接分析具体文件]
 
 ## 附录
 - 术语表：
