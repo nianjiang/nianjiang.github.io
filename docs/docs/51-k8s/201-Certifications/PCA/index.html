@@ -1,0 +1,266 @@
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  PCA (Prometheus Certified Associate)
+  #
+
+
+  PCA Goal
+  #
+
+
+  English
+
+  Chinese
+
+  CNCF Project Desc
+
+  Prometheus
+
+  Github
+
+  Exam Objects
+  #
+
+
+  📋 Observability Concepts 18%
+  #
+
+
+        
+  Metrics
+  #
+
+
+        
+  Understand logs and events
+  #
+
+
+        
+  Tracing and Spans
+  #
+
+
+        
+  Push vs Pull
+  #
+
+
+        
+  Service Discovery
+  #
+
+
+        
+  Basics of SLOs, SLAs, and SLIs
+  #
+
+
+  📋 Prometheus Fundamentals 20%
+  #
+
+
+        
+  System Architecture
+  #
+
+
+        
+  Configuration and 
+  Scraping
+  #
+
+
+        
+  Understanding Prometheus Limitations
+  #
+
+
+        
+  Data Model and Labels
+  #
+
+
+        
+  Exposition Format
+  #
+
+
+  📋 PromQL 28%
+  #
+
+
+        
+  Selecting Data
+  #
+
+
+        
+  Rates and 
+  Derivatives
+  #
+
+
+        
+  Aggregating over time
+  #
+
+
+        
+  Aggregating over dimensions
+  #
+
+
+        
+  Binary operators
+  #
+
+
+        
+  Histograms
+  #
+
+
+        
+  Timestamp Metrics
+  #
+
+
+  📋 Instrumentation and Exporters 16%
+  #
+
+
+        
+  Client Libraries
+  #
+
+
+        
+  Instrumentation
+  #
+
+
+        
+  Exporters
+  #
+
+
+        
+  Structuring and naming metrics
+  #
+
+
+  📋 Alerting & Dashboarding 18%
+  #
+
+
+        
+  Dashboarding basics
+  #
+
+
+        
+  Configuring Alerting rules
+  #
+
+
+        
+  Understand and Use Alertmanager
+  #
+
+
+        
+  Alerting basics (when, what, and why)
+  #
+
+
+  Mock Exams
+  #
+
+
+  https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/51-k8s/201-Certifications/PCA/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="PCA (Prometheus)"><meta property="og:description" content="PCA (Prometheus Certified Associate) # PCA Goal # English
+Chinese
+CNCF Project Desc
+Prometheus
+Github
+Exam Objects # 📋 Observability Concepts 18% # Metrics # Understand logs and events # Tracing and Spans # Push vs Pull # Service Discovery # Basics of SLOs, SLAs, and SLIs # 📋 Prometheus Fundamentals 20% # System Architecture # Configuration and Scraping # Understanding Prometheus Limitations # Data Model and Labels # Exposition Format # 📋 PromQL 28% # Selecting Data # Rates and Derivatives # Aggregating over time # Aggregating over dimensions # Binary operators # Histograms # Timestamp Metrics # 📋 Instrumentation and Exporters 16% # Client Libraries # Instrumentation # Exporters # Structuring and naming metrics # 📋 Alerting & Dashboarding 18% # Dashboarding basics # Configuring Alerting rules # Understand and Use Alertmanager # Alerting basics (when, what, and why) # Mock Exams # https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2026-07-22T10:19:33+08:00"><title>PCA (Prometheus) | Learning Notes</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/51-k8s/201-Certifications/PCA/><link rel=stylesheet href=/book.min.3257a7ce7c061eb5dfc72257c356229b1470dc77ce9b982ac220c02542f9f04f.css integrity="sha256-MlenznwGHrXfxyJXw1YimxRw3HfOm5gqwiDAJUL58E8=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/zh.search.min.e545c2258a04745313a3c2606bf4913937314b8a41a1909e55eab7a0f8ce716d.js integrity="sha256-5UXCJYoEdFMTo8Jga/SROTcxS4pBoZCeVeq3oPjOcW0=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-BPF/>eBPF</a></li><li><a href=/docs/50-linux/60-Interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle checked>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><a href=/docs/51-k8s/020-Codes/>Codes</a></li><li><input type=checkbox id=section-f0936f125e361a508a54646437409c2d class=toggle>
+<label for=section-f0936f125e361a508a54646437409c2d class="flex justify-between"><a href=/docs/51-k8s/021-Codes/>Codes</a></label><ul><li><a href=/docs/51-k8s/021-Codes/09-Scheduler-Doc/>Scheduler Docs</a></li><li><a href=/docs/51-k8s/021-Codes/10-Scheduler/>Scheduler</a></li><li><a href=/docs/51-k8s/021-Codes/11-Score/>Scheduler-score</a></li><li><a href=/docs/51-k8s/021-Codes/19-Descheduler/>Descheduler</a></li></ul></li><li><a href=/docs/51-k8s/050-CRI/>CRI</a></li><li><a href=/docs/51-k8s/060-CSI/>CSI</a></li><li><a href=/docs/51-k8s/070-CNI/>CNI</a></li><li><a href=/docs/51-k8s/071-CNI-eBPF/>eBPF</a></li><li><a href=/docs/51-k8s/080-Security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/51-k8s/90-DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/51-k8s/90-DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-Install/>Install</a></li><li><a href=/docs/51-k8s/103-Podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle checked>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-Certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-Certifications/CKA/>CKA</a></li><li><a href=/docs/51-k8s/201-Certifications/CKS/>CKS</a></li><li><a href=/docs/51-k8s/201-Certifications/PCA/ class=active>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-Certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/Envoy/>Envoy</a></li><li><a href=/docs/52-istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/52-istio/SourceCode/>Source Code</a></li><li><a href=/docs/52-istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-AI/>AI</a></label><ul><li><a href=/docs/60-AI/10-MLOps/>MLOps</a></li><li><a href=/docs/60-AI/20-map/>Learning Map</a></li><li><a href=/docs/60-AI/21-note/>Learning Note</a></li><li><a href=/docs/60-AI/22-LLMRAG/>LLM & RAG</a></li><li><a href=/docs/60-AI/23-DeepSeek/>DeepSeek</a></li><li><a href=/docs/60-AI/24-Qwen/>Qwen</a></li><li><a href=/docs/60-AI/80-Hello-Agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-CNCF/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-CNCF/40Observe/>Observability & Analysis</a></label></li><li><a href=/docs/70-CNCF/50Logging/>Logging</a></li><li><a href=/docs/70-CNCF/80_Redis/>Redis</a></li><li><a href=/docs/70-CNCF/90_Iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-Programming/>Programming</a></label><ul><li><a href=/docs/80-Programming/05_Toolkit/>Toolkit</a></li><li><a href=/docs/80-Programming/10_Vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-Programming/Golang/>Golang</a></label><ul><li><a href=/docs/80-Programming/Golang/01_Golang/>Golang</a></li><li><a href=/docs/80-Programming/Golang/10_Gin/>Gin</a></li><li><a href=/docs/80-Programming/Golang/12_Gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-Tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-Tools/11_Golang/>CMS</a></li><li><a href=/docs/90-Tools/21_Cloud/>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-English/>English</a></label><ul><li><a href=/docs/99-English/05-AI/>Artificial Intellience</a></li><li><a href=/docs/99-English/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-English/25-Kids/>Kids</a></li><li><a href=/docs/99-English/50-TV/>TV/Movie/Books</a></li><li><a href=/docs/99-English/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>PCA (Prometheus)</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#pca-prometheus-certified-associate>PCA (Prometheus Certified Associate)</a><ul><li><a href=#pca-goal>PCA Goal</a></li><li><a href=#exam-objects>Exam Objects</a><ul><li><a href=#-observability-concepts-18>📋 Observability Concepts 18%</a></li><li><a href=#-prometheus-fundamentals-20>📋 Prometheus Fundamentals 20%</a></li><li><a href=#-promql-28>📋 PromQL 28%</a></li><li><a href=#-instrumentation-and-exporters-16>📋 Instrumentation and Exporters 16%</a></li><li><a href=#-alerting--dashboarding-18>📋 Alerting & Dashboarding 18%</a></li></ul></li><li><a href=#mock-exams>Mock Exams</a></li><li><a href=#prometheus-reference>Prometheus Reference</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=pca-prometheus-certified-associate>PCA (Prometheus Certified Associate)
+<a class=anchor href=#pca-prometheus-certified-associate>#</a></h1><h2 id=pca-goal>PCA Goal
+<a class=anchor href=#pca-goal>#</a></h2><p><a href=https://www.cncf.io/training/certification/pca/>English</a></p><p><a href=https://training.linuxfoundation.cn/certificates/23>Chinese</a></p><p><a href=https://www.cncf.io/projects/prometheus/>CNCF Project Desc</a></p><p><a href=https://prometheus.io/>Prometheus</a></p><p><a href=https://github.com/prometheus/prometheus>Github</a></p><h2 id=exam-objects>Exam Objects
+<a class=anchor href=#exam-objects>#</a></h2><h3 id=-observability-concepts-18>📋 Observability Concepts 18%
+<a class=anchor href=#-observability-concepts-18>#</a></h3><h4 id=metrics>     
+<a href=https://prometheus.io/docs/introduction/overview/#what-are-metrics>Metrics</a>
+<a class=anchor href=#metrics>#</a></h4><h4 id=understand-logs-and-events>     
+<a href=https://www.honeycomb.io/blog/how-are-structured-logs-different-from-events>Understand logs and events</a>
+<a class=anchor href=#understand-logs-and-events>#</a></h4><h4 id=tracing-and-spans>     
+<a href="https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.">Tracing and Spans</a>
+<a class=anchor href=#tracing-and-spans>#</a></h4><h4 id=push-vs-pull>     
+<a href=https://prometheus.io/docs/introduction/faq/#why-do-you-pull-rather-than-push>Push vs Pull</a>
+<a class=anchor href=#push-vs-pull>#</a></h4><h4 id=service-discovery>     
+<a href="https://www.youtube.com/watch?v=PzFUwBflXYc&amp;t=339s">Service Discovery</a>
+<a class=anchor href=#service-discovery>#</a></h4><h4 id=basics-of-slos-slas-and-slis>     
+<a href=https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos>Basics of SLOs, SLAs, and SLIs</a>
+<a class=anchor href=#basics-of-slos-slas-and-slis>#</a></h4><h3 id=-prometheus-fundamentals-20>📋 Prometheus Fundamentals 20%
+<a class=anchor href=#-prometheus-fundamentals-20>#</a></h3><h4 id=system-architecture>     
+<a href=https://prometheus.io/docs/introduction/overview/#architecture>System Architecture</a>
+<a class=anchor href=#system-architecture>#</a></h4><h4 id=configuration-and-scraping>     
+<a href=https://prometheus.io/docs/prometheus/latest/configuration/configuration>Configuration</a> and
+<a href=https://www.oreilly.com/library/view/prometheus-up/9781492034131/ch01.html#idm45497381503248>Scraping</a>
+<a class=anchor href=#configuration-and-scraping>#</a></h4><h4 id=understanding-prometheus-limitations>     
+<a href="https://youtu.be/m0JgWlTc60Q?t=282">Understanding Prometheus Limitations</a>
+<a class=anchor href=#understanding-prometheus-limitations>#</a></h4><h4 id=data-model-and-labels>     
+<a href=https://prometheus.io/docs/concepts/data_model>Data Model and Labels</a>
+<a class=anchor href=#data-model-and-labels>#</a></h4><h4 id=exposition-format>     
+<a href=https://prometheus.io/docs/instrumenting/exposition_formats/#exposition-formats>Exposition Format</a>
+<a class=anchor href=#exposition-format>#</a></h4><h3 id=-promql-28>📋 PromQL 28%
+<a class=anchor href=#-promql-28>#</a></h3><h4 id=selecting-data>     
+<a href=https://promlabs.com/blog/2020/07/02/selecting-data-in-promql>Selecting Data</a>
+<a class=anchor href=#selecting-data>#</a></h4><h4 id=rates-and-derivatives>     
+<a href=https://prometheus.io/docs/prometheus/latest/querying/functions/#rate>Rates</a> and
+<a href=https://prometheus.io/docs/prometheus/latest/querying/functions/#deriv>Derivatives</a>
+<a class=anchor href=#rates-and-derivatives>#</a></h4><h4 id=aggregating-over-time>     
+<a href=https://prometheus.io/docs/prometheus/latest/querying/functions/#aggregation_over_time>Aggregating over time</a>
+<a class=anchor href=#aggregating-over-time>#</a></h4><h4 id=aggregating-over-dimensions>     
+<a href=https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators>Aggregating over dimensions</a>
+<a class=anchor href=#aggregating-over-dimensions>#</a></h4><h4 id=binary-operators>     
+<a href=https://prometheus.io/docs/prometheus/latest/querying/operators/#binary-operators>Binary operators</a>
+<a class=anchor href=#binary-operators>#</a></h4><h4 id=histograms>     
+<a href=https://prometheus.io/docs/practices/histograms>Histograms</a>
+<a class=anchor href=#histograms>#</a></h4><h4 id=timestamp-metrics>     
+<a href=https://prometheus.io/docs/prometheus/latest/querying/functions/#timestamp>Timestamp Metrics</a>
+<a class=anchor href=#timestamp-metrics>#</a></h4><h3 id=-instrumentation-and-exporters-16>📋 Instrumentation and Exporters 16%
+<a class=anchor href=#-instrumentation-and-exporters-16>#</a></h3><h4 id=client-libraries>     
+<a href=https://prometheus.io/docs/instrumenting/clientlibs/#client-libraries>Client Libraries</a>
+<a class=anchor href=#client-libraries>#</a></h4><h4 id=instrumentation>     
+<a href=https://prometheus.io/docs/practices/instrumentation>Instrumentation</a>
+<a class=anchor href=#instrumentation>#</a></h4><h4 id=exporters>     
+<a href=https://prometheus.io/docs/instrumenting/exporters>Exporters</a>
+<a class=anchor href=#exporters>#</a></h4><h4 id=structuring-and-naming-metrics>     
+<a href=https://prometheus.io/docs/practices/naming/#metric-names>Structuring and naming metrics</a>
+<a class=anchor href=#structuring-and-naming-metrics>#</a></h4><h3 id=-alerting--dashboarding-18>📋 Alerting & Dashboarding 18%
+<a class=anchor href=#-alerting--dashboarding-18>#</a></h3><h4 id=dashboarding-basics>     
+<a href=https://www.oreilly.com/library/view/prometheus-up/9781492034131/ch06.html#grafana_chapter>Dashboarding basics</a>
+<a class=anchor href=#dashboarding-basics>#</a></h4><h4 id=configuring-alerting-rules>     
+<a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/#:~:text=Alerting%20rules%20are%20configured%20in,same%20way%20as%20recording%20rules.&amp;text=The%20optional%20for%20clause%20causes,as%20firing%20for%20this%20element.">Configuring Alerting rules</a>
+<a class=anchor href=#configuring-alerting-rules>#</a></h4><h4 id=understand-and-use-alertmanager>     
+<a href=https://prometheus.io/docs/alerting/latest/alertmanager/#alertmanager>Understand and Use Alertmanager</a>
+<a class=anchor href=#understand-and-use-alertmanager>#</a></h4><h4 id=alerting-basics-when-what-and-why>     
+<a href=https://prometheus.io/docs/practices/alerting/#alerting>Alerting basics (when, what, and why)</a>
+<a class=anchor href=#alerting-basics-when-what-and-why>#</a></h4><h2 id=mock-exams>Mock Exams
+<a class=anchor href=#mock-exams>#</a></h2><p><a href=https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef>https://gist.github.com/luckylittle/68ea588d1242cff04765bbeddbed8fef</a></p><h2 id=prometheus-reference>Prometheus Reference
+<a class=anchor href=#prometheus-reference>#</a></h2><p><a href=https://prometheus.io/docs/introduction/overview/>Prometheus Docs</a></p><p><a href=https://github.com/prometheus/prometheus>Github</a></p><p><a href=https://medium.com/@onai.rotich/prometheus-certified-associate-a-comprehensive-guide-9c51638578d2>Prometheus Certified Associate: A Comprehensive Guide</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=https://www.cncf.io/training/certification/>CNCF Certifications</a></p><p><a href=https://www.cncf.io/training/>CNCF Training & Certification</a></p><p><a href=https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/>Linux Training</a></p><p><a href=https://training.linuxfoundation.cn/>Linux Training (China)</a></p><p><a href=https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-pca>FAQ</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/6a6b718939796c0b41d0139f4c4107742d8f241a title='最后修改者 Nian Jiang | 2026-07-22 10:19:33' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt>
+<span>2026-07-22 10:19:33</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/51-k8s/201-Certifications/PCA.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#pca-prometheus-certified-associate>PCA (Prometheus Certified Associate)</a><ul><li><a href=#pca-goal>PCA Goal</a></li><li><a href=#exam-objects>Exam Objects</a><ul><li><a href=#-observability-concepts-18>📋 Observability Concepts 18%</a></li><li><a href=#-prometheus-fundamentals-20>📋 Prometheus Fundamentals 20%</a></li><li><a href=#-promql-28>📋 PromQL 28%</a></li><li><a href=#-instrumentation-and-exporters-16>📋 Instrumentation and Exporters 16%</a></li><li><a href=#-alerting--dashboarding-18>📋 Alerting & Dashboarding 18%</a></li></ul></li><li><a href=#mock-exams>Mock Exams</a></li><li><a href=#prometheus-reference>Prometheus Reference</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main><style>@media screen and (min-width:56rem){.sidebar-toggle{position:fixed;top:50%;transform:translateY(-50%);z-index:100;width:1.2rem;height:3rem;border:none;border-radius:.25rem;background:var(--gray-200);color:var(--body-font-color);cursor:pointer;font-size:.6rem;display:flex;align-items:center;justify-content:center;opacity:.35;transition:opacity .2s ease,left .2s ease,right .2s ease}.sidebar-toggle:hover{opacity:1}.sidebar-toggle-menu{left:16rem}.sidebar-toggle-toc{right:16rem}body.menu-collapsed .sidebar-toggle-menu{left:0}body.toc-collapsed .sidebar-toggle-toc{right:0}body.menu-collapsed .book-menu{display:none}body.toc-collapsed .book-toc{display:none}}@media screen and (max-width:56rem){.sidebar-toggle{display:none!important}}</style><script>(function(){var e,t,n,s,r=document.querySelector(".book-menu"),o=document.querySelector(".book-toc");if(!r)return;e=document.createElement("button"),e.className="sidebar-toggle sidebar-toggle-menu",e.setAttribute("aria-label","Toggle menu"),e.innerHTML="&#9664;",t=document.createElement("button"),t.className="sidebar-toggle sidebar-toggle-toc",t.setAttribute("aria-label","Toggle table of contents"),t.innerHTML="&#9654;",document.body.appendChild(e),o&&document.body.appendChild(t),n=localStorage.getItem("book-menu-collapsed")==="true",s=localStorage.getItem("book-toc-collapsed")==="true";function i(){document.body.classList.toggle("menu-collapsed",n),e.innerHTML=n?"&#9654;":"&#9664;"}function a(){if(!o)return;document.body.classList.toggle("toc-collapsed",s),t.innerHTML=s?"&#9664;":"&#9654;"}e.addEventListener("click",function(){n=!n,localStorage.setItem("book-menu-collapsed",n),i()}),o&&t.addEventListener("click",function(){s=!s,localStorage.setItem("book-toc-collapsed",s),a()}),i(),a()})()</script></body></html>

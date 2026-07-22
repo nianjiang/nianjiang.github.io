@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: ""
+title: Hugo Book 个人技术博客站点
+scope:
+    - .github/
+    - .gitee/
+    - archetypes/
+    - content/
+    - docs/
+    - public/
+    - resources/
+    - .gitignore
+    - .gitmodules
+    - README.md
+    - config.yaml
+    - hugo.toml
+    - LICENSE
+source_files: []
+depends_on: []
+related_to: []

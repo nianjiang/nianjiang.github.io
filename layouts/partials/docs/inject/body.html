@@ -1,0 +1,137 @@
+<!-- Sidebar toggle: collapse/expand left menu and right TOC on desktop -->
+<style>
+@media screen and (min-width: 56rem) {
+  .sidebar-toggle {
+    position: fixed;
+    top: 0.75rem;
+    z-index: 100;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.375rem;
+    background: transparent;
+    color: var(--gray-500);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, color 0.15s ease, left 0.25s ease, right 0.25s ease;
+  }
+
+  .sidebar-toggle:hover {
+    background: var(--gray-100);
+    color: var(--body-font-color);
+  }
+
+  .sidebar-toggle:active {
+    background: var(--gray-200);
+  }
+
+  .sidebar-toggle svg {
+    pointer-events: none;
+  }
+
+  .sidebar-toggle-menu {
+    left: calc(16rem - 2rem);
+  }
+
+  .sidebar-toggle-toc {
+    right: calc(16rem + 0.5rem);
+  }
+
+  body.menu-collapsed .sidebar-toggle-menu {
+    left: 0.5rem;
+  }
+
+  body.toc-collapsed .sidebar-toggle-toc {
+    right: 0.5rem;
+  }
+
+  body.menu-collapsed .book-menu {
+    display: none;
+  }
+
+  body.toc-collapsed .book-toc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 56rem) {
+  .sidebar-toggle {
+    display: none !important;
+  }
+}
+</style>
+
+<script>
+(function () {
+  var menu = document.querySelector('.book-menu');
+  var toc = document.querySelector('.book-toc');
+  if (!menu) return;
+
+  // SVG chevron arrows
+  var chevronLeft = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var chevronRight = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  // Create toggle buttons
+  var menuBtn = document.createElement('button');
+  menuBtn.className = 'sidebar-toggle sidebar-toggle-menu';
+  menuBtn.setAttribute('aria-label', 'Toggle menu');
+  menuBtn.innerHTML = chevronLeft;
+
+  var tocBtn = document.createElement('button');
+  tocBtn.className = 'sidebar-toggle sidebar-toggle-toc';
+  tocBtn.setAttribute('aria-label', 'Toggle table of contents');
+  tocBtn.innerHTML = chevronRight;
+
+  document.body.appendChild(menuBtn);
+  if (toc) document.body.appendChild(tocBtn);
+
+  // Load persisted state
+  var menuCollapsed = localStorage.getItem('book-menu-collapsed') === 'true';
+  var tocCollapsed = localStorage.getItem('book-toc-collapsed') === 'true';
+
+  function updateMenu() {
+    document.body.classList.toggle('menu-collapsed', menuCollapsed);
+    menuBtn.innerHTML = menuCollapsed ? chevronRight : chevronLeft;
+    menuBtn.title = (menuCollapsed ? '\u5c55\u5f00\u83dc\u5355' : '\u6536\u8d77\u83dc\u5355') + ' (Ctrl+Cmd+\u2190)';
+  }
+
+  function updateToc() {
+    if (!toc) return;
+    document.body.classList.toggle('toc-collapsed', tocCollapsed);
+    tocBtn.innerHTML = tocCollapsed ? chevronLeft : chevronRight;
+    tocBtn.title = (tocCollapsed ? '\u5c55\u5f00\u76ee\u5f55' : '\u6536\u8d77\u76ee\u5f55') + ' (Ctrl+Cmd+\u2192)';
+  }
+
+  menuBtn.addEventListener('click', function () {
+    menuCollapsed = !menuCollapsed;
+    localStorage.setItem('book-menu-collapsed', menuCollapsed);
+    updateMenu();
+  });
+
+  if (toc) {
+    tocBtn.addEventListener('click', function () {
+      tocCollapsed = !tocCollapsed;
+      localStorage.setItem('book-toc-collapsed', tocCollapsed);
+      updateToc();
+    });
+  }
+
+  // Keyboard shortcuts: Ctrl+Cmd+Left toggles menu, Ctrl+Cmd+Right toggles TOC
+  document.addEventListener('keydown', function (e) {
+    if (!(e.ctrlKey && e.metaKey)) return;
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      menuBtn.click();
+    } else if (e.key === 'ArrowRight' && toc) {
+      e.preventDefault();
+      tocBtn.click();
+    }
+  });
+
+  updateMenu();
+  updateToc();
+})();
+</script>

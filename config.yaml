@@ -2,11 +2,6 @@ baseURL: 'https://nianjiang.github.io/'
 title: 'Learning Notes'
 theme: 'hugo-book'
 
-# Import golang module
-module:
-  imports:
-    - path: github.com/alex-shpak/hugo-book
-
 # Book configuration
 disablePathToLower: true
 enableGitInfo: true

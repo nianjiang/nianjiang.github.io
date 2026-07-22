@@ -1,0 +1,306 @@
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Kubernetes 调度与驱逐（Scheduling & Eviction）文档总结
+  #
+
+
+官方文档：
+  kubernetes.io/docs/concepts/scheduling-eviction/
+
+
+
+  一、整体结构
+  #
+
+该文档页面是 Kubernetes 调度、抢占与驱逐 三大主题的导航入口，涵盖以下子主题：
+
+  Scheduling（调度）
+  #
+
+
+  
+      
+          序号
+          主题
+          说明
+          Note
+      
+  
+  
+      
+          1
+          
+  Kubernetes Scheduler
+          默认调度器
+          ✅
+      
+      
+          2
+          
+  Assigning Pods to Nodes
+          手动指定节点
+          
+      
+      
+          3
+          
+  Pod Overhead
+          Pod 额外开销
+          
+      
+      
+          4
+          
+  Pod Topology Spread Constraints
+          Pod 拓扑分散约束
+          
+      
+      
+          5
+          
+  Taints and Tolerations
+          污点与容忍
+          
+      
+      
+          6
+          
+  Scheduling Framework
+          调度框架（插件化架构）
+          ✅
+      
+      
+          7
+          
+  Dynamic Resource Allocation
+          动态资源分配
+          
+      
+      
+          8
+          
+  Scheduler Performance Tuning
+          调度器性能调优
+          
+      
+      
+          9
+          
+  Resource Bin Packing
+          扩展资源装箱
+          
+      
+      
+          10
+          
+  Pod Scheduling Readiness
+          Pod 调度就绪
+          
+      
+      
+          11
+          
+  PodGroup Scheduling
+          PodGroup 调度
+          
+      
+      
+          12
+          
+  Gang Scheduling
+          Gang 调度
+          
+      
+      
+          13
+          
+  Topology-aware Scheduling
+          拓扑感知调度
+          
+      
+      
+          14
+          
+  Workload-Aware Preemption
+          工作负载感知抢占
+          
+      
+      
+          15
+          
+  Descheduler
+          反调度器
+          
+      
+      
+          16
+          
+  Node Declared Features
+          节点声明特性
+          
+      
+  
+
+
+  Pod Disruption（Pod 中断）
+  #
+
+
+  
+      
+          序号
+          主题
+          说明
+          Note
+      
+  
+  
+      
+          1
+          
+  Pod Priority and Preemption
+          优先级与抢占
+          ✅
+      
+      
+          2
+          
+  Node-pressure Eviction
+          节点压力驱逐
+          ✅
+      
+      
+          3
+          
+  API-initiated Eviction
+          API 发起的驱逐
+          ✅
+      
+  
+
+
+
+  二、调度核心：kube-scheduler
+  #
+
+
+  工作原理
+  #
+
+kube-scheduler 负责为未分配节点的 Pod 选择最佳节点，采用两步法："><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/51-k8s/021-Codes/09-Scheduler-Doc/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="Scheduler Docs"><meta property="og:description" content="Kubernetes 调度与驱逐（Scheduling & Eviction）文档总结 # 官方文档： kubernetes.io/docs/concepts/scheduling-eviction/
+一、整体结构 # 该文档页面是 Kubernetes 调度、抢占与驱逐 三大主题的导航入口，涵盖以下子主题：
+Scheduling（调度） # 序号 主题 说明 Note 1 Kubernetes Scheduler 默认调度器 ✅ 2 Assigning Pods to Nodes 手动指定节点 3 Pod Overhead Pod 额外开销 4 Pod Topology Spread Constraints Pod 拓扑分散约束 5 Taints and Tolerations 污点与容忍 6 Scheduling Framework 调度框架（插件化架构） ✅ 7 Dynamic Resource Allocation 动态资源分配 8 Scheduler Performance Tuning 调度器性能调优 9 Resource Bin Packing 扩展资源装箱 10 Pod Scheduling Readiness Pod 调度就绪 11 PodGroup Scheduling PodGroup 调度 12 Gang Scheduling Gang 调度 13 Topology-aware Scheduling 拓扑感知调度 14 Workload-Aware Preemption 工作负载感知抢占 15 Descheduler 反调度器 16 Node Declared Features 节点声明特性 Pod Disruption（Pod 中断） # 序号 主题 说明 Note 1 Pod Priority and Preemption 优先级与抢占 ✅ 2 Node-pressure Eviction 节点压力驱逐 ✅ 3 API-initiated Eviction API 发起的驱逐 ✅ 二、调度核心：kube-scheduler # 工作原理 # kube-scheduler 负责为未分配节点的 Pod 选择最佳节点，采用两步法："><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2026-07-22T10:19:33+08:00"><title>Scheduler Docs | Learning Notes</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/51-k8s/021-Codes/09-Scheduler-Doc/><link rel=stylesheet href=/book.min.3257a7ce7c061eb5dfc72257c356229b1470dc77ce9b982ac220c02542f9f04f.css integrity="sha256-MlenznwGHrXfxyJXw1YimxRw3HfOm5gqwiDAJUL58E8=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/zh.search.min.e545c2258a04745313a3c2606bf4913937314b8a41a1909e55eab7a0f8ce716d.js integrity="sha256-5UXCJYoEdFMTo8Jga/SROTcxS4pBoZCeVeq3oPjOcW0=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-BPF/>eBPF</a></li><li><a href=/docs/50-linux/60-Interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle checked>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><a href=/docs/51-k8s/020-Codes/>Codes</a></li><li><input type=checkbox id=section-f0936f125e361a508a54646437409c2d class=toggle checked>
+<label for=section-f0936f125e361a508a54646437409c2d class="flex justify-between"><a href=/docs/51-k8s/021-Codes/>Codes</a></label><ul><li><a href=/docs/51-k8s/021-Codes/09-Scheduler-Doc/ class=active>Scheduler Docs</a></li><li><a href=/docs/51-k8s/021-Codes/10-Scheduler/>Scheduler</a></li><li><a href=/docs/51-k8s/021-Codes/11-Score/>Scheduler-score</a></li><li><a href=/docs/51-k8s/021-Codes/19-Descheduler/>Descheduler</a></li></ul></li><li><a href=/docs/51-k8s/050-CRI/>CRI</a></li><li><a href=/docs/51-k8s/060-CSI/>CSI</a></li><li><a href=/docs/51-k8s/070-CNI/>CNI</a></li><li><a href=/docs/51-k8s/071-CNI-eBPF/>eBPF</a></li><li><a href=/docs/51-k8s/080-Security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/51-k8s/90-DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/51-k8s/90-DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-Install/>Install</a></li><li><a href=/docs/51-k8s/103-Podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-Certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-Certifications/CKA/>CKA</a></li><li><a href=/docs/51-k8s/201-Certifications/CKS/>CKS</a></li><li><a href=/docs/51-k8s/201-Certifications/PCA/>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-Certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/Envoy/>Envoy</a></li><li><a href=/docs/52-istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/52-istio/SourceCode/>Source Code</a></li><li><a href=/docs/52-istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-AI/>AI</a></label><ul><li><a href=/docs/60-AI/10-MLOps/>MLOps</a></li><li><a href=/docs/60-AI/20-map/>Learning Map</a></li><li><a href=/docs/60-AI/21-note/>Learning Note</a></li><li><a href=/docs/60-AI/22-LLMRAG/>LLM & RAG</a></li><li><a href=/docs/60-AI/23-DeepSeek/>DeepSeek</a></li><li><a href=/docs/60-AI/24-Qwen/>Qwen</a></li><li><a href=/docs/60-AI/80-Hello-Agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-CNCF/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-CNCF/40Observe/>Observability & Analysis</a></label></li><li><a href=/docs/70-CNCF/50Logging/>Logging</a></li><li><a href=/docs/70-CNCF/80_Redis/>Redis</a></li><li><a href=/docs/70-CNCF/90_Iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-Programming/>Programming</a></label><ul><li><a href=/docs/80-Programming/05_Toolkit/>Toolkit</a></li><li><a href=/docs/80-Programming/10_Vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-Programming/Golang/>Golang</a></label><ul><li><a href=/docs/80-Programming/Golang/01_Golang/>Golang</a></li><li><a href=/docs/80-Programming/Golang/10_Gin/>Gin</a></li><li><a href=/docs/80-Programming/Golang/12_Gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-Tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-Tools/11_Golang/>CMS</a></li><li><a href=/docs/90-Tools/21_Cloud/>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-English/>English</a></label><ul><li><a href=/docs/99-English/05-AI/>Artificial Intellience</a></li><li><a href=/docs/99-English/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-English/25-Kids/>Kids</a></li><li><a href=/docs/99-English/50-TV/>TV/Movie/Books</a></li><li><a href=/docs/99-English/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Scheduler Docs</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#kubernetes-调度与驱逐scheduling--eviction文档总结>Kubernetes 调度与驱逐（Scheduling & Eviction）文档总结</a><ul><li><a href=#一整体结构>一、整体结构</a><ul><li><a href=#scheduling调度>Scheduling（调度）</a></li><li><a href=#pod-disruptionpod-中断>Pod Disruption（Pod 中断）</a></li></ul></li><li><a href=#二调度核心kube-scheduler>二、调度核心：kube-scheduler</a><ul><li><a href=#工作原理>工作原理</a></li><li><a href=#调度决策考虑因素>调度决策考虑因素</a></li></ul></li><li><a href=#三scheduling-framework调度框架>三、Scheduling Framework（调度框架）</a><ul><li><a href=#各扩展点详解>各扩展点详解</a></li><li><a href=#关键机制>关键机制</a></li></ul></li><li><a href=#四pod-优先级与抢占preemption>四、Pod 优先级与抢占（Preemption）</a><ul><li><a href=#核心概念>核心概念</a></li><li><a href=#使用方式>使用方式</a></li><li><a href=#抢占流程>抢占流程</a></li><li><a href=#内置-priorityclass>内置 PriorityClass</a></li></ul></li><li><a href=#五节点压力驱逐node-pressure-eviction>五、节点压力驱逐（Node-pressure Eviction）</a><ul><li><a href=#核心概念-1>核心概念</a></li><li><a href=#监控的资源信号>监控的资源信号</a></li><li><a href=#驱逐阈值>驱逐阈值</a></li><li><a href=#驱逐优先级>驱逐优先级</a></li><li><a href=#自愈行为>自愈行为</a></li></ul></li><li><a href=#六总结对比>六、总结对比</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=kubernetes-调度与驱逐scheduling--eviction文档总结>Kubernetes 调度与驱逐（Scheduling & Eviction）文档总结
+<a class=anchor href=#kubernetes-%e8%b0%83%e5%ba%a6%e4%b8%8e%e9%a9%b1%e9%80%90scheduling--eviction%e6%96%87%e6%a1%a3%e6%80%bb%e7%bb%93>#</a></h1><blockquote><p>官方文档：
+<a href=https://kubernetes.io/docs/concepts/scheduling-eviction/>kubernetes.io/docs/concepts/scheduling-eviction/</a></p></blockquote><hr><h2 id=一整体结构>一、整体结构
+<a class=anchor href=#%e4%b8%80%e6%95%b4%e4%bd%93%e7%bb%93%e6%9e%84>#</a></h2><p>该文档页面是 Kubernetes <strong>调度、抢占与驱逐</strong> 三大主题的导航入口，涵盖以下子主题：</p><h3 id=scheduling调度>Scheduling（调度）
+<a class=anchor href=#scheduling%e8%b0%83%e5%ba%a6>#</a></h3><table><thead><tr><th style=text-align:center>序号</th><th>主题</th><th>说明</th><th>Note</th></tr></thead><tbody><tr><td style=text-align:center>1</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/>Kubernetes Scheduler</a></td><td>默认调度器</td><td>✅</td></tr><tr><td style=text-align:center>2</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/>Assigning Pods to Nodes</a></td><td>手动指定节点</td><td></td></tr><tr><td style=text-align:center>3</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/>Pod Overhead</a></td><td>Pod 额外开销</td><td></td></tr><tr><td style=text-align:center>4</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/>Pod Topology Spread Constraints</a></td><td>Pod 拓扑分散约束</td><td></td></tr><tr><td style=text-align:center>5</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/>Taints and Tolerations</a></td><td>污点与容忍</td><td></td></tr><tr><td style=text-align:center>6</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/>Scheduling Framework</a></td><td>调度框架（插件化架构）</td><td>✅</td></tr><tr><td style=text-align:center>7</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/>Dynamic Resource Allocation</a></td><td>动态资源分配</td><td></td></tr><tr><td style=text-align:center>8</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/scheduler-perf-tuning/>Scheduler Performance Tuning</a></td><td>调度器性能调优</td><td></td></tr><tr><td style=text-align:center>9</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/>Resource Bin Packing</a></td><td>扩展资源装箱</td><td></td></tr><tr><td style=text-align:center>10</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/>Pod Scheduling Readiness</a></td><td>Pod 调度就绪</td><td></td></tr><tr><td style=text-align:center>11</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/pod-group-scheduling/>PodGroup Scheduling</a></td><td>PodGroup 调度</td><td></td></tr><tr><td style=text-align:center>12</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/gang-scheduling/>Gang Scheduling</a></td><td>Gang 调度</td><td></td></tr><tr><td style=text-align:center>13</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/topology-aware-scheduling/>Topology-aware Scheduling</a></td><td>拓扑感知调度</td><td></td></tr><tr><td style=text-align:center>14</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/workload-aware-preemption/>Workload-Aware Preemption</a></td><td>工作负载感知抢占</td><td></td></tr><tr><td style=text-align:center>15</td><td><a href=https://github.com/kubernetes-sigs/descheduler#descheduler-for-kubernetes>Descheduler</a></td><td>反调度器</td><td></td></tr><tr><td style=text-align:center>16</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/node-declared-features/>Node Declared Features</a></td><td>节点声明特性</td><td></td></tr></tbody></table><h3 id=pod-disruptionpod-中断>Pod Disruption（Pod 中断）
+<a class=anchor href=#pod-disruptionpod-%e4%b8%ad%e6%96%ad>#</a></h3><table><thead><tr><th style=text-align:center>序号</th><th>主题</th><th>说明</th><th>Note</th></tr></thead><tbody><tr><td style=text-align:center>1</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/>Pod Priority and Preemption</a></td><td>优先级与抢占</td><td>✅</td></tr><tr><td style=text-align:center>2</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/>Node-pressure Eviction</a></td><td>节点压力驱逐</td><td>✅</td></tr><tr><td style=text-align:center>3</td><td><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/api-eviction/>API-initiated Eviction</a></td><td>API 发起的驱逐</td><td>✅</td></tr></tbody></table><hr><h2 id=二调度核心kube-scheduler>二、调度核心：kube-scheduler
+<a class=anchor href=#%e4%ba%8c%e8%b0%83%e5%ba%a6%e6%a0%b8%e5%bf%83kube-scheduler>#</a></h2><h3 id=工作原理>工作原理
+<a class=anchor href=#%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86>#</a></h3><p>kube-scheduler 负责为<strong>未分配节点的 Pod</strong> 选择最佳节点，采用<strong>两步法</strong>：</p><pre tabindex=0><code>第一步：Filter（过滤）
+    遍历所有节点，排除不满足 Pod 要求的节点
+    ├─ PodFitsResources     → 资源是否充足
+    ├─ PodFitsHostPorts     → 端口是否冲突
+    ├─ NodeSelector         → 节点选择器匹配
+    ├─ NodeAffinity         → 节点亲和性
+    └─ TaintToleration      → 污点容忍
+    ↓ 结果：可行节点列表（feasible nodes）
+
+第二步：Score（打分）
+    对可行节点进行打分排序
+    ├─ NodeResourcesFit     → 资源打分
+    ├─ InterPodAffinity     → Pod 间亲和性
+    └─ TaintToleration      → 污点容忍度
+    ↓ 结果：选择最高分节点
+
+第三步：Bind（绑定）
+    将 Pod 绑定到选中节点
+</code></pre><h3 id=调度决策考虑因素>调度决策考虑因素
+<a class=anchor href=#%e8%b0%83%e5%ba%a6%e5%86%b3%e7%ad%96%e8%80%83%e8%99%91%e5%9b%a0%e7%b4%a0>#</a></h3><table><thead><tr><th>因素</th><th>说明</th></tr></thead><tbody><tr><td>资源需求</td><td>CPU、内存、GPU 等资源是否满足</td></tr><tr><td>硬件/软件约束</td><td>节点标签、污点、亲和性</td></tr><tr><td>数据局部性</td><td>优先调度到数据所在节点</td></tr><tr><td>工作负载干扰</td><td>避免互相干扰的 Pod 在同一节点</td></tr><tr><td>拓扑分散</td><td>Pod 在故障域间均匀分布</td></tr></tbody></table><hr><h2 id=三scheduling-framework调度框架>三、Scheduling Framework（调度框架）
+<a class=anchor href=#%e4%b8%89scheduling-framework%e8%b0%83%e5%ba%a6%e6%a1%86%e6%9e%b6>#</a></h2><p>调度框架是 kube-scheduler 的<strong>插件化架构</strong>（v1.19 GA），将调度流程拆分为多个扩展点：</p><pre tabindex=0><code>调度周期（Scheduling Cycle）─ 串行执行
+┌─────────────────────────────────────────────────────────────┐
+│  PreEnqueue → QueueSort → PreFilter → Filter → PostFilter  │
+│       ↓                                                     │
+│  PreScore → Score → NormalizeScore → Reserve → Permit      │
+└─────────────────────────────────────────────────────────────┘
+                          ↓ 选中节点
+绑定周期（Binding Cycle）─ 可并发执行
+┌─────────────────────────────────────────────────────────────┐
+│  PreBind → Bind → PostBind                                  │
+└─────────────────────────────────────────────────────────────┘
+</code></pre><h3 id=各扩展点详解>各扩展点详解
+<a class=anchor href=#%e5%90%84%e6%89%a9%e5%b1%95%e7%82%b9%e8%af%a6%e8%a7%a3>#</a></h3><table><thead><tr><th>扩展点</th><th>阶段</th><th>作用</th><th>是否可改变决策</th></tr></thead><tbody><tr><td><strong>PreEnqueue</strong></td><td>入队前</td><td>Pod 是否允许进入调度队列</td><td>是</td></tr><tr><td><strong>QueueSort</strong></td><td>入队</td><td>队列排序（同时只能一个）</td><td>是</td></tr><tr><td><strong>PreFilter</strong></td><td>调度前</td><td>预处理/检查条件</td><td>信息性</td></tr><tr><td><strong>Filter</strong></td><td>过滤</td><td>排除不可行节点</td><td>是</td></tr><tr><td><strong>PostFilter</strong></td><td>过滤后</td><td>无可用节点时触发抢占</td><td>是</td></tr><tr><td><strong>PreScore</strong></td><td>打分前</td><td>预计算共享状态</td><td>信息性</td></tr><tr><td><strong>Score</strong></td><td>打分</td><td>对节点打分 [0, 100]</td><td>是</td></tr><tr><td><strong>NormalizeScore</strong></td><td>归一化</td><td>调整分数到标准范围</td><td>是</td></tr><tr><td><strong>Reserve</strong></td><td>预留</td><td>预留资源（Volume 等）</td><td>信息性</td></tr><tr><td><strong>Permit</strong></td><td>准入</td><td>批准/拒绝/延迟绑定</td><td>是</td></tr><tr><td><strong>PreBind</strong></td><td>绑定前</td><td>准备工作（挂载 Volume）</td><td>信息性</td></tr><tr><td><strong>Bind</strong></td><td>绑定</td><td>实际绑定 Pod 到 Node</td><td>是</td></tr><tr><td><strong>PostBind</strong></td><td>绑定后</td><td>清理/通知</td><td>信息性</td></tr></tbody></table><h3 id=关键机制>关键机制
+<a class=anchor href=#%e5%85%b3%e9%94%ae%e6%9c%ba%e5%88%b6>#</a></h3><ul><li><strong>调度周期串行</strong>：同一时间只有一个 Pod 在调度周期中</li><li><strong>绑定周期并发</strong>：多个 Pod 可以同时在绑定周期中</li><li><strong>CycleState</strong>：插件间通过 <code>CycleState</code> 共享数据</li><li><strong>QueueingHint</strong>（v1.34 GA）：根据集群事件决定是否重新入队</li></ul><hr><h2 id=四pod-优先级与抢占preemption>四、Pod 优先级与抢占（Preemption）
+<a class=anchor href=#%e5%9b%9bpod-%e4%bc%98%e5%85%88%e7%ba%a7%e4%b8%8e%e6%8a%a2%e5%8d%a0preemption>#</a></h2><h3 id=核心概念>核心概念
+<a class=anchor href=#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5>#</a></h3><table><thead><tr><th>概念</th><th>说明</th></tr></thead><tbody><tr><td><strong>PriorityClass</strong></td><td>定义优先级名称与整数值的映射（-2147483648 ~ 1,000,000,000）</td></tr><tr><td><strong>Priority</strong></td><td>Pod 的重要程度，数值越高越重要</td></tr><tr><td><strong>Preemption</strong></td><td>高优先级 Pod 无法调度时，驱逐低优先级 Pod 腾出空间</td></tr></tbody></table><h3 id=使用方式>使用方式
+<a class=anchor href=#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 1. 创建 PriorityClass</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>scheduling.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>PriorityClass</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>high-priority</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>value</span>: <span style=color:#ae81ff>1000000</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>globalDefault</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 2. Pod 使用 PriorityClass</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>Pod</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>priorityClassName</span>: <span style=color:#ae81ff>high-priority</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>containers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>app</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>nginx</span>
+</span></span></code></pre></div><h3 id=抢占流程>抢占流程
+<a class=anchor href=#%e6%8a%a2%e5%8d%a0%e6%b5%81%e7%a8%8b>#</a></h3><pre tabindex=0><code>高优先级 Pod 无法调度（无可用节点）
+    ↓
+调度器寻找可驱逐的低优先级 Pod
+    ↓
+选择驱逐代价最小的节点
+    ├─ 优先驱逐优先级低的 Pod
+    ├─ 考虑 PDB（PodDisruptionBudget）
+    └─ 尽量减少驱逐数量
+    ↓
+驱逐选中的 Pod → 高优先级 Pod 调度
+</code></pre><h3 id=内置-priorityclass>内置 PriorityClass
+<a class=anchor href=#%e5%86%85%e7%bd%ae-priorityclass>#</a></h3><table><thead><tr><th>名称</th><th>用途</th></tr></thead><tbody><tr><td><code>system-cluster-critical</code></td><td>集群关键组件</td></tr><tr><td><code>system-node-critical</code></td><td>节点关键组件（优先级更高）</td></tr></tbody></table><hr><h2 id=五节点压力驱逐node-pressure-eviction>五、节点压力驱逐（Node-pressure Eviction）
+<a class=anchor href=#%e4%ba%94%e8%8a%82%e7%82%b9%e5%8e%8b%e5%8a%9b%e9%a9%b1%e9%80%90node-pressure-eviction>#</a></h2><h3 id=核心概念-1>核心概念
+<a class=anchor href=#%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5-1>#</a></h3><p>kubelet 监控节点资源，当资源压力超过阈值时，<strong>主动驱逐 Pod</strong> 以回收资源。</p><blockquote><p><strong>与 API 驱逐的区别</strong>：节点压力驱逐不遵守 <code>PodDisruptionBudget</code> 和 <code>terminationGracePeriodSeconds</code>。</p></blockquote><h3 id=监控的资源信号>监控的资源信号
+<a class=anchor href=#%e7%9b%91%e6%8e%a7%e7%9a%84%e8%b5%84%e6%ba%90%e4%bf%a1%e5%8f%b7>#</a></h3><table><thead><tr><th>信号</th><th>说明</th><th>驱逐策略</th></tr></thead><tbody><tr><td><code>memory.available</code></td><td>可用内存</td><td>驱逐低优先级 Pod</td></tr><tr><td><code>nodefs.available</code></td><td>根文件系统可用空间</td><td>驱逐可回收空间的 Pod</td></tr><tr><td><code>imagefs.available</code></td><td>镜像文件系统可用空间</td><td>删除未使用镜像</td></tr><tr><td><code>imagefs.inodesFree</code></td><td>镜像文件系统 inode</td><td>删除未使用镜像</td></tr><tr><td><code>pid.available</code></td><td>可用 PID</td><td>驱逐进程多的 Pod</td></tr></tbody></table><h3 id=驱逐阈值>驱逐阈值
+<a class=anchor href=#%e9%a9%b1%e9%80%90%e9%98%88%e5%80%bc>#</a></h3><pre tabindex=0><code>软驱逐（Soft Eviction）
+├─ 配置：eviction-soft + eviction-soft-grace-period
+├─ 超过阈值 + 持续时间 &gt; grace-period → 驱逐
+└─ 遵守 eviction-max-pod-grace-period
+
+硬驱逐（Hard Eviction）
+├─ 配置：eviction-hard
+├─ 超过阈值 → 立即驱逐（0s grace period）
+└─ 不等待，直接终止 Pod
+</code></pre><h3 id=驱逐优先级>驱逐优先级
+<a class=anchor href=#%e9%a9%b1%e9%80%90%e4%bc%98%e5%85%88%e7%ba%a7>#</a></h3><p>kubelet 按以下顺序选择要驱逐的 Pod：</p><pre tabindex=0><code>1. 优先驱逐 BestEffort QoS 的 Pod
+2. 其次驱逐 Burstable QoS 的 Pod
+3. 最后驱逐 Guaranteed QoS 的 Pod
+
+同等 QoS 下：
+├─ 按 Priority 排序（低优先级先驱逐）
+└─ 按资源使用量排序（使用多的先驱逐）
+</code></pre><h3 id=自愈行为>自愈行为
+<a class=anchor href=#%e8%87%aa%e6%84%88%e8%a1%8c%e4%b8%ba>#</a></h3><pre tabindex=0><code>资源压力 → kubelet 先尝试回收资源
+├─ 删除未使用的容器镜像
+├─ 清理临时文件
+└─ 仍不足 → 才开始驱逐 Pod
+</code></pre><hr><h2 id=六总结对比>六、总结对比
+<a class=anchor href=#%e5%85%ad%e6%80%bb%e7%bb%93%e5%af%b9%e6%af%94>#</a></h2><table><thead><tr><th>主题</th><th>触发方</th><th>目的</th><th>核心机制</th></tr></thead><tbody><tr><td><strong>调度</strong></td><td>Scheduler</td><td>为 Pod 找最佳节点</td><td>Filter → Score → Bind</td></tr><tr><td><strong>抢占</strong></td><td>Scheduler</td><td>为高优先级 Pod 腾空间</td><td>驱逐低优先级 Pod</td></tr><tr><td><strong>节点压力驱逐</strong></td><td>kubelet</td><td>保护节点不被资源耗尽</td><td>监控资源 → 超阈值驱逐</td></tr><tr><td><strong>API 驱逐</strong></td><td>管理员/PDB</td><td>主动下线 Pod</td><td>Eviction API</td></tr></tbody></table><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=https://kubernetes.io/docs/concepts/scheduling-eviction/>Scheduler</a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/commit/6a6b718939796c0b41d0139f4c4107742d8f241a title='最后修改者 Nian Jiang | 2026-07-22 10:19:33' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt>
+<span>2026-07-22 10:19:33</span></a></div><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/51-k8s/021-Codes/09-Scheduler-Doc.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#kubernetes-调度与驱逐scheduling--eviction文档总结>Kubernetes 调度与驱逐（Scheduling & Eviction）文档总结</a><ul><li><a href=#一整体结构>一、整体结构</a><ul><li><a href=#scheduling调度>Scheduling（调度）</a></li><li><a href=#pod-disruptionpod-中断>Pod Disruption（Pod 中断）</a></li></ul></li><li><a href=#二调度核心kube-scheduler>二、调度核心：kube-scheduler</a><ul><li><a href=#工作原理>工作原理</a></li><li><a href=#调度决策考虑因素>调度决策考虑因素</a></li></ul></li><li><a href=#三scheduling-framework调度框架>三、Scheduling Framework（调度框架）</a><ul><li><a href=#各扩展点详解>各扩展点详解</a></li><li><a href=#关键机制>关键机制</a></li></ul></li><li><a href=#四pod-优先级与抢占preemption>四、Pod 优先级与抢占（Preemption）</a><ul><li><a href=#核心概念>核心概念</a></li><li><a href=#使用方式>使用方式</a></li><li><a href=#抢占流程>抢占流程</a></li><li><a href=#内置-priorityclass>内置 PriorityClass</a></li></ul></li><li><a href=#五节点压力驱逐node-pressure-eviction>五、节点压力驱逐（Node-pressure Eviction）</a><ul><li><a href=#核心概念-1>核心概念</a></li><li><a href=#监控的资源信号>监控的资源信号</a></li><li><a href=#驱逐阈值>驱逐阈值</a></li><li><a href=#驱逐优先级>驱逐优先级</a></li><li><a href=#自愈行为>自愈行为</a></li></ul></li><li><a href=#六总结对比>六、总结对比</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main><style>@media screen and (min-width:56rem){.sidebar-toggle{position:fixed;top:50%;transform:translateY(-50%);z-index:100;width:1.2rem;height:3rem;border:none;border-radius:.25rem;background:var(--gray-200);color:var(--body-font-color);cursor:pointer;font-size:.6rem;display:flex;align-items:center;justify-content:center;opacity:.35;transition:opacity .2s ease,left .2s ease,right .2s ease}.sidebar-toggle:hover{opacity:1}.sidebar-toggle-menu{left:16rem}.sidebar-toggle-toc{right:16rem}body.menu-collapsed .sidebar-toggle-menu{left:0}body.toc-collapsed .sidebar-toggle-toc{right:0}body.menu-collapsed .book-menu{display:none}body.toc-collapsed .book-toc{display:none}}@media screen and (max-width:56rem){.sidebar-toggle{display:none!important}}</style><script>(function(){var e,t,n,s,r=document.querySelector(".book-menu"),o=document.querySelector(".book-toc");if(!r)return;e=document.createElement("button"),e.className="sidebar-toggle sidebar-toggle-menu",e.setAttribute("aria-label","Toggle menu"),e.innerHTML="&#9664;",t=document.createElement("button"),t.className="sidebar-toggle sidebar-toggle-toc",t.setAttribute("aria-label","Toggle table of contents"),t.innerHTML="&#9654;",document.body.appendChild(e),o&&document.body.appendChild(t),n=localStorage.getItem("book-menu-collapsed")==="true",s=localStorage.getItem("book-toc-collapsed")==="true";function i(){document.body.classList.toggle("menu-collapsed",n),e.innerHTML=n?"&#9654;":"&#9664;"}function a(){if(!o)return;document.body.classList.toggle("toc-collapsed",s),t.innerHTML=s?"&#9664;":"&#9654;"}e.addEventListener("click",function(){n=!n,localStorage.setItem("book-menu-collapsed",n),i()}),o&&t.addEventListener("click",function(){s=!s,localStorage.setItem("book-toc-collapsed",s),a()}),i(),a()})()</script></body></html>

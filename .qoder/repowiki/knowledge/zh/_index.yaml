@@ -1,0 +1,28 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: master
+nodes_managed: true
+exported_at: "2026-07-22T03:12:34Z"
+modules:
+    "":
+        dir_name: Hugo Book 个人技术博客站点
+        title: Hugo Book 个人技术博客站点
+        scope:
+            - .github/
+            - .gitee/
+            - archetypes/
+            - content/
+            - docs/
+            - public/
+            - resources/
+            - .gitignore
+            - .gitmodules
+            - README.md
+            - config.yaml
+            - hugo.toml
+            - LICENSE
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
