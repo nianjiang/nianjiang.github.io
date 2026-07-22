@@ -1,0 +1,239 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Kubernetes Scheduler 代码结构
+  #
+
+
+仓库地址：github.com/kubernetes/kubernetes
+
+
+
+  整体代码布局
+  #
+
+kubernetes/
+├── cmd/kube-scheduler/          # 入口：二进制启动命令
+│   ├── scheduler.go             # main() 入口
+│   └── app/                     # cobra 命令、选项解析、初始化
+│
+└── pkg/scheduler/               # 核心实现
+    ├── scheduler.go             # Scheduler 主结构体 + Run()
+    ├── schedule_one.go          # 单 Pod 调度完整流程
+    ├── schedule_one_podgroup.go # PodGroup（批量调度）
+    ├── eventhandlers.go         # Informer 事件处理
+    ├── extender.go              # 外部扩展调度器
+    │
+    ├── framework/               # 调度框架（插件系统）
+    │   ├── interface.go         # 所有扩展点接口定义
+    │   ├── types.go             # 核心类型（NodeInfo、CycleState 等）
+    │   ├── cycle_state.go       # 调度周期状态传递
+    │   ├── runtime/             # 框架运行时（插件注册/调用）
+    │   ├── plugins/             # 内置插件实现
+    │   └── preemption/          # 抢占逻辑
+    │
+    ├── apis/config/             # KubeSchedulerConfiguration API
+    ├── profile/                 # 多调度 Profile 支持
+    ├── metrics/                 # Prometheus 指标
+    ├── backend/                 # 调度队列后端
+    ├── util/                    # 工具函数
+    └── testing/                 # 测试工具
+
+
+  核心文件解析
+  #
+
+
+  1. scheduler.go — 主结构体与启动
+  #
+
+type Scheduler struct {
+    Cache           internalcache.Cache       // 节点/Pod 缓存
+    Extenders       []fwk.Extender            // 外部调度扩展
+    NextEntity      func() (QueuedEntityInfo, error)  // 从队列取 Pod
+    SchedulePod     func() (ScheduleResult, error)    // 核心调度函数
+    FailureHandler  FailureHandlerFn                   // 失败处理
+    SchedulingQueue internalqueue.SchedulingQueue      // 调度队列
+    Profiles        profile.Map                        // 多 Profile
+    StopEverything  <-chan struct{}                    // 停止信号
+}
+
+func (sched *Scheduler) Run(ctx context.Context) {
+    sched.SchedulingQueue.Run(logger)  // 启动调度队列
+    go wait.UntilWithContext(ctx, sched.scheduleOne, 0)  // 无限循环调度
+}
+核心逻辑：Run() 启动后不断调用 scheduleOne() 从队列取 Pod 并调度。"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/51-k8s/021-codes/10-scheduler/"><meta property="og:site_name" content="My New Hugo Site"><meta property="og:title" content="Scheduler"><meta property="og:description" content="Kubernetes Scheduler 代码结构 # 仓库地址：github.com/kubernetes/kubernetes
+整体代码布局 # kubernetes/ ├── cmd/kube-scheduler/ # 入口：二进制启动命令 │ ├── scheduler.go # main() 入口 │ └── app/ # cobra 命令、选项解析、初始化 │ └── pkg/scheduler/ # 核心实现 ├── scheduler.go # Scheduler 主结构体 + Run() ├── schedule_one.go # 单 Pod 调度完整流程 ├── schedule_one_podgroup.go # PodGroup（批量调度） ├── eventhandlers.go # Informer 事件处理 ├── extender.go # 外部扩展调度器 │ ├── framework/ # 调度框架（插件系统） │ ├── interface.go # 所有扩展点接口定义 │ ├── types.go # 核心类型（NodeInfo、CycleState 等） │ ├── cycle_state.go # 调度周期状态传递 │ ├── runtime/ # 框架运行时（插件注册/调用） │ ├── plugins/ # 内置插件实现 │ └── preemption/ # 抢占逻辑 │ ├── apis/config/ # KubeSchedulerConfiguration API ├── profile/ # 多调度 Profile 支持 ├── metrics/ # Prometheus 指标 ├── backend/ # 调度队列后端 ├── util/ # 工具函数 └── testing/ # 测试工具 核心文件解析 # 1. scheduler.go — 主结构体与启动 # type Scheduler struct { Cache internalcache.Cache // 节点/Pod 缓存 Extenders []fwk.Extender // 外部调度扩展 NextEntity func() (QueuedEntityInfo, error) // 从队列取 Pod SchedulePod func() (ScheduleResult, error) // 核心调度函数 FailureHandler FailureHandlerFn // 失败处理 SchedulingQueue internalqueue.SchedulingQueue // 调度队列 Profiles profile.Map // 多 Profile StopEverything <-chan struct{} // 停止信号 } func (sched *Scheduler) Run(ctx context.Context) { sched.SchedulingQueue.Run(logger) // 启动调度队列 go wait.UntilWithContext(ctx, sched.scheduleOne, 0) // 无限循环调度 } 核心逻辑：Run() 启动后不断调用 scheduleOne() 从队列取 Pod 并调度。"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Scheduler | My New Hugo Site</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/51-k8s/021-codes/10-scheduler/><link rel=stylesheet href=/book.min.3257a7ce7c061eb5dfc72257c356229b1470dc77ce9b982ac220c02542f9f04f.css integrity="sha256-MlenznwGHrXfxyJXw1YimxRw3HfOm5gqwiDAJUL58E8=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.b2754e002158549ae760dc12aaca3b6d62698792f8d36054621359fe0e91c7fc.js integrity="sha256-snVOACFYVJrnYNwSqso7bWJph5L402BUYhNZ/g6Rx/w=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>My New Hugo Site</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-embeededlinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-bpf/>eBPF</a></li><li><a href=/docs/50-linux/60-interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle checked>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><a href=/docs/51-k8s/020-codes/>Codes</a></li><li><input type=checkbox id=section-f0936f125e361a508a54646437409c2d class=toggle checked>
+<label for=section-f0936f125e361a508a54646437409c2d class="flex justify-between"><a href=/docs/51-k8s/021-codes/>Codes</a></label><ul><li><a href=/docs/51-k8s/021-codes/09-scheduler-doc/>Scheduler Docs</a></li><li><a href=/docs/51-k8s/021-codes/10-scheduler/ class=active>Scheduler</a></li><li><a href=/docs/51-k8s/021-codes/11-score/>Scheduler-score</a></li><li><a href=/docs/51-k8s/021-codes/19-descheduler/>Descheduler</a></li></ul></li><li><a href=/docs/51-k8s/050-cri/>CRI</a></li><li><a href=/docs/51-k8s/060-csi/>CSI</a></li><li><a href=/docs/51-k8s/070-cni/>CNI</a></li><li><a href=/docs/51-k8s/071-cni-ebpf/>eBPF</a></li><li><a href=/docs/51-k8s/080-security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-devsecops/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-devsecops/50-knative/>Knative</a></li><li><a href=/docs/51-k8s/90-devsecops/51-tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-devsecops/52-argo/>Argo</a></li><li><a href=/docs/51-k8s/90-devsecops/80-kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-install/>Install</a></li><li><a href=/docs/51-k8s/103-podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-certifications/cka/>CKA</a></li><li><a href=/docs/51-k8s/201-certifications/cks/>CKS</a></li><li><a href=/docs/51-k8s/201-certifications/pca/>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-certifications/ica/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-certifications/capa/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-certifications/cca/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/envoy/>Envoy</a></li><li><a href=/docs/52-istio/trafficmanagement/>Traffic Management</a></li><li><a href=/docs/52-istio/sourcecode/>Source Code</a></li><li><a href=/docs/52-istio/train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-ai/>AI</a></label><ul><li><a href=/docs/60-ai/10-mlops/>MLOps</a></li><li><a href=/docs/60-ai/20-map/>Learning Map</a></li><li><a href=/docs/60-ai/21-note/>Learning Note</a></li><li><a href=/docs/60-ai/22-llmrag/>LLM & RAG</a></li><li><a href=/docs/60-ai/23-deepseek/>DeepSeek</a></li><li><a href=/docs/60-ai/24-qwen/>Qwen</a></li><li><a href=/docs/60-ai/80-hello-agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-cncf/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-cncf/40observe/>Observability & Analysis</a></label></li><li><a href=/docs/70-cncf/50logging/>Logging</a></li><li><a href=/docs/70-cncf/80_redis/>Redis</a></li><li><a href=/docs/70-cncf/90_iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-programming/>Programming</a></label><ul><li><a href=/docs/80-programming/05_toolkit/>Toolkit</a></li><li><a href=/docs/80-programming/10_vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-programming/golang/>Golang</a></label><ul><li><a href=/docs/80-programming/golang/01_golang/>Golang</a></li><li><a href=/docs/80-programming/golang/10_gin/>Gin</a></li><li><a href=/docs/80-programming/golang/12_gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-tools/11_golang/>CMS</a></li><li><a href=/docs/90-tools/21_cloud/>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-english/>English</a></label><ul><li><a href=/docs/99-english/05-ai/>Artificial Intellience</a></li><li><a href=/docs/99-english/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-english/25-kids/>Kids</a></li><li><a href=/docs/99-english/50-tv/>TV/Movie/Books</a></li><li><a href=/docs/99-english/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Scheduler</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#整体代码布局>整体代码布局</a></li><li><a href=#核心文件解析>核心文件解析</a><ul><li><a href=#1-schedulergo--主结构体与启动>1. <code>scheduler.go</code> — 主结构体与启动</a></li><li><a href=#2-schedule_onego--单-pod-调度完整生命周期>2. <code>schedule_one.go</code> — 单 Pod 调度完整生命周期</a></li></ul></li><li><a href=#调度框架scheduling-framework>调度框架（Scheduling Framework）</a><ul><li><a href=#扩展点extension-points>扩展点（Extension Points）</a></li><li><a href=#各扩展点说明>各扩展点说明</a></li></ul></li><li><a href=#内置插件frameworkplugins>内置插件（<code>framework/plugins/</code>）</a></li><li><a href=#关键数据流>关键数据流</a></li><li><a href=#核心数据结构>核心数据结构</a></li><li><a href=#配置入口>配置入口</a></li><li><a href=#总结>总结</a></li><li><a href=#reference>Reference</a></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=kubernetes-scheduler-代码结构>Kubernetes Scheduler 代码结构
+<a class=anchor href=#kubernetes-scheduler-%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84>#</a></h1><blockquote><p>仓库地址：<a href=https://github.com/kubernetes/kubernetes>github.com/kubernetes/kubernetes</a></p></blockquote><hr><h2 id=整体代码布局>整体代码布局
+<a class=anchor href=#%e6%95%b4%e4%bd%93%e4%bb%a3%e7%a0%81%e5%b8%83%e5%b1%80>#</a></h2><pre tabindex=0><code>kubernetes/
+├── cmd/kube-scheduler/          # 入口：二进制启动命令
+│   ├── scheduler.go             # main() 入口
+│   └── app/                     # cobra 命令、选项解析、初始化
+│
+└── pkg/scheduler/               # 核心实现
+    ├── scheduler.go             # Scheduler 主结构体 + Run()
+    ├── schedule_one.go          # 单 Pod 调度完整流程
+    ├── schedule_one_podgroup.go # PodGroup（批量调度）
+    ├── eventhandlers.go         # Informer 事件处理
+    ├── extender.go              # 外部扩展调度器
+    │
+    ├── framework/               # 调度框架（插件系统）
+    │   ├── interface.go         # 所有扩展点接口定义
+    │   ├── types.go             # 核心类型（NodeInfo、CycleState 等）
+    │   ├── cycle_state.go       # 调度周期状态传递
+    │   ├── runtime/             # 框架运行时（插件注册/调用）
+    │   ├── plugins/             # 内置插件实现
+    │   └── preemption/          # 抢占逻辑
+    │
+    ├── apis/config/             # KubeSchedulerConfiguration API
+    ├── profile/                 # 多调度 Profile 支持
+    ├── metrics/                 # Prometheus 指标
+    ├── backend/                 # 调度队列后端
+    ├── util/                    # 工具函数
+    └── testing/                 # 测试工具
+</code></pre><hr><h2 id=核心文件解析>核心文件解析
+<a class=anchor href=#%e6%a0%b8%e5%bf%83%e6%96%87%e4%bb%b6%e8%a7%a3%e6%9e%90>#</a></h2><h3 id=1-schedulergo--主结构体与启动>1. <code>scheduler.go</code> — 主结构体与启动
+<a class=anchor href=#1-schedulergo--%e4%b8%bb%e7%bb%93%e6%9e%84%e4%bd%93%e4%b8%8e%e5%90%af%e5%8a%a8>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>Scheduler</span> <span style=color:#66d9ef>struct</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Cache</span>           <span style=color:#a6e22e>internalcache</span>.<span style=color:#a6e22e>Cache</span>       <span style=color:#75715e>// 节点/Pod 缓存</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Extenders</span>       []<span style=color:#a6e22e>fwk</span>.<span style=color:#a6e22e>Extender</span>            <span style=color:#75715e>// 外部调度扩展</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>NextEntity</span>      <span style=color:#66d9ef>func</span>() (<span style=color:#a6e22e>QueuedEntityInfo</span>, <span style=color:#66d9ef>error</span>)  <span style=color:#75715e>// 从队列取 Pod</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>SchedulePod</span>     <span style=color:#66d9ef>func</span>() (<span style=color:#a6e22e>ScheduleResult</span>, <span style=color:#66d9ef>error</span>)    <span style=color:#75715e>// 核心调度函数</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>FailureHandler</span>  <span style=color:#a6e22e>FailureHandlerFn</span>                   <span style=color:#75715e>// 失败处理</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>SchedulingQueue</span> <span style=color:#a6e22e>internalqueue</span>.<span style=color:#a6e22e>SchedulingQueue</span>      <span style=color:#75715e>// 调度队列</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Profiles</span>        <span style=color:#a6e22e>profile</span>.<span style=color:#a6e22e>Map</span>                        <span style=color:#75715e>// 多 Profile</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>StopEverything</span>  <span style=color:#f92672>&lt;-</span><span style=color:#66d9ef>chan</span> <span style=color:#66d9ef>struct</span>{}                    <span style=color:#75715e>// 停止信号</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> (<span style=color:#a6e22e>sched</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>Scheduler</span>) <span style=color:#a6e22e>Run</span>(<span style=color:#a6e22e>ctx</span> <span style=color:#a6e22e>context</span>.<span style=color:#a6e22e>Context</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>sched</span>.<span style=color:#a6e22e>SchedulingQueue</span>.<span style=color:#a6e22e>Run</span>(<span style=color:#a6e22e>logger</span>)  <span style=color:#75715e>// 启动调度队列</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>go</span> <span style=color:#a6e22e>wait</span>.<span style=color:#a6e22e>UntilWithContext</span>(<span style=color:#a6e22e>ctx</span>, <span style=color:#a6e22e>sched</span>.<span style=color:#a6e22e>scheduleOne</span>, <span style=color:#ae81ff>0</span>)  <span style=color:#75715e>// 无限循环调度</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>核心逻辑</strong>：<code>Run()</code> 启动后不断调用 <code>scheduleOne()</code> 从队列取 Pod 并调度。</p><hr><h3 id=2-schedule_onego--单-pod-调度完整生命周期>2. <code>schedule_one.go</code> — 单 Pod 调度完整生命周期
+<a class=anchor href=#2-schedule_onego--%e5%8d%95-pod-%e8%b0%83%e5%ba%a6%e5%ae%8c%e6%95%b4%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f>#</a></h3><p>这是调度器最核心的文件，实现了完整的调度周期（Scheduling Cycle）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#66d9ef>func</span> (<span style=color:#a6e22e>sched</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>Scheduler</span>) <span style=color:#a6e22e>scheduleOnePod</span>(<span style=color:#a6e22e>ctx</span> <span style=color:#a6e22e>context</span>.<span style=color:#a6e22e>Context</span>, <span style=color:#a6e22e>podInfo</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>framework</span>.<span style=color:#a6e22e>QueuedPodInfo</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 1. 获取对应的调度 Profile/Framework</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>fwk</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>sched</span>.<span style=color:#a6e22e>Profiles</span>[<span style=color:#a6e22e>pod</span>.<span style=color:#a6e22e>Spec</span>.<span style=color:#a6e22e>SchedulerName</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 2. 创建 CycleState（用于在插件间传递数据）</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>state</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>framework</span>.<span style=color:#a6e22e>NewCycleState</span>()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 3. 执行调度算法（findNodesThatFitPod + scoreNodes）</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>scheduleResult</span>, <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>sched</span>.<span style=color:#a6e22e>SchedulePod</span>(<span style=color:#a6e22e>ctx</span>, <span style=color:#a6e22e>fwk</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>podInfo</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 4. 执行绑定周期（Reserve → PreBind → Bind → PostBind）</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>go</span> <span style=color:#a6e22e>sched</span>.<span style=color:#a6e22e>bindingCycle</span>(<span style=color:#a6e22e>ctx</span>, <span style=color:#a6e22e>state</span>, <span style=color:#a6e22e>fwk</span>, <span style=color:#f92672>...</span>)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=调度框架scheduling-framework>调度框架（Scheduling Framework）
+<a class=anchor href=#%e8%b0%83%e5%ba%a6%e6%a1%86%e6%9e%b6scheduling-framework>#</a></h2><p>调度框架是一个<strong>插件化的扩展点系统</strong>，定义在 <a href=https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/interface.go><code>interface.go</code></a>。</p><h3 id=扩展点extension-points>扩展点（Extension Points）
+<a class=anchor href=#%e6%89%a9%e5%b1%95%e7%82%b9extension-points>#</a></h3><pre tabindex=0><code>┌─────────────────────────────────────────────────────────────────────┐
+│                        Scheduling Cycle（调度周期）                  │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  QueueSort ──→ PreFilter ──→ Filter ──→ PostFilter ──→ Score       │
+│       │            │            │            │            │         │
+│       │            │            │            │            │         │
+│       │            ▼            ▼            ▼            ▼         │
+│       │      [PreFilter    [Filter     [PostFilter   [Score        │
+│       │       Result]      NodeA/B/C]   (抢占)]      Nodes]        │
+│       │                                                             │
+│       └──────────────────────────────┐                             │
+│                                      ▼                             │
+│                              Reserve ──→ Permit ──→ PreBind        │
+│                                  │          │           │          │
+├──────────────────────────────────┼──────────┼───────────┼──────────┤
+│                           Binding Cycle（绑定周期）                  │
+│                                  │          │           │          │
+│                                  ▼          ▼           ▼          │
+│                               [Bind] ──→ PostBind                  │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre><h3 id=各扩展点说明>各扩展点说明
+<a class=anchor href=#%e5%90%84%e6%89%a9%e5%b1%95%e7%82%b9%e8%af%b4%e6%98%8e>#</a></h3><table><thead><tr><th>扩展点</th><th>阶段</th><th>作用</th></tr></thead><tbody><tr><td><code>QueueSort</code></td><td>入队</td><td>决定 Pod 在调度队列中的优先级</td></tr><tr><td><code>PreFilter</code></td><td>调度前</td><td>预处理/过滤（如检查 PVC 是否可用）</td></tr><tr><td><code>Filter</code></td><td>过滤</td><td>谓词计算，排除不满足条件的节点</td></tr><tr><td><code>PostFilter</code></td><td>过滤后</td><td>无可用节点时触发抢占（Preemption）</td></tr><tr><td><code>Score</code></td><td>打分</td><td>对可行节点打分排序</td></tr><tr><td><code>Reserve</code></td><td>预留</td><td>预留资源（如 Volume、端口）</td></tr><tr><td><code>Permit</code></td><td>准入</td><td>延迟绑定（如等待 Gang 调度）</td></tr><tr><td><code>PreBind</code></td><td>绑定前</td><td>执行绑定前准备（如挂载 Volume）</td></tr><tr><td><code>Bind</code></td><td>绑定</td><td>实际将 Pod 绑定到 Node</td></tr><tr><td><code>PostBind</code></td><td>绑定后</td><td>清理、通知</td></tr></tbody></table><hr><h2 id=内置插件frameworkplugins>内置插件（<code>framework/plugins/</code>）
+<a class=anchor href=#%e5%86%85%e7%bd%ae%e6%8f%92%e4%bb%b6frameworkplugins>#</a></h2><pre tabindex=0><code>plugins/
+├── defaultbinder/        # 默认绑定器
+├── defaultpreemption/    # 默认抢占
+├── interpodaffinity/     # Pod 间亲和/反亲和
+├── nodeaffinity/         # 节点亲和性
+├── nodeports/            # 检查节点端口冲突
+├── noderesources/        # 资源（CPU/内存）检查
+├── nodeunschedulable/    # 节点可调度性检查
+├── nodevolumelimit/      # 节点 Volume 限制
+├── podtopologyspread/    # Pod 拓扑分散约束
+├── prioritysort/         # 优先级排序
+├── volumebinding/        # Volume 绑定
+├── volumerestrictions/   # Volume 限制
+├── volumzone/            # Volume 可用区
+└── ...（约 20+ 个内置插件）
+</code></pre><hr><h2 id=关键数据流>关键数据流
+<a class=anchor href=#%e5%85%b3%e9%94%ae%e6%95%b0%e6%8d%ae%e6%b5%81>#</a></h2><pre tabindex=0><code>                    ┌──────────────────────┐
+                    │  未调度 Pod（Pending） │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │   Scheduling Queue   │ ← QueueSort 插件排序
+                    │  (PriorityQueue)     │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │  scheduleOne()       │
+                    │  ├─ PreFilter        │
+                    │  ├─ Filter（谓词）   │ ← 并行检查所有节点
+                    │  ├─ Score（打分）    │ ← 并行打分
+                    │  └─ Reserve          │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │  bindingCycle()      │
+                    │  ├─ PreBind          │
+                    │  ├─ Bind             │
+                    │  └─ PostBind         │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │  Pod 已绑定到 Node   │
+                    └──────────────────────┘
+</code></pre><hr><h2 id=核心数据结构>核心数据结构
+<a class=anchor href=#%e6%a0%b8%e5%bf%83%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#75715e>// 调度结果</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>ScheduleResult</span> <span style=color:#66d9ef>struct</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>SuggestedHost</span> <span style=color:#66d9ef>string</span>  <span style=color:#75715e>// 选中的节点名</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 节点信息快照</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>NodeInfo</span> <span style=color:#66d9ef>struct</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Node</span>         <span style=color:#f92672>*</span><span style=color:#a6e22e>v1</span>.<span style=color:#a6e22e>Node</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Pods</span>         []<span style=color:#f92672>*</span><span style=color:#a6e22e>PodInfo</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>UsedPorts</span>    <span style=color:#a6e22e>HostPortInfo</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Allocated</span>    <span style=color:#f92672>*</span><span style=color:#a6e22e>Resource</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>...</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 调度周期状态（插件间传递）</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>CycleState</span> <span style=color:#66d9ef>struct</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>states</span> <span style=color:#66d9ef>map</span>[<span style=color:#a6e22e>StateKey</span>]<span style=color:#a6e22e>StateData</span>  <span style=color:#75715e>// 插件可读写</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=配置入口>配置入口
+<a class=anchor href=#%e9%85%8d%e7%bd%ae%e5%85%a5%e5%8f%a3>#</a></h2><p>Scheduler 通过 <code>KubeSchedulerConfiguration</code> 配置：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>kubescheduler.config.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>kind</span>: <span style=color:#ae81ff>KubeSchedulerConfiguration</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>profiles</span>:
+</span></span><span style=display:flex><span>- <span style=color:#f92672>schedulerName</span>: <span style=color:#ae81ff>default-scheduler</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>plugins</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>filter</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>enabled</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>NodeResourcesFit</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>score</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>enabled</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>NodeResourcesFit</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>1</span>
+</span></span></code></pre></div><hr><h2 id=总结>总结
+<a class=anchor href=#%e6%80%bb%e7%bb%93>#</a></h2><table><thead><tr><th>模块</th><th>核心文件</th><th>职责</th></tr></thead><tbody><tr><td>入口</td><td><code>cmd/kube-scheduler/</code></td><td>启动、配置解析</td></tr><tr><td>主循环</td><td><code>scheduler.go</code> + <code>schedule_one.go</code></td><td>调度主流程</td></tr><tr><td>框架</td><td><code>framework/</code></td><td>插件注册、调用、状态传递</td></tr><tr><td>插件</td><td><code>framework/plugins/</code></td><td>内置调度策略实现</td></tr><tr><td>队列</td><td><code>backend/</code></td><td>优先级队列管理</td></tr><tr><td>抢占</td><td><code>framework/preemption/</code></td><td>Pod 抢占逻辑</td></tr></tbody></table><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#整体代码布局>整体代码布局</a></li><li><a href=#核心文件解析>核心文件解析</a><ul><li><a href=#1-schedulergo--主结构体与启动>1. <code>scheduler.go</code> — 主结构体与启动</a></li><li><a href=#2-schedule_onego--单-pod-调度完整生命周期>2. <code>schedule_one.go</code> — 单 Pod 调度完整生命周期</a></li></ul></li><li><a href=#调度框架scheduling-framework>调度框架（Scheduling Framework）</a><ul><li><a href=#扩展点extension-points>扩展点（Extension Points）</a></li><li><a href=#各扩展点说明>各扩展点说明</a></li></ul></li><li><a href=#内置插件frameworkplugins>内置插件（<code>framework/plugins/</code>）</a></li><li><a href=#关键数据流>关键数据流</a></li><li><a href=#核心数据结构>核心数据结构</a></li><li><a href=#配置入口>配置入口</a></li><li><a href=#总结>总结</a></li><li><a href=#reference>Reference</a></li></ul></nav></div></aside></main></body></html>

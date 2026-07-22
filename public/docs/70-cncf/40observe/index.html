@@ -1,0 +1,115 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Learning Notes
+  #
+
+
+This is my learning Notes for Monitor/Metrics/Tracing
+
+
+  Monitoring
+  #
+
+
+  
+      
+          Name
+          Docs
+          Codes
+          Comments
+          Next
+      
+  
+  
+      
+          OpenTelemetry
+          Docs
+          Github
+          OpenTelemetry is a collection of APIs, SDKs, and tools for generating, collecting, and exporting telemetry data (traces, metrics, and logs).
+          Getting Started with OpenTelemetry
+      
+      
+          Prometheus
+          Docs
+          Github
+          Prometheus is a systems and service monitoring system.
+          
+      
+      
+          Thanos
+          Docs
+          Github
+          Thanos is a set of components that can be composed into a highly available Prometheus setup.
+          
+      
+      
+          Zabbix
+          Docs
+          Github
+          Zabbix is an enterprise-class open-source monitoring solution for tracking the status of various network services, servers, and other network hardware.
+          
+      
+      
+          Grafana
+          Docs
+          Github
+          Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB, Prometheus and other time series databases.
+          
+      
+      
+          Zipkin
+          Docs
+          Github
+          Zipkin is a distributed tracing system.
+          
+      
+      
+          Fluentd
+          Docs
+          Github
+          Fluentd is an open source data collector for unified logging layer.
+          
+      
+      
+          Kibana
+          Docs
+          Github
+          Kibana is an open source data visualization plugin for Elasticsearch.
+          
+      
+      
+          Loki
+          Docs
+          Github
+          Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus.
+          
+      
+  
+
+
+
+  Prometheus
+  #
+
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/70-cncf/40observe/"><meta property="og:site_name" content="My New Hugo Site"><meta property="og:title" content="Observability & Analysis"><meta property="og:description" content="Learning Notes # This is my learning Notes for Monitor/Metrics/Tracing
+Monitoring # Name Docs Codes Comments Next OpenTelemetry Docs Github OpenTelemetry is a collection of APIs, SDKs, and tools for generating, collecting, and exporting telemetry data (traces, metrics, and logs). Getting Started with OpenTelemetry Prometheus Docs Github Prometheus is a systems and service monitoring system. Thanos Docs Github Thanos is a set of components that can be composed into a highly available Prometheus setup. Zabbix Docs Github Zabbix is an enterprise-class open-source monitoring solution for tracking the status of various network services, servers, and other network hardware. Grafana Docs Github Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB, Prometheus and other time series databases. Zipkin Docs Github Zipkin is a distributed tracing system. Fluentd Docs Github Fluentd is an open source data collector for unified logging layer. Kibana Docs Github Kibana is an open source data visualization plugin for Elasticsearch. Loki Docs Github Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. Prometheus #"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Observability & Analysis | My New Hugo Site</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/70-cncf/40observe/><link rel=stylesheet href=/book.min.3257a7ce7c061eb5dfc72257c356229b1470dc77ce9b982ac220c02542f9f04f.css integrity="sha256-MlenznwGHrXfxyJXw1YimxRw3HfOm5gqwiDAJUL58E8=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.b2754e002158549ae760dc12aaca3b6d62698792f8d36054621359fe0e91c7fc.js integrity="sha256-snVOACFYVJrnYNwSqso7bWJph5L402BUYhNZ/g6Rx/w=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>My New Hugo Site</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-embeededlinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-bpf/>eBPF</a></li><li><a href=/docs/50-linux/60-interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><a href=/docs/51-k8s/020-codes/>Codes</a></li><li><input type=checkbox id=section-f0936f125e361a508a54646437409c2d class=toggle>
+<label for=section-f0936f125e361a508a54646437409c2d class="flex justify-between"><a href=/docs/51-k8s/021-codes/>Codes</a></label><ul><li><a href=/docs/51-k8s/021-codes/09-scheduler-doc/>Scheduler Docs</a></li><li><a href=/docs/51-k8s/021-codes/10-scheduler/>Scheduler</a></li><li><a href=/docs/51-k8s/021-codes/11-score/>Scheduler-score</a></li><li><a href=/docs/51-k8s/021-codes/19-descheduler/>Descheduler</a></li></ul></li><li><a href=/docs/51-k8s/050-cri/>CRI</a></li><li><a href=/docs/51-k8s/060-csi/>CSI</a></li><li><a href=/docs/51-k8s/070-cni/>CNI</a></li><li><a href=/docs/51-k8s/071-cni-ebpf/>eBPF</a></li><li><a href=/docs/51-k8s/080-security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-devsecops/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-devsecops/50-knative/>Knative</a></li><li><a href=/docs/51-k8s/90-devsecops/51-tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-devsecops/52-argo/>Argo</a></li><li><a href=/docs/51-k8s/90-devsecops/80-kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-install/>Install</a></li><li><a href=/docs/51-k8s/103-podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-certifications/cka/>CKA</a></li><li><a href=/docs/51-k8s/201-certifications/cks/>CKS</a></li><li><a href=/docs/51-k8s/201-certifications/pca/>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-certifications/ica/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-certifications/capa/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-certifications/cca/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/envoy/>Envoy</a></li><li><a href=/docs/52-istio/trafficmanagement/>Traffic Management</a></li><li><a href=/docs/52-istio/sourcecode/>Source Code</a></li><li><a href=/docs/52-istio/train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-ai/>AI</a></label><ul><li><a href=/docs/60-ai/10-mlops/>MLOps</a></li><li><a href=/docs/60-ai/20-map/>Learning Map</a></li><li><a href=/docs/60-ai/21-note/>Learning Note</a></li><li><a href=/docs/60-ai/22-llmrag/>LLM & RAG</a></li><li><a href=/docs/60-ai/23-deepseek/>DeepSeek</a></li><li><a href=/docs/60-ai/24-qwen/>Qwen</a></li><li><a href=/docs/60-ai/80-hello-agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle checked>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-cncf/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle checked>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-cncf/40observe/ class=active>Observability & Analysis</a></label></li><li><a href=/docs/70-cncf/50logging/>Logging</a></li><li><a href=/docs/70-cncf/80_redis/>Redis</a></li><li><a href=/docs/70-cncf/90_iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-programming/>Programming</a></label><ul><li><a href=/docs/80-programming/05_toolkit/>Toolkit</a></li><li><a href=/docs/80-programming/10_vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-programming/golang/>Golang</a></label><ul><li><a href=/docs/80-programming/golang/01_golang/>Golang</a></li><li><a href=/docs/80-programming/golang/10_gin/>Gin</a></li><li><a href=/docs/80-programming/golang/12_gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-tools/11_golang/>CMS</a></li><li><a href=/docs/90-tools/21_cloud/>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-english/>English</a></label><ul><li><a href=/docs/99-english/05-ai/>Artificial Intellience</a></li><li><a href=/docs/99-english/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-english/25-kids/>Kids</a></li><li><a href=/docs/99-english/50-tv/>TV/Movie/Books</a></li><li><a href=/docs/99-english/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Observability & Analysis</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#monitoring>Monitoring</a></li><li><a href=#prometheus>Prometheus</a></li><li><a href=#learning>Learning</a></li><li><a href=#tracing>Tracing</a></li><li><a href=#chaos-engineering>Chaos Engineering</a></li><li><a href=#reference>Reference</a></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=learning-notes>Learning Notes
+<a class=anchor href=#learning-notes>#</a></h1><blockquote><p>This is my learning Notes for Monitor/Metrics/Tracing</p></blockquote><h2 id=monitoring>Monitoring
+<a class=anchor href=#monitoring>#</a></h2><table><thead><tr><th>Name</th><th>Docs</th><th>Codes</th><th>Comments</th><th>Next</th></tr></thead><tbody><tr><td><a href=https://opentelemetry.io/>OpenTelemetry</a></td><td><a href=https://opentelemetry.io/docs/>Docs</a></td><td><a href=https://github.com/open-telemetry>Github</a></td><td>OpenTelemetry is a collection of APIs, SDKs, and tools for generating, collecting, and exporting telemetry data (traces, metrics, and logs).</td><td><a href="https://www.cncf.io/training/courses/?_sft_lf-project=opentelemetry">Getting Started with OpenTelemetry</a></td></tr><tr><td><a href=https://prometheus.io/>Prometheus</a></td><td><a href=https://prometheus.io/docs/introduction/overview/>Docs</a></td><td><a href=https://github.com/prometheus/prometheus>Github</a></td><td>Prometheus is a systems and service monitoring system.</td><td></td></tr><tr><td><a href=https://thanos.io/>Thanos</a></td><td><a href=https://thanos.io/tip/thanos/getting-started.md/>Docs</a></td><td><a href=https://github.com/thanos-io/thanos>Github</a></td><td>Thanos is a set of components that can be composed into a highly available Prometheus setup.</td><td></td></tr><tr><td><a href=https://www.zabbix.com/cn>Zabbix</a></td><td><a href=https://www.zabbix.com/documentation/current/en/manual/introduction>Docs</a></td><td><a href=https://github.com/zabbix/zabbix>Github</a></td><td>Zabbix is an enterprise-class open-source monitoring solution for tracking the status of various network services, servers, and other network hardware.</td><td></td></tr><tr><td><a href=https://grafana.com/oss/grafana/>Grafana</a></td><td><a href=https://grafana.com/docs/grafana/latest/>Docs</a></td><td><a href=https://github.com/grafana/grafana>Github</a></td><td>Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB, Prometheus and other time series databases.</td><td></td></tr><tr><td><a href=https://zipkin.io/>Zipkin</a></td><td><a href=https://zipkin.io/pages/quickstart>Docs</a></td><td><a href=https://github.com/openzipkin/zipkin>Github</a></td><td>Zipkin is a distributed tracing system.</td><td></td></tr><tr><td><a href=https://www.fluentd.org/>Fluentd</a></td><td><a href=https://docs.fluentd.org/v1.0/articles/quickstart>Docs</a></td><td><a href=https://github.com/fluent/fluentd>Github</a></td><td>Fluentd is an open source data collector for unified logging layer.</td><td></td></tr><tr><td><a href=https://www.elastic.co/kibana>Kibana</a></td><td><a href=https://www.elastic.co/guide/en/kibana/current/index.html>Docs</a></td><td><a href=https://github.com/elastic/kibana>Github</a></td><td>Kibana is an open source data visualization plugin for Elasticsearch.</td><td></td></tr><tr><td><a href=https://grafana.com/oss/loki/>Loki</a></td><td><a href=https://grafana.com/docs/loki/latest/>Docs</a></td><td><a href=https://github.com/grafana/loki>Github</a></td><td>Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus.</td><td></td></tr></tbody></table><hr><h2 id=prometheus>Prometheus
+<a class=anchor href=#prometheus>#</a></h2><p><img src=https://prometheus.io/assets/docs/architecture.svg alt=Architecture></p><p><a href=https://github.com/Einsteinish/Docker-Compose-Prometheus-and-Grafana>Demo with Grafana</a></p><hr><h2 id=learning>Learning
+<a class=anchor href=#learning>#</a></h2><p><a href=https://robustperception.teachable.com/courses/enrolled/200947>Introduction to Prometheus</a></p><p><a href=https://training.promlabs.com/trainings/>PromLabs</a></p><p><a href=https://training.linuxfoundation.org/training/monitoring-systems-and-services-with-prometheus-lfs241/>Prometheus Course Outline</a></p><p>Chapter 1. Course Introduction</p><p>Chapter 2. Introduction to Observability</p><p>Chapter 3. Introduction to Prometheus</p><p>Chapter 4. Installing and Setting Up Prometheus</p><p>Chapter 5. Basic Querying</p><p>Chapter 6. Dashboarding</p><p>Chapter 7. Monitoring Host Metrics</p><p>Chapter 8. Monitoring Container Metrics</p><p>Chapter 9. Instrumenting Code</p><p>Chapter 10. Building Exporters</p><p>Chapter 11. Advanced Querying</p><p>Chapter 12. Relabeling</p><p>Chapter 13. Service Discovery</p><p>Chapter 14. Blackbox Monitoring</p><p>Chapter 15. Pushing Data</p><p>Chapter 16. Alerting</p><p>Chapter 17. Making Prometheus Highly Available</p><p>Chapter 18. Recording Rules</p><p>Chapter 19. Scaling Prometheus Deployments</p><p>Chapter 20. Local Storage</p><p>Chapter 21. Remote Storage Integrations</p><p>Chapter 22. Transitioning From and Integration with Other Monitoring Systems</p><p>Chapter 23. Monitoring and Debugging Prometheus</p><p>Chapter 24. Prometheus and Kubernetes</p><hr><h2 id=tracing>Tracing
+<a class=anchor href=#tracing>#</a></h2><hr><h2 id=chaos-engineering>Chaos Engineering
+<a class=anchor href=#chaos-engineering>#</a></h2><hr><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#monitoring>Monitoring</a></li><li><a href=#prometheus>Prometheus</a></li><li><a href=#learning>Learning</a></li><li><a href=#tracing>Tracing</a></li><li><a href=#chaos-engineering>Chaos Engineering</a></li><li><a href=#reference>Reference</a></li></ul></nav></div></aside></main></body></html>

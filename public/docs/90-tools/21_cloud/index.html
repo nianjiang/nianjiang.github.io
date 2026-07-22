@@ -1,0 +1,434 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Aliyun Tools
+  #
+
+
+  
+      
+          Name
+          Docs
+          Codes
+          Other
+          Comments
+          Demo
+      
+  
+  
+      
+          ExternalDNS
+          docs
+          github
+          
+          自动将 K8s Ingress/Service 域名同步到阿里云解析 DNS
+          
+      
+      
+          Keda (Kubernetes Event-driven Autoscaling)
+          docs
+          github
+          
+          基于事件驱动的 K8s 弹性伸缩器，支持按 RocketMQ 堆积量或 ALB QPS 扩容
+          
+      
+      
+          Kyverno
+          docs
+          github
+          
+          K8s 原生策略管理工具，无需写 Rego 即可实现合规检查与拦截
+          
+      
+      
+          Backstage
+          docs
+          github
+          
+          Spotify 开源的开发者门户（IDP），构建企业内部统一运维/研发门户
+          
+      
+      
+          Crossplane
+          docs
+          github
+          
+          将 K8s 变成控制平面，用 YAML 声明式管理阿里云 RDS/OSS 等云资源
+          
+      
+      
+          1Panel
+          docs
+          github
+          
+          现代化、开源的 Linux 服务器运维管理面板，适合管理边缘节点/ECS
+          
+      
+      
+          JumpServer
+          docs
+          github
+          
+          开源堡垒机，支持统一审计 ACK 集群、ECS 及数据库访问行为
+          
+      
+      
+          Restic
+          docs
+          github
+          
+          安全、快速、高效的备份工具，常用于物理机/容器卷的增量快照备份
+          
+      
+      
+          Velero
+          docs
+          github
+          
+          K8s 集群灾备与迁移利器，完美对接阿里云 OSS 存储集群快照
+          
+      
+      
+          KubeCost
+          docs
+          github
+          
+          K8s 成本监控与优化工具（开源内核为 OpenCost），分析 ACK 账单
+          
+      
+      
+          CloudExplorer Lite
+          docs
+          github
+          
+          轻量级多云管理平台（CMP），适合统一看管阿里云等多家云资源
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+      
+          
+          docs
+          github
+          
+          
+          
+      
+  
+
+
+
+  
+      
+          运维痛点
+          推荐开源组合
+          落地难度
+      
+  
+  
+      
+          应用频繁发布、配置混乱
+          Argo CD
+          中（需规范 Git 流程）
+      
+      
+          微服务多了不知道哪步慢，网关报错难排查
+          OpenTelemetry + Grafana
+          高（需要代码或网关配合）
+      
+      
+          云账单居高不下，老板要求优化成本
+          OpenCost + Keda
+          中（需要微服务支持弹性）
+      
+  
+
+
+
+  Other
+  #
+
+
+  
+      
+          Name
+          Docs
+          Codes
+          Other
+          Comments
+          Demo
+      
+  
+  
+      
+          certimate
+          docs
+          github
+          
+          An ACME UI Tool, 适合自动化管理与分发 SSL 证书
+          
+      
+      
+          Gitea
+          docs
+          github
+          
+          轻量级自托管 Git 服务，资源占用极低，适合私有化部署
+          
+      
+      
+          Drone
+          docs
+          github
+          
+          基于容器的现代 CI/CD 工具，与 Gitea/GitHub 结合非常丝滑
+          
+      
+      
+          Argo CD
+          docs
+          github
+          
+          声明式 K8s GitOps 持续交付工具，ACK 运维核心推荐
+          
+      
+      
+          Argo Rollouts（灰度发布）
+          docs
+          github
+          
+          K8s 蓝绿/金丝雀灰度发布控制器，可联动阿里云 ALB/云原生网关
+          
+      
+      
+          Argo Workflows（工作流）
+          docs
+          github
+          
+          基于 K8s 的原生工作流引擎，适合编排复杂的运维任务或大模型数据流
+          
+      
+      
+          KubeVela
+          docs
+          github
+          CD Tool
+          基于 OAM 规范的云原生应用交付与管理平台，阿里开源贡献
+          
+      
+      
+          Prometheus
+          docs
+          github
+          
+          K8s 指标监控的事实标准，ACK 托管监控的开源内核
+          
+      
+      
+          Grafana
+          docs
+          github
+          
+          强大的多源数据可视化看板，运维必装，用于统一观测监控数据
+          
+      
+      
+          VictoriaMetrics
+          docs
+          github
+          
+          高性能、低成本的开源时序数据库，常作为 Prometheus 的长期存储替代
+          
+      
+      
+          Loki
+          docs
+          github
+          
+          Grafana 出品的轻量级日志聚合系统，像 Prometheus 一样收集/查询日志
+          
+      
+      
+          Kube-bench
+          docs
+          github
+          
+          检查 Kubernetes 是否符合 CIS 安全基准的安全扫描工具
+          
+      
+      
+          Trivy
+          docs
+          github
+          
+          全能型云原生安全扫描器，支持扫描容器镜像漏洞及 K8s YAML 配置缺陷
+          
+      
+      
+          Falco
+          docs
+          github
+          
+          K8s 运行时安全威胁检测工具，实时监控容器内的异常系统调用行为
+          
+      
+  
+
+
+
+  
+  #
+
+
+  
+      
+          英文全称
+          常用简称
+          类似/变体名称
+          定位与核心作用
+      
+  
+  
+      
+          Development
+          DEV
+          Dev / Trunk
+          开发环境。开发人员的沙盒，代码变动最频繁，允许频繁崩溃，通常使用 mock 数据。
+      
+      
+          Testing / Quality Assurance
+          TEST / QA
+          FAT (Feature Acceptance Test) / CIT / QC
+          测试环境。QA（测试工程师）进行功能测试、自动化测试、回归测试和提测的专用稳定环境。
+      
+      
+          Staging
+          STG
+          Stage / Pre-Production / Pre / 预发环境
+          预发布环境。1:1 高度模拟生产环境（包括配置、架构甚至脱敏后的数据），用于上线前的最后把关。
+      
+      
+          Production
+          PROD
+          Live / Online / 线上的
+          生产环境。面向真实终端用户的真实环境。对稳定性、安全性和监控要求最高。
+      
+  
+
+
+
+  
+  #
+
+
+  
+      
+          云厂商
+          规格
+          型号
+          按量付费
+          年付
+          备注
+      
+  
+  
+      
+          阿里
+          104C192G
+          ecs.ebmc6.26xlarge（计算型弹性裸金属服务器 ebmc6）
+          14.232元/小时
+          36893/年 （张家口）
+          地域是张家口， 不是北京
+      
+      
+          华为
+          20C128G
+          physical.s4.medium
+          &ndash;
+          48600/年
+          没有按量付费
+      
+      
+          腾讯
+          96C384G
+          BMI5.24XLARGE384（高IO型BMI5，96核384GB）
+          16.1元/小时
+          104315/年
+          
+      
+  
+
+
+
+  Reference
+  #
+
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/90-tools/21_cloud/"><meta property="og:site_name" content="My New Hugo Site"><meta property="og:title" content="Cloud"><meta property="og:description" content="Aliyun Tools # Name Docs Codes Other Comments Demo ExternalDNS docs github 自动将 K8s Ingress/Service 域名同步到阿里云解析 DNS Keda (Kubernetes Event-driven Autoscaling) docs github 基于事件驱动的 K8s 弹性伸缩器，支持按 RocketMQ 堆积量或 ALB QPS 扩容 Kyverno docs github K8s 原生策略管理工具，无需写 Rego 即可实现合规检查与拦截 Backstage docs github Spotify 开源的开发者门户（IDP），构建企业内部统一运维/研发门户 Crossplane docs github 将 K8s 变成控制平面，用 YAML 声明式管理阿里云 RDS/OSS 等云资源 1Panel docs github 现代化、开源的 Linux 服务器运维管理面板，适合管理边缘节点/ECS JumpServer docs github 开源堡垒机，支持统一审计 ACK 集群、ECS 及数据库访问行为 Restic docs github 安全、快速、高效的备份工具，常用于物理机/容器卷的增量快照备份 Velero docs github K8s 集群灾备与迁移利器，完美对接阿里云 OSS 存储集群快照 KubeCost docs github K8s 成本监控与优化工具（开源内核为 OpenCost），分析 ACK 账单 CloudExplorer Lite docs github 轻量级多云管理平台（CMP），适合统一看管阿里云等多家云资源 docs github docs github docs github docs github docs github docs github docs github docs github 运维痛点 推荐开源组合 落地难度 应用频繁发布、配置混乱 Argo CD 中（需规范 Git 流程） 微服务多了不知道哪步慢，网关报错难排查 OpenTelemetry + Grafana 高（需要代码或网关配合） 云账单居高不下，老板要求优化成本 OpenCost + Keda 中（需要微服务支持弹性） Other # Name Docs Codes Other Comments Demo certimate docs github An ACME UI Tool, 适合自动化管理与分发 SSL 证书 Gitea docs github 轻量级自托管 Git 服务，资源占用极低，适合私有化部署 Drone docs github 基于容器的现代 CI/CD 工具，与 Gitea/GitHub 结合非常丝滑 Argo CD docs github 声明式 K8s GitOps 持续交付工具，ACK 运维核心推荐 Argo Rollouts（灰度发布） docs github K8s 蓝绿/金丝雀灰度发布控制器，可联动阿里云 ALB/云原生网关 Argo Workflows（工作流） docs github 基于 K8s 的原生工作流引擎，适合编排复杂的运维任务或大模型数据流 KubeVela docs github CD Tool 基于 OAM 规范的云原生应用交付与管理平台，阿里开源贡献 Prometheus docs github K8s 指标监控的事实标准，ACK 托管监控的开源内核 Grafana docs github 强大的多源数据可视化看板，运维必装，用于统一观测监控数据 VictoriaMetrics docs github 高性能、低成本的开源时序数据库，常作为 Prometheus 的长期存储替代 Loki docs github Grafana 出品的轻量级日志聚合系统，像 Prometheus 一样收集/查询日志 Kube-bench docs github 检查 Kubernetes 是否符合 CIS 安全基准的安全扫描工具 Trivy docs github 全能型云原生安全扫描器，支持扫描容器镜像漏洞及 K8s YAML 配置缺陷 Falco docs github K8s 运行时安全威胁检测工具，实时监控容器内的异常系统调用行为 # 英文全称 常用简称 类似/变体名称 定位与核心作用 Development DEV Dev / Trunk 开发环境。开发人员的沙盒，代码变动最频繁，允许频繁崩溃，通常使用 mock 数据。 Testing / Quality Assurance TEST / QA FAT (Feature Acceptance Test) / CIT / QC 测试环境。QA（测试工程师）进行功能测试、自动化测试、回归测试和提测的专用稳定环境。 Staging STG Stage / Pre-Production / Pre / 预发环境 预发布环境。1:1 高度模拟生产环境（包括配置、架构甚至脱敏后的数据），用于上线前的最后把关。 Production PROD Live / Online / 线上的 生产环境。面向真实终端用户的真实环境。对稳定性、安全性和监控要求最高。 # 云厂商 规格 型号 按量付费 年付 备注 阿里 104C192G ecs.ebmc6.26xlarge（计算型弹性裸金属服务器 ebmc6） 14.232元/小时 36893/年 （张家口） 地域是张家口， 不是北京 华为 20C128G physical.s4.medium – 48600/年 没有按量付费 腾讯 96C384G BMI5.24XLARGE384（高IO型BMI5，96核384GB） 16.1元/小时 104315/年 Reference #"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Cloud | My New Hugo Site</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/90-tools/21_cloud/><link rel=stylesheet href=/book.min.3257a7ce7c061eb5dfc72257c356229b1470dc77ce9b982ac220c02542f9f04f.css integrity="sha256-MlenznwGHrXfxyJXw1YimxRw3HfOm5gqwiDAJUL58E8=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.12ac62f9d5b9027f72737658df2ca17c1e0bd9b100c306256f7c23b513429967.js integrity="sha256-Eqxi+dW5An9yc3ZY3yyhfB4L2bEAwwYlb3wjtRNCmWc=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>My New Hugo Site</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-embeededlinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-bpf/>eBPF</a></li><li><a href=/docs/50-linux/60-interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><a href=/docs/51-k8s/020-codes/>Codes</a></li><li><a href=/docs/51-k8s/050-cri/>CRI</a></li><li><a href=/docs/51-k8s/060-csi/>CSI</a></li><li><a href=/docs/51-k8s/070-cni/>CNI</a></li><li><a href=/docs/51-k8s/071-cni-ebpf/>eBPF</a></li><li><a href=/docs/51-k8s/080-security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-devsecops/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-devsecops/50-knative/>Knative</a></li><li><a href=/docs/51-k8s/90-devsecops/51-tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-devsecops/52-argo/>Argo</a></li><li><a href=/docs/51-k8s/90-devsecops/80-kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-install/>Install</a></li><li><a href=/docs/51-k8s/103-podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-certifications/cka/>CKA</a></li><li><a href=/docs/51-k8s/201-certifications/cks/>CKS</a></li><li><a href=/docs/51-k8s/201-certifications/pca/>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-certifications/ica/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-certifications/capa/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-certifications/cca/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/envoy/>Envoy</a></li><li><a href=/docs/52-istio/trafficmanagement/>Traffic Management</a></li><li><a href=/docs/52-istio/sourcecode/>Source Code</a></li><li><a href=/docs/52-istio/train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-ai/>AI</a></label><ul><li><a href=/docs/60-ai/10-mlops/>MLOps</a></li><li><a href=/docs/60-ai/20-map/>Learning Map</a></li><li><a href=/docs/60-ai/21-note/>Learning Note</a></li><li><a href=/docs/60-ai/22-llmrag/>LLM & RAG</a></li><li><a href=/docs/60-ai/23-deepseek/>DeepSeek</a></li><li><a href=/docs/60-ai/24-qwen/>Qwen</a></li><li><a href=/docs/60-ai/80-hello-agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-cncf/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-cncf/40observe/>Observability & Analysis</a></label></li><li><a href=/docs/70-cncf/50logging/>Logging</a></li><li><a href=/docs/70-cncf/80_redis/>Redis</a></li><li><a href=/docs/70-cncf/90_iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-programming/>Programming</a></label><ul><li><a href=/docs/80-programming/05_toolkit/>Toolkit</a></li><li><a href=/docs/80-programming/10_vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-programming/golang/>Golang</a></label><ul><li><a href=/docs/80-programming/golang/01_golang/>Golang</a></li><li><a href=/docs/80-programming/golang/10_gin/>Gin</a></li><li><a href=/docs/80-programming/golang/12_gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle checked>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-tools/11_golang/>CMS</a></li><li><a href=/docs/90-tools/21_cloud/ class=active>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-english/>English</a></label><ul><li><a href=/docs/99-english/05-ai/>Artificial Intellience</a></li><li><a href=/docs/99-english/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-english/25-kids/>Kids</a></li><li><a href=/docs/99-english/50-tv/>TV/Movie/Books</a></li><li><a href=/docs/99-english/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Cloud</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#aliyun-tools>Aliyun Tools</a></li><li><a href=#other>Other</a></li><li></li><li></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h3 id=aliyun-tools>Aliyun Tools
+<a class=anchor href=#aliyun-tools>#</a></h3><table><thead><tr><th>Name</th><th>Docs</th><th>Codes</th><th>Other</th><th>Comments</th><th>Demo</th></tr></thead><tbody><tr><td><a href=https://kubernetes-sigs.github.io/external-dns/>ExternalDNS</a></td><td><a href=https://kubernetes-sigs.github.io/external-dns/latest/>docs</a></td><td><a href=https://github.com/kubernetes-sigs/external-dns>github</a></td><td></td><td>自动将 K8s Ingress/Service 域名同步到阿里云解析 DNS</td><td></td></tr><tr><td><a href=https://keda.sh/>Keda (Kubernetes Event-driven Autoscaling)</a></td><td><a href=https://keda.sh/docs/>docs</a></td><td><a href=https://github.com/kedacore/keda>github</a></td><td></td><td>基于事件驱动的 K8s 弹性伸缩器，支持按 RocketMQ 堆积量或 ALB QPS 扩容</td><td></td></tr><tr><td><a href=https://kyverno.io/>Kyverno</a></td><td><a href=https://kyverno.io/docs/>docs</a></td><td><a href=https://github.com/kyverno/kyverno>github</a></td><td></td><td>K8s 原生策略管理工具，无需写 Rego 即可实现合规检查与拦截</td><td></td></tr><tr><td><a href=https://backstage.io/>Backstage</a></td><td><a href=https://backstage.io/docs/overview/what-is-backstage>docs</a></td><td><a href=https://github.com/backstage/backstage>github</a></td><td></td><td>Spotify 开源的开发者门户（IDP），构建企业内部统一运维/研发门户</td><td></td></tr><tr><td><a href=https://www.crossplane.io/>Crossplane</a></td><td><a href=https://docs.crossplane.io/>docs</a></td><td><a href=https://github.com/crossplane/crossplane>github</a></td><td></td><td>将 K8s 变成控制平面，用 YAML 声明式管理阿里云 RDS/OSS 等云资源</td><td></td></tr><tr><td><a href=https://1panel.cn/>1Panel</a></td><td><a href=https://1panel.cn/docs/>docs</a></td><td><a href=https://github.com/1Panel-dev/1Panel>github</a></td><td></td><td>现代化、开源的 Linux 服务器运维管理面板，适合管理边缘节点/ECS</td><td></td></tr><tr><td><a href=https://www.jumpserver.org/>JumpServer</a></td><td><a href=https://docs.jumpserver.org/>docs</a></td><td><a href=https://github.com/jumpserver/jumpserver>github</a></td><td></td><td>开源堡垒机，支持统一审计 ACK 集群、ECS 及数据库访问行为</td><td></td></tr><tr><td><a href=https://restic.net/>Restic</a></td><td><a href=https://restic.net/manual/>docs</a></td><td><a href=https://github.com/restic/restic>github</a></td><td></td><td>安全、快速、高效的备份工具，常用于物理机/容器卷的增量快照备份</td><td></td></tr><tr><td><a href=https://velero.io/>Velero</a></td><td><a href=https://velero.io/docs/>docs</a></td><td><a href=https://github.com/vmware-tanzu/velero>github</a></td><td></td><td>K8s 集群灾备与迁移利器，完美对接阿里云 OSS 存储集群快照</td><td></td></tr><tr><td><a href=https://www.kubecost.com/>KubeCost</a></td><td><a href=https://docs.kubecost.com/>docs</a></td><td><a href=https://github.com/opencost/opencost>github</a></td><td></td><td>K8s 成本监控与优化工具（开源内核为 OpenCost），分析 ACK 账单</td><td></td></tr><tr><td><a href=https://www.fit2cloud.com/cloudexplorer-lite/>CloudExplorer Lite</a></td><td><a href=https://github.com/fit2cloud/cloudexplorer-lite>docs</a></td><td><a href=https://github.com/fit2cloud/cloudexplorer-lite>github</a></td><td></td><td>轻量级多云管理平台（CMP），适合统一看管阿里云等多家云资源</td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr><tr><td><a href></a></td><td><a href>docs</a></td><td><a href>github</a></td><td></td><td></td><td></td></tr></tbody></table><hr><table><thead><tr><th>运维痛点</th><th>推荐开源组合</th><th>落地难度</th></tr></thead><tbody><tr><td>应用频繁发布、配置混乱</td><td>Argo CD</td><td>中（需规范 Git 流程）</td></tr><tr><td>微服务多了不知道哪步慢，网关报错难排查</td><td>OpenTelemetry + Grafana</td><td>高（需要代码或网关配合）</td></tr><tr><td>云账单居高不下，老板要求优化成本</td><td>OpenCost + Keda</td><td>中（需要微服务支持弹性）</td></tr></tbody></table><hr><h3 id=other>Other
+<a class=anchor href=#other>#</a></h3><table><thead><tr><th>Name</th><th>Docs</th><th>Codes</th><th>Other</th><th>Comments</th><th>Demo</th></tr></thead><tbody><tr><td><a href=https://docs.certimate.me/zh-CN/>certimate</a></td><td><a href=https://docs.certimate.me/zh-CN/docs/introduction/>docs</a></td><td><a href=https://github.com/certimate-go/certimate>github</a></td><td></td><td>An ACME UI Tool, 适合自动化管理与分发 SSL 证书</td><td></td></tr><tr><td><a href=https://about.gitea.com/>Gitea</a></td><td><a href=https://docs.gitea.com/>docs</a></td><td><a href=https://github.com/go-gitea/gitea>github</a></td><td></td><td>轻量级自托管 Git 服务，资源占用极低，适合私有化部署</td><td></td></tr><tr><td><a href=https://www.drone.io/>Drone</a></td><td><a href=https://docs.drone.io/>docs</a></td><td><a href=https://github.com/harness/drone>github</a></td><td></td><td>基于容器的现代 CI/CD 工具，与 Gitea/GitHub 结合非常丝滑</td><td></td></tr><tr><td><a href=https://argoproj.github.io/cd/>Argo CD</a></td><td><a href=https://argo-cd.readthedocs.io/>docs</a></td><td><a href=https://github.com/argoproj/argo-cd>github</a></td><td></td><td>声明式 K8s GitOps 持续交付工具，ACK 运维核心推荐</td><td></td></tr><tr><td><a href=https://argoproj.github.io/argo-rollouts/>Argo Rollouts（灰度发布）</a></td><td><a href=https://argo-rollouts.readthedocs.io/>docs</a></td><td><a href=https://github.com/argoproj/argo-rollouts>github</a></td><td></td><td>K8s 蓝绿/金丝雀灰度发布控制器，可联动阿里云 ALB/云原生网关</td><td></td></tr><tr><td><a href=https://argoproj.github.io/workflows/>Argo Workflows（工作流）</a></td><td><a href=https://argo-workflows.readthedocs.io/>docs</a></td><td><a href=https://github.com/argoproj/argo-workflows>github</a></td><td></td><td>基于 K8s 的原生工作流引擎，适合编排复杂的运维任务或大模型数据流</td><td></td></tr><tr><td><a href=https://kubevela.io/>KubeVela</a></td><td><a href=https://kubevela.io/docs/>docs</a></td><td><a href=https://github.com/kubevela/kubevela>github</a></td><td>CD Tool</td><td>基于 OAM 规范的云原生应用交付与管理平台，阿里开源贡献</td><td></td></tr><tr><td><a href=https://prometheus.io/>Prometheus</a></td><td><a href=https://prometheus.io/docs/introduction/overview/>docs</a></td><td><a href=https://github.com/prometheus/prometheus>github</a></td><td></td><td>K8s 指标监控的事实标准，ACK 托管监控的开源内核</td><td></td></tr><tr><td><a href=https://grafana.com/>Grafana</a></td><td><a href=https://grafana.com/docs/>docs</a></td><td><a href=https://github.com/grafana/grafana>github</a></td><td></td><td>强大的多源数据可视化看板，运维必装，用于统一观测监控数据</td><td></td></tr><tr><td><a href=https://victoriametrics.com/>VictoriaMetrics</a></td><td><a href=https://docs.victoriametrics.com/>docs</a></td><td><a href=https://github.com/VictoriaMetrics/VictoriaMetrics>github</a></td><td></td><td>高性能、低成本的开源时序数据库，常作为 Prometheus 的长期存储替代</td><td></td></tr><tr><td><a href=https://grafana.com/oss/loki/>Loki</a></td><td><a href=https://grafana.com/docs/loki/latest/>docs</a></td><td><a href=https://github.com/grafana/loki>github</a></td><td></td><td>Grafana 出品的轻量级日志聚合系统，像 Prometheus 一样收集/查询日志</td><td></td></tr><tr><td><a href=https://aquasecurity.github.io/kube-bench/>Kube-bench</a></td><td><a href=https://aquasecurity.github.io/kube-bench/v0.8.0/>docs</a></td><td><a href=https://github.com/aquasecurity/kube-bench>github</a></td><td></td><td>检查 Kubernetes 是否符合 CIS 安全基准的安全扫描工具</td><td></td></tr><tr><td><a href=https://aquasecurity.github.io/trivy/>Trivy</a></td><td><a href=https://aquasecurity.github.io/trivy/latest/>docs</a></td><td><a href=https://github.com/aquasecurity/trivy>github</a></td><td></td><td>全能型云原生安全扫描器，支持扫描容器镜像漏洞及 K8s YAML 配置缺陷</td><td></td></tr><tr><td><a href=https://falco.org/>Falco</a></td><td><a href=https://falco.org/docs/>docs</a></td><td><a href=https://github.com/falcosecurity/falco>github</a></td><td></td><td>K8s 运行时安全威胁检测工具，实时监控容器内的异常系统调用行为</td><td></td></tr></tbody></table><hr><h3><a href></a><a class=anchor href=#>#</a></h3><table><thead><tr><th style=text-align:left>英文全称</th><th style=text-align:left>常用简称</th><th style=text-align:left>类似/变体名称</th><th style=text-align:left>定位与核心作用</th></tr></thead><tbody><tr><td style=text-align:left><strong>Development</strong></td><td style=text-align:left><strong>DEV</strong></td><td style=text-align:left>Dev / Trunk</td><td style=text-align:left><strong>开发环境</strong>。开发人员的沙盒，代码变动最频繁，允许频繁崩溃，通常使用 mock 数据。</td></tr><tr><td style=text-align:left><strong>Testing / Quality Assurance</strong></td><td style=text-align:left><strong>TEST / QA</strong></td><td style=text-align:left>FAT (Feature Acceptance Test) / CIT / QC</td><td style=text-align:left><strong>测试环境</strong>。QA（测试工程师）进行功能测试、自动化测试、回归测试和提测的专用稳定环境。</td></tr><tr><td style=text-align:left><strong>Staging</strong></td><td style=text-align:left><strong>STG</strong></td><td style=text-align:left>Stage / Pre-Production / Pre / 预发环境</td><td style=text-align:left><strong>预发布环境</strong>。1:1 高度模拟生产环境（包括配置、架构甚至脱敏后的数据），用于上线前的最后把关。</td></tr><tr><td style=text-align:left><strong>Production</strong></td><td style=text-align:left><strong>PROD</strong></td><td style=text-align:left>Live / Online / 线上的</td><td style=text-align:left><strong>生产环境</strong>。面向真实终端用户的真实环境。对稳定性、安全性和监控要求最高。</td></tr></tbody></table><hr><h3><a href></a><a class=anchor href=#>#</a></h3><table><thead><tr><th style=text-align:left>云厂商</th><th style=text-align:left>规格</th><th style=text-align:left>型号</th><th style=text-align:left>按量付费</th><th style=text-align:left>年付</th><th style=text-align:left>备注</th></tr></thead><tbody><tr><td style=text-align:left>阿里</td><td style=text-align:left>104C192G</td><td style=text-align:left>ecs.ebmc6.26xlarge（计算型弹性裸金属服务器 ebmc6）</td><td style=text-align:left>14.232元/小时</td><td style=text-align:left>36893/年 （张家口）</td><td style=text-align:left>地域是张家口， 不是北京</td></tr><tr><td style=text-align:left>华为</td><td style=text-align:left>20C128G</td><td style=text-align:left>physical.s4.medium</td><td style=text-align:left>&ndash;</td><td style=text-align:left>48600/年</td><td style=text-align:left>没有按量付费</td></tr><tr><td style=text-align:left>腾讯</td><td style=text-align:left>96C384G</td><td style=text-align:left>BMI5.24XLARGE384（高IO型BMI5，96核384GB）</td><td style=text-align:left>16.1元/小时</td><td style=text-align:left>104315/年</td><td style=text-align:left></td></tr></tbody></table><hr><h3 id=reference>Reference
+<a class=anchor href=#reference>#</a></h3><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p><p><a href></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#aliyun-tools>Aliyun Tools</a></li><li><a href=#other>Other</a></li><li></li><li></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main></body></html>

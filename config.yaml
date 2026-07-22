@@ -109,6 +109,9 @@ params:
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks: true
 
+  # 开启后，即使在电脑上，侧边栏也会默认折叠，只剩一个按钮
+  # BookPortable = true 
+
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
   BookServiceWorker: true

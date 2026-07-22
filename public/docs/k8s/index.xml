@@ -1,379 +1,379 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8S on My New Hugo Site</title><link>http://localhost:1313/docs/k8s/</link><description>Recent content in K8S on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>CRI</title><link>http://localhost:1313/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cri/</guid><description>&lt;h1 id="cri">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8S on My New Hugo Site</title><link>http://localhost:1313/docs/k8s/</link><description>Recent content in K8S on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/k8s/index.xml" rel="self" type="application/rss+xml"/><item><title>CRI</title><link>http://localhost:1313/docs/k8s/cri/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cri/</guid><description>&lt;h1 id="cri"&gt;
  CRI
- &lt;a class="anchor" href="#cri">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="reference">
+ &lt;a class="anchor" href="#cri"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://kubernetes.io/docs/concepts/architecture/cri/">CRI&lt;/a>, &lt;a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/">Container-Runtimes&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">OCI - Open Container Initiative&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.aquasec.com/cloud-native-academy/container-security/container-runtime-interface/">Container Runtime Interface (CRI): Past, Present, and Future&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/containerd/containerd/blob/main/docs/cri/architecture.md">containerd - Architecture&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>CSI</title><link>http://localhost:1313/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/csi/</guid><description>&lt;h1 id="csi">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://kubernetes.io/docs/concepts/architecture/cri/"&gt;CRI&lt;/a&gt;, &lt;a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/"&gt;Container-Runtimes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;OCI - Open Container Initiative&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.aquasec.com/cloud-native-academy/container-security/container-runtime-interface/"&gt;Container Runtime Interface (CRI): Past, Present, and Future&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/containerd/containerd/blob/main/docs/cri/architecture.md"&gt;containerd - Architecture&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>CSI</title><link>http://localhost:1313/docs/k8s/csi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/csi/</guid><description>&lt;h1 id="csi"&gt;
  CSI
- &lt;a class="anchor" href="#csi">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="need-read-first">
+ &lt;a class="anchor" href="#csi"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="need-read-first"&gt;
  Need Read First
- &lt;a class="anchor" href="#need-read-first">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://ceph.io/en/users/getting-started/">https://ceph.io/en/users/getting-started/&lt;/a>&lt;/p>
-&lt;h2 id="csi-drivershttpskubernetes-csigithubiodocsdrivershtml">
- &lt;a href="https://kubernetes-csi.github.io/docs/drivers.html">CSI Drivers&lt;/a>
- &lt;a class="anchor" href="#csi-drivershttpskubernetes-csigithubiodocsdrivershtml">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Name&lt;/th>
- &lt;th>CSI Driver Name&lt;/th>
- &lt;th>Compatible with CSI Version(s)&lt;/th>
- &lt;th>Description&lt;/th>
- &lt;th>Persistence (Beyond Pod Lifetime)&lt;/th>
- &lt;th>Supported Access Modes&lt;/th>
- &lt;th>Dynamic Provisioning&lt;/th>
- &lt;th>Other Features&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/ceph/ceph-csi">CephFS&lt;/a>&lt;/td>
- &lt;td>&lt;code>cephfs.csi.ceph.com&lt;/code>&lt;/td>
- &lt;td>v0.3, &amp;gt;=v1.0.0&lt;/td>
- &lt;td>A Container Storage Interface (CSI) Driver for CephFS&lt;/td>
- &lt;td>Persistent&lt;/td>
- &lt;td>Read/Write Multiple Pods&lt;/td>
- &lt;td>Yes&lt;/td>
- &lt;td>Expansion, Snapshot, Cloning&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/ceph/ceph-csi">Ceph RBD&lt;/a>&lt;/td>
- &lt;td>&lt;code>rbd.csi.ceph.com&lt;/code>&lt;/td>
- &lt;td>v0.3, &amp;gt;=v1.0.0&lt;/td>
- &lt;td>A Container Storage Interface (CSI) Driver for Ceph RBD&lt;/td>
- &lt;td>Persistent&lt;/td>
- &lt;td>Read/Write Single Pod&lt;/td>
- &lt;td>Yes&lt;/td>
- &lt;td>Raw Block, Snapshot, Expansion, Topology, Cloning,In-tree plugin migration&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="reference">
+ &lt;a class="anchor" href="#need-read-first"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://ceph.io/en/users/getting-started/"&gt;https://ceph.io/en/users/getting-started/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="csi-drivers"&gt;
+ &lt;a href="https://kubernetes-csi.github.io/docs/drivers.html"&gt;CSI Drivers&lt;/a&gt;
+ &lt;a class="anchor" href="#csi-drivers"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Name&lt;/th&gt;
+ &lt;th&gt;CSI Driver Name&lt;/th&gt;
+ &lt;th&gt;Compatible with CSI Version(s)&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;th&gt;Persistence (Beyond Pod Lifetime)&lt;/th&gt;
+ &lt;th&gt;Supported Access Modes&lt;/th&gt;
+ &lt;th&gt;Dynamic Provisioning&lt;/th&gt;
+ &lt;th&gt;Other Features&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://github.com/ceph/ceph-csi"&gt;CephFS&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;cephfs.csi.ceph.com&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;v0.3, &amp;gt;=v1.0.0&lt;/td&gt;
+ &lt;td&gt;A Container Storage Interface (CSI) Driver for CephFS&lt;/td&gt;
+ &lt;td&gt;Persistent&lt;/td&gt;
+ &lt;td&gt;Read/Write Multiple Pods&lt;/td&gt;
+ &lt;td&gt;Yes&lt;/td&gt;
+ &lt;td&gt;Expansion, Snapshot, Cloning&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://github.com/ceph/ceph-csi"&gt;Ceph RBD&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;rbd.csi.ceph.com&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;v0.3, &amp;gt;=v1.0.0&lt;/td&gt;
+ &lt;td&gt;A Container Storage Interface (CSI) Driver for Ceph RBD&lt;/td&gt;
+ &lt;td&gt;Persistent&lt;/td&gt;
+ &lt;td&gt;Read/Write Single Pod&lt;/td&gt;
+ &lt;td&gt;Yes&lt;/td&gt;
+ &lt;td&gt;Raw Block, Snapshot, Expansion, Topology, Cloning,In-tree plugin migration&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://kubernetes-csi.github.io/docs/">CSI-Doc&lt;/a>, &lt;a href="https://github.com/kubernetes-csi/docs">Github&lt;/a>&lt;/p></description></item><item><title>CNI</title><link>http://localhost:1313/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni/</guid><description>&lt;h1 id="cni">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://kubernetes-csi.github.io/docs/"&gt;CSI-Doc&lt;/a&gt;, &lt;a href="https://github.com/kubernetes-csi/docs"&gt;Github&lt;/a&gt;&lt;/p&gt;</description></item><item><title>CNI</title><link>http://localhost:1313/docs/k8s/cni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni/</guid><description>&lt;h1 id="cni"&gt;
  CNI
- &lt;a class="anchor" href="#cni">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="reference">
+ &lt;a class="anchor" href="#cni"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://www.cni.dev/">CNI&lt;/a>, &lt;a href="https://github.com/containernetworking/cni">CNI-Github&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/kubernetes/community/tree/master/sig-network">sig-network&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>eBPF</title><link>http://localhost:1313/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.cni.dev/"&gt;CNI&lt;/a&gt;, &lt;a href="https://github.com/containernetworking/cni"&gt;CNI-Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/kubernetes/community/tree/master/sig-network"&gt;sig-network&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>eBPF</title><link>http://localhost:1313/docs/k8s/cni-ebpf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/cni-ebpf/</guid><description>&lt;h1 id="ebpf--cilium"&gt;
  eBPF &amp;amp; Cilium
- &lt;a class="anchor" href="#ebpf--cilium">#&lt;/a>
-&lt;/h1>
-&lt;p>&lt;a href="https://ebpf.io/">eBPF&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://cilium.io/">Cilium&lt;/a>, &lt;a href="https://github.com/cilium">Github&lt;/a>, &lt;a href="https://cilium.io/enterprise/#trainings">Trainings&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Security</title><link>http://localhost:1313/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security">
+ &lt;a class="anchor" href="#ebpf--cilium"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://ebpf.io/"&gt;eBPF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cilium.io/"&gt;Cilium&lt;/a&gt;, &lt;a href="https://github.com/cilium"&gt;Github&lt;/a&gt;, &lt;a href="https://cilium.io/enterprise/#trainings"&gt;Trainings&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Security</title><link>http://localhost:1313/docs/k8s/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/security/</guid><description>&lt;h1 id="kubernetes-security"&gt;
  Kubernetes Security
- &lt;a class="anchor" href="#kubernetes-security">#&lt;/a>
-&lt;/h1>
-&lt;p>&lt;a href="https://www.anquanke.com/post/id/287522">https://www.anquanke.com/post/id/287522&lt;/a>&lt;/p></description></item><item><title>Codes</title><link>http://localhost:1313/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure">
+ &lt;a class="anchor" href="#kubernetes-security"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.anquanke.com/post/id/287522"&gt;https://www.anquanke.com/post/id/287522&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Codes</title><link>http://localhost:1313/docs/k8s/codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/codes/</guid><description>&lt;h2 id="codes-structure"&gt;
  Codes Structure:
- &lt;a class="anchor" href="#codes-structure">#&lt;/a>
-&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Command Name for k8s components&lt;/th>
- &lt;th>Cobra Client&lt;/th>
- &lt;th>Real Code&lt;/th>
- &lt;th>Note&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>kube-apiserver&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/apiserver.go">cmd/kube-apiserver/apiserver.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/app/server.go">cmd/kube-apiserver/app/server.go&lt;/a>&lt;/td>
- &lt;td>kubeAPIServer, APIExtensionsServer, AggregatorServer&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>kube-controller-manager&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-controller-manager/controller-manager.go">cmd/kube-controller-manager/controller-manager.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>kube-scheduler&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-scheduler/scheduler.go">cmd/kube-scheduler/scheduler.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go">pkg/scheduler/scheduler.go&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Etcd&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Cloud Controller Manager&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/cloud-controller-manager/main.go">cmd/cloud-controller-manager/main.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>kubelet&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubelet/kubelet.go">cmd/kubelet/kubelet.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/kubelet.go">pkg/kubelet/kubelet.go&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>kube-proxy&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-proxy/proxy.go">cmd/kube-proxy/proxy.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/service.go">pkg/proxy/service.go&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>kubectl&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubectl/kubectl.go">cmd/kubectl/kubectl.go&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/">&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="commands">
+ &lt;a class="anchor" href="#codes-structure"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Command Name for k8s components&lt;/th&gt;
+ &lt;th&gt;Cobra Client&lt;/th&gt;
+ &lt;th&gt;Real Code&lt;/th&gt;
+ &lt;th&gt;Note&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kube-apiserver&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/apiserver.go"&gt;cmd/kube-apiserver/apiserver.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-apiserver/app/server.go"&gt;cmd/kube-apiserver/app/server.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;kubeAPIServer, APIExtensionsServer, AggregatorServer&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kube-controller-manager&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-controller-manager/controller-manager.go"&gt;cmd/kube-controller-manager/controller-manager.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/"&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kube-scheduler&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-scheduler/scheduler.go"&gt;cmd/kube-scheduler/scheduler.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go"&gt;pkg/scheduler/scheduler.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Etcd&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/"&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/"&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Cloud Controller Manager&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/cloud-controller-manager/main.go"&gt;cmd/cloud-controller-manager/main.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/"&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kubelet&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubelet/kubelet.go"&gt;cmd/kubelet/kubelet.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/kubelet.go"&gt;pkg/kubelet/kubelet.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kube-proxy&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kube-proxy/proxy.go"&gt;cmd/kube-proxy/proxy.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/service.go"&gt;pkg/proxy/service.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;kubectl&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/cmd/kubectl/kubectl.go"&gt;cmd/kubectl/kubectl.go&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/kubernetes/blob/master/"&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="commands"&gt;
  Commands
- &lt;a class="anchor" href="#commands">#&lt;/a>
-&lt;/h2>
-&lt;div class="book-tabs">
+ &lt;a class="anchor" href="#commands"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="book-tabs"&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-0" checked="checked" />
-&lt;label for="tabs-0-0">kube-apiserver &lt;/label>
-&lt;div class="book-tabs-content markdown-inner"> 
-kube-apiserver &lt;br/>
---advertise-address=172.20.0.2 &lt;br/>
---allow-privileged=true &lt;br/>
---authorization-mode=Node,RBAC &lt;br/>
---client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
---enable-admission-plugins=NodeRestriction &lt;br/>
---enable-bootstrap-token-auth=true &lt;br/>
---etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt &lt;br/>
---etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 &lt;br/>
---kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt &lt;br/>
---kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key &lt;br/>
---kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname &lt;br/>
---proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key &lt;br/>
---requestheader-allowed-names=front-proxy-client &lt;br/>
---requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/>
---requestheader-extra-headers-prefix=X-Remote-Extra- &lt;br/>
---requestheader-group-headers=X-Remote-Group &lt;br/>
---requestheader-username-headers=X-Remote-User &lt;br/>
---runtime-config= &lt;br/>
---secure-port=6443 &lt;br/>
---service-account-issuer=https://kubernetes.default.svc.cluster.local &lt;br/>
---service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key &lt;br/>
---service-cluster-ip-range=10.96.0.0/16 &lt;br/>
---tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-0" checked="checked" /&gt;
+&lt;label for="tabs-0-0"&gt;kube-apiserver &lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt; 
+kube-apiserver &lt;br/&gt;
+--advertise-address=172.20.0.2 &lt;br/&gt;
+--allow-privileged=true &lt;br/&gt;
+--authorization-mode=Node,RBAC &lt;br/&gt;
+--client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/&gt;
+--enable-admission-plugins=NodeRestriction &lt;br/&gt;
+--enable-bootstrap-token-auth=true &lt;br/&gt;
+--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt &lt;br/&gt;
+--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 &lt;br/&gt;
+--kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt &lt;br/&gt;
+--kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key &lt;br/&gt;
+--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname &lt;br/&gt;
+--proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key &lt;br/&gt;
+--requestheader-allowed-names=front-proxy-client &lt;br/&gt;
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/&gt;
+--requestheader-extra-headers-prefix=X-Remote-Extra- &lt;br/&gt;
+--requestheader-group-headers=X-Remote-Group &lt;br/&gt;
+--requestheader-username-headers=X-Remote-User &lt;br/&gt;
+--runtime-config= &lt;br/&gt;
+--secure-port=6443 &lt;br/&gt;
+--service-account-issuer=https://kubernetes.default.svc.cluster.local &lt;br/&gt;
+--service-account-key-file=/etc/kubernetes/pki/sa.pub --service-account-signing-key-file=/etc/kubernetes/pki/sa.key &lt;br/&gt;
+--service-cluster-ip-range=10.96.0.0/16 &lt;br/&gt;
+--tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-private-key-file=/etc/kubernetes/pki/apiserver.key &lt;br/&gt;
+&lt;/div&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-1" />
-&lt;label for="tabs-0-1">kube-controller-manager &lt;/label>
-&lt;div class="book-tabs-content markdown-inner">
-kube-controller-manager &lt;br/>
---allocate-node-cidrs=true &lt;br/>
---authentication-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
---authorization-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
---bind-address=127.0.0.1 &lt;br/>
---client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
---cluster-cidr=10.244.0.0/16 &lt;br/>
---cluster-name=kind &lt;br/>
---cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key &lt;br/>
---controllers=*,bootstrapsigner,tokencleaner &lt;br/>
---enable-hostpath-provisioner=true &lt;br/>
---kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/>
---leader-elect=true &lt;br/>
---requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/>
---root-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/>
---service-account-private-key-file=/etc/kubernetes/pki/sa.key &lt;br/>
---service-cluster-ip-range=10.96.0.0/16 &lt;br/>
---use-service-account-credentials=true &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-1" /&gt;
+&lt;label for="tabs-0-1"&gt;kube-controller-manager &lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt;
+kube-controller-manager &lt;br/&gt;
+--allocate-node-cidrs=true &lt;br/&gt;
+--authentication-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/&gt;
+--authorization-kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/&gt;
+--bind-address=127.0.0.1 &lt;br/&gt;
+--client-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/&gt;
+--cluster-cidr=10.244.0.0/16 &lt;br/&gt;
+--cluster-name=kind &lt;br/&gt;
+--cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key &lt;br/&gt;
+--controllers=*,bootstrapsigner,tokencleaner &lt;br/&gt;
+--enable-hostpath-provisioner=true &lt;br/&gt;
+--kubeconfig=/etc/kubernetes/controller-manager.conf &lt;br/&gt;
+--leader-elect=true &lt;br/&gt;
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt &lt;br/&gt;
+--root-ca-file=/etc/kubernetes/pki/ca.crt &lt;br/&gt;
+--service-account-private-key-file=/etc/kubernetes/pki/sa.key &lt;br/&gt;
+--service-cluster-ip-range=10.96.0.0/16 &lt;br/&gt;
+--use-service-account-credentials=true &lt;br/&gt;
+&lt;/div&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-2" />
-&lt;label for="tabs-0-2">kube-scheduler&lt;/label>
-&lt;div class="book-tabs-content markdown-inner"> 
-kube-scheduler &lt;br/>
---authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/>
---bind-address=127.0.0.1 &lt;br/>
---kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/>
---leader-elect=true &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-2" /&gt;
+&lt;label for="tabs-0-2"&gt;kube-scheduler&lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt; 
+kube-scheduler &lt;br/&gt;
+--authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/&gt;
+--bind-address=127.0.0.1 &lt;br/&gt;
+--kubeconfig=/etc/kubernetes/scheduler.conf &lt;br/&gt;
+--leader-elect=true &lt;br/&gt;
+&lt;/div&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-3" />
-&lt;label for="tabs-0-3">etcd&lt;/label>
-&lt;div class="book-tabs-content markdown-inner"> 
-etcd &lt;br/>
---advertise-client-urls=https://172.20.0.2:2379 &lt;br/>
---cert-file=/etc/kubernetes/pki/etcd/server.crt &lt;br/>
---client-cert-auth=true &lt;br/>
---data-dir=/var/lib/etcd &lt;br/>
---experimental-initial-corrupt-check &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-3" /&gt;
+&lt;label for="tabs-0-3"&gt;etcd&lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt; 
+etcd &lt;br/&gt;
+--advertise-client-urls=https://172.20.0.2:2379 &lt;br/&gt;
+--cert-file=/etc/kubernetes/pki/etcd/server.crt &lt;br/&gt;
+--client-cert-auth=true &lt;br/&gt;
+--data-dir=/var/lib/etcd &lt;br/&gt;
+--experimental-initial-corrupt-check &lt;br/&gt;
+&lt;/div&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-4" />
-&lt;label for="tabs-0-4">kubelet&lt;/label>
-&lt;div class="book-tabs-content markdown-inner"> 
-/usr/bin/kubelet &lt;br/>
---bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf &lt;br/>
---kubeconfig=/etc/kubernetes/kubelet.conf &lt;br/>
---config=/var/lib/kubelet/config.yaml &lt;br/>
---container-runtime-endpoin &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-4" /&gt;
+&lt;label for="tabs-0-4"&gt;kubelet&lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt; 
+/usr/bin/kubelet &lt;br/&gt;
+--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf &lt;br/&gt;
+--kubeconfig=/etc/kubernetes/kubelet.conf &lt;br/&gt;
+--config=/var/lib/kubelet/config.yaml &lt;br/&gt;
+--container-runtime-endpoin &lt;br/&gt;
+&lt;/div&gt;
 
 
 
-&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-5" />
-&lt;label for="tabs-0-5">kube-proxy&lt;/label>
-&lt;div class="book-tabs-content markdown-inner"> 
-/usr/local/bin/kube-proxy &lt;br/>
---config=/var/lib/kube-proxy/config.conf &lt;br/>
---hostname-override=kind-control-plane &lt;br/>
-&lt;/div>
+&lt;input type="radio" class="toggle" name="tabs-0" id="tabs-0-5" /&gt;
+&lt;label for="tabs-0-5"&gt;kube-proxy&lt;/label&gt;
+&lt;div class="book-tabs-content markdown-inner"&gt; 
+/usr/local/bin/kube-proxy &lt;br/&gt;
+--config=/var/lib/kube-proxy/config.conf &lt;br/&gt;
+--hostname-override=kind-control-plane &lt;br/&gt;
+&lt;/div&gt;
 
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;h2 id="customer-resource-definition-crd">
+&lt;h2 id="customer-resource-definition-crd"&gt;
  Customer Resource Definition (CRD)
- &lt;a class="anchor" href="#customer-resource-definition-crd">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md">Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a>&lt;/p></description></item><item><title>Install</title><link>http://localhost:1313/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/install/</guid><description>&lt;h3 id="tools">
+ &lt;a class="anchor" href="#customer-resource-definition-crd"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/cloudnativeto/sig-kubernetes/blob/kubernetes-picture-book-v1.0/docs/SUMMARY.md"&gt;Kuberenetes Design&amp;amp;Architecture Pictures &lt;/a&gt;&lt;/p&gt;</description></item><item><title>Install</title><link>http://localhost:1313/docs/k8s/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/install/</guid><description>&lt;h3 id="tools"&gt;
  Tools
- &lt;a class="anchor" href="#tools">#&lt;/a>
-&lt;/h3>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Tools&lt;/th>
- &lt;th>Doc&lt;/th>
- &lt;th>Github&lt;/th>
- &lt;th>Note&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>&lt;a href="https://kubernetes.io/docs/tutorials/hello-minikube/">minikube&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://minikube.sigs.k8s.io/docs/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes/minikube">Github&lt;/a>&lt;/td>
- &lt;td>Run Kubernetes locally&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://k3s.io/">k3s&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://docs.k3s.io/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/k3s-io/k3s/">Github&lt;/a>&lt;/td>
- &lt;td>Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://kind.sigs.k8s.io/">kind&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://kind.sigs.k8s.io/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubernetes-sigs/kind/">Github&lt;/a>&lt;/td>
- &lt;td>Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>&lt;a href="https://github.com/kubernetes-sigs/kwok/">kwok&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint">kubectl&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md">crictl&lt;/a>, &lt;a href="https://docs.podman.io/en/latest/Introduction.html">podman&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;h3 id="commands">
+ &lt;a class="anchor" href="#tools"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Tools&lt;/th&gt;
+ &lt;th&gt;Doc&lt;/th&gt;
+ &lt;th&gt;Github&lt;/th&gt;
+ &lt;th&gt;Note&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://kubernetes.io/docs/tutorials/hello-minikube/"&gt;minikube&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://minikube.sigs.k8s.io/docs/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes/minikube"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Run Kubernetes locally&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://k3s.io/"&gt;k3s&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://docs.k3s.io/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/k3s-io/k3s/"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Lightweight Kubernetes. Easy to install, half the memory, all in a binary of less than 100 MB.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://kind.sigs.k8s.io/"&gt;kind&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://kind.sigs.k8s.io/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubernetes-sigs/kind/"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://github.com/kubernetes-sigs/kwok/"&gt;kwok&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint"&gt;kubectl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md"&gt;crictl&lt;/a&gt;, &lt;a href="https://docs.podman.io/en/latest/Introduction.html"&gt;podman&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="commands"&gt;
  Commands
- &lt;a class="anchor" href="#commands">#&lt;/a>
-&lt;/h3>
-&lt;details >&lt;summary>minikube&lt;/summary>
- &lt;div class="markdown-inner">
+ &lt;a class="anchor" href="#commands"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;details &gt;&lt;summary&gt;minikube&lt;/summary&gt;
+ &lt;div class="markdown-inner"&gt;
  
  minikube start --kubernetes-version=v1.28.4
 
@@ -386,48 +386,48 @@ etcd &lt;br/>
  http://127.0.0.1:56740/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
 
 
- &lt;/div>
-&lt;/details>
+ &lt;/div&gt;
+&lt;/details&gt;
 
-&lt;details >&lt;summary>kind&lt;/summary>
- &lt;div class="markdown-inner">
+&lt;details &gt;&lt;summary&gt;kind&lt;/summary&gt;
+ &lt;div class="markdown-inner"&gt;
  
  kind create cluster --image=kindest/node:v1.28.0 -n kind2
 
  kind build node-image /path/to/kubernetes/source --image=kindest/node:v1.28.4
 
- &lt;/div>
-&lt;/details>
+ &lt;/div&gt;
+&lt;/details&gt;
 
-&lt;h3 id="reference">
+&lt;h3 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/594206344">k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a>&lt;/p></description></item><item><title>Docker</title><link>http://localhost:1313/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://zhuanlan.zhihu.com/p/594206344"&gt;k0s、MicroK8s、kind、k3s 和 Minikube&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Docker</title><link>http://localhost:1313/docs/k8s/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/docker/</guid><description>&lt;h1 id="tools-dockercontainerd"&gt;
  Tools (docker/containerd/&amp;hellip;)
- &lt;a class="anchor" href="#tools-dockercontainerd">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="install-toolsconfigurations">
+ &lt;a class="anchor" href="#tools-dockercontainerd"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="install-toolsconfigurations"&gt;
  Install Tools/Configurations
- &lt;a class="anchor" href="#install-toolsconfigurations">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html">
- &lt;a href="https://www.cnblogs.com/wubolive/p/17317586.html">The mirrors for Docker images&lt;/a>
- &lt;a class="anchor" href="#the-mirrors-for-docker-imageshttpswwwcnblogscomwubolivep17317586html">#&lt;/a>
-&lt;/h3>
-&lt;pre>&lt;code>&lt;details >&lt;summary>m.daocloud.io&lt;/summary>
- &lt;div class="markdown-inner">
+ &lt;a class="anchor" href="#install-toolsconfigurations"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="the-mirrors-for-docker-images"&gt;
+ &lt;a href="https://www.cnblogs.com/wubolive/p/17317586.html"&gt;The mirrors for Docker images&lt;/a&gt;
+ &lt;a class="anchor" href="#the-mirrors-for-docker-images"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&lt;details &gt;&lt;summary&gt;m.daocloud.io&lt;/summary&gt;
+ &lt;div class="markdown-inner"&gt;
  
 DaoCloud
 源站：docker pull k8s.gcr.io/metrics-server/metrics-server:v0.6.1
 改为：docker pull m.daocloud.io/k8s.gcr.io/metrics-server/metrics-server:v0.6.1
 
- &lt;/div>
-&lt;/details>
+ &lt;/div&gt;
+&lt;/details&gt;
 
 
-&lt;details >&lt;summary>kubeadm config images list&lt;/summary>
- &lt;div class="markdown-inner">
+&lt;details &gt;&lt;summary&gt;kubeadm config images list&lt;/summary&gt;
+ &lt;div class="markdown-inner"&gt;
  
 
 docker pull m.daocloud.io/registry.k8s.io/kube-apiserver:v1.28.4
@@ -446,16 +446,16 @@ docker tag m.daocloud.io/registry.k8s.io/pause:3.9 registry.k8s.io/pause:3.9
 docker tag m.daocloud.io/registry.k8s.io/etcd:3.5.9-0 registry.k8s.io/etcd:3.5.9-0
 docker tag m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1 registry.k8s.io/coredns/coredns:v1.10.1
 
- &lt;/div>
-&lt;/details>
+ &lt;/div&gt;
+&lt;/details&gt;
 
-&lt;/code>&lt;/pre>
-&lt;h3 id="install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd">
- &lt;a href="https://github.com/containerd/containerd/blob/main/docs/getting-started.md">Install containerd/runc/cni&lt;/a>
- &lt;a class="anchor" href="#install-containerdrunccnihttpsgithubcomcontainerdcontainerdblobmaindocsgetting-startedmd">#&lt;/a>
-&lt;/h3>
-&lt;pre>&lt;code>&lt;details >&lt;summary>&lt;/summary>
- &lt;div class="markdown-inner">
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="install-containerdrunccni"&gt;
+ &lt;a href="https://github.com/containerd/containerd/blob/main/docs/getting-started.md"&gt;Install containerd/runc/cni&lt;/a&gt;
+ &lt;a class="anchor" href="#install-containerdrunccni"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&lt;details &gt;&lt;summary&gt;&lt;/summary&gt;
+ &lt;div class="markdown-inner"&gt;
  
 wget https://github.com/containerd/containerd/releases/download/v1.7.11/containerd-1.7.11-linux-amd64.tar.gz
 sudo tar Cxzvf /usr/local containerd-*-linux-amd64.tar.gz
@@ -473,11 +473,11 @@ wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni
 mkdir -p /opt/cni/bin
 sudo tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v*.tgz
 
- &lt;/div>
-&lt;/details>
+ &lt;/div&gt;
+&lt;/details&gt;
 
-&lt;/code>&lt;/pre>
-&lt;p>&lt;a href="https://containerd.io/">containerd&lt;/a>, &lt;a href="https://cri-o.io/">cri-o&lt;/a>&lt;/p></description></item><item><title/><link>http://localhost:1313/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/operator/</guid><description>&lt;h1 id="operator">
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="https://containerd.io/"&gt;containerd&lt;/a&gt;, &lt;a href="https://cri-o.io/"&gt;cri-o&lt;/a&gt;&lt;/p&gt;</description></item><item><title/><link>http://localhost:1313/docs/k8s/operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/k8s/operator/</guid><description>&lt;h1 id="operator"&gt;
  Operator
- &lt;a class="anchor" href="#operator">#&lt;/a>
-&lt;/h1></description></item></channel></rss>
+ &lt;a class="anchor" href="#operator"&gt;#&lt;/a&gt;
+&lt;/h1&gt;</description></item></channel></rss>

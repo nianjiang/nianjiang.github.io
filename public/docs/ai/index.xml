@@ -1,227 +1,224 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on My New Hugo Site</title><link>http://localhost:1313/docs/ai/</link><description>Recent content in AI on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning Map</title><link>http://localhost:1313/docs/ai/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/20-map/</guid><description>&lt;h2 id="maps">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on My New Hugo Site</title><link>http://localhost:1313/docs/ai/</link><description>Recent content in AI on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://localhost:1313/docs/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning Map</title><link>http://localhost:1313/docs/ai/20-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/20-map/</guid><description>&lt;h2 id="maps"&gt;
  Maps:
- &lt;a class="anchor" href="#maps">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="快速入门ai领域的思维导图深度学习自学入门">
+ &lt;a class="anchor" href="#maps"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="快速入门ai领域的思维导图深度学习自学入门"&gt;
  快速入门AI领域的思维导图（深度学习自学入门）
- &lt;a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8ai%e9%a2%86%e5%9f%9f%e7%9a%84%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e8%87%aa%e5%ad%a6%e5%85%a5%e9%97%a8">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;img src="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp" alt="" />&lt;/p>
-&lt;h3 id="reference">
+ &lt;a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8ai%e9%a2%86%e5%9f%9f%e7%9a%84%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e8%87%aa%e5%ad%a6%e5%85%a5%e9%97%a8"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h3 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp">快速入门AI领域的思维导图（深度学习自学入门）&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/ai/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/21-note/</guid><description>&lt;h2 id="notes">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://pic2.zhimg.com/80/v2-1c5ee0b6a8e35b514ca8e834d8cd4905_1440w.webp"&gt;快速入门AI领域的思维导图（深度学习自学入门）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Learning Note</title><link>http://localhost:1313/docs/ai/21-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/21-note/</guid><description>&lt;h2 id="notes"&gt;
  Notes:
- &lt;a class="anchor" href="#notes">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="aimachine-learning-toolkit-for-kubernetes">
+ &lt;a class="anchor" href="#notes"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="aimachine-learning-toolkit-for-kubernetes"&gt;
  AI/Machine Learning Toolkit for Kubernetes
- &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes">#&lt;/a>
-&lt;/h3>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Toolkit&lt;/th>
- &lt;th>Website&lt;/th>
- &lt;th>Doc&lt;/th>
- &lt;th>Github&lt;/th>
- &lt;th>Note&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>&lt;a href="https://www.cncf.io/projects/kubeflow/">Kubeflow&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://www.kubeflow.org/">website&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://www.kubeflow.org/docs/started/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/kubeflow/kubeflow">Github&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="">&lt;/a>&lt;/td>
- &lt;td>&lt;a href="">&lt;/a>&lt;/td>
- &lt;td>&lt;a href="">&lt;/a>&lt;/td>
- &lt;td>&lt;a href="">&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="nvidia">
+ &lt;a class="anchor" href="#aimachine-learning-toolkit-for-kubernetes"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Toolkit&lt;/th&gt;
+ &lt;th&gt;Website&lt;/th&gt;
+ &lt;th&gt;Doc&lt;/th&gt;
+ &lt;th&gt;Github&lt;/th&gt;
+ &lt;th&gt;Note&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://www.cncf.io/projects/kubeflow/"&gt;Kubeflow&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://www.kubeflow.org/"&gt;website&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://www.kubeflow.org/docs/started/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/kubeflow/kubeflow"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="nvidia"&gt;
  NVIDIA/&amp;hellip;
- &lt;a class="anchor" href="#nvidia">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://www.bilibili.com/video/BV1hQDGYWEMN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760&amp;amp;p=2">2024吃透AI大模型（LLM+RAG系统+GPT-4o+OpenAI）&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.ibm.com/topics?topic=all&amp;amp;page=1">IBM-Explainers&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://learn.microsoft.com/zh-cn/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">Microsoft Certified: Azure AI Fundamentals&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://edu.huaweicloud.com/training/aie.html">华为认证人工智能工程师&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.nvidia.cn/training/">Nvidia Training-CN&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.nvidia.com/en-us/training/">Nvidia Training&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h3 id="map">
+ &lt;a class="anchor" href="#nvidia"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.bilibili.com/video/BV1hQDGYWEMN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=8f134d86d2e1e426d0598d5ac4a9a760&amp;amp;p=2"&gt;2024吃透AI大模型（LLM+RAG系统+GPT-4o+OpenAI）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/topics?topic=all&amp;amp;page=1"&gt;IBM-Explainers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://learn.microsoft.com/zh-cn/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification"&gt;Microsoft Certified: Azure AI Fundamentals&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://edu.huaweicloud.com/training/aie.html"&gt;华为认证人工智能工程师&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.nvidia.cn/training/"&gt;Nvidia Training-CN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.nvidia.com/en-us/training/"&gt;Nvidia Training&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="map"&gt;
  Map
- &lt;a class="anchor" href="#map">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://www.zhihu.com/question/644285055/answer/19105760471">初学者怎么入门大语言模型（LLM）？&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/696128856">[LLM教程] 大语言模型：全方位入门&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.bilibili.com/opus/932698847561383973">【附教程】大语言模型(LLM)入门学习路线图&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.andrewng.org/courses/">Andrew Ng - 吴恩达&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h3 id="trainings">
+ &lt;a class="anchor" href="#map"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.zhihu.com/question/644285055/answer/19105760471"&gt;初学者怎么入门大语言模型（LLM）？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zhuanlan.zhihu.com/p/696128856"&gt;[LLM教程] 大语言模型：全方位入门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.bilibili.com/opus/932698847561383973"&gt;【附教程】大语言模型(LLM)入门学习路线图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.andrewng.org/courses/"&gt;Andrew Ng - 吴恩达&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="trainings"&gt;
  Trainings
- &lt;a class="anchor" href="#trainings">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main">👍 Microsoft/generative-ai-for-beginners&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/">Fundamental AI Concepts (Azure)&lt;/a>&lt;/p></description></item><item><title>LLM &amp; RAG</title><link>http://localhost:1313/docs/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/22-llmrag/</guid><description>&lt;h2 id="notes">
+ &lt;a class="anchor" href="#trainings"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/microsoft/generative-ai-for-beginners/tree/main"&gt;👍 Microsoft/generative-ai-for-beginners&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/"&gt;Fundamental AI Concepts (Azure)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/nlplanet/the-basic-concepts-and-terms-you-need-to-know-for-ai-and-ml-28eb07fd6c49"&gt;The Basic Concepts and Terms You Need to Know for AI and ML&lt;/a&gt;&lt;/p&gt;</description></item><item><title>LLM &amp; RAG</title><link>http://localhost:1313/docs/ai/22-llmrag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/22-llmrag/</guid><description>&lt;h2 id="notes"&gt;
  Notes:
- &lt;a class="anchor" href="#notes">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="rag-retrieval-augmented-generation">
+ &lt;a class="anchor" href="#notes"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="rag-retrieval-augmented-generation"&gt;
  RAG (Retrieval Augmented Generation)
- &lt;a class="anchor" href="#rag-retrieval-augmented-generation">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://www.ibm.com/think/topics/retrieval-augmented-generation">What is RAG?&lt;/a>,&lt;a href="https://www.youtube.com/watch?v=00Q0G84kq3M">RAG VS Fine Tuning&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h3 id="llm-large-language-model">
+ &lt;a class="anchor" href="#rag-retrieval-augmented-generation"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/think/topics/retrieval-augmented-generation"&gt;What is RAG?&lt;/a&gt;,&lt;a href="https://www.youtube.com/watch?v=00Q0G84kq3M"&gt;RAG VS Fine Tuning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="llm-large-language-model"&gt;
  LLM (Large Language Model)
- &lt;a class="anchor" href="#llm-large-language-model">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://www.ibm.com/think/topics/large-language-models">What are large language models (LLMs)?&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Large_language_model">WIKI&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://developers.google.com/machine-learning/resources/intro-llms">Introduction to Large Language Models&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>what is Transformer / GPT?&lt;/p>
-&lt;hr>
-&lt;h3 id="tools-table">
+ &lt;a class="anchor" href="#llm-large-language-model"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/think/topics/large-language-models"&gt;What are large language models (LLMs)?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Large_language_model"&gt;WIKI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://developers.google.com/machine-learning/resources/intro-llms"&gt;Introduction to Large Language Models&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;what is Transformer / GPT?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="tools-table"&gt;
  Tools table
- &lt;a class="anchor" href="#tools-table">#&lt;/a>
-&lt;/h3>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Toolkit&lt;/th>
- &lt;th>Website&lt;/th>
- &lt;th>Doc&lt;/th>
- &lt;th>Github&lt;/th>
- &lt;th>Note&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>&lt;a href="">LangChain&lt;/a>&lt;/td>
- &lt;td>&lt;a href="python.langchain.com">Official&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://python.langchain.com/docs/introduction/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/langchain-ai/langchain">Github&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://www.ibm.com/think/topics/llamaindex">LlamaIndex&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://docs.llamaindex.ai/en/stable/">Official&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://docs.llamaindex.ai/en/stable/">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/run-llama/llama_index">Github&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="">RagFlow&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://ragflow.io/">Official&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://ragflow.io/docs/dev/category/guides">Doc&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://github.com/infiniflow/ragflow">Github&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="reference">
+ &lt;a class="anchor" href="#tools-table"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Toolkit&lt;/th&gt;
+ &lt;th&gt;Website&lt;/th&gt;
+ &lt;th&gt;Doc&lt;/th&gt;
+ &lt;th&gt;Github&lt;/th&gt;
+ &lt;th&gt;Note&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href=""&gt;LangChain&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="python.langchain.com"&gt;Official&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://python.langchain.com/docs/introduction/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/langchain-ai/langchain"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://www.ibm.com/think/topics/llamaindex"&gt;LlamaIndex&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://docs.llamaindex.ai/en/stable/"&gt;Official&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://docs.llamaindex.ai/en/stable/"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/run-llama/llama_index"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href=""&gt;RagFlow&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ragflow.io/"&gt;Official&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ragflow.io/docs/dev/category/guides"&gt;Doc&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://github.com/infiniflow/ragflow"&gt;Github&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://github.com/langchain-ai/langchain">LangChain&lt;/a>&lt;/p></description></item><item><title>DeepSeek</title><link>http://localhost:1313/docs/ai/23-deepseek/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/23-deepseek/</guid><description>&lt;h2 id="deepseekhttpswwwdeepseekcom">
- &lt;a href="https://www.deepseek.com/">Deepseek&lt;/a>
- &lt;a class="anchor" href="#deepseekhttpswwwdeepseekcom">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://github.com/deepseek-ai">Github&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/20498436722">OpenAI VS DeepSeek&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328">清华大学：DeepSeek从入门到精通（2025）&lt;/a>，&lt;a href="https://pan.baidu.com/s/1mZD2GTcsSNT9u3KRbg3ehw?pwd=rugh">PDF&lt;/a>&lt;/p>
-&lt;h3 id="heading">
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/langchain-ai/langchain"&gt;LangChain&lt;/a&gt;&lt;/p&gt;</description></item><item><title>DeepSeek</title><link>http://localhost:1313/docs/ai/23-deepseek/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/ai/23-deepseek/</guid><description>&lt;h2 id="deepseek"&gt;
+ &lt;a href="https://www.deepseek.com/"&gt;Deepseek&lt;/a&gt;
+ &lt;a class="anchor" href="#deepseek"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/deepseek-ai"&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zhuanlan.zhihu.com/p/20498436722"&gt;OpenAI VS DeepSeek&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://haokan.baidu.com/v?pd=wisenatural&amp;amp;vid=6706304160610646328"&gt;清华大学：DeepSeek从入门到精通（2025）&lt;/a&gt;，&lt;a href="https://pan.baidu.com/s/1mZD2GTcsSNT9u3KRbg3ehw?pwd=rugh"&gt;PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=""&gt;
  
- &lt;a class="anchor" href="#heading">#&lt;/a>
-&lt;/h3>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Tools&lt;/th>
- &lt;th>Website&lt;/th>
- &lt;th>Note&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>&lt;a href="https://chat.deepseek.com/">DeepSeek Chat&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://chat.scnet.cn/">SCNet&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://cloud.siliconflow.cn/playground/chat">SiliconFlow&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat">volcenginer&lt;/a>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://ide.cloud.tencent.com/dashboard/gpu-workspace?fromSource=gwzcw.9299775.9299775.9299775">Tencent&lt;/a>&lt;/td>
- &lt;td>&lt;a href="https://cloud.tencent.com/">T.Cloud&lt;/a>&lt;/td>
- &lt;td>DeepSeek-R1-Distill-Qwen-32B 免费体验&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;h2 id="llm-large-language-model">
+ &lt;a class="anchor" href="#"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Tools&lt;/th&gt;
+ &lt;th&gt;Website&lt;/th&gt;
+ &lt;th&gt;Note&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://chat.deepseek.com/"&gt;DeepSeek Chat&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://chat.scnet.cn/"&gt;SCNet&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://cloud.siliconflow.cn/playground/chat"&gt;SiliconFlow&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://console.volcengine.com/ark/region:ark&amp;#43;cn-beijing/experience/chat"&gt;volcenginer&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://ide.cloud.tencent.com/dashboard/gpu-workspace?fromSource=gwzcw.9299775.9299775.9299775"&gt;Tencent&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.tencent.com/"&gt;T.Cloud&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;DeepSeek-R1-Distill-Qwen-32B 免费体验&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="llm-large-language-model"&gt;
  LLM (Large Language Model)
- &lt;a class="anchor" href="#llm-large-language-model">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h3 id="reference">
+ &lt;a class="anchor" href="#llm-large-language-model"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="reference"&gt;
  Reference
- &lt;a class="anchor" href="#reference">#&lt;/a>
-&lt;/h3>
-&lt;p>&lt;a href="https://huggingface.co/models">Hugging Face&lt;/a>，&lt;a href="https://modelscope.cn/home">ModelScope&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://gpt-tokenizer.dev/">gpt-tokenizer&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="">&lt;/a>&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#reference"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://huggingface.co/models"&gt;Hugging Face&lt;/a&gt;，&lt;a href="https://modelscope.cn/home"&gt;ModelScope&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gpt-tokenizer.dev/"&gt;gpt-tokenizer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
