@@ -178,3 +178,7 @@ content/docs/istio/a.yaml
 .DS_Store
 nohup.out
 start.sh
+
+
+# Ignore Public
+public/
