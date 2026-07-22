@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: master
 nodes_managed: true
-exported_at: "2026-07-22T05:54:27Z"
+exported_at: "2026-07-22T06:21:52Z"
 modules:
     "":
-        dir_name: 基于 hugo-book 的 Cloud Native_编程_AI 学习笔记静态博客
-        title: 基于 hugo-book 的 Cloud Native/编程/AI 学习笔记静态博客
+        dir_name: Hugo + hugo-book 技术笔记站点源码
+        title: Hugo + hugo-book 技术笔记站点源码
         scope:
             - .github/
             - .gitee/

@@ -22,12 +22,14 @@ node_modules/
 creds.js
  
 # Private Files
-*.json
 *.csv
 *.csv.gz
 *.tsv
 *.tsv.gz
 *.xlsx
+
+# Un-ignore theme assets
+!themes/hugo-book/assets/*.json
  
  
 # Mac/OSX

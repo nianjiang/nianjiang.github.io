@@ -44,23 +44,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Debug environment
-        run: |
-          echo "=== Hugo version ==="
-          hugo version
-          echo "=== Theme dir ==="
-          ls -la themes/hugo-book/ | head -10
-          echo "=== Theme assets ==="
-          ls themes/hugo-book/assets/ 2>&1 || echo "ASSETS NOT FOUND"
-          echo "=== go.mod check ==="
-          find . -name 'go.mod' -not -path './vendor/*' 2>/dev/null || echo "No go.mod found"
-
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --gc --minify --verbose --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
