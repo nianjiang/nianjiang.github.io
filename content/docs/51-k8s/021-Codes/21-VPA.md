@@ -461,20 +461,20 @@ VPA 的 `updateMode` 决定了推荐值如何被应用（[官方文档](https://
 
 | 文件 | 组件 | 作用 |
 |:---|:---|:---|
-| `pkg/recommender/main.go` | Recommender | 入口，初始化并启动主循环 |
-| `pkg/recommender/routines/recommender.go` | Recommender | 主循环：采集 → 计算 → 更新 |
-| `pkg/recommender/logic/recommender.go` | Recommender | 推荐算法核心逻辑 |
-| `pkg/recommender/logic/estimator.go` | Recommender | 资源估算器 |
-| `pkg/recommender/model/vpa.go` | Recommender | VPA 对象模型 |
-| `pkg/recommender/model/aggregate_container_state.go` | Recommender | 容器聚合统计 |
-| `pkg/recommender/input/cluster_feeder.go` | Recommender | K8s 资源监听 + 模型更新 |
-| `pkg/recommender/routines/capping_post_processor.go` | Recommender | Min/Max 范围约束 |
-| `pkg/updater/main.go` | Updater | 入口 |
-| `pkg/updater/logic/updater.go` | Updater | 主循环：比对 → 驱逐 |
-| `pkg/updater/inplace/` | Updater | 原地资源更新 |
-| `pkg/admission-controller/main.go` | AC | 入口，启动 HTTPS Server |
-| `pkg/admission-controller/logic/server.go` | AC | Webhook Server 核心逻辑 |
-| `pkg/apis/autoscaling.k8s.io/v1/types.go` | Shared | VPA CRD 类型定义 |
+| [`pkg/recommender/main.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/main.go) | Recommender | 入口，初始化并启动主循环 |
+| [`pkg/recommender/routines/recommender.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/routines/recommender.go) | Recommender | 主循环：采集 → 计算 → 更新 |
+| [`pkg/recommender/logic/recommender.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/logic/recommender.go) | Recommender | 推荐算法核心逻辑 |
+| [`pkg/recommender/logic/estimator.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/logic/estimator.go) | Recommender | 资源估算器 |
+| [`pkg/recommender/model/vpa.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/model/vpa.go) | Recommender | VPA 对象模型 |
+| [`pkg/recommender/model/aggregate_container_state.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/model/aggregate_container_state.go) | Recommender | 容器聚合统计 |
+| [`pkg/recommender/input/cluster_feeder.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/input/cluster_feeder.go) | Recommender | K8s 资源监听 + 模型更新 |
+| [`pkg/recommender/routines/capping_post_processor.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/recommender/routines/capping_post_processor.go) | Recommender | Min/Max 范围约束 |
+| [`pkg/updater/main.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/updater/main.go) | Updater | 入口 |
+| [`pkg/updater/logic/updater.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/updater/logic/updater.go) | Updater | 主循环：比对 → 驱逐 |
+| [`pkg/updater/inplace/`](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler/pkg/updater/inplace) | Updater | 原地资源更新 |
+| [`pkg/admission-controller/main.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/admission-controller/main.go) | AC | 入口，启动 HTTPS Server |
+| [`pkg/admission-controller/logic/server.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/admission-controller/logic/server.go) | AC | Webhook Server 核心逻辑 |
+| [`pkg/apis/autoscaling.k8s.io/v1/types.go`](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/pkg/apis/autoscaling.k8s.io/v1/types.go) | Shared | VPA CRD 类型定义 |
 
 
 ---
