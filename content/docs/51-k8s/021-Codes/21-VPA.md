@@ -38,8 +38,8 @@ VPA 由 **3 个核心组件** 组成，各自独立运行：
 
 | 组件 | 触发方式 | 说明 |
 |:---|:---|:---|
-| **Recommender** | **定时循环** (Timer Loop) | 主循环每 `--metrics-fetcher-interval`（默认 1min）触发一轮：拉取 Metrics → 更新模型 → 计算推荐值 → 写入 VPA Status |
-| **Updater** | **事件驱动** (Informer Watch) | 监听 VPA 对象变更（Recommendation 更新时），比对关联 Pod 的资源请求，不匹配则 Evict 或 InPlace 更新 |
+| **Recommender** | **轮询** (默认 1 分钟) | 主循环每 `--metrics-fetcher-interval`（默认 1min）触发一轮：拉取 Metrics → 更新模型 → 计算推荐值 → 写入 VPA Status |
+| **Updater** | **轮询** (默认 1 分钟) | 主循环每 `--updater-interval`（默认 1min）触发一轮：通过 Informer 缓存获取 VPA 及关联 Pod，比对资源请求与推荐范围，不匹配则 Evict 或 InPlace 更新 |
 | **Admission Controller** | **Webhook 调用** (MutatingAdmissionWebhook) | K8s API Server 在 Pod **CREATE** 时回调 HTTP 接口，将推荐值注入 Pod Spec（resources.requests；或者VPA创建或更新时，触发。 |
 
 
@@ -246,18 +246,32 @@ pkg/updater/
 **Updater 主循环流程：**
 
 ```
-循环（每 1 分钟）
-  │
-  ├── 1. 获取所有 VPA 对象（Lister）
-  ├── 2. 获取所有匹配的 Live Pod（当前资源分配）
-  ├── 3. 对每个 VPA：
-  │     ├── 比对 Pod 实际资源 vs 推荐值（Target/LowerBound/UpperBound）
-  │     ├── 判断是否需要更新（实际值超出 [LowerBound, UpperBound]）
-  │     └── 计算可驱逐副本数（遵守 PDB、maxEvictRatio）
-  ├── 4. 按优先级排序待驱逐 Pod
-  │     ├── 按资源变更百分比排序（变更最大的先驱逐）
-  │     └── 遵守 minReplicas 等限制
-  └── 5. 执行驱逐（Eviction API）或原地更新（In-Place Update）
+每 1 分钟触发一次
+       │
+       ▼
+  Admission Controller 健康？ ──No──→ 跳过本轮
+       │ Yes
+       ▼
+  列出 VPA + 列出 Pod + 建立映射
+       │
+       ▼
+  ┌─ for each VPA ─────────────────────────────
+  │                                             
+  │  mode=Off/Initial? ──Yes──→ 跳过            
+  │       │ No                                  
+  │       ▼                                     
+  │  InPlace 类模式？                            
+  │    ├─ Yes → CanInPlace → PATCH /resize      
+  │    │          │ 超时/失败                     
+  │    │          ▼                             
+  │    │     (InPlaceOrRecreate only)            
+  │    │          ▼                             
+  │    └──────────→ Evict Pod                    
+  │                                             
+  │  Recreate 模式？                             
+  │    └─ Yes → 优先级排序 → Evict Pod            
+  │                                             
+  └─────────────────────────────────────────────
 ```
 
 ---
