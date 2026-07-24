@@ -590,4 +590,36 @@ Select（选择最高分节点）
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;安装方式支持：&lt;strong&gt;kubectl apply&lt;/strong&gt; / &lt;strong&gt;Helm Chart&lt;/strong&gt;（v0.18+）/ &lt;strong&gt;Kustomize&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;安装方式支持：&lt;strong&gt;kubectl apply&lt;/strong&gt; / &lt;strong&gt;Helm Chart&lt;/strong&gt;（v0.18+）/ &lt;strong&gt;Kustomize&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Vertical Pod Autoscalling</title><link>http://localhost:1313/docs/51-k8s/021-Codes/21-VPA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/docs/51-k8s/021-Codes/21-VPA/</guid><description>&lt;h1 id="vertical-pod-autoscaler-vpa--代码结构"&gt;
+ Vertical Pod Autoscaler (VPA) — 代码结构
+ &lt;a class="anchor" href="#vertical-pod-autoscaler-vpa--%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;仓库地址：
+ &lt;a href="https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler"&gt;github.com/kubernetes/autoscaler/vertical-pod-autoscaler&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="一整体架构概览"&gt;
+ 一、整体架构概览
+ &lt;a class="anchor" href="#%e4%b8%80%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84%e6%a6%82%e8%a7%88"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;VPA 由 &lt;strong&gt;3 个核心组件&lt;/strong&gt; 组成，各自独立运行：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────────┐
+│ Vertical Pod Autoscaler (VPA) │
+├─────────────────────┬─────────────────────┬─────────────────────────┤
+│ Recommender │ Updater │ Admission Controller │
+│ │ │ │
+│ 监控资源使用历史 │ 检查 Pod 资源是否 │ 作为 Mutating Webhook │
+│ 计算推荐值并写入 │ 匹配推荐值，不匹配 │ 在 Pod 创建时自动注入 │
+│ VPA Status │ 则驱逐或原地更新 │ 推荐资源请求 │
+└─────────────────────┴─────────────────────┴─────────────────────────┘
+ │ │ │
+ └───────────────────────┴──────────────────────┘
+ │
+ ┌───────────┴───────────┐
+ │ Shared Packages │
+ │ (apis, client, │
+ │ target, utils, │
+ │ features) │
+ └───────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;组件触发方式：&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

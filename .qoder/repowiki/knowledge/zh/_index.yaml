@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: master
 nodes_managed: true
-exported_at: "2026-07-22T06:21:52Z"
+exported_at: "2026-07-22T06:53:41Z"
 modules:
     "":
-        dir_name: Hugo + hugo-book 技术笔记站点源码
-        title: Hugo + hugo-book 技术笔记站点源码
+        dir_name: Hugo Book 技术笔记站点根目录
+        title: Hugo Book 技术笔记站点根目录
         scope:
             - .github/
             - .gitee/

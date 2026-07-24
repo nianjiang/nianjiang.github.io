@@ -184,3 +184,7 @@ start.sh
 
 # Ignore Public
 public/
+
+# AI
+AGENTS.md
+.qoder/

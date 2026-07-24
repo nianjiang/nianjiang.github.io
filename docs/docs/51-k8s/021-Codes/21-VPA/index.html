@@ -1,0 +1,368 @@
+<!doctype html><html lang=zh dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Vertical Pod Autoscaler (VPA) — 代码结构
+  #
+
+
+仓库地址：
+  github.com/kubernetes/autoscaler/vertical-pod-autoscaler
+
+
+
+  一、整体架构概览
+  #
+
+VPA 由 3 个核心组件 组成，各自独立运行：
+┌─────────────────────────────────────────────────────────────────────┐
+│                    Vertical Pod Autoscaler (VPA)                     │
+├─────────────────────┬─────────────────────┬─────────────────────────┤
+│   Recommender       │     Updater         │  Admission Controller   │
+│                     │                     │                         │
+│  监控资源使用历史     │  检查 Pod 资源是否   │  作为 Mutating Webhook  │
+│  计算推荐值并写入     │  匹配推荐值，不匹配  │  在 Pod 创建时自动注入  │
+│  VPA Status          │  则驱逐或原地更新    │  推荐资源请求            │
+└─────────────────────┴─────────────────────┴─────────────────────────┘
+        │                       │                      │
+        └───────────────────────┴──────────────────────┘
+                                │
+                    ┌───────────┴───────────┐
+                    │  Shared Packages      │
+                    │  (apis, client,       │
+                    │   target, utils,      │
+                    │   features)           │
+                    └───────────────────────┘
+组件触发方式："><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/51-k8s/021-Codes/21-VPA/"><meta property="og:site_name" content="Learning Notes"><meta property="og:title" content="Vertical Pod Autoscalling"><meta property="og:description" content="Vertical Pod Autoscaler (VPA) — 代码结构 # 仓库地址： github.com/kubernetes/autoscaler/vertical-pod-autoscaler
+一、整体架构概览 # VPA 由 3 个核心组件 组成，各自独立运行：
+┌─────────────────────────────────────────────────────────────────────┐ │ Vertical Pod Autoscaler (VPA) │ ├─────────────────────┬─────────────────────┬─────────────────────────┤ │ Recommender │ Updater │ Admission Controller │ │ │ │ │ │ 监控资源使用历史 │ 检查 Pod 资源是否 │ 作为 Mutating Webhook │ │ 计算推荐值并写入 │ 匹配推荐值，不匹配 │ 在 Pod 创建时自动注入 │ │ VPA Status │ 则驱逐或原地更新 │ 推荐资源请求 │ └─────────────────────┴─────────────────────┴─────────────────────────┘ │ │ │ └───────────────────────┴──────────────────────┘ │ ┌───────────┴───────────┐ │ Shared Packages │ │ (apis, client, │ │ target, utils, │ │ features) │ └───────────────────────┘ 组件触发方式："><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Vertical Pod Autoscalling | Learning Notes</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/51-k8s/021-Codes/21-VPA/><link rel=stylesheet href=/book.min.a249ebe08f98979031fb104dae53f0b7c58c5d0506a67752338e6a311c4a09fd.css integrity="sha256-oknr4I+Yl5Ax+xBNrlPwt8WMXQUGpndSM45qMRxKCf0=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/zh.search.min.ab1b46742b50d4a8c11f5e1633dd2123bcf9213c23ed1e43e2c8fbe1ee1e11c2.js integrity="sha256-qxtGdCtQ1KjBH14WM90hI7z5ITwj7R5D4sj74e4eEcI=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Learning Notes</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=搜索 aria-label=搜索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><input type=checkbox id=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class=toggle>
+<label for=section-1b0ab8a1a47a7e205cecf1ec1f5979a8 class="flex justify-between"><a href=/docs/50-linux/>Linux</a></label><ul><li><a href=/docs/50-linux/40-EmbeededLinux/>Embeeded Linux</a></li><li><a href=/docs/50-linux/50-BPF/>eBPF</a></li><li><a href=/docs/50-linux/60-Interview/>Interview</a></li></ul></li><li><input type=checkbox id=section-b2e1d04376d62b420221a8a5438d6a6f class=toggle checked>
+<label for=section-b2e1d04376d62b420221a8a5438d6a6f class="flex justify-between"><a href=/docs/51-k8s/>K8S</a></label><ul><li><input type=checkbox id=section-f0936f125e361a508a54646437409c2d class=toggle checked>
+<label for=section-f0936f125e361a508a54646437409c2d class="flex justify-between"><a href=/docs/51-k8s/021-Codes/>Codes</a></label><ul><li><a href=/docs/51-k8s/021-Codes/09-Scheduler-Doc/>Scheduler Docs</a></li><li><a href=/docs/51-k8s/021-Codes/10-Scheduler/>Scheduler</a></li><li><a href=/docs/51-k8s/021-Codes/11-Score/>Scheduler-score</a></li><li><a href=/docs/51-k8s/021-Codes/19-Descheduler/>Descheduler</a></li><li><a href=/docs/51-k8s/021-Codes/21-VPA/ class=active>Vertical Pod Autoscalling</a></li></ul></li><li><a href=/docs/51-k8s/050-CRI/>CRI</a></li><li><a href=/docs/51-k8s/060-CSI/>CSI</a></li><li><a href=/docs/51-k8s/070-CNI/>CNI</a></li><li><a href=/docs/51-k8s/071-CNI-eBPF/>eBPF</a></li><li><a href=/docs/51-k8s/080-Security/>Security</a></li><li><input type=checkbox id=section-54faadcc25e7dfb3d3ee7504cb897cbe class=toggle>
+<label for=section-54faadcc25e7dfb3d3ee7504cb897cbe class="flex justify-between"><a href=/docs/51-k8s/90-DevSecOps/>DevSecOps</a></label><ul><li><a href=/docs/51-k8s/90-DevSecOps/50-Knative/>Knative</a></li><li><a href=/docs/51-k8s/90-DevSecOps/51-Tekton/>Tekton</a></li><li><a href=/docs/51-k8s/90-DevSecOps/52-Argo/>Argo</a></li><li><a href=/docs/51-k8s/90-DevSecOps/80-Kubeflow/>Kubeflow</a></li></ul></li><li><a href=/docs/51-k8s/101-Install/>Install</a></li><li><a href=/docs/51-k8s/103-Podman/>Podman</a></li><li><a href=/docs/51-k8s/104-docker/>Docker</a></li><li><input type=checkbox id=section-a81135055e165849e44ea949315e10ca class=toggle>
+<label for=section-a81135055e165849e44ea949315e10ca class="flex justify-between"><a href=/docs/51-k8s/201-Certifications/>Certifications</a></label><ul><li><a href=/docs/51-k8s/201-Certifications/CKA/>CKA</a></li><li><a href=/docs/51-k8s/201-Certifications/CKS/>CKS</a></li><li><a href=/docs/51-k8s/201-Certifications/PCA/>PCA (Prometheus)</a></li><li><a href=/docs/51-k8s/201-Certifications/ICA/>ICA (Istio)</a></li><li><a href=/docs/51-k8s/201-Certifications/CAPA/>CAPA (Argo)</a></li><li><a href=/docs/51-k8s/201-Certifications/CCA/>CCA (Cilium)</a></li><li><a href=/docs/51-k8s/201-Certifications/question/>Questions</a></li></ul></li></ul></li><li><input type=checkbox id=section-c645a17fb0db9ae77785c2afe57f0f71 class=toggle>
+<label for=section-c645a17fb0db9ae77785c2afe57f0f71 class="flex justify-between"><a href=/docs/52-istio/>Istio</a></label><ul><li><a href=/docs/52-istio/Envoy/>Envoy</a></li><li><a href=/docs/52-istio/TrafficManagement/>Traffic Management</a></li><li><a href=/docs/52-istio/SourceCode/>Source Code</a></li><li><a href=/docs/52-istio/Train/>Training</a></li></ul></li><li><input type=checkbox id=section-b7260d9367e259846adea8ca5ce5225e class=toggle>
+<label for=section-b7260d9367e259846adea8ca5ce5225e class="flex justify-between"><a href=/docs/60-AI/>AI</a></label><ul><li><a href=/docs/60-AI/10-MLOps/>MLOps</a></li><li><a href=/docs/60-AI/20-map/>Learning Map</a></li><li><a href=/docs/60-AI/21-note/>Learning Note</a></li><li><a href=/docs/60-AI/22-LLMRAG/>LLM & RAG</a></li><li><a href=/docs/60-AI/23-DeepSeek/>DeepSeek</a></li><li><a href=/docs/60-AI/24-Qwen/>Qwen</a></li><li><a href=/docs/60-AI/80-Hello-Agents/>Hello-Agents</a></li></ul></li><li><input type=checkbox id=section-43186187efbb455c938830282bdb3e14 class=toggle>
+<label for=section-43186187efbb455c938830282bdb3e14 class="flex justify-between"><a href=/docs/70-CNCF/>CNCF & Infracture</a></label><ul><li><input type=checkbox id=section-8750a27d71cb60a9b9d398edf69aa400 class=toggle>
+<label for=section-8750a27d71cb60a9b9d398edf69aa400 class="flex justify-between"><a href=/docs/70-CNCF/40Observe/>Observability & Analysis</a></label></li><li><a href=/docs/70-CNCF/50Logging/>Logging</a></li><li><a href=/docs/70-CNCF/80_Redis/>Redis</a></li><li><a href=/docs/70-CNCF/90_Iac/>Infrastructure as Code</a></li></ul></li><li><input type=checkbox id=section-f1114491280fa93d5b59c5e6797f59a9 class=toggle>
+<label for=section-f1114491280fa93d5b59c5e6797f59a9 class="flex justify-between"><a href=/docs/80-Programming/>Programming</a></label><ul><li><a href=/docs/80-Programming/05_Toolkit/>Toolkit</a></li><li><a href=/docs/80-Programming/10_Vue/>Vue</a></li><li><input type=checkbox id=section-717574aa1a94c01c90846fbcb16d2788 class=toggle>
+<label for=section-717574aa1a94c01c90846fbcb16d2788 class="flex justify-between"><a href=/docs/80-Programming/Golang/>Golang</a></label><ul><li><a href=/docs/80-Programming/Golang/01_Golang/>Golang</a></li><li><a href=/docs/80-Programming/Golang/10_Gin/>Gin</a></li><li><a href=/docs/80-Programming/Golang/12_Gorm/>Gorm</a></li></ul></li></ul></li><li><input type=checkbox id=section-c200ba76ee1eba5b0d1748b01720bdf9 class=toggle>
+<label for=section-c200ba76ee1eba5b0d1748b01720bdf9 class="flex justify-between"><a href=/docs/90-Tools/>Systems & Tools</a></label><ul><li><a href=/docs/90-Tools/11_Golang/>CMS</a></li><li><a href=/docs/90-Tools/21_Cloud/>Cloud</a></li></ul></li><li><input type=checkbox id=section-d62c0f3654bdb5df0343960f463f2528 class=toggle>
+<label for=section-d62c0f3654bdb5df0343960f463f2528 class="flex justify-between"><a href=/docs/99-English/>English</a></label><ul><li><a href=/docs/99-English/05-AI/>Artificial Intellience</a></li><li><a href=/docs/99-English/10-cambridge/>Cambridge English</a></li><li><a href=/docs/99-English/25-Kids/>Kids</a></li><li><a href=/docs/99-English/50-TV/>TV/Movie/Books</a></li><li><a href=/docs/99-English/80-%E6%94%80%E7%99%BB%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%B3%BB%E5%88%97/>攀登英语阅读系列</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li><li><a href=https://github.com/alex-shpak/hugo-book target=_blank rel=noopener>Hugo Book</a></li><li><a href=https://gitee.com/jnh/jnh target=_blank rel=noopener>Gitee</a></li><li><a href=https://github.com/nianjiang/nianjiang.github.io target=_blank rel=noopener>Github</a></li><li><a href=/links target=_blank rel=noopener>常用导航</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Vertical Pod Autoscalling</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#vertical-pod-autoscaler-vpa--代码结构>Vertical Pod Autoscaler (VPA) — 代码结构</a><ul><li><a href=#一整体架构概览>一、整体架构概览</a><ul><li><a href=#vpa-crd>VPA CRD</a></li></ul></li><li><a href=#二顶层目录结构>二、顶层目录结构</a></li><li><a href=#三核心组件代码结构>三、核心组件代码结构</a><ul><li><a href=#31-recommender推荐器-核心引擎>3.1 Recommender（推荐器）— 核心引擎</a></li><li><a href=#32-updater更新器>3.2 Updater（更新器）</a></li><li><a href=#33-admission-controller准入控制器>3.3 Admission Controller（准入控制器）</a></li></ul></li><li><a href=#四共享包shared-packages>四、共享包（Shared Packages）</a><ul><li><a href=#41-apis--crd-api-定义>4.1 apis/ — CRD API 定义</a></li><li><a href=#42-client--生成的-k8s-client>4.2 client/ — 生成的 K8s Client</a></li><li><a href=#43-target--目标选择器>4.3 target/ — 目标选择器</a></li><li><a href=#44-features--feature-gates>4.4 features/ — Feature Gates</a></li><li><a href=#45-utils--共享工具库>4.5 utils/ — 共享工具库</a></li></ul></li><li><a href=#五三个组件的协作关系>五、三个组件的协作关系</a></li><li><a href=#六updatepolicy-模式>六、UpdatePolicy 模式</a></li><li><a href=#七关键源码文件>七、关键源码文件</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=vertical-pod-autoscaler-vpa--代码结构>Vertical Pod Autoscaler (VPA) — 代码结构
+<a class=anchor href=#vertical-pod-autoscaler-vpa--%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84>#</a></h1><blockquote><p>仓库地址：
+<a href=https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler>github.com/kubernetes/autoscaler/vertical-pod-autoscaler</a></p></blockquote><hr><h2 id=一整体架构概览>一、整体架构概览
+<a class=anchor href=#%e4%b8%80%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84%e6%a6%82%e8%a7%88>#</a></h2><p>VPA 由 <strong>3 个核心组件</strong> 组成，各自独立运行：</p><pre tabindex=0><code>┌─────────────────────────────────────────────────────────────────────┐
+│                    Vertical Pod Autoscaler (VPA)                     │
+├─────────────────────┬─────────────────────┬─────────────────────────┤
+│   Recommender       │     Updater         │  Admission Controller   │
+│                     │                     │                         │
+│  监控资源使用历史     │  检查 Pod 资源是否   │  作为 Mutating Webhook  │
+│  计算推荐值并写入     │  匹配推荐值，不匹配  │  在 Pod 创建时自动注入  │
+│  VPA Status          │  则驱逐或原地更新    │  推荐资源请求            │
+└─────────────────────┴─────────────────────┴─────────────────────────┘
+        │                       │                      │
+        └───────────────────────┴──────────────────────┘
+                                │
+                    ┌───────────┴───────────┐
+                    │  Shared Packages      │
+                    │  (apis, client,       │
+                    │   target, utils,      │
+                    │   features)           │
+                    └───────────────────────┘
+</code></pre><p><strong>组件触发方式：</strong></p><table><thead><tr><th style=text-align:left>组件</th><th style=text-align:left>触发方式</th><th style=text-align:left>说明</th></tr></thead><tbody><tr><td style=text-align:left><strong>Recommender</strong></td><td style=text-align:left><strong>定时循环</strong> (Timer Loop)</td><td style=text-align:left>主循环每 <code>--metrics-fetcher-interval</code>（默认 1min）触发一轮：拉取 Metrics → 更新模型 → 计算推荐值 → 写入 VPA Status</td></tr><tr><td style=text-align:left><strong>Updater</strong></td><td style=text-align:left><strong>事件驱动</strong> (Informer Watch)</td><td style=text-align:left>监听 VPA 对象变更（Recommendation 更新时），比对关联 Pod 的资源请求，不匹配则 Evict 或 InPlace 更新</td></tr><tr><td style=text-align:left><strong>Admission Controller</strong></td><td style=text-align:left><strong>Webhook 调用</strong> (MutatingAdmissionWebhook)</td><td style=text-align:left>K8s API Server 在 Pod <strong>CREATE</strong> 时回调 HTTP 接口，将推荐值注入 Pod Spec（resources.requests；或者VPA创建或更新时，触发。</td></tr></tbody></table><h3 id=vpa-crd>VPA CRD
+<a class=anchor href=#vpa-crd>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>Name</span>:         <span style=color:#ae81ff>nginx-deployment-basic-vpa</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Namespace</span>:    <span style=color:#ae81ff>default</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Labels</span>:       <span style=color:#ae81ff>&lt;none&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Annotations</span>:  <span style=color:#ae81ff>&lt;none&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>API Version</span>:  <span style=color:#ae81ff>autoscaling.k8s.io/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Kind</span>:         <span style=color:#ae81ff>VerticalPodAutoscaler</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Metadata</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Creation Timestamp</span>:  <span style=color:#e6db74>2026-07-22T07:33:19Z</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Generation</span>:          <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Resource Version</span>:    <span style=color:#ae81ff>9692349125</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>UID</span>:                 <span style=color:#ae81ff>c1fe1497-1026-4357-8d78-4e9344237aee</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Spec</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Target Ref</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>API Version</span>:  <span style=color:#ae81ff>apps/v1</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Kind</span>:         <span style=color:#ae81ff>Deployment</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Name</span>:         <span style=color:#ae81ff>nginx-deployment-basic</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Update Policy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Update Mode</span>:  <span style=color:#66d9ef>Off</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>resourcePolicy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>containerPolicies</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>containerName</span>: <span style=color:#e6db74>&#34;application&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>minAllowed</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>cpu</span>: <span style=color:#ae81ff>100m</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>memory</span>: <span style=color:#ae81ff>128Mi</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>maxAllowed</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>cpu</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>memory</span>: <span style=color:#ae81ff>2Gi</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>controlledResources</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>cpu</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>memory</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>controlledValues</span>: <span style=color:#ae81ff>RequestsAndLimits</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Status</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Conditions</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Last Transition Time</span>:  <span style=color:#e6db74>2026-07-22T07:33:25Z</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Status</span>:                <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Type</span>:                  <span style=color:#ae81ff>RecommendationProvided</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>Recommendation</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>Container Recommendations</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>Container Name</span>:  <span style=color:#ae81ff>nginx</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>Lower Bound</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Cpu</span>:     <span style=color:#ae81ff>25m</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Memory</span>:  <span style=color:#ae81ff>262144k</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>Target</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Cpu</span>:     <span style=color:#ae81ff>25m</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Memory</span>:  <span style=color:#ae81ff>262144k</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>Uncapped Target</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Cpu</span>:     <span style=color:#ae81ff>25m</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Memory</span>:  <span style=color:#ae81ff>262144k</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>Upper Bound</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Cpu</span>:     <span style=color:#ae81ff>8496m</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>Memory</span>:  <span style=color:#ae81ff>8882928571</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>Events</span>:          <span style=color:#ae81ff>&lt;none&gt;</span>
+</span></span></code></pre></div><hr><h2 id=二顶层目录结构>二、顶层目录结构
+<a class=anchor href=#%e4%ba%8c%e9%a1%b6%e5%b1%82%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84>#</a></h2><pre tabindex=0><code>vertical-pod-autoscaler/
+├── charts/                    # Helm Chart 部署配置
+├── common/                    # 公共库（多组件共享的常量与工具）
+├── deploy/                    # 部署 YAML（Deployment、RBAC、CRD 等）
+├── docs/                      # 文档（components.md、features.md 等）
+├── enhancements/              # 增强提案（KEP 式设计文档）
+├── hack/                      # 构建/开发脚本
+├── pkg/                       # 核心代码（重点）
+│   ├── admission-controller/  # Admission Controller 组件
+│   ├── apis/                  # CRD API 定义
+│   ├── client/                # 生成的 K8s Client（Clientset/Informers/Listers）
+│   ├── features/              # Feature Gates 定义
+│   ├── recommender/           # Recommender 组件（核心推荐引擎）
+│   ├── target/                # Target Selector / Controller Fetcher
+│   ├── updater/               # Updater 组件
+│   └── utils/                 # 共享工具库
+├── test/                      # 测试（e2e、集成测试）
+├── go.mod / go.sum            # Go Module 依赖声明
+└── README.md
+</code></pre><hr><h2 id=三核心组件代码结构>三、核心组件代码结构
+<a class=anchor href=#%e4%b8%89%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84>#</a></h2><h3 id=31-recommender推荐器-核心引擎>3.1 Recommender（推荐器）— 核心引擎
+<a class=anchor href=#31-recommender%e6%8e%a8%e8%8d%90%e5%99%a8-%e6%a0%b8%e5%bf%83%e5%bc%95%e6%93%8e>#</a></h3><p>Recommender 是 VPA 的<strong>心脏</strong>，负责根据历史 + 实时资源使用数据计算推荐值。</p><pre tabindex=0><code>pkg/recommender/
+├── main.go                    # 入口，启动 Recommender 循环
+├── Dockerfile                 # 容器镜像构建
+├── Makefile                   # 构建脚本
+│
+├── model/                     # 集群内存模型
+│   ├── cluster.go             #   Cluster 模型定义（Pod/VPA 索引）
+│   ├── vpa.go                 #   VPA 对象模型（推荐值存储与读取）
+│   ├── container.go           #   Container 模型（资源使用采样）
+│   ├── aggregate_container_state.go  #   容器聚合状态（统计信息）
+│   ├── aggregations_config.go #   聚合配置（时间窗口等）
+│   ├── types.go               #   通用类型定义
+│   └── errors.go              #   错误类型定义
+│
+├── input/                     # 数据采集层
+│   ├── cluster_feeder.go      #   ClusterFeeder：监听 K8s 资源变更，喂数据到模型
+│   ├── history/               #   历史数据来源（Checkpoint / Prometheus）
+│   ├── metrics/               #   Metrics API 实时数据获取
+│   ├── oom/                   #   OOM 事件监听（内存推荐修正）
+│   └── spec/                  #   Pod Spec 解析
+│
+├── logic/                     # 推荐逻辑核心
+│   ├── recommender.go         #   推荐算法主逻辑
+│   └── estimator.go           #   资源估算器
+│
+├── routines/                  # 运行循环与后处理
+│   ├── recommender.go         #   Recommender 主循环（定时采集 → 计算 → 更新）
+│   ├── recommender_controller.go  #   单个 VPA 的处理控制器
+│   ├── vpa.go                 #   VPA 推荐值更新逻辑
+│   ├── capping_post_processor.go  #   Min/Max 范围约束（cappingPolicy）
+│   ├── cpu_integer_post_processor.go  #   CPU 整数值处理（如 mCPU 取整）
+│   └── recommendation_post_processor.go  #   推荐后处理接口
+│
+├── checkpoint/                # 推荐值持久化
+│   └── checkpoint_writer.go   #   写入 VPACheckpoint CRD（持久化历史统计）
+│
+├── config/                    # Recommender 配置
+│
+└── util/                      # Recommender 内部工具
+</code></pre><p><strong>Recommender 主循环流程：</strong></p><pre tabindex=0><code>启动
+  │
+  ├── 1. 从 VPACheckpoint（或 Prometheus）加载历史数据 → 构建模型
+  │
+  ▼
+循环（每 1 分钟，由 config.MetricsFetcherInterval 控制）
+  │
+  ├── 2. ClusterFeeder 监听 K8s 资源变更（Pod/VPA 增删改）→ 更新模型
+  ├── 3. 从 Metrics API 获取实时 CPU/Memory 使用数据 → 更新模型
+  ├── 4. 对每个 VPA 执行推荐算法
+  │     │
+  │     │  ┌──────────────────────────────────────────────────────────
+  │     │  │ Estimator 装饰器链 执行顺序（由外到内）：   
+  │     │  │                    
+  │     │  │  4a. PercentileEstimator 百分位取值                   
+  │     │  │        Target:   P90                                  
+  │     │  │        Upper:    P95                                  
+  │     │  │        Lower:    P50    
+  │     │  │  4b. Margin 安全边距（base × 1.15）  
+  │     │  │  4c. ConfidenceMultiplier 置信度乘数                    
+  │     │  │        Upper: (1+1/confidence)^1                      
+  │     │  │        Lower: (1+0.001/confidence)^-2  
+  │     │  │  4d. MinResource 确保结果不低于保底（按容器数均分）  
+  │     │  └──────────────────────────────────────────────────────────
+  │     │                          ↓
+  │     │  ┌──────────────────────────────────────────────────────────
+  │     │  │ PostProcessor 阶段（Estimator 之后）：                 
+  │     │  │                                                      
+  │     │  │  4e. CPUIntegerPostProcessor （可选，基于 VPA 注解启用）                        
+  │     │  │  4f. CappingPostProcessor应用minAllowed/maxAllowed范围约束               
+  │     │  └──────────────────────────────────────────────────────────
+  │     │
+  ├── 5. 将推荐值写入 VPA Status
+  └── 6. CheckpointWriter 持久化聚合统计数据
+</code></pre><hr><h3 id=32-updater更新器>3.2 Updater（更新器）
+<a class=anchor href=#32-updater%e6%9b%b4%e6%96%b0%e5%99%a8>#</a></h3><p>Updater 负责检查已有 Pod 的资源是否与推荐值匹配，不匹配时执行驱逐或原地更新。</p><pre tabindex=0><code>pkg/updater/
+├── main.go                    # 入口，启动 Updater 循环
+├── Dockerfile                 # 容器镜像构建
+├── Makefile                   # 构建脚本
+│
+├── logic/                     # 核心逻辑
+│   └── updater.go             #   Updater 主循环（获取 VPA → 比对 → 驱逐/更新）
+│
+├── inplace/                   # In-Place 原地更新
+│                              #   不重启 Pod，直接修改资源请求（K8s 1.27+）
+│
+├── priority/                  # 驱逐优先级
+│                              #   决定哪些 Pod 优先被驱逐
+│
+├── restriction/               # 驱逐限制
+│                              #   PDB 遵守、单节点驱逐上限等
+│
+├── config/                    # Updater 配置
+│
+└── utils/                     # Updater 内部工具
+</code></pre><p><strong>Updater 主循环流程：</strong></p><pre tabindex=0><code>循环（每 1 分钟）
+  │
+  ├── 1. 获取所有 VPA 对象（Lister）
+  ├── 2. 获取所有匹配的 Live Pod（当前资源分配）
+  ├── 3. 对每个 VPA：
+  │     ├── 比对 Pod 实际资源 vs 推荐值（Target/LowerBound/UpperBound）
+  │     ├── 判断是否需要更新（实际值超出 [LowerBound, UpperBound]）
+  │     └── 计算可驱逐副本数（遵守 PDB、maxEvictRatio）
+  ├── 4. 按优先级排序待驱逐 Pod
+  │     ├── 按资源变更百分比排序（变更最大的先驱逐）
+  │     └── 遵守 minReplicas 等限制
+  └── 5. 执行驱逐（Eviction API）或原地更新（In-Place Update）
+</code></pre><hr><h3 id=33-admission-controller准入控制器>3.3 Admission Controller（准入控制器）
+<a class=anchor href=#33-admission-controller%e5%87%86%e5%85%a5%e6%8e%a7%e5%88%b6%e5%99%a8>#</a></h3><p>作为 Mutating Webhook，在 Pod 创建时自动注入 VPA 推荐的资源请求。</p><pre tabindex=0><code>pkg/admission-controller/
+├── main.go                    # 入口，启动 HTTPS Server + Webhook 注册
+├── config.go                  # Webhook 配置（端口、地址、标签等）
+├── certs.go                   # TLS 证书管理
+├── Dockerfile                 # 容器镜像构建
+├── Makefile                   # 构建脚本
+│
+├── gencerts.sh                # 生成 TLS 证书脚本
+├── delete-webhook.sh          # 删除 Webhook 脚本
+├── rmcerts.sh                 # 清理证书脚本
+│
+├── logic/                     # 核心逻辑
+│   └── server.go              #   Webhook Server：接收请求 → 匹配 VPA → 生成 JSON Patch
+│
+├── resource/                  # 资源处理
+│                              #   VPA 资源查找、推荐值读取
+│
+└── config/                    # 准入控制器配置
+</code></pre><p><strong>Admission Controller 处理流程：</strong></p><pre tabindex=0><code>Pod CREATE 请求
+  │
+  ▼
+API Server → Mutating Webhook → Admission Controller
+  │
+  ├── 1. 接收 HTTPS 请求（包含 Pod Spec）
+  ├── 2. 查找匹配的 VPA（通过 Namespace + Label Selector）
+  ├── 3. 如找到 VPA：
+  │     ├── 读取当前推荐值（VPA.Status.Recommendation）
+  │     ├── 生成 JSON Patch（修改 containers[].resources.requests）
+  │     └── 返回 Patch 给 API Server
+  └── 4. 如未找到 VPA：直接放行
+</code></pre><hr><h2 id=四共享包shared-packages>四、共享包（Shared Packages）
+<a class=anchor href=#%e5%9b%9b%e5%85%b1%e4%ba%ab%e5%8c%85shared-packages>#</a></h2><h3 id=41-apis--crd-api-定义>4.1 apis/ — CRD API 定义
+<a class=anchor href=#41-apis--crd-api-%e5%ae%9a%e4%b9%89>#</a></h3><pre tabindex=0><code>pkg/apis/
+├── autoscaling.k8s.io/        # 正式版 API（autoscaling.k8s.io/v1）
+│   ├── v1/                    #   VPA CRD 类型定义
+│   │   ├── types.go           #     VerticalPodAutoscaler / VPAStatus / VPARecommendation
+│   │   ├── register.go        #     注册到 Scheme
+│   │   └── zz_generated.deepcopy.go  #     自动生成的 DeepCopy 方法
+│   └── v1beta2/               #   Beta 版 API（向后兼容）
+│
+└── poc.autoscaling.k8s.io/    # PoC 版 API（v1alpha1，旧版）
+    └── v1alpha1/
+</code></pre><p><strong>核心 CRD 类型：</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>VerticalPodAutoscaler</span> <span style=color:#66d9ef>struct</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Spec</span>: <span style=color:#a6e22e>VerticalPodAutoscalerSpec</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>TargetRef</span>:          <span style=color:#75715e>// 目标 workload（如 Deployment）</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>UpdatePolicy</span>:       <span style=color:#75715e>// Off / Initial / Auto</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>ResourcePolicy</span>:     <span style=color:#75715e>// 容器级 min/max 约束</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>Status</span>: <span style=color:#a6e22e>VerticalPodAutoscalerStatus</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>Recommendation</span>:     <span style=color:#75715e>// 推荐值（Target / LowerBound / UpperBound）</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>Conditions</span>:         <span style=color:#75715e>// VPA 状态条件</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=42-client--生成的-k8s-client>4.2 client/ — 生成的 K8s Client
+<a class=anchor href=#42-client--%e7%94%9f%e6%88%90%e7%9a%84-k8s-client>#</a></h3><pre tabindex=0><code>pkg/client/
+├── clientset/versioned/       #   强类型 Clientset（CRUD VPA/Checkpoint）
+├── informers/externalversions/  # Informer（Watch + 本地缓存）
+└── listers/                   #   Lister（从 Informer 缓存中读取）
+</code></pre><h3 id=43-target--目标选择器>4.3 target/ — 目标选择器
+<a class=anchor href=#43-target--%e7%9b%ae%e6%a0%87%e9%80%89%e6%8b%a9%e5%99%a8>#</a></h3><pre tabindex=0><code>pkg/target/
+├── fetcher.go                 #   VPA Target Selector 解析
+└── controller_fetcher/        #   从 VPA.TargetRef 找到 Controller（Deployment/StatefulSet 等）
+</code></pre><h3 id=44-features--feature-gates>4.4 features/ — Feature Gates
+<a class=anchor href=#44-features--feature-gates>#</a></h3><pre tabindex=0><code>pkg/features/
+├── features.go                #   Feature Gate 定义
+└── versioned_features.go      #   按版本控制的特性
+</code></pre><p><strong>已知 Feature Gates：</strong></p><table><thead><tr><th style=text-align:left>Feature Gate</th><th style=text-align:left>说明</th></tr></thead><tbody><tr><td style=text-align:left>InPlaceOrRecreate</td><td style=text-align:left>支持 InPlace 原地更新模式</td></tr><tr><td style=text-align:left>InPlaceOnly</td><td style=text-align:left>仅使用原地更新（不驱逐）</td></tr></tbody></table><h3 id=45-utils--共享工具库>4.5 utils/ — 共享工具库
+<a class=anchor href=#45-utils--%e5%85%b1%e4%ba%ab%e5%b7%a5%e5%85%b7%e5%ba%93>#</a></h3><pre tabindex=0><code>pkg/utils/
+├── annotations/               #   VPA 相关注解处理
+├── client/                    #   K8s 客户端工具
+├── limitrange/                #   LimitRange 处理
+├── metrics/                   #   Metrics API 客户端
+├── resources/                 #   资源计算工具（CPU/Memory 转换）
+├── server/                    #   HTTP Server 工具
+├── status/                    #   VPA Status 更新工具
+├── test/                      #   测试工具
+└── vpa/                       #   VPA 操作工具（匹配、过滤等）
+</code></pre><hr><h2 id=五三个组件的协作关系>五、三个组件的协作关系
+<a class=anchor href=#%e4%ba%94%e4%b8%89%e4%b8%aa%e7%bb%84%e4%bb%b6%e7%9a%84%e5%8d%8f%e4%bd%9c%e5%85%b3%e7%b3%bb>#</a></h2><pre tabindex=0><code>                    ┌──────────────┐
+                    │  Metrics API │
+                    └──────┬───────┘
+                           │ CPU/Memory 使用数据
+                           ▼
+┌──────────────────────────────────────────────────┐
+│                  Recommender                      │
+│                                                  │
+│  1. 监听 Pod/VPA 变更 → 更新模型                  │
+│  2. 定时采集 Metrics → 更新模型                    │
+│  3. 运行推荐算法 → 计算推荐值                      │
+│  4. 写入 VPA.Status.Recommendation                │
+└──────────────────────┬───────────────────────────┘
+                       │ VPA Status（推荐值）
+          ┌────────────┼────────────┐
+          ▼                         ▼
+┌─────────────────┐       ┌─────────────────────┐
+│  Updater        │       │  Admission Controller│
+│                 │       │                      │
+│ 1. 读取推荐值    │       │ 1. 拦截 Pod CREATE   │
+│ 2. 比对实际资源  │       │ 2. 查找匹配 VPA       │
+│ 3. 驱逐/原地更新 │       │ 3. 注入推荐资源请求    │
+└─────────────────┘       └─────────────────────┘
+         │                          │
+         ▼                          ▼
+    Evict Pod               Pod 以推荐资源创建
+         │
+         ▼
+  Controller 重建 Pod
+         │
+         ▼
+  触发 Admission Controller
+  （新 Pod 自动获得推荐值）
+</code></pre><hr><h2 id=六updatepolicy-模式>六、UpdatePolicy 模式
+<a class=anchor href=#%e5%85%adupdatepolicy-%e6%a8%a1%e5%bc%8f>#</a></h2><p>VPA 的 <code>updateMode</code> 决定了推荐值如何被应用（
+<a href=https://kubernetes.io/docs/concepts/workloads/autoscaling/vertical-pod-autoscale/#update-modes>官方文档</a>）：</p><table><thead><tr><th style=text-align:left>模式</th><th style=text-align:center>Recommender</th><th style=text-align:center>Admission Controller</th><th style=text-align:center>Updater</th><th style=text-align:left>说明</th></tr></thead><tbody><tr><td style=text-align:left><strong>Off</strong></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>❌ 不注入</td><td style=text-align:center>❌ 不驱逐</td><td style=text-align:left>推荐值仅写入 VPA Status，供手动查看</td></tr><tr><td style=text-align:left><strong>Initial</strong></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>✅ 仅新 Pod 注入</td><td style=text-align:center>❌ 不驱逐已有 Pod</td><td style=text-align:left>只在 Pod 创建时注入推荐值</td></tr><tr><td style=text-align:left><strong>Recreate</strong></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>✅ 新 Pod 注入</td><td style=text-align:center>✅ 驱逐不匹配的 Pod</td><td style=text-align:left>驱逐后由控制器重建，新 Pod 自动获得推荐值</td></tr><tr><td style=text-align:left><strong>InPlaceOrRecreate</strong></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>✅ 新 Pod 注入</td><td style=text-align:center>✅ 优先原地更新</td><td style=text-align:left>先尝试原地更新，失败则回退为驱逐</td></tr><tr><td style=text-align:left><strong>InPlace</strong></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>✅ 新 Pod 注入</td><td style=text-align:center>✅ 仅原地更新</td><td style=text-align:left>Alpha（VPA 1.7.0+，K8s 1.33+），永不驱逐，更新失败则等待重试</td></tr><tr><td style=text-align:left><del><strong>Auto</strong></del></td><td style=text-align:center>✅ 计算推荐值</td><td style=text-align:center>✅ 新 Pod 注入</td><td style=text-align:center>✅ 驱逐不匹配的 Pod</td><td style=text-align:left><strong>已废弃</strong>（VPA 1.4.0+），现为 Recreate 的别名</td></tr></tbody></table><hr><h2 id=七关键源码文件>七、关键源码文件
+<a class=anchor href=#%e4%b8%83%e5%85%b3%e9%94%ae%e6%ba%90%e7%a0%81%e6%96%87%e4%bb%b6>#</a></h2><table><thead><tr><th style=text-align:left>文件</th><th style=text-align:left>组件</th><th style=text-align:left>作用</th></tr></thead><tbody><tr><td style=text-align:left><code>pkg/recommender/main.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>入口，初始化并启动主循环</td></tr><tr><td style=text-align:left><code>pkg/recommender/routines/recommender.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>主循环：采集 → 计算 → 更新</td></tr><tr><td style=text-align:left><code>pkg/recommender/logic/recommender.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>推荐算法核心逻辑</td></tr><tr><td style=text-align:left><code>pkg/recommender/logic/estimator.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>资源估算器</td></tr><tr><td style=text-align:left><code>pkg/recommender/model/vpa.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>VPA 对象模型</td></tr><tr><td style=text-align:left><code>pkg/recommender/model/aggregate_container_state.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>容器聚合统计</td></tr><tr><td style=text-align:left><code>pkg/recommender/input/cluster_feeder.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>K8s 资源监听 + 模型更新</td></tr><tr><td style=text-align:left><code>pkg/recommender/routines/capping_post_processor.go</code></td><td style=text-align:left>Recommender</td><td style=text-align:left>Min/Max 范围约束</td></tr><tr><td style=text-align:left><code>pkg/updater/main.go</code></td><td style=text-align:left>Updater</td><td style=text-align:left>入口</td></tr><tr><td style=text-align:left><code>pkg/updater/logic/updater.go</code></td><td style=text-align:left>Updater</td><td style=text-align:left>主循环：比对 → 驱逐</td></tr><tr><td style=text-align:left><code>pkg/updater/inplace/</code></td><td style=text-align:left>Updater</td><td style=text-align:left>原地资源更新</td></tr><tr><td style=text-align:left><code>pkg/admission-controller/main.go</code></td><td style=text-align:left>AC</td><td style=text-align:left>入口，启动 HTTPS Server</td></tr><tr><td style=text-align:left><code>pkg/admission-controller/logic/server.go</code></td><td style=text-align:left>AC</td><td style=text-align:left>Webhook Server 核心逻辑</td></tr><tr><td style=text-align:left><code>pkg/apis/autoscaling.k8s.io/v1/types.go</code></td><td style=text-align:left>Shared</td><td style=text-align:left>VPA CRD 类型定义</td></tr></tbody></table><hr><h2 id=reference>Reference
+<a class=anchor href=#reference>#</a></h2><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p><p><a href=/></a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://gitee.com/jnh/jnh/edit/master/content/docs/51-k8s/021-Codes/21-VPA.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt>
+<span>编辑本页</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#vertical-pod-autoscaler-vpa--代码结构>Vertical Pod Autoscaler (VPA) — 代码结构</a><ul><li><a href=#一整体架构概览>一、整体架构概览</a><ul><li><a href=#vpa-crd>VPA CRD</a></li></ul></li><li><a href=#二顶层目录结构>二、顶层目录结构</a></li><li><a href=#三核心组件代码结构>三、核心组件代码结构</a><ul><li><a href=#31-recommender推荐器-核心引擎>3.1 Recommender（推荐器）— 核心引擎</a></li><li><a href=#32-updater更新器>3.2 Updater（更新器）</a></li><li><a href=#33-admission-controller准入控制器>3.3 Admission Controller（准入控制器）</a></li></ul></li><li><a href=#四共享包shared-packages>四、共享包（Shared Packages）</a><ul><li><a href=#41-apis--crd-api-定义>4.1 apis/ — CRD API 定义</a></li><li><a href=#42-client--生成的-k8s-client>4.2 client/ — 生成的 K8s Client</a></li><li><a href=#43-target--目标选择器>4.3 target/ — 目标选择器</a></li><li><a href=#44-features--feature-gates>4.4 features/ — Feature Gates</a></li><li><a href=#45-utils--共享工具库>4.5 utils/ — 共享工具库</a></li></ul></li><li><a href=#五三个组件的协作关系>五、三个组件的协作关系</a></li><li><a href=#六updatepolicy-模式>六、UpdatePolicy 模式</a></li><li><a href=#七关键源码文件>七、关键源码文件</a></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></aside></main><style>@media screen and (min-width:56rem){.sidebar-toggle{position:fixed;top:.75rem;z-index:100;width:1.75rem;height:1.75rem;padding:0;border:none;border-radius:.375rem;background:0 0;color:var(--gray-500);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s ease,color .15s ease,left .25s ease,right .25s ease}.sidebar-toggle:hover{background:var(--gray-100);color:var(--body-font-color)}.sidebar-toggle:active{background:var(--gray-200)}.sidebar-toggle svg{pointer-events:none}.sidebar-toggle-menu{left:calc(16rem - 2.5rem)}.sidebar-toggle-toc{right:calc(16rem - .5rem)}body.menu-collapsed .sidebar-toggle-menu{left:.5rem}body.toc-collapsed .sidebar-toggle-toc{right:.5rem}body.menu-collapsed .book-menu{display:none}body.toc-collapsed .book-toc{display:none}}@media screen and (max-width:56rem){.sidebar-toggle{display:none!important}}</style><script>(function(){var e,t,n,s,i,a,l=document.querySelector(".book-menu"),o=document.querySelector(".book-toc");if(!l)return;i='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',a='<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',e=document.createElement("button"),e.className="sidebar-toggle sidebar-toggle-menu",e.setAttribute("aria-label","Toggle menu"),e.innerHTML=i,t=document.createElement("button"),t.className="sidebar-toggle sidebar-toggle-toc",t.setAttribute("aria-label","Toggle table of contents"),t.innerHTML=a,document.body.appendChild(e),o&&document.body.appendChild(t),n=localStorage.getItem("book-menu-collapsed")==="true",s=localStorage.getItem("book-toc-collapsed")==="true";function r(){document.body.classList.toggle("menu-collapsed",n),e.innerHTML=n?a:i,e.title=(n?"展开菜单":"收起菜单")+" (Ctrl+Cmd+←)"}function c(){if(!o)return;document.body.classList.toggle("toc-collapsed",s),t.innerHTML=s?i:a,t.title=(s?"展开目录":"收起目录")+" (Ctrl+Cmd+→)"}e.addEventListener("click",function(){n=!n,localStorage.setItem("book-menu-collapsed",n),r()}),o&&t.addEventListener("click",function(){s=!s,localStorage.setItem("book-toc-collapsed",s),c()}),document.addEventListener("keydown",function(n){if(!n.ctrlKey||!n.metaKey)return;n.key==="ArrowLeft"?(n.preventDefault(),e.click()):n.key==="ArrowRight"&&o&&(n.preventDefault(),t.click())}),r(),c()})()</script></body></html>
