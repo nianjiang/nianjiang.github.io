@@ -182,9 +182,9 @@ nohup.out
 start.sh
 
 
-# Ignore Public and Docs
-public/
-docs/
+# Ignore Public and Docs (root-level only)
+/public/
+/docs/
 
 # AI
 AGENTS.md
