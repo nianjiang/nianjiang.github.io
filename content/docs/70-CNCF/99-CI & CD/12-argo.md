@@ -1,6 +1,6 @@
 ---
 weight: 21
-title: "Vertical Pod Autoscalling"
+title: "argo"
 ---
 
 |  Website | Doc           | Github          |  Demo  |     Comment          |
