@@ -92,7 +92,7 @@ bookCollapseSection: true
                         |
                         |
 
-GitLab -------- CI/CD -------- ArgoCD
+GitLab ---- Tekton/Argo Workflow ---- Harbor/... ---- ArgoCD
 
                         |
 

@@ -7,6 +7,34 @@ title: "Vertical Pod Autoscalling"
 
 > 仓库地址：[github.com/kubernetes/autoscaler/vertical-pod-autoscaler](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler)
 
+## 简介
+
+**VPA（Vertical Pod Autoscaler）** 是 Kubernetes 官方的垂直自动伸缩组件，用于自动调整 Pod 的**资源请求（CPU/Memory Requests）**。
+
+### 解决什么问题？
+
+开发人员在部署应用时经常面临：
+
+- **资源请求写多少合适？** 写太小 → 应用被节流或 OOMKilled；写太大 → 节点资源浪费，集群利用率低
+- **应用负载变化后，Requests 还准确吗？** 随着版本迭代、流量变化，当初设定的资源请求早已不准确
+
+VPA 通过监控 Pod 的实际资源使用量，自动计算出合理的 Requests 并应用。
+
+
+### 工作方式
+
+VPA 创建后会在后台持续运行：
+
+```
+Pod 实际使用 500m CPU → VPA 观测到 → 推荐 600m（含安全边距） → 自动更新 Pod Spec
+```
+
+支持四种模式：
+- **Off**：只观察，不修改（适合评估阶段）
+- **Initial**：仅在 Pod 创建时注入推荐值
+- **Recreate**：驱逐不匹配的 Pod，由控制器重建
+- **InPlaceOrRecreate**：优先原地更新（K8s 1.27+），失败则驱逐
+
 ---
 
 ## 一、整体架构概览

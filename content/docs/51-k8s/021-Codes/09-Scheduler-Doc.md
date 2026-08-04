@@ -15,7 +15,7 @@ title: "Scheduler Docs"
 
 ### Scheduling（调度）
 
-| 序号 | 主题 | 说明 | Note |
+| 序号 | 主题 | 核心问题 | Note |
 |:----:|------|------|------|
 | 1 | [Kubernetes Scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/) | 默认调度器 | ✅ |
 | 2 | [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) | 手动指定节点 |
