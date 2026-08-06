@@ -7,12 +7,12 @@ title: "Scheduler-score"
 
 ---
 
-## 1. Score 在调度流程中的位置
+## 1. Score 在调度流程中的位置（[source](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/interface.go)）
 
 ```
-Filter（过滤不可用节点）
+Filter（过滤不可用节点，获取可用节点列表）
     ↓
-Score（对可用节点打分）  ← 我们在这里
+Score（对可用节点打分）  
     ↓
 Select（选择最高分节点）
 ```
@@ -23,7 +23,7 @@ Score 阶段的输入是**经过 Filter 后所有可用的节点列表**，输�
 
 ## 2. 核心数据结构
 
-### 2.1 分数相关常量
+### 2.1 分数相关常量（[source](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/interface.go)）
 
 ```go
 const (
@@ -32,7 +32,7 @@ const (
 )
 ```
 
-### 2.2 打分结果结构
+### 2.2 打分结果结构（[source](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/interface.go)）
 
 ```go
 // 单个插件对某个节点的打分
@@ -57,7 +57,7 @@ type NodePluginScores struct {
 
 ---
 
-## 3. ScorePlugin 接口定义
+## 3. ScorePlugin 接口定义（[source](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/interface.go)）
 
 ```go
 // ScorePlugin 是打分插件的接口
@@ -80,7 +80,7 @@ type ScoreExtensions interface {
 
 ## 4. Score 执行流程（核心代码）
 
-### 4.1 入口函数 `prioritizeNodes()`
+### 4.1 入口函数 [`prioritizeNodes()`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go)
 
 ```go
 // schedule_one.go

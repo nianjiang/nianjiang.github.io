@@ -45,7 +45,7 @@ kubernetes/
 
 ## 核心文件解析
 
-### 1. `scheduler.go` — 主结构体与启动
+### 1. [`scheduler.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go) — 主结构体与启动
 
 ```go
 type Scheduler struct {
@@ -69,7 +69,7 @@ func (sched *Scheduler) Run(ctx context.Context) {
 
 ---
 
-### 2. `schedule_one.go` — 单 Pod 调度完整生命周期
+### 2. [`schedule_one.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go) — 单 Pod 调度完整生命周期
 
 这是调度器最核心的文件，实现了完整的调度周期（Scheduling Cycle）：
 
@@ -138,7 +138,7 @@ func (sched *Scheduler) scheduleOnePod(ctx context.Context, podInfo *framework.Q
 
 ---
 
-## 内置插件（`framework/plugins/`）
+## 内置插件（[`framework/plugins/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/plugins/)）
 
 ```
 plugins/
@@ -244,12 +244,12 @@ profiles:
 
 | 模块 | 核心文件 | 职责 |
 |------|---------|------|
-| 入口 | `cmd/kube-scheduler/` | 启动、配置解析 |
-| 主循环 | `scheduler.go` + `schedule_one.go` | 调度主流程 |
-| 框架 | `framework/` | 插件注册、调用、状态传递 |
-| 插件 | `framework/plugins/` | 内置调度策略实现 |
-| 队列 | `backend/` | 优先级队列管理 |
-| 抢占 | `framework/preemption/` | Pod 抢占逻辑 |
+| 入口 | [`cmd/kube-scheduler/`](https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-scheduler/) | 启动、配置解析 |
+| 主循环 | [`scheduler.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go) + [`schedule_one.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go) | 调度主流程 |
+| 框架 | [`framework/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/) | 插件注册、调用、状态传递 |
+| 插件 | [`framework/plugins/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/plugins/) | 内置调度策略实现 |
+| 队列 | [`internal/queue/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/internal/queue/) | 优先级队列管理 |
+| 抢占 | [`framework/preemption/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/preemption/) | Pod 抢占逻辑 |
 
 
 
@@ -258,9 +258,9 @@ profiles:
 
 ## Reference
 
-[]()
+[cmd/kube-scheduler](https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-scheduler/)
 
-[]()
+[pkg/scheduler](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/)
 
 []()
 

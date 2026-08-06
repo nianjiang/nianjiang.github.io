@@ -103,7 +103,7 @@ Chapter 24. Prometheus and Kubernetes
 ## Tools
 | Name  | Docs   | Codes    | Demo  |Comments   | Next | 
 | ----------- | ----------- | ----------- |----------- | ----------- | ----------- | 
-| [Sentry](https://sentry.io/)  | [Docs](https://docs.sentry.io/product/sentry-basics/) | [Github](https://github.com/getsentry/sentry) | [Demo](https://sandbox.sentry.io/)  |  error tracking and performance monitoring。Python  |   |
+| [Sentry](https://sentry.io/)  | [Docs](https://docs.sentry.io/product/sentry-basics/) | [Github](https://github.com/getsentry/sentry) | [Demo](https://sandbox.sentry.io/)  |  error tracking and performance monitoring。Python  | [self-hosted](https://github.com/getsentry/self-hosted)  |
 | []()  | [Docs]() | [Github]() |   |   |   |
 | []()  | [Docs]() | [Github]() |   |   |   |
 
