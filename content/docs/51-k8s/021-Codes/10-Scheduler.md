@@ -74,18 +74,34 @@ func (sched *Scheduler) Run(ctx context.Context) {
 这是调度器最核心的文件，实现了完整的调度周期（Scheduling Cycle）：
 
 ```go
+// scheduleOnePod 为单个 Pod 执行完整的调度流程。
 func (sched *Scheduler) scheduleOnePod(ctx context.Context, podInfo *framework.QueuedPodInfo) {
-    // 1. 获取对应的调度 Profile/Framework
-    fwk := sched.Profiles[pod.Spec.SchedulerName]
+    pod := podInfo.Pod
 
-    // 2. 创建 CycleState（用于在插件间传递数据）
+    // 1. 根据 Pod.Spec.SchedulerName 获取对应的 Framework
+    schedFramework, err := sched.frameworkForPod(pod)
+    if err != nil {
+        // Profile 不存在，直接标记完成
+        sched.SchedulingQueue.Done(podInfo.Pod.UID)
+        return
+    }
+
+    // 2. 跳过不需要调度的 Pod（正在删除 或 已被 assume）
+    if sched.skipPodSchedule(ctx, schedFramework, pod) {
+        sched.SchedulingQueue.Done(podInfo.Pod.UID)
+        return
+    }
+
+    // 3. 同步执行调度周期（Filtering + Scoring + Assume + Reserve）
     state := framework.NewCycleState()
+    scheduleResult, assumedPodInfo, status := sched.schedulingCycle(ctx, state, schedFramework, podInfo, start, podsToActivate)
+    if !status.IsSuccess() {
+        sched.FailureHandler(ctx, schedFramework, assumedPodInfo, status, ...)
+        return
+    }
 
-    // 3. 执行调度算法（findNodesThatFitPod + scoreNodes）
-    scheduleResult, err := sched.SchedulePod(ctx, fwk, state, podInfo)
-
-    // 4. 执行绑定周期（Reserve → PreBind → Bind → PostBind）
-    go sched.bindingCycle(ctx, state, fwk, ...)
+    // 4. 异步执行绑定周期（WaitOnPermit → PreBind → Bind → PostBind）
+    go sched.runBindingCycle(ctx, state, schedFramework, scheduleResult, assumedPodInfo, start, podsToActivate)
 }
 ```
 
@@ -98,43 +114,56 @@ func (sched *Scheduler) scheduleOnePod(ctx context.Context, podInfo *framework.Q
 ### 扩展点（Extension Points）
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Scheduling Cycle（调度周期）                  │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  QueueSort ──→ PreFilter ──→ Filter ──→ PostFilter ──→ Score       │
-│       │            │            │            │            │         │
-│       │            │            │            │            │         │
-│       │            ▼            ▼            ▼            ▼         │
-│       │      [PreFilter    [Filter     [PostFilter   [Score        │
-│       │       Result]      NodeA/B/C]   (抢占)]      Nodes]        │
-│       │                                                             │
-│       └──────────────────────────────┐                             │
-│                                      ▼                             │
-│                              Reserve ──→ Permit ──→ PreBind        │
-│                                  │          │           │          │
-├──────────────────────────────────┼──────────┼───────────┼──────────┤
-│                           Binding Cycle（绑定周期）                  │
-│                                  │          │           │          │
-│                                  ▼          ▼           ▼          │
-│                               [Bind] ──→ PostBind                  │
-└─────────────────────────────────────────────────────────────────────┘
+                       QueueSort（队列排序，NextEntity 阶段）
+                              │
+                              ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│               Scheduling Cycle（调度周期，同步）                            │
+│                                                                          │
+│  schedulingAlgorithm:                                                    │
+│  ┌──────────┐   ┌────────┐   ┌───────────┐   ┌─────────┐   ┌──────┐      │
+│  │PreFilter │──→│ Filter │──→│ PostFilter│──→│ PreScore│──→│ Score│      │
+│  └──────────┘   └────────┘   └───────────┘   └─────────┘   └──┬───┘      │
+│                                                               │          │
+│                                                               ▼          │
+│  prepareForBindingCycle:                                  (选出最佳节点)   │
+│                                  ┌────────┐   ┌─────────┐   ┌────────┐   │
+│                          ┌─────→ │ Assume │──→│ Reserve │──→│ Permit │   │
+│                          │       └────────┘   └─────────┘   └────┬───┘   │
+└──────────────────────────┼───────────────────────────────────────┼───────┘
+│                          │                                       │       │
+│                          │ go sched.runBindingCycle()            │       │
+│                          ▼                                       │       │
+┌──────────────────────────┼───────────────────────────────────────┼───────┐
+│              Binding Cycle（绑定周期，异步 goroutine）                      │
+│                                                                          │
+│  ┌────────────────┐   ┌────────────┐   ┌─────────┐   ┌────────┐          │
+│  │PreBindPreFlight│──→│WaitOnPermit│──→│ PreBind │──→│  Bind  │          │
+│  └────────────────┘   └────────────┘   └─────────┘   └───┬────┘          │
+│                                                          │               │
+│                                                          ▼               │
+│                                                    ┌────────┐            │
+│                                                    │PostBind│            │
+│                                                    └────────┘            │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### 各扩展点说明
 
-| 扩展点 | 阶段 | 作用 |
-|--------|------|------|
-| `QueueSort` | 入队 | 决定 Pod 在调度队列中的优先级 |
-| `PreFilter` | 调度前 | 预处理/过滤（如检查 PVC 是否可用） |
-| `Filter` | 过滤 | 谓词计算，排除不满足条件的节点 |
-| `PostFilter` | 过滤后 | 无可用节点时触发抢占（Preemption） |
-| `Score` | 打分 | 对可行节点打分排序 |
-| `Reserve` | 预留 | 预留资源（如 Volume、端口） |
-| `Permit` | 准入 | 延迟绑定（如等待 Gang 调度） |
-| `PreBind` | 绑定前 | 执行绑定前准备（如挂载 Volume） |
-| `Bind` | 绑定 | 实际将 Pod 绑定到 Node |
-| `PostBind` | 绑定后 | 清理、通知 |
+| 扩展点 | 阶段 | 作用 | Details |
+|--------|------|------|------|
+| [`QueueSort`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L69) | 入队 | 决定 Pod 在调度队列中的优先级 | 优先级/先进先出 |
+| [`PreFilter`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L641) | 调度前 | 预处理/过滤（如检查 PVC 是否可用） | 1. 每个调度周期只执行一次<br/>2. 可返回需要检查的节点列表<br/>3. 失败则 Pod 直接进入不可调度队列 |
+| [`Filter`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L817) | 过滤 | 谓词计算，排除不满足条件的节点 | 1. 对每个候选节点执行<br/>2. 检查资源、亲和性、污点容忍等<br/>3. 支持并行执行以提高性能 |
+| [`PostFilter`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L296) | 过滤后 | 无可用节点时触发抢占（Preemption） | 1. 仅当所有节点都未通过 Filter 时触发<br/>2. 尝试驱逐低优先级 Pod<br/>3. 设置 NominatedNodeName 供下次调度使用 |
+| [`PreScore`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L968) | 打分前 | 为打分插件做预处理（如计算 Pod 拓扑信息） | 1. 每个调度周期只执行一次<br/>2. 为 Score 插件准备共享状态<br/>3. 如计算拓扑分布约束信息 |
+| [`Score`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L974) | 打分 | 对可行节点打分排序 | 1. 对每个通过 Filter 的节点执行<br/>2. 返回 0-100 的分数<br/>3. 各插件分数加权汇总 |
+| [`Reserve`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L339) | 预留 | 预留资源（如 Volume、端口） | 1. 在内存中预留资源（不写 etcd）<br/>2. 更新调度器缓存的节点状态<br/>3. 绑定失败时执行 Unreserve 回滚 |
+| [`Permit`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L211) | 准入 | 延迟绑定（如等待 Gang 调度），可返回 Wait | 1. 可返回 Allow / Deny / Wait<br/>2. Wait 时 Pod 进入等待状态<br/>3. 超时后自动 Deny |
+| [`PreBindPreFlight`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L413) | 绑定前检查 | 检查 PreBind 条件是否就绪（新扩展点） | 1. 在 Binding Cycle 中 WaitOnPermit 之前执行<br/>2. 检查 PreBind 插件是否就绪<br/>3. 失败则跳过 PreBind 直接进入 Bind |
+| [`PreBind`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L466) | 绑定前 | 执行绑定前准备（如挂载 Volume） | 1. 在 Binding Cycle 中执行<br/>2. 典型操作：挂载 PV、注入 Secret<br/>3. 失败则触发 Unreserve |
+| [`Bind`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L1110) | 绑定 | 实际将 Pod 绑定到 Node | 1. 向 API Server 发送 Binding 请求<br/>2. 默认使用 DefaultBinder 插件<br/>3. 成功后触发 PostBind |
+| [`PostBind`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go#L495) | 绑定后 | 清理、通知 | 1. 绑定成功后执行清理<br/>2. 更新调度器内部状态<br/>3. 触发 podsToActivate 激活等待中的 Pod |
 
 ---
 
@@ -248,8 +277,8 @@ profiles:
 | 主循环 | [`scheduler.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go) + [`schedule_one.go`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/schedule_one.go) | 调度主流程 |
 | 框架 | [`framework/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/) | 插件注册、调用、状态传递 |
 | 插件 | [`framework/plugins/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/plugins/) | 内置调度策略实现 |
-| 队列 | [`internal/queue/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/internal/queue/) | 优先级队列管理 |
 | 抢占 | [`framework/preemption/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/framework/preemption/) | Pod 抢占逻辑 |
+| 队列 | [`internal/queue/`](https://github.com/kubernetes/kubernetes/tree/master/pkg/scheduler/internal/queue/) | 优先级队列管理 |
 
 
 
