@@ -1,6 +1,6 @@
 ---
 weight: 71
-title: "Services, Load Balancing, and Networking"
+title: "Services/LB/Net."
 ---
 
 # Services, Load Balancing, and Networking
