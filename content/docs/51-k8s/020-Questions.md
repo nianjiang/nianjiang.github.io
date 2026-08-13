@@ -27,24 +27,16 @@ title: "Questions"
 ### Kubernetes The Hard Way
 [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
-通过一遍：
+通过自己搭建，来真正理解 Kubernetes 架构：
 
-API Server
-Controller Manager
-Scheduler
-kubelet
-etcd
-
-全部自己搭建。
-
-你会真正理解 Kubernetes 架构。
+API Server / Controller Manager / Scheduler / kubelet / etcd
 
 ---
 
 ### 构建内部开发者平台 (IDP)
 
 ```
-GitLab/Kubernetes
+GitLab
 ↓
 Tekton/Argo Workflow
 ↓
