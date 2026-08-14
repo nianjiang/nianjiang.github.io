@@ -139,8 +139,9 @@ var controllerDescriptors = []ControllerDescriptor{
     {name: "daemonset", aliases: []string{"daemonsetcontroller"}, initFunc: startDaemonSetController},
     {name: "job", aliases: []string{"jobcontroller"}, initFunc: startJobController},
     {name: "cronjob", aliases: []string{"cronjobcontroller"}, initFunc: startCronJobController},
-    {name: "endpoint", aliases: []string{"endpointcontroller"}, initFunc: startEndpointController},
-    {name: "endpointslice", aliases: []string{"endpointslicemirroringcontroller"}, initFunc: startEndpointSliceController},
+    {name: "endpoint", aliases: []string{"endpoint"}, constructor: newEndpointsController},
+    {name: "endpointslice", aliases: []string{"endpointslice"}, constructor: newEndpointSliceController},
+    {name: "endpointslicemirroring", aliases: []string{"endpointslicemirroring"}, constructor: newEndpointSliceMirroringController},
     {name: "horizontalpodautoscaling", aliases: []string{"hpacontroller"}, initFunc: startHPAController},
     {name: "podgc", aliases: []string{"podgccontroller"}, initFunc: startPodGCController},
     {name: "namespace", aliases: []string{"namespacecontroller"}, initFunc: startNamespaceController},
@@ -235,7 +236,7 @@ func startNodeLifecycleController(ctx ControllerContext) (controller.Interface, 
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-### 以 Deployment Controller 为例
+### [以 Deployment Controller 为例](https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/deployment/deployment_controller.go#L67C6-L67C26)， [syncHandler](https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/deployment/deployment_controller.go#L574)
 
 ```go
 // pkg/controller/deployment/deployment_controller.go
@@ -335,8 +336,9 @@ ControllerManager 启动时：
 | | Node IPAM | `nodeipam` | 为节点分配 Pod CIDR |
 | | Route | `route` | 在云平台为 Pod CIDR 配置路由 |
 | **服务** | Service | `service` | 管理 LoadBalancer 类型 Service 的云 LB |
-| | Endpoint | `endpoint` | 维护 Service → Pod 的端点映射 |
-| | EndpointSlice | `endpointslice` | EndpointSlice 维护（大规模优化） |
+| | Endpoint | `endpoint` | 维护 v1/Endpoints（已被 EndpointSlice 替代，仅兼容保留） |
+| | EndpointSlice | `endpointslice` | 维护 EndpointSlice（**主推方案**，GA since v1.21） |
+| | EndpointSlice Mirroring | `endpointslicemirroring` | 将旧 Endpoints 镜像到 EndpointSlice（过渡期兼容桥接） |
 | **工作负载** | Deployment | `deployment` | 管理 ReplicaSet 版本滚动 |
 | | ReplicaSet | `replicaset` | 维护 Pod 副本数 |
 | | StatefulSet | `statefulset` | 有状态应用管理 |
@@ -506,3 +508,9 @@ func updateDeployment(d *appsv1.Deployment) error {
 [kubebuilder 教程](https://book.kubebuilder.io/)
 
 [Kubernetes 控制器模式详解](https://kubernetes.io/docs/concepts/architecture/controller/)
+
+[]()
+
+[]()
+
+[]()

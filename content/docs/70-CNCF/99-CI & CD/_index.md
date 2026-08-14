@@ -149,12 +149,20 @@ GitLab ---- Tekton/Argo Workflow ---- Harbor/... ---- ArgoCD
 
 
 ---
+### [OAM](https://oam.dev/)
+
+[Github](https://github.com/oam-dev/spec), [CN](https://cncf.team/cloud-native/oam.html)   
+ 
+---
+
 
 ---
 
 ### Reference
 
 [CNCF Landscape](https://landscape.cncf.io/?fullscreen=yes)
+
+[Hasura](https://hasura.io/)
 
 []()
 
