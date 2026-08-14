@@ -520,6 +520,43 @@ argocd proj get <project>                 # 查看项目详情
 
 
 
+### ArgoCD 面试题精选
+
+#### 基础概念
+
+| # | 问题 | 参考答案 |
+|---|------|----------|
+| 1 | **ArgoCD 与 Jenkins 等传统 CI/CD 的核心区别是什么？** | Jenkins 是 Push 模式（CI 服务器主动推送到集群），ArgoCD 是 Pull 模式（控制器从 Git 拉取期望状态并同步到集群）。Pull 模式更符合 GitOps 原则，无需暴露集群凭证给外部系统，天然具备状态自愈能力。 |
+| 2 | **什么是 GitOps？ArgoCD 如何体现 GitOps 原则？** | GitOps 以 Git 为唯一真实来源（Source of Truth），所有基础设施和应用配置声明式存储在 Git 中。ArgoCD 持续监控 Git 变更与集群状态，自动或手动将集群同步到 Git 定义的期望状态。 |
+| 3 | **ArgoCD 的三大核心组件是什么？各自职责？** | API Server（gRPC/REST 入口，认证/RBAC/Webhook）、Repository Server（Git 缓存 + 清单渲染）、Application Controller（持续 Reconcile，检测 OutOfSync 并执行同步）。 |
+| 4 | **Application CRD 中 source 和 destination 分别定义什么？** | `source` 定义 Git 仓库地址、路径、revision（分支/tag/commit）和配置管理工具参数；`destination` 定义目标集群 API Server 地址和目标 namespace。 |
+
+#### 同步机制
+
+| # | 问题 | 参考答案 |
+|---|------|----------|
+| 5 | **Automated Sync 的 prune 和 selfHeal 有什么区别？** | `prune=true`：Git 中删除的资源自动从集群中删除；`selfHeal=true`：集群中被手动修改的资源自动回滚到 Git 定义的状态。两者结合实现完整的声明式管理。 |
+| 6 | **Sync Waves 和 Resource Hooks 分别解决什么问题？** | Sync Waves 通过 `argocd.argoproj.io/sync-wave` annotation 控制同一应用内资源的部署顺序（数字小的先部署）；Resource Hooks 在同步生命周期的特定阶段执行任务，如 PreSync 跑数据库迁移、PostSync 发通知。 |
+| 7 | **`OutOfSync` 状态一定是问题吗？常见原因有哪些？** | 不一定是问题。常见原因：(1) Git 有新提交尚未同步；(2) 有人手动修改了集群资源；(3) 控制器动态修改了某些字段（如 HPA 修改 replicas），可通过 `ignoreDifferences` 忽略。 |
+| 8 | **Sync Window 的 allow 和 deny 模式分别适用于什么场景？** | `allow`：仅在指定时间窗口内允许同步（适合生产环境的变更窗口）；`deny`：在指定时间内禁止同步（适合封网期/重大活动期间）。 |
+
+#### 多集群与多租户
+
+| # | 问题 | 参考答案 |
+|---|------|----------|
+| 9 | **ApplicationSet 的常用 Generator 有哪些？** | List（静态列表）、Cluster（自动发现集群）、Git Directory（按目录生成）、Git File（按配置文件生成）、SCM Provider（发现 GitHub/GitLab 仓库）、Pull Request（预览环境）、Matrix/Merge（组合多个 Generator）。 |
+| 10 | **AppProject 如何实现多租户隔离？** | AppProject 可限制：(1) 允许的 Git 仓库（sourceRepos）；(2) 允许的目标集群和 namespace（destinations）；(3) 允许的集群级资源类型（clusterResourceWhitelist）；(4) 禁止的资源类型（namespaceResourceBlacklist）；(5) 项目级 RBAC 角色。 |
+| 11 | **Hub-Spoke 模式 vs 每个集群独立部署 ArgoCD，如何选择？** | Hub-Spoke 适合集群数量少、网络直通的场景，运维成本低；独立部署适合大规模、网络隔离、安全合规严格的场景。App of Apps 模式可实现分层管理。 |
+
+#### 生产实践
+
+| # | 问题 | 参考答案 |
+|---|------|----------|
+| 12 | **如何在 ArgoCD 中管理 Secret？** | 三种方案：(1) [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets) — 加密后可安全提交到 Git；(2) [External Secrets Operator](https://external-secrets.io/) — 从 Vault/AWS SM/GCP SM 同步；(3) SOPS — Mozilla 的加密工具。避免明文 Secret 提交到 Git。 |
+| 13 | **ArgoCD 如何与 CI 流水线配合？** | CI（Tekton/GitHub Actions/Jenkins）负责构建镜像、推送到 Registry、更新 Git 仓库中的镜像 tag；ArgoCD 检测 Git 变更后自动同步到集群。可通过 Webhook 触发即时同步，或使用 [Argo Image Updater](https://argo-image-updater.readthedocs.io/) 直接监控镜像仓库。 |
+| 14 | **大规模应用中 `ApplyOutOfSyncOnly=true` 的作用是什么？** | 默认情况下每次同步会 apply 所有资源。当应用包含数千个资源时，该选项只同步 OutOfSync 的资源，减少 API Server 压力并加速同步过程。 |
+| 15 | **ArgoCD 的 App of Apps 模式是什么？适用于什么场景？** | 用一个根 Application 管理所有子 Application 的声明式定义。适用于：(1) 集群引导（Bootstrap）时自动创建所有基础应用；(2) 全局统一管理和版本控制所有子应用；(3) 配合 ApplicationSet 实现多集群批量部署。 |
+
 ---
 
 ## Reference
