@@ -159,23 +159,263 @@ replacements:
 | **Inline Patch** | 直接写在 kustomization.yaml 中 | 简单场景下避免额外文件 |
 | **Patch 目标选择器** | 按 kind/name/label 批量匹配 | 同时补丁多个 Deployment |
 
+---
+
+#### 1. Strategic Merge Patch（策略合并补丁）
+
+提供一份**部分资源 YAML**，Kustomize 会按 `apiVersion/kind/metadata.name` 定位目标资源，然后将字段逐层合并。**只需写出要修改的字段**，未列出的字段保持原值。
+
+> 适用场景：修改副本数、调整资源配额、添加注解/标签等"覆盖或新增"型操作。
+
+假设 base 中的 Deployment 如下：
+
 ```yaml
-# Strategic Merge Patch 示例（replica_patch.yaml）
+# base/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
+  labels:
+    app: myapp
 spec:
-  replicas: 5
+  replicas: 2
   template:
     spec:
       containers:
         - name: myapp
+          image: myapp:v1.0.0
+          resources:
+            requests:
+              cpu: "500m"
+              memory: 512Mi
+```
+
+编写补丁文件（只需包含要改的字段）：
+
+```yaml
+# overlays/prod/replica_patch.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp          # ← 必须与目标资源 name 一致，用于定位
+spec:
+  replicas: 5          # ← 覆盖为 5
+  template:
+    spec:
+      containers:
+        - name: myapp  # ← 列表合并的关键：同名容器会合并而非替换
           resources:
             limits:
               cpu: "2"
               memory: 2Gi
 ```
+
+在 `kustomization.yaml` 中引用：
+
+```yaml
+# overlays/prod/kustomization.yaml
+resources:
+  - ../../base
+
+patches:
+  - path: replica_patch.yaml       # 现代写法（推荐）
+  # 旧写法（已 deprecated）：
+  # patchesStrategicMerge:
+  #   - replica_patch.yaml
+```
+
+> **列表合并规则**（Strategic Merge 的核心特性）：对于 `containers`、`ports`、`env` 等拥有 `name` 子键的列表，补丁会按 `name` **逐元素合并**，而非整体替换。例如 base 中容器有 `requests`，补丁新增 `limits`，最终结果同时包含 `requests` 和 `limits`。
+
+构建结果（`kustomize build overlays/prod`）：
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  replicas: 5                          # ← 被 patch 覆盖
+  template:
+    spec:
+      containers:
+        - name: myapp
+          image: myapp:v1.0.0          # ← 原值保留
+          resources:
+            requests:                  # ← 原值保留
+              cpu: "500m"
+              memory: 512Mi
+            limits:                    # ← patch 新增
+              cpu: "2"
+              memory: 2Gi
+```
+
+---
+
+#### 2. JSON Patch（RFC 6902）
+
+通过 **op（操作）+ path（JSON 指针路径）** 对目标资源进行精确的字段级操作：`add` / `replace` / `remove` / `move` / `copy` / `test`。
+
+> 适用场景：删除某个字段、替换数组中的特定元素、条件性修改（`test` 操作）等 Strategic Merge 难以表达的精确操作。
+
+补丁文件使用 JSON Patch 数组格式：
+
+```yaml
+# overlays/prod/json_patch.yaml
+- op: replace                             # 替换 replicas
+  path: /spec/replicas
+  value: 3
+- op: remove                               # 删除 readinessProbe
+  path: /spec/template/spec/containers/0/readinessProbe
+- op: add                                  # 新增注解
+  path: /metadata/annotations/prometheus.io~1scrape
+  value: "true"
+```
+
+> **路径语法**：`path` 使用 JSON Pointer（RFC 6901），数组元素用 `/0`、`/1` 索引；`/` 在键名中用 `~1` 转义（如 `prometheus.io/scrape` → `prometheus.io~1scrape`），`~` 用 `~0` 转义。
+
+在 `kustomization.yaml` 中引用（需指定目标资源）：
+
+```yaml
+# overlays/prod/kustomization.yaml
+resources:
+  - ../../base
+
+patches:
+  - target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: myapp
+    path: json_patch.yaml
+  # 旧写法（已 deprecated）：
+  # patchesJson6902:
+  #   - target:
+  #       group: apps
+  #       version: v1
+  #       kind: Deployment
+  #       name: myapp
+  #     path: json_patch.yaml
+```
+
+---
+
+#### 3. Inline Patch（内联补丁）
+
+不创建独立的补丁文件，直接把补丁内容**写在 `kustomization.yaml` 内部**的 `patches` 字段中。适合补丁内容很短、不值得单独建文件的场景。
+
+> 适用场景：改一个 replicas 值、加一个标签等单行级的小修改，减少文件碎片。
+
+**内联 Strategic Merge Patch**：
+
+```yaml
+# overlays/prod/kustomization.yaml
+resources:
+  - ../../base
+
+patches:
+  - target:
+      version: v1
+      kind: Deployment
+      name: myapp
+    patch: |-                          # ← 内联 YAML 补丁
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: myapp
+      spec:
+        replicas: 3
+```
+
+**内联 JSON Patch**：
+
+```yaml
+# overlays/prod/kustomization.yaml
+resources:
+  - ../../base
+
+patches:
+  - target:
+      version: v1
+      kind: Deployment
+      name: myapp
+    options:
+      allowJsonPatch: true
+    jsonPatch: |-                       # ← 内联 JSON Patch 数组
+      - op: replace
+        path: /spec/replicas
+        value: 3
+      - op: add
+        path: /metadata/labels/managed-by
+        value: kustomize
+```
+
+> **Inline Patch vs 外部文件**：内联方式减少文件数量，但补丁内容过长时会让 `kustomization.yaml` 膨胀可读性下降。建议：**5 行以内**用内联，更长则拆为独立文件。
+
+---
+
+#### 4. Patch 目标选择器（批量匹配）
+
+通过 `target` 中的 `kind`、`name`、`labelSelector`、`namespace`、`annotationSelector` 等条件**一次匹配多个资源**，对它们统一应用同一份补丁。
+
+> 适用场景：给所有 Deployment 统一添加标签、为所有 Service 添加注解、批量修改某命名空间下的资源等。
+
+**按 kind 批量匹配**（给所有 Deployment 添加标签）：
+
+```yaml
+# overlays/prod/kustomization.yaml
+resources:
+  - ../../base
+
+patches:
+  - target:
+      kind: Deployment             # ← 匹配所有 Deployment
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        labels:
+          environment: production
+```
+
+**按 label 选择器批量匹配**（只补丁带有 `tier=frontend` 标签的资源）：
+
+```yaml
+patches:
+  - target:
+      kind: Deployment
+      labelSelector: tier=frontend   # ← 仅匹配 label tier=frontend 的 Deployment
+    patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        labels:
+          tier: frontend
+          team: web
+    # 也可以配合 JSON Patch
+    # jsonPatch: |-
+    #   - op: replace
+    #     path: /spec/replicas
+    #     value: 5
+```
+
+**按 annotation 选择器批量匹配**：
+
+```yaml
+patches:
+  - target:
+      kind: Service
+      annotationSelector: expose=true   # 匹配 annotation expose=true 的 Service
+    patch: |-
+      apiVersion: v1
+      kind: Service
+      metadata:
+        annotations:
+          external-traffic-policy: Local
+```
+
+> **匹配规则小结**：`target` 中所有条件为**逻辑与（AND）**关系。`name` 精确匹配单个资源；`labelSelector` / `annotationSelector` 支持 `key=value`、`key in (a,b)`、`key!=value` 等 Kubernetes 标签选择器语法。省略某个条件表示不限制该维度。
 
 ### 常用命令
 
