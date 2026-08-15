@@ -32,10 +32,10 @@ title: "argo"
 
 | 科目 | 权重 | 核心考点 |
 | ---- | ---- | -------- |
-| **Argo Workflows** | 36% | Workflow CRD 字段（entrypoint/templates/arguments/retryStrategy）、DAG 依赖编排、Steps 顺序执行、Artifact 生成与消费、WorkflowTemplate/ClusterWorkflowTemplate 复用、数据处理作业 |
-| **Argo CD** | 34% | Application CRD（source/destination/syncPolicy）、AppProject 多租户隔离、ApplicationSet Generator、Sync Options/Waves/Hooks/Windows、Helm & Kustomize 集成、App of Apps 模式、Reconciliation 优化 |
-| **Argo Rollouts** | 18% | Rollout CRD（替代 Deployment）、Blue-Green/Canary 策略、AnalysisTemplate & AnalysisRun、流量管理（Ingress/Service Mesh）、Progressive Delivery 概念 |
-| **Argo Events** | 12% | EventSource/Sensor/EventBus/Trigger 架构、20+ 事件源支持、Webhook 认证、事件过滤与表达式 |
+| **Argo Workflows** | 36% |- Argo Workflow Fundamentals<br>- Argo Workflow Spec<br>- Generating and Consuming Artifacts<br>- Argo Workflow Templates<br>- DAG（Directed-Acyclic Graphs）<br>- Run Data Processing Jobs |
+| **Argo CD** | 34% | - Argo CD Fundamentals<br>- Synchronize Applications Using Argo CD<br>- Argo CD Application<br>- Configure with Helm and Kustomize<br>- Common Reconciliation Patterns |
+| **Argo Rollouts** | 18% | - Argo Rollouts Fundamentals<br>- Common Progressive Rollout Strategies<br>- AnalysisTemplate & AnalysisRun |
+| **Argo Events** | 12% | - Argo Events Fundamentals<br>- Argo Event Components and Architecture |
 
 **备考资源：**
 
