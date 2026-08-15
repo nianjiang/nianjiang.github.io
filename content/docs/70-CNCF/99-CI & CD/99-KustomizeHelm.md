@@ -7,10 +7,13 @@ title: "Kustomize & Helm"
 
 > Kubernetes 配置管理的两大主流方案：**模板渲染**（Helm）vs **补丁叠加**（Kustomize）。
 
-|  | Website | Doc | Github | Comment |
-|---|---------|-----|--------|---------|
-| **Kustomize** | [kustomize.io](https://kustomize.io/) | [Doc](https://kubectl.docs.kubernetes.io/guides/introduction/kustomize/) | [Github](https://github.com/kubernetes-sigs/kustomize) | Kubernetes 原生，无模板，基于补丁的配置定制工具。已内置于 kubectl |
-| **Helm** | [helm.sh](https://helm.sh/) | [Doc](https://helm.sh/docs/) | [Github](https://github.com/helm/helm) | CNCF 毕业项目，Kubernetes 包管理器，基于模板渲染 |
+|  | Website | Doc | Github | Comment | Demo |
+|---|---------|-----|--------|---------|---------|
+| **Kustomize** | [kustomize.io](https://kustomize.io/) | [Doc](https://kubectl.docs.kubernetes.io/guides/introduction/kustomize/) | [Github](https://github.com/kubernetes-sigs/kustomize) | Kubernetes 原生，无模板，基于补丁的配置定制工具。已内置于 kubectl | [Killercoda Playgrounds](https://killercoda.com/playgrounds)、[KodeKloud](https://kodekloud.com/studio/labs/kubernetes) |
+| **Helm** | [helm.sh](https://helm.sh/) | [Doc](https://helm.sh/docs/) | [Github](https://github.com/helm/helm) | CNCF 毕业项目，Kubernetes 包管理器，基于模板渲染 | [Killercoda](https://killercoda.com/helm)、[KodeKloud](https://kodekloud.com/studio/labs/kubernetes) |
+
+
+
 
 ---
 
@@ -827,14 +830,10 @@ spec:
 
 [Helm vs Kustomize 2026](https://sanj.dev/post/kustomize-vs-helm-2026/)
 
-[]()
+[Killercoda Helm Scenarios](https://killercoda.com/helm) — Helm 交互式练习场景
 
-[]()
+[Killercoda Playgrounds](https://killercoda.com/playgrounds) — 免费 K8s 集群环境，可手动练习 Kustomize/Helm
 
-[]()
+[KodeKloud Kubernetes Labs](https://kodekloud.com/studio/labs/kubernetes) — 交互式 Kubernetes 实验环境
 
-[]()
-
-[]()
-
-[]()
+[Play with Kubernetes](https://labs.play-with-k8s.com/) — Docker 官方 K8s Playground
