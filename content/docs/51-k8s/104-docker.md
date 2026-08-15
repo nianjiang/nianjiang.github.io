@@ -34,7 +34,7 @@ title: "Docker"
     docker tag   m.daocloud.io/registry.k8s.io/coredns/coredns:v1.10.1          registry.k8s.io/coredns/coredns:v1.10.1
     {{< /details >}}
 
-[DaoCloud](https://github.com/DaoCloud/public-image-mirror)
+[DaoCloud](https://github.com/DaoCloud/public-image-mirror)  -->  m.daocloud.io/docker.io/library/nginx:1.27
 
 ### [Install containerd/runc/cni](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
     {{< details title="" open=false >}}
