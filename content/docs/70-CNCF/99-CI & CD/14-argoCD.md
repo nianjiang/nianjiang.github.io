@@ -517,11 +517,6 @@ argocd proj get <project>                 # 查看项目详情
 ---
 
 ## Question
-
-
-
-### ArgoCD 面试题精选
-
 #### 基础概念
 
 | # | 问题 | 参考答案 |
