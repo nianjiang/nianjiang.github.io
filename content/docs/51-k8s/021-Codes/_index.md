@@ -224,6 +224,12 @@ https://podsbook.com/posts/kubernetes/operator/#client-go
 | 1.34     | 2025/08    | 2026/10    | [Release Doc](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.34) |
 | -------- | --------   | --------   | --------     |
 | 1.33     | 2025/04    | 2026/06    | [Release Doc](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.33) |
+
+<details>
+<summary>已停止维护的版本 (1.32 及以下)</summary>
+
+|  Release | Released Month | End of Life | Note |
+| -------- | --------   | --------   | --------     |
 | 1.32     | 2024/12    | 2026/02    | [Release Doc](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.32) |
 | 1.31     | 2024/08    | 2025/11    | [Release Doc](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/) |
 | -------- | --------   | --------   | --------     |
@@ -239,6 +245,8 @@ https://podsbook.com/posts/kubernetes/operator/#client-go
 | 1.23     | 2021/12    | 2023/02    |              |
 | 1.14     | 2019/03    | 2019/12    |              |
 | 1.0      | 2015/07/10 |            | Original Release             |
+
+</details>
 
 
 [Release](https://github.com/kubernetes/sig-release/tree/master/releases) ,
