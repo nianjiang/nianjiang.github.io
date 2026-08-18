@@ -321,18 +321,18 @@ spec:
 
 通过 Generator 模板自动生成多个 Application：
 
-### 常用 Generator
+### [常用 Generator](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/)
 
 | Generator | 说明 |
 | --------- | ---- |
-| **List** | 静态列表，手动指定参数 |
-| **Cluster** | 自动发现已注册的集群 |
-| **Git Directory** | 根据 Git 仓库中的目录结构生成应用 |
-| **Git File** | 根据 Git 仓库中的 JSON/YAML 文件生成应用 |
-| **Matrix** | 组合多个 Generator 的笛卡尔积 |
-| **Merge** | 合并多个 Generator 的结果 |
-| **SCM Provider** | 自动发现 GitHub/GitLab 组织下的仓库 |
-| **Pull Request** | 根据 PR 生成应用（预览环境） |
+| **[List](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/List/)** | 静态列表，手动指定参数 |
+| **[Cluster](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Cluster/)** | 自动发现已注册的集群 |
+| **[Git Directory](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Git/)** | 根据 Git 仓库中的目录结构生成应用 |
+| **[Git File](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Git/)** | 根据 Git 仓库中的 JSON/YAML 文件生成应用 |
+| **[Matrix](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Matrix/)** | 组合多个 Generator 的笛卡尔积 |
+| **[Merge](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Merge/)** | 合并多个 Generator 的结果 |
+| **[SCM Provider](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/SCM-Provider/)** | 自动发现 GitHub/GitLab 组织下的仓库 |
+| **[Pull Request](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators/Pull-Request/)** | 根据 PR 生成应用（预览环境） |
 
 ### ApplicationSet 示例
 
@@ -363,6 +363,265 @@ spec:
         server: '{{url}}'
         namespace: guestbook
 ```
+
+<details>
+<summary>各 Generator 示例</summary>
+
+**List** — 静态列表，手动指定参数
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: list-generator
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: dev
+        url: https://dev.example.com
+      - cluster: prod
+        url: https://prod.example.com
+  template:
+    metadata:
+      name: '{{cluster}}-guestbook'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: guestbook
+        targetRevision: HEAD
+      destination:
+        server: '{{url}}'
+        namespace: guestbook
+```
+
+**Cluster** — 自动发现已注册的集群
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-generator
+  namespace: argocd
+spec:
+  generators:
+  - clusters:
+      selector:
+        matchLabels:
+          env: prod       # 只匹配带 env=prod 标签的集群
+  template:
+    metadata:
+      name: '{{name}}-guestbook'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: guestbook
+        targetRevision: HEAD
+      destination:
+        server: '{{server}}'
+        namespace: guestbook
+```
+
+**Git Directory** — 根据 Git 仓库中的目录结构生成应用
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: git-directory-generator
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/argoproj/argocd-example-apps
+      revision: HEAD
+      directories:
+      - path: apps/*     # 每个子目录生成一个 Application
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: '{{path}}'
+        targetRevision: HEAD
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path.basename}}'
+```
+
+**Git File** — 根据 Git 仓库中的 JSON/YAML 文件生成应用
+
+```yaml
+# 仓库中的 config.json:
+# [{ "cluster": "dev", "url": "https://dev.example.com" },
+#  { "cluster": "prod", "url": "https://prod.example.com" }]
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: git-file-generator
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/argoproj/argocd-example-apps
+      revision: HEAD
+      files:
+      - path: config.json
+  template:
+    metadata:
+      name: '{{cluster}}-guestbook'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: guestbook
+        targetRevision: HEAD
+      destination:
+        server: '{{url}}'
+        namespace: guestbook
+```
+
+**Matrix** — 组合多个 Generator 的笛卡尔积
+
+```yaml
+# Cluster × Git Directory 的笛卡尔积
+# 3 个集群 × 2 个目录 = 6 个 Application
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: matrix-generator
+  namespace: argocd
+spec:
+  generators:
+  - matrix:
+      generators:
+      - clusters: {}                          # Generator 1: 所有集群
+      - git:
+          repoURL: https://github.com/argoproj/argocd-example-apps
+          revision: HEAD
+          directories:
+          - path: apps/*                       # Generator 2: 所有子目录
+  template:
+    metadata:
+      name: '{{name}}-{{path.basename}}'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: '{{path}}'
+        targetRevision: HEAD
+      destination:
+        server: '{{server}}'
+        namespace: '{{path.basename}}'
+```
+
+**Merge** — 合并多个 Generator 的结果
+
+```yaml
+# 合并 Cluster 和 Git 两个 Generator，按 cluster 字段关联
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: merge-generator
+  namespace: argocd
+spec:
+  generators:
+  - merge:
+      mergeKeys:
+      - cluster                  # 按 cluster 字段匹配合并
+      generators:
+      - clusters:
+          selector:
+            matchLabels:
+              env: prod
+        # 输出参数: cluster, server, name
+      - git:
+          repoURL: https://github.com/argoproj/argocd-example-apps
+          revision: HEAD
+          files:
+          - path: "clusters/{{cluster}}.json"
+  template:
+    metadata:
+      name: '{{cluster}}-guestbook'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        path: guestbook
+        targetRevision: HEAD
+      destination:
+        server: '{{server}}'
+        namespace: guestbook
+```
+
+**SCM Provider** — 自动发现 GitHub/GitLab 组织下的仓库
+
+```yaml
+# 自动发现 GitHub org 下所有含 kustomize 的仓库
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: scm-provider-generator
+  namespace: argocd
+spec:
+  generators:
+  - scmProvider:
+      github:
+        organization: argoproj          # GitHub 组织
+        tokenRef:
+          secretName: github-token
+          key: token
+      filters:
+      - repositoryMatch: ^kustomize-    # 只匹配 kustomize- 开头的仓库
+  template:
+    metadata:
+      name: '{{repository}}'
+    spec:
+      source:
+        repoURL: '{{repoURL}}'
+        path: kustomize
+        targetRevision: HEAD
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{repository}}'
+```
+
+**Pull Request** — 根据 PR 生成应用（预览环境）
+
+```yaml
+# 每个 PR 自动生成一个预览环境，PR 关闭后自动清理
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: pr-preview
+  namespace: argocd
+spec:
+  generators:
+  - pullRequest:
+      github:
+        owner: argoproj
+        repo: argocd-example-apps
+        labels:
+        - preview          # 只处理带 preview 标签的 PR
+      requeueAfterSeconds: 300
+  template:
+    metadata:
+      name: 'preview-{{branch}}-{{number}}'
+    spec:
+      source:
+        repoURL: https://github.com/argoproj/argocd-example-apps
+        targetRevision: '{{branch}}'
+        path: guestbook
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'preview-{{number}}'
+```
+
+</details>
 
 ---
 
