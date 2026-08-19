@@ -572,7 +572,7 @@ conntrack -L | grep <ClusterIP>
 | **规模上限** | ~1000 Service | ~10000+ Service | ~10000+ Service | ~10000+ Service |
 | **Masquerade** | 原生支持 | 仍需 iptables 辅助 | 原生支持 | 由 datapath 处理 |
 | **会话亲和性** | recent 模块 | SH 调度算法 | 原生支持 | Maglev 一致性哈希 |
-| **内核依赖** | iptables（通用） | ip_vs 模块（需加载） | nft 内核模块（≥3.13） | BPF 子系统（≥4.18） |
+| **内核依赖** | iptables（≥2.4，通用） | ip_vs 模块（≥2.6.10） | nft 内核模块（≥3.13，推荐 ≥5.10） | BPF 子系统（≥4.18，推荐 5.8+） |
 | **kube-proxy 状态** | 默认模式 | GA | Alpha（v1.29+） | 非 kube-proxy（替代方案） |
 | **推荐场景** | 小型集群、通用 | 中大型集群、生产环境 | 新内核环境、未来方向 | 大规模集群、高性能网络 |
 
