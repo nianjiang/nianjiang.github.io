@@ -14,7 +14,7 @@ Argo Workflows 是 CNCF 毕业项目，Kubernetes 原生的工作流引擎，用
 | GitHub | [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows) |
 | API 版本 | `argoproj.io/v1alpha1` |
 | CRD | `Workflow`、`WorkflowTemplate`、`ClusterWorkflowTemplate`、`CronWorkflow` |
-| Online | [killercoda](https://killercoda.com/argoproj/course/argo-workflows) |
+| Online | [killercoda](https://killercoda.com/argoproj/course/argo-workflows), [Github](https://github.com/argoproj-labs/training-material/tree/main/argo-workflows) |
 
 ---
 
