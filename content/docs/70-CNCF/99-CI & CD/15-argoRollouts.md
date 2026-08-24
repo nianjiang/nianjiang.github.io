@@ -74,6 +74,26 @@ Rollout 是 Argo Rollouts 的核心 CRD，等价于 Kubernetes Deployment 但具
 
 ---
 
+## 升级策略比较
+
+| 策略 | 原理 | 流量切换 | 资源开销 | 回滚速度 | 适用场景 | Argo Rollouts 实现 |
+|------|------|----------|----------|----------|----------|--------------------|
+| **Rolling Update** | 逐步替换旧 Pod，新旧 Pod 共存 | 按比例逐步切换（默认） | 低（无多余副本） | 中（需反向滚动） | 常规迭代、无特殊要求 | `RollingUpdate`（K8s 原生） |
+| **Canary** | 先小流量灰度，验证后逐步放量 | 按权重精细切换（5%→25%→100%） | 低~中（少量 canary 副本） | 快（停止放量即可） | 高风险发布、A/B 测试 | `strategy.canary` |
+| **Blue-Green** | 新版本完全部署后一次性切换流量 | 0/100 瞬间切换 | 高（需双倍副本） | 极快（切回旧环境） | 需要瞬时回滚、低容忍度 | `strategy.blueGreen` |
+| **Experiment** | 运行临时实验副本，不影响生产流量 | 不切换流量（仅对比指标） | 中（额外实验副本） | N/A（实验自动结束） | 性能对比、A/B 验证 | `experiment` step |
+| **Traffic Mirroring** | 将生产流量复制到新版本，不响应 | 镜像流量（0% 真实负载） | 中（镜像副本） | N/A（仅观测） | 预发验证、线上仿真 | `setMirrorRoute`（需 Istio） |
+
+**对比详解**：
+
+- **Rolling Update**：K8s Deployment 默认策略，新旧交替，零额外资源，但无法精细控制流量比例，出问题时只能反向滚动回退
+- **Canary**：Argo Rollouts 核心策略，支持 `setWeight` 按 5%/10%/25% 等比例放量，每步可配合 `AnalysisRun` 自动判断是否继续
+- **Blue-Green**：蓝绿部署，`activeReplicas` + `previewReplicas` 两套环境并行运行，`autoPromotionEnabled` 控制是否自动切换，切换瞬间完成但需要双倍资源
+- **Experiment**：与 Canary 搭配使用，起一组临时 ReplicaSet 跑实验，与 baseline 对比指标后自动结束
+- **Traffic Mirroring**：流量镜像/影子流量，把真实请求复制一份给新版本但不返回响应，纯观测模式
+
+---
+
 ## 架构
 
 ```
@@ -395,6 +415,28 @@ spec:
 | `setHeaderRoute: { ... }` | 设置基于 Header 的路由（仅 Istio） |
 | `setMirrorRoute: { ... }` | 设置流量镜像路由（仅 Istio） |
 | `plugin: { name: ..., config: ... }` | 执行自定义插件 |
+
+```yaml
+# Canary 示例
+strategy:
+  canary:
+    steps:
+    - setWeight: 5            # 5% 流量到新版本
+    - analysis:               # 自动分析指标
+        templates:
+        - templateName: success-rate
+    - setWeight: 25           # 分析通过，放量到 25%
+    - setWeight: 50
+    - setWeight: 100
+
+# Blue-Green 示例
+strategy:
+  blueGreen:
+    activeService: active     # 当前生效的 Service
+    previewService: preview    # 预览 Service（指向新版本）
+    autoPromotionEnabled: false # 手动 promote
+    scaleDownDelaySeconds: 30  # 切换后 30s 再缩旧版本
+```
 
 ---
 
