@@ -66,7 +66,7 @@ bookCollapseSection: true
 
 ### Reference
 
-[]()
+[Introduction to Continuous Delivery and GitOps using Argo CD by Akuity](https://academy.akuity.io/courses/gitops-argocd-intro)
 
 []()
 

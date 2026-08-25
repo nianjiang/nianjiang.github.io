@@ -655,7 +655,7 @@ argocd cluster add <context-name>
 
 ## 安全与多租户
 
-### RBAC
+### [RBAC](https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/)
 
 ```yaml
 # argocd-rbac-cm ConfigMap
