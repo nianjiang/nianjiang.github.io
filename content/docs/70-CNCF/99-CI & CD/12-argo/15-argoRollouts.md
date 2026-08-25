@@ -98,19 +98,27 @@ Rollout 是 Argo Rollouts 的核心 CRD，等价于 Kubernetes Deployment 但具
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                    Argo Rollouts Controller                       │
+│              argo-rollouts Deployment (单进程)                    │
 │                                                                  │
 │  ┌───────────────────────────────────────────────────────────┐   │
 │  │            Rollout Reconciler (核心控制器)                  │   │
 │  │   Watch Rollout CRD → 管理 ReplicaSet → Reconcile 状态     │   │
-│  └──────────┬────────────────────────────────┬───────────────┘   │
-│             │                                │                    │
-│  ┌──────────┴──────────┐   ┌────────────────┴──────────────┐    │
-│  │ Traffic Router      │   │ Analysis Controller           │    │
-│  │ (操作 Ingress/Mesh) │   │ (创建/监控 AnalysisRun)       │    │
-│  └──────────┬──────────┘   └────────────────┬──────────────┘    │
-│             │                                │                    │
-└─────────────┼────────────────────────────────┼────────────────────┘
+│  │   ┌─────────────────────────────────────────────────────┐ │   │
+│  │   │ Traffic Router 模块 (内置，非独立组件)                │ │   │
+│  │   │ 直接操作 Ingress/Mesh 资源实现流量分割               │ │   │
+│  │   └─────────────────────────┬───────────────────────────┘ │   │
+│  └─────────────────────────────┼─────────────────────────────┘   │
+│                                │                                  │
+│  ┌─────────────────────────────┼─────────────────────────────┐   │
+│  │ Analysis Reconciler (独立 Reconciler，同一进程)            │   │
+│  │   Watch AnalysisRun CRD → 查询指标 → 判断成功/失败/不确定  │   │
+│  └─────────────────────────────┼─────────────────────────────┘   │
+│                                │                                  │
+│  ┌─────────────────────────────┼─────────────────────────────┐   │
+│  │ Experiment Reconciler (独立 Reconciler，同一进程)          │   │
+│  │   Watch Experiment CRD → 管理实验版本 → 对比分析           │   │
+│  └───────────────────────────────────────────────────────────┘   │
+└──────────────────────────────────────────────────────────────────┘
               │                                │
     ┌─────────┴─────────┐           ┌──────────┴──────────┐
     │ Ingress/Mesh      │           │ Metric Provider     │
@@ -133,13 +141,16 @@ Rollout 是 Argo Rollouts 的核心 CRD，等价于 Kubernetes Deployment 但具
 
 ### 核心组件
 
-| 组件 | 职责 |
-|------|------|
-| **Rollout Controller** | 主控制器，Watch Rollout CRD，管理 ReplicaSet 的创建/扩缩/删除，驱动状态 Reconcile |
-| **Traffic Router** | 操作 Ingress Controller 或 Service Mesh 资源，实现精细流量分割 |
-| **Analysis Controller** | 创建 AnalysisRun，查询指标，判断成功/失败/不确定，驱动自动推广或回滚 |
-| **Dashboard (UI)** | 可选的 Web UI，可视化 Rollout 进度和状态 |
-| **kubectl Plugin** | 可选的 CLI 工具，管理 Rollout 操作（pause/promote/abort 等） |
+| 组件 | 类型 | 职责 |
+|------|------|------|
+| **Rollout Reconciler** | 主 Reconciler | Watch Rollout CRD，管理 ReplicaSet 的创建/扩缩/删除，驱动部署策略执行 |
+| ↳ Traffic Router 模块 | 内置模块（非独立组件） | Rollout Reconciler 内部的流量操作模块，直接修改 Ingress/Service Mesh 资源（如 Istio VirtualService 权重、NGINX annotation）实现精细流量分割 |
+| **Analysis Reconciler** | 独立 Reconciler（同进程） | Watch AnalysisRun CRD，查询指标提供者，判断成功/失败/不确定，驱动自动推广或回滚 |
+| **Experiment Reconciler** | 独立 Reconciler（同进程） | Watch Experiment CRD，管理多版本并行实验和对比分析 |
+| **Dashboard (UI)** | 可选组件 | Web UI，可视化 Rollout 进度和状态 |
+| **kubectl Plugin** | 可选组件 | CLI 工具，管理 Rollout 操作（pause/promote/abort 等） |
+
+> **部署形态**：所有 Reconciler 运行在同一个 `argo-rollouts` Deployment 中（单进程多 Reconciler），不是独立部署的多个服务。
 
 ### 核心 CRD
 

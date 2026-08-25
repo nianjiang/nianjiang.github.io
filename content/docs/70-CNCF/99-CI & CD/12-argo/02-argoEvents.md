@@ -1053,7 +1053,7 @@ kubectl -n argo-events get workflows
 |---|------|----------|
 | 10 | **Argo Events 与 Argo Workflows 如何配合实现事件驱动 CI/CD？** | EventSource 监听 Git Push 事件 → 转换为 CloudEvents 发布到 EventBus → Sensor 订阅事件，过滤匹配的仓库 → 触发 Argo Workflow 执行 CI 构建+测试 → Workflow 完成后可通过 K8s Trigger 更新 Argo CD Application 触发部署。这实现了从 Git Push 到部署的完整自动化管道。 |
 | 11 | **生产环境部署 Argo Events 有哪些关键实践？** | (1) 使用 JetStream EventBus 并配置持久化存储；(2) 为 EventSource 和 Sensor 设置资源限制；(3) 安装 Validating Webhook 防止错误配置；(4) 使用最小权限 ServiceAccount；(5) 配置 filter 减少不必要触发；(6) 监控 EventBus 健康状态；(7) 在 CI/CD 中使用 `argo-events lint` 验证配置。 |
-| 12 | **Argo Events 与 Knative Eventing 有何区别？** | Argo Events 专注于将外部事件触发为 Argo Workflows/K8s 资源，与 Argo 生态深度集成，适合 CI/CD 和数据处理管道。Knative Eventing 是更通用的 K8s 事件网格，支持更复杂的路由和 Broker/Trigger 模型，适合微服务间事件通信。两者可互补使用，Argo Events 更轻量、更专注于触发工作流。 |
+| 12 | **Argo Events 与 Knative Eventing 有何区别？** | Argo Events 专注于将外部事件触发为 Argo Workflows/K8s 资源，与 Argo 生态深度集成，适合 CI/CD 和数据处理管道。 <br/> Knative Eventing 是更通用的 K8s 事件网格，支持更复杂的路由和 Broker/Trigger 模型，适合微服务间事件通信。两者可互补使用，Argo Events 更轻量、更专注于触发工作流。 |
 
 ---
 

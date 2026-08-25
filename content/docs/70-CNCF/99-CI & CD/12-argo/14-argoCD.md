@@ -11,6 +11,9 @@ title: "Argo CD"
 | -------- | --------   | -------    |-------    |-------    |
 |  [Argo CD](https://argoproj.github.io/cd/)      | [Doc](https://argo-cd.readthedocs.io/)  | [Github](https://github.com/argoproj/argo-cd)  | [Demo](https://cd.apps.argoproj.io/) | CNCF 毕业项目，GitOps 持续交付工具，提供完整 UI |
 
+[argocd-example-apps](https://github.com/argoproj/argocd-example-apps/tree/master)
+
+[]()
 ---
 
 ## Read First
@@ -730,7 +733,7 @@ argocd proj get <project>                 # 查看项目详情
 
 ---
 
-## 最佳实践
+##  最佳实践 👍👍👍
 
 | 实践 | 说明 |
 | ---- | ---- |
@@ -790,26 +793,26 @@ argocd proj get <project>                 # 查看项目详情
 | # | 问题 | 参考答案 |
 |---|------|----------|
 | 5 | **Automated Sync 的 prune 和 selfHeal 有什么区别？** | `prune=true`：Git 中删除的资源自动从集群中删除；`selfHeal=true`：集群中被手动修改的资源自动回滚到 Git 定义的状态。两者结合实现完整的声明式管理。 |
-| 6 | **Sync Waves 和 Resource Hooks 分别解决什么问题？** | Sync Waves 通过 `argocd.argoproj.io/sync-wave` annotation 控制同一应用内资源的部署顺序（数字小的先部署）；Resource Hooks 在同步生命周期的特定阶段执行任务，如 PreSync 跑数据库迁移、PostSync 发通知。 |
+| 6 | **Sync Waves 和 Resource Hooks 分别解决什么问题？** | Sync Waves 通过 `argocd.argoproj.io/sync-wave` annotation 控制同一应用内资源的部署顺序（数字小的先部署）；<br/> Resource Hooks 在同步生命周期的特定阶段执行任务，如 PreSync 跑数据库迁移、PostSync 发通知。 |
 | 7 | **`OutOfSync` 状态一定是问题吗？常见原因有哪些？** | 不一定是问题。常见原因：(1) Git 有新提交尚未同步；(2) 有人手动修改了集群资源；(3) 控制器动态修改了某些字段（如 HPA 修改 replicas），可通过 `ignoreDifferences` 忽略。 |
-| 8 | **Sync Window 的 allow 和 deny 模式分别适用于什么场景？** | `allow`：仅在指定时间窗口内允许同步（适合生产环境的变更窗口）；`deny`：在指定时间内禁止同步（适合封网期/重大活动期间）。 |
+| 8 | **Sync Window 的 allow 和 deny 模式分别适用于什么场景？** | `allow`：仅在指定时间窗口内允许同步（适合生产环境的变更窗口）；<br/> `deny`：在指定时间内禁止同步（适合封网期/重大活动期间）。 |
 
 #### 多集群与多租户
 
 | # | 问题 | 参考答案 |
 |---|------|----------|
 | 9 | **ApplicationSet 的常用 Generator 有哪些？** | List（静态列表）、Cluster（自动发现集群）、Git Directory（按目录生成）、Git File（按配置文件生成）、SCM Provider（发现 GitHub/GitLab 仓库）、Pull Request（预览环境）、Matrix/Merge（组合多个 Generator）。 |
-| 10 | **AppProject 如何实现多租户隔离？** | AppProject 可限制：(1) 允许的 Git 仓库（sourceRepos）；(2) 允许的目标集群和 namespace（destinations）；(3) 允许的集群级资源类型（clusterResourceWhitelist）；(4) 禁止的资源类型（namespaceResourceBlacklist）；(5) 项目级 RBAC 角色。 |
-| 11 | **Hub-Spoke 模式 vs 每个集群独立部署 ArgoCD，如何选择？** | Hub-Spoke 适合集群数量少、网络直通的场景，运维成本低；独立部署适合大规模、网络隔离、安全合规严格的场景。App of Apps 模式可实现分层管理。 |
+| 10 | **AppProject 如何实现多租户隔离？** | AppProject 可限制：<br/> (1) 允许的 Git 仓库（sourceRepos）；<br/> (2) 允许的目标集群和 namespace（destinations）；<br/> (3) 允许的集群级资源类型（clusterResourceWhitelist）；<br/> (4) 禁止的资源类型（namespaceResourceBlacklist）；<br/> (5) 项目级 RBAC 角色。 |
+| 11 | **Hub-Spoke 模式 vs 每个集群独立部署 ArgoCD，如何选择？** | Hub-Spoke 适合集群数量少、网络直通的场景，运维成本低；独立部署适合大规模、网络隔离、安全合规严格的场景。<br/> App of Apps 模式可实现分层管理。 |
 
 #### 生产实践
 
 | # | 问题 | 参考答案 |
 |---|------|----------|
 | 12 | **如何在 ArgoCD 中管理 Secret？** | 三种方案：(1) [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets) — 加密后可安全提交到 Git；(2) [External Secrets Operator](https://external-secrets.io/) — 从 Vault/AWS SM/GCP SM 同步；(3) SOPS — Mozilla 的加密工具。避免明文 Secret 提交到 Git。 |
-| 13 | **ArgoCD 如何与 CI 流水线配合？** | CI（Tekton/GitHub Actions/Jenkins）负责构建镜像、推送到 Registry、更新 Git 仓库中的镜像 tag；ArgoCD 检测 Git 变更后自动同步到集群。可通过 Webhook 触发即时同步，或使用 [Argo Image Updater](https://argo-image-updater.readthedocs.io/) 直接监控镜像仓库。 |
+| 13 | **ArgoCD 如何与 CI 流水线配合？** | CI（Tekton/GitHub Actions/Jenkins）负责构建镜像、推送到 Registry、更新 Git 仓库中的镜像 tag；<br/> ArgoCD 检测 Git 变更后自动同步到集群。<br/> 可通过 Webhook 触发即时同步，或使用 [Argo Image Updater](https://argo-image-updater.readthedocs.io/) 直接监控镜像仓库。 |
 | 14 | **大规模应用中 `ApplyOutOfSyncOnly=true` 的作用是什么？** | 默认情况下每次同步会 apply 所有资源。当应用包含数千个资源时，该选项只同步 OutOfSync 的资源，减少 API Server 压力并加速同步过程。 |
-| 15 | **ArgoCD 的 App of Apps 模式是什么？适用于什么场景？** | 用一个根 Application 管理所有子 Application 的声明式定义。适用于：(1) 集群引导（Bootstrap）时自动创建所有基础应用；(2) 全局统一管理和版本控制所有子应用；(3) 配合 ApplicationSet 实现多集群批量部署。 |
+| 15 | **ArgoCD 的 App of Apps 模式是什么？适用于什么场景？** | 用一个根 Application 管理所有子 Application 的声明式定义。适用于：<br/> (1) 集群引导（Bootstrap）时自动创建所有基础应用；<br/> (2) 全局统一管理和版本控制所有子应用；<br/> (3) 配合 ApplicationSet 实现多集群批量部署。 |
 
 ---
 
