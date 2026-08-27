@@ -13,7 +13,7 @@ title: "Prometheus"
 
 [awesome-prometheus](https://github.com/roaldnefs/awesome-prometheus)
 
-[]()
+[Youtube](https://www.youtube.com/@PrometheusIo)
 
 []()
 

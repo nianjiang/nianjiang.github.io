@@ -14,7 +14,7 @@ bookCollapseSection: true
 |  [Argo CD](https://argoproj.github.io/cd/)      | [Doc](https://argo-cd.readthedocs.io/)  | [Github](https://github.com/argoproj/argo-cd)  | [Demo](https://cd.apps.argoproj.io/) | CNCF 毕业项目，GitOps 持续交付工具，提供完整 UI |
 |  [Argo Rollouts](https://argoproj.github.io/rollouts/)      | [Doc](https://argo-rollouts.readthedocs.io/)  | [Github](https://github.com/argoproj/argo-rollouts)  | [Demo](https://argo-rollouts.readthedocs.io/en/stable/getting-started/) | CNCF 毕业项目，金丝雀/蓝绿等高级部署策略控制器 |
 
-
+[👍CAPA-study-guide](https://github.com/msahihi/CAPA-study-guide)
 ---
 
 ### 认证考试：CAPA（Certified Argo Project Associate）
