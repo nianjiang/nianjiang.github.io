@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Qoder Usage Planned Progress
-// @namespace    http://tampermonkey.net/
-// @version      4.2.0
+// @namespace    https://github.com/nianjiang
+// @version      0.1.0
 // @description  在 Qoder Usage 页面"实际用量"下方显示当月规划进度 + 通过官方 API 拉取每日实际用量
-// @author       You
+// @author       https://github.com/nianjiang
 // @match        https://qoder.com/account/usage*
 // @grant        none
 // @run-at       document-end
+// @license      Apache 2.0
 // ==/UserScript==
 
 (function () {
