@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Qoder Usage Planned Progress
 // @namespace    https://github.com/nianjiang
-// @version      0.1.0
+// @version      0.2.0
 // @description  在 Qoder Usage 页面"实际用量"下方显示当月规划进度 + 通过官方 API 拉取每日实际用量
 // @author       https://github.com/nianjiang
 // @match        https://qoder.com/account/usage*
@@ -238,49 +238,116 @@
         detail.appendChild(table);
     }
 
-    // ========== 5. 注入：插到"实际用量"（div.DnkF2）下方 ==========
-    function findAnchor() {
-        // 策略1：直接用"实际用量"容器的 class（用户提供）
+    // ========== 5. 注入：插到"实际用量"进度条正下方 ==========
+    // 页面实测结构（qoder.com/account/usage，Team Plan 卡片，页面第 1 张卡）：
+    //   div.ant-card（Team Plan 卡片）
+    //     └── div.ant-card-body
+    //         ├── div.cardHeader                ← 标题区（Team Plan + 配额说明）
+    //         └── div（无名包装层）
+    //             └── div.DnkF2                 ← 进度条容器（哈希 class，随构建变化）
+    //                 └── div[role="progressbar"] aria-label="进度：783 / 3,000，已完成 27%"
+    //                     ├── 用量文本行（783 / 3,000 (27% used)｜2,217 left）
+    //                     └── div.ant-progress（绿色进度条）
+    // 注：页面上并无"实际用量"文案（中英文界面均无）；进度条 aria-label 固定为
+    // 中文"进度：x / y，已完成 z%"，不随界面语言变化，是最稳定的定位特征。
+    // 插入目标：进度条所在内容块（ant-card-body 的直接子元素）之后，
+    // 面板成为 Team Plan 卡片内的最后一个元素，紧跟在进度条下方。
+    //
+    // 时序（修复"首次打开位置错误、刷新后正常"）：
+    // 页面由 React 异步渲染，冷启动首次打开时进度条往往要数秒后才挂载；
+    // 旧逻辑 500ms 就注入，进度条不存在时直接落到 main/body 兜底锚点（位置全错），
+    // 刷新后资源走缓存、渲染变快才"碰巧"正常。因此注入必须：
+    //   1) 只认强锚点（进度条已渲染），出现前持续等待（轮询 + MutationObserver）；
+    //   2) 等待超时后才用弱锚点兜底，保证面板至少可见；
+    //   3) 注入后持续校验位置，React 重渲染导致面板被移除/挪位时自动重挂。
+
+    // 定位"实际用量"（Team Plan 配额）进度条元素：
+    // 页面共有两个进度条（Team Plan、Add-on Credits），aria-label 均以"进度："开头，
+    // 取文档顺序第一个即 Team Plan
+    function findActualUsageProgressbar() {
+        for (const pb of document.querySelectorAll('[role="progressbar"][aria-label]')) {
+            if (/^进度[:：]/.test(pb.getAttribute('aria-label'))) return pb;
+        }
+        return null;
+    }
+
+    // 返回 cardBody 中包含 target 的直接子元素（即 target 所在内容块）
+    function containingBlock(cardBody, target) {
+        for (const child of cardBody.children) {
+            if (child.contains(target)) return child;
+        }
+        return cardBody.lastElementChild || cardBody;
+    }
+
+    // 强锚点：进度条已渲染时才能命中（位置可靠的唯一依据），否则返回 null
+    function findStrongAnchor() {
+        // 首选：按 aria-label"进度："定位进度条 → 其在卡片体内所在内容块
+        // （不依赖哈希 class，跨中英文界面、跨构建版本稳定）
+        const pb = findActualUsageProgressbar();
+        if (pb) {
+            const cardBody = pb.closest('.ant-card-body');
+            if (cardBody) return containingBlock(cardBody, pb);
+        }
+
+        // 次选：退回哈希 class div.DnkF2（当前构建的进度条容器）
         const dnkf = document.querySelector('div.DnkF2');
-        if (dnkf) return dnkf;
-
-        // 策略2：精确匹配"实际用量"标题，取最内层匹配元素（class 是构建哈希，可能变化）
-        let heading = null;
-        for (const el of document.querySelectorAll('h1,h2,h3,h4,h5,h6,span,div,p,dt,summary')) {
-            if (el.closest('#qoder-planned-progress')) continue; // 排除自己注入的面板
-            const t = (el.textContent || '').trim();
-            if (t === '实际用量' || /^Actual Usage$/i.test(t)) heading = el;
+        if (dnkf) {
+            const cardBody = dnkf.closest('.ant-card-body');
+            if (cardBody) return containingBlock(cardBody, dnkf);
+            return dnkf;
         }
-        if (heading) {
-            // 向上找最近的卡片式容器（最多 6 层）
-            let card = heading.parentElement;
-            for (let i = 0; i < 6 && card && card !== document.body; i++) {
-                if (/card|section|panel|block/i.test((card.className || '').toString())) return card;
-                card = card.parentElement;
-            }
-            return heading.parentElement || heading;
-        }
+        return null;
+    }
 
-        // 策略3：备选，包含"实际用量"的卡片
-        const blocks = document.querySelectorAll('[class*="card"],[class*="section"],[class*="panel"]');
-        for (const b of blocks) {
-            const t = b.textContent || '';
-            if (/实际用量|订阅席位/.test(t) && t.length < 800) return b;
+    // 弱锚点：超时兜底（不保证位置精确，仅保证面板可见）
+    function findWeakAnchor() {
+        const card = document.querySelector('.ant-card');
+        if (card) {
+            const body = card.querySelector('.ant-card-body');
+            if (body && body.lastElementChild) return body.lastElementChild;
         }
         return document.querySelector('main') || document.body;
     }
 
-    function inject(retries) {
-        if (document.getElementById('qoder-planned-progress')) return;
-        const anchor = findAnchor();
-        if (!anchor || !anchor.parentNode) {
-            if (retries > 0) setTimeout(() => inject(retries - 1), 1000);
-            return;
-        }
+    function mountPanel(anchor) {
         const panel = buildPanel();
         anchor.parentNode.insertBefore(panel, anchor.nextSibling);
         // 等布局稳定后，把进度条起点对齐到原生"实际用量"进度条
         requestAnimationFrame(() => requestAnimationFrame(() => alignProgressStart(panel)));
+    }
+
+    // 面板是否仍紧跟在强锚点之后（检测 React 重渲染导致的面板丢失/挪位）
+    function panelInPlace() {
+        const panel = document.getElementById('qoder-planned-progress');
+        if (!panel || !panel.isConnected) return false;
+        const anchor = findStrongAnchor();
+        if (!anchor) return false;
+        return panel.parentElement === anchor.parentElement &&
+            (anchor.compareDocumentPosition(panel) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0;
+    }
+
+    // 注入主循环：每次 tick 校验面板状态并决定是否（重）挂载。
+    // SPA 内路由跳转（如切到 Profile 再切回 Usage）后也能自动重挂，无需刷新页面。
+    const START_AT = Date.now();
+    const STRONG_WAIT_MS = 20000; // 强锚点最长等待时间，超时后才用弱锚点兜底
+
+    function tick() {
+        if (panelInPlace()) return;
+
+        const stale = document.getElementById('qoder-planned-progress');
+        const anchor = findStrongAnchor();
+        if (anchor && anchor.parentNode) {
+            if (stale) stale.remove(); // 面板位置不对或被挪走，重挂到正确位置
+            mountPanel(anchor);
+            return;
+        }
+
+        // 强锚点尚未出现：已有面板（弱兜底已挂）则不动；无面板且已超时才弱兜底
+        if (stale && stale.isConnected) return;
+        if (Date.now() - START_AT > STRONG_WAIT_MS && /^\/account\/usage/.test(location.pathname)) {
+            const weak = findWeakAnchor();
+            if (weak && weak.parentNode) mountPanel(weak);
+        }
     }
 
     // ========== 6. 进度条起点与原生"实际用量"进度条齐平 ==========
@@ -329,5 +396,14 @@
         console.log('[Qoder Progress] 进度条对齐: leftDelta=', leftDelta, 'rightDelta=', rightDelta);
     }
 
-    setTimeout(() => inject(10), 500);
+    // 轮询 + DOM 变更监听双保险：冷启动慢渲染、React 重渲染都能自动恢复；
+    // MutationObserver 回调做 150ms 防抖，避免高频触发
+    tick();
+    setInterval(tick, 500);
+    let moPending = false;
+    new MutationObserver(() => {
+        if (moPending) return;
+        moPending = true;
+        setTimeout(() => { moPending = false; tick(); }, 150);
+    }).observe(document.documentElement, { childList: true, subtree: true });
 })();
