@@ -120,8 +120,7 @@
         const panel = document.createElement('div');
         panel.id = 'qoder-planned-progress';
         panel.style.cssText = [
-            'margin: 16px 0', 'padding: 12px 16px',
-            'border: 1px solid #e5e7eb', 'border-radius: 8px',
+            'margin: 16px 0', 'padding: 12px 0', 'border-radius: 8px',
             'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
             'font-size: 13px', 'color: #374151'
         ].join(';');
@@ -129,7 +128,7 @@
         const header = document.createElement('div');
         header.style.cssText = 'display:flex;justify-content:space-between;margin-bottom:6px;';
         const title = document.createElement('span');
-        title.textContent = '📅 规划进度（应该已用）';
+        title.textContent = '规划进度（应该已用）';
         const value = document.createElement('span');
         value.textContent = `${p.pct.toFixed(1)}%（${p.amount.toFixed(0)} / ${MONTHLY_TOTAL}）`;
         header.append(title, value);
