@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         Qoder Usage Planned Progress
 // @namespace    https://github.com/nianjiang
-// @version      0.2.0
-// @description  在 Qoder Usage 页面"实际用量"下方显示当月规划进度 + 通过官方 API 拉取每日实际用量
+// @version      0.2.1
+// @description  Show monthly planned progress below "Actual Usage" on the Qoder Usage page, and show daily total usage. 
+// @description:zh-CN  在 Qoder Usage 页面"实际用量"下方显示当月规划进度，以及显示每日用量。 
 // @author       https://github.com/nianjiang
 // @match        https://qoder.com/account/usage*
 // @grant        none
