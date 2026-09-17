@@ -3,7 +3,7 @@ weight: 80
 title: "Vaultwarden"
 ---
 
-> **Vaultwarden** 是一个用 Rust 编写的轻量级 Bitwarden 兼容服务端实现，适合自托管部署。
+> **Vaultwarden** 是一个用 Rust 编写的轻量级 [Bitwarden](https://bitwarden.com/) 兼容服务端实现，适合自托管部署。
 > 原名 Bitwarden_RS，后因商标问题更名为 Vaultwarden。
 
 ## 基本信息
