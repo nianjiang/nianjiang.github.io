@@ -35,12 +35,12 @@ Article: [What is AI inference?][a02]
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 07 | What happens when a model answers? | [AI inference][v02] — first listen | [AI inference][a02] — definition | Describe inference in three plain-English sentences. |
-|  | 08 | Training vs. inference | [AI inference][v02] — listen for differences | [AI inference][a02] — training comparison | Make a two-column comparison and explain it aloud. |
-|  | 09 | From input to prediction | [AI inference][v02] — follow the process | [AI inference][a02] — how inference works | Use “first,” “next,” and “finally” to explain the process. |
-|  | 10 | Why response time matters | [AI inference][v02] — replay a technical passage | [AI inference][a02] — latency and performance | Explain latency to a nontechnical colleague in 60 seconds. |
-|  | 11 | Quality, speed, and cost | [AI inference][v02] — revisit the explanation | [AI inference][a02] — efficiency and deployment | Write 100 words about a trade-off using “however” and “depends on.” |
-|  | 12 | Review: explain an AI request | [AI inference][v02] — listen without captions | [AI inference][a02] — verify your summary | Explain training and inference in two minutes without notes. |
+|  | 07 | What happens when a model answers? | [AI inference][v02] — first listen, <br/>[How Deep Learning Works][v02b] — how networks process input | [What is AI inference?][a02] — definition | Describe inference in three plain-English sentences. |
+|  | 08 | Training vs. inference | [AI inference][v02] — listen for differences, <br/>[LLMs Explained][v02c] — how models are trained and make predictions | [Training Data][a02b] — training comparison | Make a two-column comparison and explain it aloud. |
+|  | 09 | From input to prediction | [AI inference][v02] — follow the process, <br/>[Intro to LLMs][v02d] — follow the prediction pipeline | [Model Performance][a02c] — how inference works | Use "first," "next," and "finally" to explain the process. |
+|  | 10 | Why response time matters | [AI inference][v02] — replay a technical passage, <br/>[Google Cloud AI Low-latency][v02e] — why latency matters worldwide | [Edge AI][a02d] — latency and performance | Explain latency to a nontechnical colleague in 60 seconds. |
+|  | 11 | Quality, speed, and cost | [AI inference][v02] — revisit the explanation, <br/>[Model Providers Compared][v02f] — speed, cost, and intelligence trade-offs | [Model Deployment][a02e] — efficiency and deployment | Write 100 words about a trade-off using "however" and "depends on." |
+|  | 12 | Review: explain an AI request | [AI inference][v02] — listen without captions, <br/>[LLMs Explained][v02c] — replay the full process | [AI Infrastructure][a02f] — verify your summary | Explain training and inference in two minutes without notes. |
 
 ## Week 3 — Generative AI
 
@@ -208,7 +208,17 @@ After each sixth study day, record:
 [a01e]: https://www.ibm.com/think/topics/artificial-intelligence-business-use-cases
 [a01f]: https://www.ibm.com/think/topics/artificial-intelligence-types
 [v02]: https://www.youtube.com/watch?v=XtT5i0ZeHHE
+[v02b]: https://www.youtube.com/watch?v=He4t7Zekob0
+[v02c]: https://www.youtube.com/watch?v=RhPKBmeYNuI
+[v02d]: https://www.youtube.com/watch?v=h_r3NsfrrRI
+[v02e]: https://www.youtube.com/watch?v=v6NFg3NQRlo
+[v02f]: https://www.youtube.com/watch?v=MWNuTqEJg28
 [a02]: https://www.ibm.com/think/topics/ai-inference
+[a02b]: https://www.ibm.com/think/topics/training-data
+[a02c]: https://www.ibm.com/think/topics/model-performance
+[a02d]: https://www.ibm.com/think/topics/edge-ai
+[a02e]: https://www.ibm.com/think/topics/model-deployment
+[a02f]: https://www.ibm.com/think/topics/ai-infrastructure
 [v03]: https://www.ibm.com/think/videos/generative-ai-models
 [a03]: https://www.ibm.com/think/topics/generative-ai
 [v04]: https://www.youtube.com/watch?v=LPZh9BOjkQs
