@@ -16,17 +16,17 @@ title: "AI Topic"
 
 ## Week 1 — AI, Machine Learning, and Deep Learning
 
-Video: [AI, Machine Learning, Deep Learning and Generative AI Explained][v01]  
+Video: [AI, Machine Learning, Deep Learning and Generative AI Explained][v01] + [Machine Learning vs Deep Learning][v01b] + [AI vs Machine Learning][v01c]  
 Article: [What is artificial intelligence (AI)?][a01]
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 01 | What is AI? | [AI explained][v01] — listen for the main idea | [Artificial intelligence][a01] — introduction | Record a 60-second baseline explanation without a script. |
-|  | 02 | AI vs. machine learning | [AI explained][v01] — compare the definitions | [Artificial intelligence][a01] — AI and machine learning | Write three comparison sentences using “whereas” or “while.” |
-|  | 03 | Machine learning vs. deep learning | [AI explained][v01] — replay the comparison | [Artificial intelligence][a01] — deep learning | Explain the relationship using one everyday analogy. |
-|  | 04 | Where does generative AI fit? | [AI explained][v01] — focus on generative AI | [Artificial intelligence][a01] — generative AI | Draw a concept map and describe it aloud for 90 seconds. |
-|  | 05 | AI in everyday work | [AI explained][v01] — replay an example | [Artificial intelligence][a01] — applications | Write 80–100 words about one useful workplace application. |
-|  | 06 | Review: explain AI to a colleague | [AI explained][v01] — replay without captions | [Artificial intelligence][a01] — check your definitions | Give a two-minute explanation; compare it with Day 01. |
+|  | 01 | What is AI? | [AI explained][v01] — listen for the main idea， <br/>[AI vs ML][v01c],<br/>[AI Simplified: 6 Concepts][v01d] — overview of modern AI concepts | [What is AI?][a01] — introduction | Record a 60-second baseline explanation without a script. |
+|  | 02 | AI vs. machine learning | [AI vs ML][v01c] + [AI explained][v01] — compare the definitions,<br/>[Understanding AI Concepts][v01e] — compare AI, ML, and GenAI | [AI vs ML vs DL vs Neural Networks][a01b] — compare the definitions | Write three comparison sentences using "whereas" or "while." |
+|  | 03 | Machine learning vs. deep learning | [ML vs DL][v01b] + [AI vs ML][v01c] — listen for the pizza analogy,<br/>[Machine Learning Explained][v01f] — ML, AI, and deep learning guide | [Deep Learning][a01c] — what is deep learning? | Explain the relationship using one everyday analogy. |
+|  | 04 | Where does generative AI fit? | [AI explained][v01] + [AI vs ML][v01c] — focus on generative AI,<br/>[Evolution of AI][v01g] — traditional AI vs generative AI | [Generative AI][a01d] — what is generative AI? | Draw a concept map and describe it aloud for 90 seconds. |
+|  | 05 | AI in everyday work | [ML vs DL][v01b] + [AI vs ML][v01c] — replay an example,<br/>[Rise of GenAI for Business][v01h] — practical applications | [AI Use Cases][a01e] — valuable business applications | Write 80–100 words about one useful workplace application. |
+|  | 06 | Review: explain AI to a colleague | [AI explained][v01] + [AI vs ML][v01c] — replay without captions,<br/>[Brief History of AI][v01i] — review the full timeline | [Types of AI][a01f] — review the different types | Give a two-minute explanation; compare it with Day 01. |
 
 ## Week 2 — Training and Inference
 
@@ -193,7 +193,20 @@ After each sixth study day, record:
 - **Next step:** Which one difficulty should I focus on next week? Repeat a difficult week if needed; finishing on schedule is not a language-proficiency test.
 
 [v01]: https://www.youtube.com/watch?v=qYNweeDHiyU
+[v01b]: https://www.youtube.com/watch?v=q6kJ71tEYqM
+[v01c]: https://www.youtube.com/watch?v=4RixMPF4xis
+[v01d]: https://www.youtube.com/watch?v=mUw27wG7uFA
+[v01e]: https://www.youtube.com/watch?v=w__y7508704
+[v01f]: https://www.youtube.com/watch?v=znF2U_3Z210
+[v01g]: https://www.youtube.com/watch?v=SNZSm02_fpU
+[v01h]: https://www.youtube.com/watch?v=s4r5gXdSVPM
+[v01i]: https://www.youtube.com/watch?v=ZHCB09O6zUk
 [a01]: https://www.ibm.com/think/topics/artificial-intelligence
+[a01b]: https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks
+[a01c]: https://www.ibm.com/think/topics/deep-learning
+[a01d]: https://www.ibm.com/think/topics/generative-ai
+[a01e]: https://www.ibm.com/think/topics/artificial-intelligence-business-use-cases
+[a01f]: https://www.ibm.com/think/topics/artificial-intelligence-types
 [v02]: https://www.youtube.com/watch?v=XtT5i0ZeHHE
 [a02]: https://www.ibm.com/think/topics/ai-inference
 [v03]: https://www.ibm.com/think/videos/generative-ai-models
