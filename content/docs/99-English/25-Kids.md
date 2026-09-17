@@ -34,10 +34,10 @@ title: "Kids"
 
 | 名称 | 说明 |
 | :--- | :--- |
-| [Oxford Reading Tree](https://global.oup.com/education/content/primary/series/oxford-reading-tree/) | 牛津阅读树，全球最权威分级读物，Stage 1-3 适合二年级 |
-| [RAZ (Reading A-Z)](https://www.readinga-z.com/) | 美国学校在用分级阅读，aa-C 级适合二年级 |
-| [Oxford Owl 免费电子书](https://www.oxfordowl.co.uk/for-home/find-a-book/library-page/) | 牛津免费电子图书馆，可在线读 Biff & Chip 故事 |
-| [National Geographic Kids](https://kids.nationalgeographic.com/) | 国家地理儿童版，科普类阅读 |
+| [Oxford Owl 免费电子书](https://www.oxfordowl.co.uk/for-home/find-a-book/library-page/) | 牛津免费电子图书馆，可在线读 Biff & Chip 故事（免费注册） |
+| [National Geographic Kids](https://kids.nationalgeographic.com/) | 国家地理儿童版，科普类阅读，部分免费 |
+| [Starfall Learn to Read](https://www.starfall.com) | 免费分级阅读，适合低年级 |
+| [Free Kids Books](https://freekidsbooks.org/) | 免费儿童电子书下载，含分级读物 |
 
 ## 互动学习网站与 App
 
@@ -45,8 +45,8 @@ title: "Kids"
 | :--- | :--- |
 | [Starfall](https://www.starfall.com/) | 免费英语学习网站，游戏化学习自然拼读 |
 | [Khan Academy Kids](https://learn.khanacademy.org/khan-academy-kids/) | 可汗学院儿童版，完全免费 |
-| [ABCmouse](https://www.abcmouse.com/) | 美国知名在线学习平台，适合 2-8 岁 |
-| [Duolingo ABC](https://www.duolingo.com/abc) | Duolingo 儿童阅读 App |
+| [PBS Kids](https://pbskids.org/games) | 美国公共电视儿童频道，免费游戏和视频 |
+| [BBC CBeebies](https://www.bbc.co.uk/cbeebies) | BBC 幼儿频道，免费游戏、故事和视频 |
 
 ## 每日学习建议
 
@@ -54,7 +54,7 @@ title: "Kids"
 | :--- | :--- | :--- |
 | 看动画 | 15-20 分钟/天 | 选一部固定看，重复看同一集效果更好 |
 | 听儿歌 | 随时 | 当背景音乐磨耳朵 |
-| 读绘本 | 10-15 分钟/天 | 从 Oxford Reading Tree Stage 1 开始 |
+| 读绘本 | 10-15 分钟/天 | 从 Oxford Owl 免费电子书开始 |
 | 互动游戏 | 10 分钟/天 | Starfall 或 Khan Kids |
 
 ### Reference
