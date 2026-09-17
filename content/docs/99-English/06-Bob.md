@@ -2,11 +2,15 @@
 weight: 06
 title: "Bob Canadian"
 ---
-# Learn English with Bob the Canadian: A 12-Week Study Plan
+# Learn English with Bob the Canadian: A 12-Week B2 Study Plan
 
-> The goal is to understand everyday English and use it yourself—not simply finish more videos.
+> **Starting level: B2 (upper intermediate), as self-reported.** The priority is to turn language you recognize into precise, fluent speech: summarize, paraphrase, explain trade-offs, and respond without a script.
 >
-> This is a suggested personal study plan, not an official Bob the Canadian course. It assumes **30 minutes a day, six days a week**, with Sunday off: about **36 hours over 12 weeks**. Adjust the pace after the first week; the schedule does not guarantee a particular proficiency level.
+> Keep **30 minutes a day, six days a week**, with Sunday off: about **36 hours over 12 weeks**, plus a one-time baseline session. This is a personalized practice plan, not an official Bob the Canadian course or a promise of reaching C1 in 12 weeks.
+
+At B2, work toward clear, detailed explanations and increasingly spontaneous interaction; see the [British Council's B2 overview](https://learnenglish.britishcouncil.org/level/understand-your-level/b2-upper-intermediate). Listening, speaking, and vocabulary may develop unevenly, so adjust exercises by skill rather than assuming every task will be equally easy.
+
+Bob's videos are the main practice material. Use familiar topics to improve how you express ideas, not just to learn object names. If a lesson is easy to understand and discuss, move on or use it briefly for pronunciation work.
 
 ## 1. Resources and Video Selection
 
@@ -14,112 +18,125 @@ title: "Bob Canadian"
 - [Videos](https://www.youtube.com/@LearnEnglishwithBobtheCanadian/videos)
 - [Playlists](https://www.youtube.com/@LearnEnglishwithBobtheCanadian/playlists)
 
-Useful starting lessons:
+The existing lesson links remain useful as speaking prompts, but they are not a graded B2 syllabus:
 
-| Lesson | Practice goal |
+| Lesson | B2 extension task |
 | --- | --- |
-| [Learn How To Talk About Your Daily Routine in English Part 2](https://www.youtube.com/watch?v=t78zZyF3Pq4) | Describe your own day; use this as a topic resource, not a required first lesson |
-| [Let's Learn English! Topic: Shopping](https://www.youtube.com/watch?v=hkP1drDPCIw) | Practice shopping vocabulary and requests |
-| [Let's Learn English! Topic: Groceries!](https://www.youtube.com/watch?v=Wzwr60XqANY) | Describe groceries and your shopping habits |
+| [Learn How To Talk About Your Daily Routine in English Part 2](https://www.youtube.com/watch?v=t78zZyF3Pq4) | Compare two ways of organizing your workday and justify your preference. |
+| [Let's Learn English! Topic: Shopping](https://www.youtube.com/watch?v=hkP1drDPCIw) | Explain the trade-offs between online and in-store shopping; handle an objection. |
+| [Let's Learn English! Topic: Groceries!](https://www.youtube.com/watch?v=Wzwr60XqANY) | Discuss convenience, cost, and food waste; recommend a practical change. |
 
-Choose **two videos per week**, then select **one 2–4-minute practice segment from each**. You do not need to study an entire long lesson. For longer topic lessons or livestreams, use a self-contained segment and record its timestamps.
+Choose **two Bob videos per week**, with **one 5–7-minute passage from each**. A complete shorter video is also fine. Prefer connected explanations, stories, comparisons, or Q&A answers to isolated vocabulary lists. For long lessons or livestreams, select a coherent passage instead of watching the whole recording.
 
 Selection rules:
 
-1. Start with familiar, concrete topics: routines, home, food, shopping, and weather.
-2. Choose a segment where you can understand the main idea after listening with English captions.
-3. If it still feels confusing, choose a shorter or easier segment. Do not turn every session into dictionary work.
-4. Prefer a lesson with usable English captions or a transcript, where available. Auto-generated captions may contain mistakes; check doubtful wording against the audio.
-5. Keep one unstudied segment aside for each checkpoint. Memorizing a familiar video is different from understanding new speech.
+1. Listen at **1× without captions** first. You should usually understand the central message while still finding details, expressions, or pronunciation worth examining.
+2. Identify what makes the material useful: a collocation you do not use naturally, an unclear sound sequence, or an idea you cannot yet explain smoothly.
+3. If both listening and a two-minute spoken response are effortless, choose a less familiar topic or another speaker. Do not manufacture difficulty by collecting rare words.
+4. Use English captions or a transcript only to check specific gaps. Auto-generated captions may contain mistakes; compare doubtful wording with the audio.
+5. Keep a fresh passage of similar length and difficulty for each checkpoint. Do not confuse memorizing a lesson with understanding unfamiliar speech.
 
-The weekly keywords below are **search suggestions, not exact video titles**. Search within Bob's channel and confirm the uploader when using YouTube-wide search.
+The weekly keywords below are **search suggestions, not exact video titles**. The discussion tasks are personal extensions, not claims about what Bob says in a video. Search within his channel and confirm the uploader when using YouTube-wide search.
 
-## 2. Day Zero: Choose Your Starting Level
+### Transfer Beyond One Speaker
 
-Spend about 15 minutes on a baseline before Week 1:
+On Friday, use a short conversation with a partner or a **3–5-minute excerpt featuring another speaker** to test transfer. This replaces part of the session; it is not extra homework. Bob remains the main resource, but understanding one teacher does not establish comfort with other accents, interruptions, or spontaneous conversation.
 
-1. Pick an unfamiliar 1–2-minute segment about an everyday topic.
-2. Listen once at normal speed without captions. Write the topic and up to three details you understood, in English or your first language.
-3. Replay with English captions and check which details were correct.
-4. Record yourself talking about the same topic for 30–60 seconds without reading a script. Save this recording.
+Optional supplementary practice: [discussing advantages and disadvantages](https://learnenglish.britishcouncil.org/free-resources/speaking/b2/discussing-advantages-disadvantages) and [challenging someone's ideas](https://learnenglish.britishcouncil.org/free-resources/speaking/b2/challenging-someones-ideas). These are B2 learning materials, not substitutes for unscripted interaction.
 
-Use the result to choose a practice path. These are informal study adjustments, not CEFR assessments.
+## 2. Day Zero: Identify Your B2 Bottleneck
 
-| Starting point | Adjustment |
+Spend about 25 minutes on a baseline before Week 1. This identifies practice priorities; it does not reassess or certify your CEFR level.
+
+1. Choose an unfamiliar 5–7-minute passage and listen once at 1× without captions.
+2. Note five meaning units in English: the central message, three supporting details, and one relationship such as a cause, contrast, or qualification. Where the speaker expresses an opinion, distinguish it from a factual claim.
+3. Check your notes using the audio and available captions. Mark specific gaps rather than estimating a vague comprehension percentage.
+4. Record a two-minute response with a position, a reason, an example, and a limitation or alternative. Use at most five keywords, not written sentences.
+5. Answer three follow-up questions without preparing the answers. A partner can ask them; alone, select prompts only after recording your talk.
+6. Save the recording and choose **one main bottleneck** for the first two weeks.
+
+| Bottleneck | Adjustment |
 | --- | --- |
-| You recognize only a few words | Use 30–60-second clips, English captions, and three useful phrases per clip. Briefly check a translation when needed. If even captioned clips are too difficult, add basic vocabulary and sentence practice before returning to Bob. |
-| You understand the main idea but miss many details | Use the standard plan: 2–4-minute clips, English-caption checking, and short spoken summaries. |
-| You understand most details but struggle to speak | Keep normal playback speed, reduce caption use, and spend more time retelling, answering questions, and creating new examples. |
+| You miss connected speech despite knowing the words | Use a 15–30-second dictation extract and compare your transcription with the audio. Identify reductions, linking, and word boundaries. |
+| You understand the lesson but hesitate when speaking | Replace three minutes of detailed listening with an extra spoken attempt on a new example. |
+| Your speech is fluent but repetitive or vague | Focus on precise collocations, paraphrases, and supporting examples; revise one vague sentence per session. |
+| Your monologue is comfortable but follow-up questions are difficult | Prioritize clarification, polite disagreement, and unexpected questions during Friday practice. |
 
 ## 3. The 30-Minute Daily Routine
 
-Use this routine on practice days. On review days, spend the same time retrieving older material and testing yourself.
+Use this routine on Monday and Thursday. On other days, keep the same time limit but redistribute it for the weekly task. Prepare video links beforehand; if selecting material takes time, use a shorter passage that day.
 
 | Time | Activity | What to do |
 | --- | --- | --- |
-| 0–4 min | Recall | Say yesterday's phrases from memory and use two in new sentences. On your first day, describe what you already know about the topic. |
-| 4–8 min | Listen for meaning | Watch the chosen segment without captions. On its first viewing, note the main idea and two details without pausing. |
-| 8–16 min | Listen closely | Replay with English captions. Check unclear parts and select useful phrases. On the first study of each clip, collect only 4–6 phrases; on later passes, reuse them. |
-| 16–22 min | Repeat and shadow | Work on a 20–40-second extract. Listen, pause, repeat, then speak along with the audio. Focus on stress, rhythm, and understandable speech. |
-| 22–28 min | Speak or write | Close the video and captions. Record a short summary or answer a personal question. If necessary, write three sentences first, then speak without reading them. |
-| 28–30 min | Log and schedule | Save timestamps, record one difficulty, and schedule your next review. |
+| 0–3 min | Retrieve | Use two older expressions in a new situation without looking. On Day 1, predict the topic's main issues. |
+| 3–10 min | Listen without captions | Watch a 5–7-minute passage at 1×. Note its main point, supporting details, and how the ideas connect. |
+| 10–15 min | Check targeted gaps | Replay only unclear moments; consult English captions as needed. Select up to 3–5 reusable expressions per passage, including familiar ones you cannot yet use naturally. |
+| 15–19 min | Pronunciation and shadowing | Practice a 30–45-second extract. Notice thought groups, sentence stress, and connected speech; record one attempt. |
+| 19–28 min | Generate your own response | Give a 2–4-minute response according to the current phase, answer follow-ups, then replay and repair one short section. Use keywords only. |
+| 28–30 min | Log | Record one language correction, one listening gap, and the next review date. |
+
+For speaking, use **point → reason → example → qualification/conclusion** as a flexible structure. A summary reports Bob's ideas; your response adds your own position. Keep the distinction clear.
 
 ### How to Use Captions and Playback Speed
 
-- **First pass:** no captions, even if you only understand a little.
-- **Checking pass:** English captions; look up only words that block meaning or phrases you want to use.
-- **Final pass:** no captions again; check whether you now hear the phrases rather than merely remember the text.
-- If necessary, briefly use 0.75× or 0.9× playback, where available. Return to 1× for the final replay.
-- If simultaneous shadowing is too difficult, pause and repeat one sentence at a time first.
-- Aim for clear communication. You do not need to copy Bob's accent exactly.
+- **Default:** normal speed, captions off. Do not read a transcript before the first listen.
+- **Checking:** reveal English captions for the specific passage you missed, then replay it with captions hidden within the checking slot.
+- **Difficult sounds:** briefly slow a short extract if needed, then return to 1×. Routine slow playback is not the main training mode.
+- **Easy material:** optional 1.1–1.25× playback can add variety, but artificially faster audio does not replace more varied speakers or spontaneous speech. Keep checkpoints at 1×.
+- Shadowing practices delivery; paraphrasing and responding practice language generation. Include both.
+- Aim for intelligibility and appropriate emphasis, not an exact imitation of Bob's accent.
 
-### Learn Phrases, Not Only Individual Words
+### Activate Collocations and Flexible Sentence Patterns
 
-For each phrase, record its meaning, an audio timestamp, and a sentence about your own life. The examples below are original practice sentences, not quotations from Bob's videos.
+Record meaning, context/register, a timestamp, and your own example. Prioritize expressions you understand but do not yet retrieve smoothly. The examples below are original practice sentences, not quotations from Bob or an official B2 vocabulary list.
 
-| Phrase | Example sentence |
-| --- | --- |
-| get ready for work | I get ready for work at seven. |
-| run out of | We've run out of milk. |
-| be in charge of | I'm in charge of maintaining our servers. |
-| figure out | I need to figure out why the service stopped. |
+| Function | Expression | Original example |
+| --- | --- | --- |
+| Weigh alternatives | weigh up the pros and cons | We need to weigh up the pros and cons before changing our deployment process. |
+| Qualify a claim | to some extent | Automation reduces errors to some extent, but it still needs oversight. |
+| Explain a constraint | take into account | We should take maintenance costs into account. |
+| Avoid overgeneralizing | tend to | Smaller releases tend to be easier to troubleshoot. |
+| Clarify meaning | what I mean is ... | What I mean is that we need a safer rollout, not a slower one. |
+| Disagree constructively | I see your point, but ... | I see your point, but a manual check may still be necessary. |
 
-Aim for **8–12 useful phrases per week**, drawn from the two clips. Collect fewer if you cannot use last week's phrases without reading.
+Aim for **6–10 activated expressions per week**, up to 3–5 from each passage. Reuse each in two different contexts. Do not add expressions just to hit a quota or force them into an unnatural answer.
 
 ## 4. Weekly Schedule
 
-Study two clips deeply across the week. Days devoted to an already studied clip are for retrieval and output, not collecting more vocabulary.
+Use two Bob passages deeply, but do not replay an entire familiar passage every day. Revisit specific gaps and change the output task so that you are not memorizing one speech.
 
 | Day | Material | Main task | Deliverable |
 | --- | --- | --- | --- |
-| Monday | Clip A | Use the daily routine; understand the situation and select 4–6 phrases | A short summary and a phrase list |
-| Tuesday | Clip A | Replay difficult lines, transcribe a 10–20-second extract, check it, and shadow | A corrected mini-dictation and a short recording |
-| Wednesday | Clip A | Retell from memory and connect the topic to your own life | A 30–90-second recording, depending on your level |
-| Thursday | Clip B | Use the daily routine; select another 4–6 phrases | A second summary and phrase list |
-| Friday | Clip B + Clip A | Shadow Clip B, then answer a question using phrases from both clips | A personal response or short role-play |
-| Saturday | Both clips + older phrases | Recall first, check afterward; review last week's material and update the tracker | A weekly self-check and one next-week adjustment |
-| Sunday | Rest | Optional relaxed listening; no required new material | No catch-up debt |
+| Monday | Passage A | Follow the daily routine: understand, check, and respond. | A meaning map and a two-minute response in Weeks 1–4. |
+| Tuesday | Passage A | Transcribe 15–30 seconds of difficult audio, check it, and shadow 30–45 seconds. Explain the same idea in different words. | One corrected dictation, a pronunciation recording, and two paraphrases. |
+| Wednesday | Passage A topic | Summarize briefly, then give your own view and address an alternative. Write a 100–150-word follow-up within the session. | A spoken response and a concise written argument; correct one recurring error. |
+| Thursday | Passage B | Follow the daily routine. Connect its ideas or language with Passage A. | A second meaning map and a response with a contrasting example. |
+| Friday | Both topics + transfer | Spend 5 minutes retrieving expressions, 15 on partner discussion or another speaker's short excerpt plus your response, and 10 on follow-ups and corrections. | Three unprepared answers, one clarification, and one polite challenge or qualification. |
+| Saturday | Current and older material | Review for 10 minutes, give a fresh response for 10, and use 10 to assess it and plan next week. | Updated tracker and one specific improvement target. |
+| Sunday | Rest | Optional relaxed listening; no required new material. | No catch-up debt. |
 
-For Weeks 4, 8, and 12, replace Saturday's normal review with the checkpoint below. Choose review-related clips during these weeks and reduce new phrases if needed.
+Increase the main speaking task from **two minutes in Weeks 1–4**, to **three minutes in Weeks 5–8**, to **four minutes in Weeks 9–12**. These are exercise targets, not CEFR thresholds. Prioritize a coherent answer over filling the time.
+
+For Weeks 4, 8, and 12, replace Saturday's normal review with the checkpoint below. Reduce new expressions during these consolidation weeks if needed. Without a partner, use randomly selected follow-up prompts; self-questioning helps retrieval but cannot fully train real turn-taking.
 
 ## 5. The 12-Week Topic Plan
 
-| Week | Focus | Search keywords in Bob's channel | Speaking or writing task |
+| Week | Communication focus | Search keywords in Bob's channel | B2 output task |
 | --- | --- | --- | --- |
-| 1 | Daily routines and introductions | `daily routine`, `introductions` | Introduce yourself and describe a typical weekday in 30–60 seconds. |
-| 2 | Home and everyday objects | `home`, `house`, `kitchen` | Describe a room and explain where five objects are. |
-| 3 | Food, groceries, and shopping | `groceries`, `shopping`, `food` | Explain your shopping list and practice asking where an item is. |
-| 4 | Review: everyday life | Revisit Weeks 1–3; reserve a fresh related clip | Give a one-minute account of your day and complete Checkpoint 1. |
-| 5 | Weather and seasons | `weather`, `seasons` | Describe today's weather and explain how it changes your plans. |
-| 6 | Places and transportation | `town`, `directions`, `transportation` | Describe your commute and give directions to a nearby place. |
-| 7 | Work and study | `work`, `jobs`, `school` | Explain your job or studies, including three regular responsibilities. |
-| 8 | Review: explaining daily situations | Revisit Weeks 5–7; reserve a fresh related clip | Describe a workday or outing in 90 seconds and complete Checkpoint 2. |
-| 9 | Health, exercise, and habits | `health`, `exercise`, `habits` | Describe a healthy habit and a change you want to make. |
-| 10 | Feelings and opinions | `feelings`, `emotions`, `opinions` | Express an opinion, give two reasons, and add an example. |
-| 11 | Problems and past experiences | `problems`, `mistakes`, `past` | Tell a short story: what happened, what you did, and how it ended. |
-| 12 | Consolidation and independent use | Choose a relevant new everyday topic | Give a two-minute talk, answer three follow-up questions, and complete the final checkpoint. |
+| 1 | Explain and compare routines | `daily routine`, `habits`, `time` | Compare two workday routines. Explain which suits you, with a reason, example, and limitation. |
+| 2 | Narrate and reflect | `stories`, `mistakes`, `experiences` | Tell a past experience with a clear sequence; explain what you would do differently now. |
+| 3 | Evaluate choices | `shopping`, `money`, `groceries` | Compare two purchasing choices using cost, convenience, and quality; defend a recommendation. |
+| 4 | Consolidate fluency and paraphrasing | Revisit Weeks 1–3; reserve a fresh related passage | Give a two-minute recommendation, paraphrase a key point, answer three questions, and complete Checkpoint 1. |
+| 5 | Explain causes and consequences | `work`, `jobs`, `problems` | Explain a workplace problem, its likely causes, and two possible solutions without assuming certainty. |
+| 6 | Compare lifestyles and priorities | `city`, `country`, `transportation` | Discuss city versus rural living or two commuting options; consider people with different priorities. |
+| 7 | Express and qualify opinions | `opinions`, `feelings`, `decisions` | Defend a view, acknowledge a reasonable objection, and revise an overgeneralized claim. |
+| 8 | Consolidate discussion skills | Revisit Weeks 5–7; reserve a fresh related passage | Give a three-minute argument, respond to three follow-ups, and complete Checkpoint 2. |
+| 9 | Discuss uncertainty and advice | `health`, `exercise`, `habits` | Compare two habit changes and give qualified advice. Separate personal experience from evidence. |
+| 10 | Hypothesize and negotiate | `plans`, `future`, `decisions` | Explain what you would do if a plan failed; negotiate a compromise between two priorities. |
+| 11 | Transfer everyday language to work | `communication`, `work`, `technology` | Explain a technical problem to a nontechnical listener, clarify a misunderstanding, and recommend a next step. |
+| 12 | Integrate and assess | Choose a fresh topic with a genuine choice or problem | Give a four-minute explanation with a counterpoint, answer three unprepared questions, and complete the final checkpoint. |
 
-If a topic is too difficult or no suitable lesson is available, substitute another familiar topic. Keep the practice method and output task; the topic order is flexible.
+If a search does not produce a suitable Bob lesson, use another topic that supports the same communication task. The goal is stronger B2 performance across situations, not mastery of a fixed list of videos.
 
 ## 6. Review and Progress Checks
 
@@ -127,30 +144,41 @@ If a topic is too difficult or no suitable lesson is available, substitute anoth
 
 Review each phrase approximately **1, 3, 7, and 14 days** after first learning it. Use the daily recall slot and Saturday review rather than adding another long session.
 
-1. Hide the English phrase. Look at its meaning or imagine the situation.
-2. Say the phrase and make a new sentence aloud.
-3. Check your answer and replay the original audio if necessary.
-4. If you cannot retrieve it, review it again the next day and reduce new material.
+1. Hide the expression. Read a short English definition or imagine a situation requiring it.
+2. Use it in a new spoken sentence, then paraphrase the sentence without that expression.
+3. Check meaning, collocation, grammar, and register; replay the source audio if useful.
+4. If retrieval fails, review it the next day. If use is awkward, improve the example before adding more expressions.
 
-A phrase is provisionally usable when you can recall it on two separate days and use it in a new sentence. Simply recognizing it in subtitles is not enough.
+An expression is provisionally active when you can retrieve it on two separate days and use it appropriately in two different contexts. Recognition in captions does not count as active use.
 
 ### Checkpoints: End of Weeks 4, 8, and 12
 
-Use a fresh 1–2-minute clip of similar difficulty each time. Do not use a clip you have already studied for the listening check.
+Use a fresh **5–7-minute Bob passage**, at 1× without captions, of similar difficulty each time. Keep the speaker type, preparation allowance, and listening conditions comparable. Log performance with another speaker separately rather than treating unlike samples as directly equivalent.
 
 | Minutes | Task | What to record |
 | --- | --- | --- |
-| 0–8 | Listen once without captions, write the topic and three details, then verify with captions | Number of correct details out of three; note any extra replays |
-| 8–13 | Recall ten previously studied phrases from meaning or situation prompts | Number you can recall and use appropriately without looking |
-| 13–20 | Record a personal talk and answer three follow-up questions without a script | Week 4: about 60 seconds; Week 8: about 90 seconds; Week 12: about two minutes |
-| 20–27 | Compare with an earlier recording | Clarity, complete ideas, long pauses, and use of learned phrases |
-| 27–30 | Choose one adjustment | Easier clips, more repetition, more speaking, or less caption support |
+| 0–12 | Listen once, note five meaning units as in Day Zero, then verify relevant moments with captions/audio. | Correct units out of five; record any extra replays separately from the first-listen result. |
+| 12–17 | Retrieve eight older expressions using situation prompts and use each in a sentence. | Appropriate, unprompted uses out of eight. |
+| 17–24 | Give a personal response using at most five keywords, then answer three unprepared questions. | Week 4: two-minute talk; Week 8: three-minute talk; Week 12: four-minute talk. Keep follow-ups brief enough for the slot. |
+| 24–30 | Replay a comparable section of an earlier recording and the new one; assess and choose one adjustment. | Evidence of improvement, one recurring error, and one next action. |
 
-Useful follow-up questions: “Why?”, “Can you give an example?”, and “What happened next?”
+Follow-up prompts: “What is the strongest objection?”, “When would your recommendation not work?”, “What would change your mind?”, and “How would you explain that without technical terms?”
 
-Use **two correct listening details out of three** and **seven usable phrases out of ten** as suggested practice targets, not standardized scores. If you repeatedly fall below them or cannot complete the speaking task, repeat the current topic for another week before adding difficulty. The plan may take longer than 12 calendar weeks.
+Suggested practice targets are **four correct meaning units out of five**, **six appropriate expression uses out of eight**, and relevant answers to **all three follow-up questions**. These are local study targets, not standardized B2/C1 scores or proof of a CEFR level.
 
-At the final checkpoint, also repeat your Day Zero speaking topic. Improvement on that familiar topic and performance on a fresh listening clip show different parts of your progress. If possible, ask a teacher or language partner whether your recording is clear and which recurring mistake to fix first.
+Assess speaking using the same questions each time:
+
+| Dimension | What to check |
+| --- | --- |
+| Organization | Is the main point clear, supported by an example, and connected to a conclusion or qualification? |
+| Fluency | Can you finish ideas without repeatedly abandoning sentences? Count pauses longer than about three seconds per minute, comparing similar tasks—not speed alone. |
+| Range and precision | Can you paraphrase and use appropriate collocations without forcing memorized expressions? |
+| Accuracy | Which grammar or word-choice errors recur, and do they obscure meaning? Correct one pattern at a time. |
+| Responsiveness | Do answers address the actual question, clarify uncertainty, and acknowledge alternative views? |
+
+If listening targets are easy but speaking remains hesitant, move practice time toward output rather than merely choosing faster videos. If both are comfortable across two checks, add less familiar topics or more spontaneous interaction. Repeat a topic week when necessary; do not chase longer speeches at the expense of clarity.
+
+During Friday practice in Week 12, also repeat your Day Zero speaking topic for comparison. Use Saturday for the fresh-material checkpoint. If possible, ask a teacher or language partner to check your recordings and challenge your self-assessment, especially grammar, natural phrasing, and interaction.
 
 ## 7. Study Templates
 
@@ -160,18 +188,21 @@ At the final checkpoint, also repeat your Day Zero speaking topic. Improvement o
 Date / week:
 Video title and URL:
 Practice timestamps:
-First-listen topic and details:
+First-listen meaning units: main point / three details / one relationship
+Caption checks and extra replays:
 
-Phrase | Meaning | Timestamp | My own sentence
+Expression | Meaning and register | Timestamp | Two different contexts
 1.
 2.
 3.
-4.
 
 Difficult audio: what I heard / what was actually said
-My spoken summary or personal response:
+Summary of Bob's ideas:
+My position / reason / example / qualification:
+One alternative way to express the same idea:
+Unprepared follow-up questions and answers:
 Recording location:
-One thing to improve:
+One recurring error and its correction:
 Review dates: +1 day / +3 days / +7 days / +14 days
 ```
 
@@ -179,40 +210,42 @@ Review dates: +1 day / +3 days / +7 days / +14 days
 
 Copy one row for each study week. Fill it in from actual practice, not estimates of how many videos you watched.
 
-| Week | Sessions completed / 6 | Clip A / Clip B | Phrases usable / tested | Speaking length | Main difficulty | Next adjustment |
+| Week | Sessions / 6 | Passage A / B | Expressions active / tested | Speaking evidence | Transfer practice | Next correction |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | — | — | — | — | — | — |
+| 1 | — | — | — | Talk length; long pauses per minute; follow-ups answered | Partner or other speaker; difficulty noted | — |
 
 Weekly checklist:
 
-- [ ] Practiced two manageable clips, or deliberately reduced the workload.
-- [ ] Completed at least one short dictation and checked it against the audio/captions.
-- [ ] Recorded speech without reading a full script.
-- [ ] Used learned phrases in sentences about my own life.
-- [ ] Reviewed older phrases before adding more.
-- [ ] Chose one specific improvement for next week.
+- [ ] Listened to new material at 1× without captions before checking specific gaps.
+- [ ] Completed a short dictation or targeted pronunciation repair.
+- [ ] Recorded an organized response using keywords only and paraphrased a key idea.
+- [ ] Reused expressions in different contexts and reviewed older material.
+- [ ] Wrote a 100–150-word follow-up and corrected one recurring error.
+- [ ] Practiced unprepared answers and transfer to another speaker or a partner.
+- [ ] Chose one measurable improvement for next week.
 
 ## 8. Adjustments for Busy or Difficult Days
 
 | Situation | Adjustment |
 | --- | --- |
-| Only 10 minutes available | Recall for 2 minutes, replay a familiar clip for 3, repeat aloud for 3, and give a short personal response for 2. Add no new phrases. |
-| Several missed days | Resume with the last familiar clip. Do not double the next day's workload; extend the schedule if needed. |
-| You understand captions but not the audio | Use 10–20-second dictation extracts, check missing sounds, and replay with captions hidden. |
-| You understand Bob but cannot speak | Pause new videos for a session. Answer five simple questions using phrases you already know. |
-| Too many unknown words | Shorten the segment, choose a more concrete topic, and keep only three high-value phrases. |
-| The material is consistently easy | Use a less familiar topic, reduce captions, or extend your spoken response. Change one variable at a time. |
-| You want workplace English | Adapt an everyday pattern to work: describe your responsibilities, explain a problem, or summarize a task. Add specialist vocabulary separately. |
+| Only 10 minutes available | Retrieve expressions for 2 minutes, replay a difficult extract for 2, speak on a new example for 3, and answer a follow-up plus correct one sentence for 3. Add no new material. |
+| Several missed days | Resume with a familiar topic and a fresh response. Do not double the workload; extend the schedule if needed. |
+| You know the words but miss the audio | Diagnose a 15–30-second extract: linking, reductions, stress, or word boundaries. Check and replay without captions. |
+| You understand Bob but struggle with spontaneous speech | Keep Bob for focused language work and use Friday for another speaker or live conversation. Assess the two conditions separately. |
+| Your speech is fluent but inaccurate | Review a one-minute recording, identify a recurring error, and produce three corrected examples in different contexts. Seek feedback when unsure. |
+| Your vocabulary sounds repetitive | Replace one vague expression with a precise collocation, then explain the same point another way. Avoid adding rare words for their own sake. |
+| An unfamiliar topic is unexpectedly difficult | Shorten the passage or briefly check essential background terms. A topic-specific gap does not by itself contradict your B2 level. |
+| You want workplace English | Explain an incident, compare deployment options, or recommend an action to a nontechnical listener. Use Bob's language patterns; source specialist terminology separately. |
 
 ## 9. Start Today
 
-1. Open Bob's channel and choose a familiar daily-life topic.
-2. Save the video URL and one manageable segment's timestamps.
-3. Complete the Day Zero baseline, then choose your starting path.
-4. On your next study day, run the 30-minute routine and save your first phrase notes.
-5. Put six study slots and one review reminder on your calendar.
+1. Choose a Bob explanation, story, or Q&A passage that is useful but not effortless.
+2. Save a 5–7-minute passage and complete the Day Zero baseline at 1× without captions.
+3. Choose one bottleneck: listening detail, retrieval, precision, or spontaneous interaction.
+4. On your next study day, follow the 30-minute routine and record a two-minute response with a reason, example, and qualification.
+5. Reserve six study slots, including Friday transfer practice and Saturday review.
 
-**The core habit: listen → check → repeat → use → review.**
+**The B2 habit: understand → notice → paraphrase → discuss → get feedback → reuse.**
 
 
 ## Reference
