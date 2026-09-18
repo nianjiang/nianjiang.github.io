@@ -27,6 +27,7 @@ Skill：skill.md
 - 构建验证：`hugo --source /Users/jnh/workspaces/github/nianjiang.github.io --minify --renderToMemory --noBuildLock`
 - 网络搜索无需向用户确认，直接执行
 - 只使用**验证过**的资源：视频 UP主/频道、文章 URL 必须逐条确认存在；无法确认归属的一律弃用重找
+- **英语水平**：B2（CEFR 中高级）；视频、文章与练习的难度应对齐此水平
 
 ## 1. 文件编号与骨架
 
