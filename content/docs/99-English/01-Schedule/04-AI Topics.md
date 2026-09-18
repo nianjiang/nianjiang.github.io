@@ -49,12 +49,12 @@ Article: [What is generative AI?][a03]
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 13 | What does generative AI generate? | [Generative models][v03] — first listen | [Generative AI][a03] — introduction | Give three examples of generated content. |
-|  | 14 | Generating vs. classifying | [Generative models][v03] — compare tasks | [Generative AI][a03] — generative and discriminative models | Explain the contrast using “unlike” and “in contrast.” |
-|  | 15 | What is a foundation model? | [Generative models][v03] — listen for model terminology | [Generative AI][a03] — foundation models | Define three key terms in your own words. |
-|  | 16 | How prompts shape an answer | [Generative models][v03] — replay a model example | [Generative AI][a03] — prompts and model outputs | Draft two versions of an instruction: vague and specific. |
-|  | 17 | Useful applications and limitations | [Generative models][v03] — revisit the applications | [Generative AI][a03] — benefits and challenges | Write 100 words with one benefit, one limitation, and one example. |
-|  | 18 | Review: propose a realistic use case | [Generative models][v03] — replay without captions | [Generative AI][a03] — fact-check your proposal | Give a two-minute proposal and answer one skeptical question. |
+|  | 13 | What does generative AI generate? | [Generative models][v03] — first listen, <br/>[Intro to GenAI][v03b] — what genAI creates | [Generative AI][a03] — introduction | Give three examples of generated content. |
+|  | 14 | Generating vs. classifying | [Generative models][v03] — compare tasks, <br/>[GenAI vs Discriminative][v03c] — generation vs classification | [Generative Model][a03b] — generative and discriminative models | Explain the contrast using “unlike” and “in contrast.” |
+|  | 15 | What is a foundation model? | [Generative models][v03] — listen for model terminology, <br/>[Intro to LLMs][v03d] — LLMs as foundation models | [Foundation Models][a03c] — foundation models | Define three key terms in your own words. |
+|  | 16 | How prompts shape an answer | [Generative models][v03] — replay a model example, <br/>[GenAI Studio][v03e] — prototype models with prompts | [Prompt Engineering][a03d] — prompts and model outputs | Draft two versions of an instruction: vague and specific. |
+|  | 17 | Useful applications and limitations | [Generative models][v03] — revisit the applications, <br/>[Responsible AI][v03f] — limitations and responsible use | [GenAI Use Cases][a03e] — benefits and challenges | Write 100 words with one benefit, one limitation, and one example. |
+|  | 18 | Review: propose a realistic use case | [Generative models][v03] — replay without captions, <br/>[GenAI vs Traditional AI][v03g] — when to choose generative AI | [AI Model][a03f] — fact-check your proposal | Give a two-minute proposal and answer one skeptical question. |
 
 ## Week 4 — Large Language Models
 
@@ -63,12 +63,12 @@ Article: [What are large language models (LLMs)?][a04]
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 19 | What is an LLM? | [LLMs explained briefly][v04] — opening explanation | [Large language models][a04] — definition | Explain an LLM without using the word “intelligent.” |
-|  | 20 | Tokens and next-token prediction | [LLMs explained briefly][v04] — prediction example | [Large language models][a04] — how LLMs work | Explain “token” and “prediction” using a short sentence as an example. |
-|  | 21 | Learning from text | [LLMs explained briefly][v04] — training explanation | [Large language models][a04] — training | Write five sentences using “is trained,” “is used,” and “is generated.” |
-|  | 22 | Context and attention | [LLMs explained briefly][v04] — transformer explanation | [Large language models][a04] — transformers and attention | Give a simple explanation; identify one detail you still do not understand. |
-|  | 23 | Capabilities do not guarantee reliability | [LLMs explained briefly][v04] — replay the overview | [Large language models][a04] — uses and limitations | Write 100–120 words using “can,” “may,” and “does not necessarily.” |
-|  | 24 | Review: how does a chatbot work? | [LLMs explained briefly][v04] — selected segment without captions | [Large language models][a04] — verify terminology | Record a two-minute explanation and reuse five phrases from Weeks 1–4. |
+|  | 19 | What is an LLM? | [LLMs explained briefly][v04] — opening explanation, <br/>[Introduction to LLMs][v04b] — listen for the definition | [Large language models][a04] — definition | Explain an LLM without using the word “intelligent.” |
+|  | 20 | Tokens and next-token prediction | [LLMs explained briefly][v04] — prediction example, <br/>[Transformers, the tech behind LLMs][v04c] — how tokens drive next-word prediction | [LLM Inference][a04b] — how LLMs work | Explain “token” and “prediction” using a short sentence as an example. |
+|  | 21 | Learning from text | [LLMs explained briefly][v04] — training explanation, <br/>[How LLMs Are Trained][v04d] — how models learn from text data | [Fine-Tuning][a04c] — training | Write five sentences using “is trained,” “is used,” and “is generated.” |
+|  | 22 | Context and attention | [LLMs explained briefly][v04] — transformer explanation, <br/>[Attention in transformers][v04e] — visual walk-through of attention | [Attention Mechanism][a04d] — transformers and attention | Give a simple explanation; identify one detail you still do not understand. |
+|  | 23 | Capabilities do not guarantee reliability | [LLMs explained briefly][v04] — replay the overview, <br/>[Why Does AI Hallucinate?][v04f] — why outputs can be wrong | [LLM Benchmarks][a04e] — uses and limitations | Write 100–120 words using “can,” “may,” and “does not necessarily.” |
+|  | 24 | Review: how does a chatbot work? | [LLMs explained briefly][v04] — selected segment without captions, <br/>[How ChatGPT Works][v04g] — end-to-end recap | [Chatbots][a04f] — verify terminology | Record a two-minute explanation and reuse five phrases from Weeks 1–4. |
 
 ## Week 5 — Hallucinations and Fact-Checking
 
@@ -221,8 +221,30 @@ After each sixth study day, record:
 [a02f]: https://www.ibm.com/think/topics/ai-infrastructure
 [v03]: https://www.ibm.com/think/videos/generative-ai-models
 [a03]: https://www.ibm.com/think/topics/generative-ai
+[a03b]: https://www.ibm.com/think/topics/generative-model
+[a03c]: https://www.ibm.com/think/topics/foundation-models
+[a03d]: https://www.ibm.com/think/topics/prompt-engineering
+[a03e]: https://www.ibm.com/think/topics/generative-ai-use-cases
+[a03f]: https://www.ibm.com/think/topics/ai-model
+[v03b]: https://www.youtube.com/watch?v=G2fqAlgmoPo
+[v03c]: https://www.youtube.com/watch?v=LHWWH1KArgs
+[v03d]: https://www.youtube.com/watch?v=h_r3NsfrrRI
+[v03e]: https://www.youtube.com/watch?v=-7nf5EJ2Fsc
+[v03f]: https://www.youtube.com/watch?v=3-xhMXeYIcg
+[v03g]: https://www.youtube.com/watch?v=ih1sUFWAgxU
 [v04]: https://www.youtube.com/watch?v=LPZh9BOjkQs
 [a04]: https://www.ibm.com/think/topics/large-language-models
+[v04b]: https://www.youtube.com/watch?v=zizonToFXDs
+[v04c]: https://www.youtube.com/watch?v=wjZofJX0v4M
+[v04d]: https://www.youtube.com/watch?v=rcxXiLhxhsk
+[v04e]: https://www.youtube.com/watch?v=eMlx5fFNoYc
+[v04f]: https://www.youtube.com/watch?v=u8tjByJtFrg
+[v04g]: https://www.youtube.com/watch?v=dVQgcuh4uPU
+[a04b]: https://www.ibm.com/think/topics/llm-inference
+[a04c]: https://www.ibm.com/think/topics/fine-tuning
+[a04d]: https://www.ibm.com/think/topics/attention-mechanism
+[a04e]: https://www.ibm.com/think/topics/llm-benchmarks
+[a04f]: https://www.ibm.com/think/topics/chatbots
 [v05]: https://www.youtube.com/watch?v=ZFKvTIADp0k
 [a05]: https://www.ibm.com/think/topics/ai-hallucinations
 [v06]: https://www.ibm.com/think/videos/rag
