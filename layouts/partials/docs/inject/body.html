@@ -62,6 +62,24 @@
     display: none !important;
   }
 }
+
+/* hl-key: highlight marker for key study days */
+.hl-key {
+  display: inline-block;
+  background-color: #fff3b0;
+  color: #7a4a00;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85em;
+  border: 1px solid #f0d97a;
+  white-space: nowrap;
+}
+
+/* hl-row: highlight the entire table row that contains an .hl-key marker */
+tr:has(td .hl-key) {
+  background-color: #fff8e1;
+}
 </style>
 
 <script>
