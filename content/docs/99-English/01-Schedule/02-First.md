@@ -3,170 +3,6 @@ weight: 2
 title: "First"
 ---
 
-# From Kubernetes/SRE to AI SRE and MLOps
-
-## Goal and Starting Point
-
-Build on existing Kubernetes and SRE knowledge to move toward **AI infrastructure / inference SRE**, while developing a practical **Machine Learning Operations (MLOps)** foundation.
-
-The recommended progression is:
-
-**Kubernetes/SRE → ML lifecycle fundamentals → AI serving and reliability → deeper MLOps specialization.**
-
-- **Technical baseline:** Existing Kubernetes and SRE knowledge. Python and hands-on ML proficiency still need to be assessed.
-- **English baseline:** Self-reported B2. Practice explaining engineering decisions, investigating incidents, and discussing trade-offs in English.
-- **Planning estimate:** A 16-week first iteration at approximately 10–12 hours per week, assuming basic programming ability. Add preparation time if Python is unfamiliar.
-- **Progress rule:** Advance when the practical completion criteria are met, not simply when a week ends. This schedule is not a guarantee of job readiness.
-- **Learning model:** Use the existing English-learning plans as supporting resources, not as substitutes for implementation, testing, and troubleshooting.
-
-## 1. Choose a Primary Direction
-
-Role titles vary across companies. Evaluate job descriptions by their responsibilities rather than by the title alone.
-
-| Direction | Main Responsibility | Skills to Add |
-| :--- | :--- | :--- |
-| **AI SRE / inference infrastructure — recommended starting point** | Keep AI services available, fast, scalable, and cost-effective. | GPU operations, model serving, inference performance, capacity planning, and AI-specific monitoring. |
-| **MLOps / ML platform engineering** | Make the model lifecycle reproducible and safely automated. | Python, data validation, training pipelines, experiment tracking, model evaluation, and promotion. |
-| **AIOps — a different emphasis** | Use AI to improve IT operations. | AI-assisted incident analysis, alert investigation, and operational automation. |
-
-The initial goal is not to become an algorithm researcher. Learn enough ML to understand why a healthy service can still produce bad predictions, and how to investigate that situation with ML practitioners.
-
-## 2. How to Use the Four Existing Plans
-
-Do not complete all four documents sequentially as prerequisites. Select their material to support the engineering topic being practiced that week.
-
-| Existing Plan | Role in This Roadmap | Priority |
-| :--- | :--- | :--- |
-| [05-AI Topics.md](./05-AI%20Topics.md) | AI concepts and English communication. | Prioritize Weeks 1–4, then Weeks 5–6 and 10–12: foundations, inference, LLMs, hallucinations, RAG, governance, evaluation, and model selection. Defer Weeks 7–9 unless the target role requires agents, coding assistants, or productivity automation. |
-| [20-MLOps.md](./20-MLOps.md) | The technical learning backbone. | Use all four weeks and attach practical exercises. The 24 study days introduce concepts; they do not establish production competence. |
-| [49-SRE.md](./49-SRE.md) | Transfer existing operational skills into AI scenarios. | Reuse SLOs, incident response, scaling, progressive delivery, and cost management. Review familiar fundamentals only where needed. |
-| [51-CNCF.md](./51-CNCF.md) | Reference material and English interview practice. | Skim familiar Kubernetes basics. Revisit observability, delivery, security, and other specific gaps when projects expose them. |
-
-For example, replace a general exercise such as “Explain HPA” with “Explain why CPU-based autoscaling may be insufficient for an LLM inference service.”
-
-The week numbers in the source documents are resource labels. They do not need to match the roadmap's calendar weeks.
-
-## 3. The 16-Week Roadmap
-
-Before starting, check whether you can write and test a small Python program, manage its dependencies, process tabular data, and expose a simple HTTP endpoint. If not, add a Python preparation phase before Week 1.
-
-| Roadmap Weeks | Focus | Supporting Material | Practical Completion Criteria |
-| :--- | :--- | :--- | :--- |
-| **1–2** | ML foundations: Python, NumPy/pandas, basic SQL, train/validation/test splits, leakage, overfitting, precision, and recall. | AI Topics Weeks 1–2. | Train a small classifier from a script, evaluate it on held-out data, and explain its errors rather than only reporting accuracy. |
-| **3–5** | Reproducible MLOps: experiment tracking, data/model versions, packaging, automated tests, and model registration. | MLOps Weeks 1–2. | Reproduce a training run within documented tolerances, trace its data/code/configuration, register the model, and serve predictions through an API. |
-| **6–8** | LLM serving: tokens, context length, GPU memory, batching, KV cache, and quantization. | AI Topics Weeks 3–4 and 12. | Deploy a small open-weight model with one serving engine. Benchmark concurrency and input/output lengths, and explain latency, throughput, memory, and quality trade-offs. |
-| **9–11** | AI reliability: inference SLOs, overload, cold starts, capacity, monitoring, and safe rollout. | MLOps Week 3; SRE Weeks 1–5 as needed; AI Topics Weeks 5 and 11 for output quality. | Build dashboards and alerts, inject failures in an isolated lab, demonstrate recovery and rollback, and write a postmortem. |
-| **12–14** | Specialization: choose AI SRE or MLOps using the branches below. | AI Topics Weeks 6 and 10 for the AI SRE branch; revisit MLOps Weeks 2–3 for the MLOps branch. | Complete one branch-specific project extension with tests and documented trade-offs. |
-| **15–16** | Portfolio and interviews: architecture decisions, operational ownership, and cost. | MLOps Week 4; selected SRE/CNCF English exercises. | Produce a reproducible demo, architecture diagram, benchmark report, runbook, and English walkthrough. |
-
-### Branch A — AI SRE / Inference Infrastructure
-
-This is the recommended first specialization because it directly extends Kubernetes and SRE experience.
-
-- **GPU operations:** Scheduling, quotas, isolation, driver/runtime compatibility, and hardware telemetry.
-- **Serving performance:** Queue-aware scaling, admission control, request limits, and graceful degradation.
-- **Capacity and cost:** Model load times, artifact caching, capacity headroom, and cost per workload.
-- **Application reliability:** Extend the inference project with a small retrieval-augmented generation (RAG) service, retrieval monitoring, and a fixed evaluation dataset.
-- **Data protection:** Control access to source documents and avoid exposing sensitive prompts or retrieved content in telemetry.
-
-**Completion criterion:** Demonstrate how the service behaves under increased load and component failure, explain its bottleneck using measurements, and show that a release has not regressed the chosen quality checks.
-
-### Branch B — MLOps / ML Platform Engineering
-
-Choose this branch if the target role emphasizes the training-to-production lifecycle and collaboration with data scientists.
-
-- **Pipeline automation:** Orchestrated training, data contracts, validation, and lineage.
-- **Feature consistency:** Apply compatible transformations during training and serving; understand when a feature store is justified.
-- **Release safety:** Evaluation gates, model promotion, rollback, and controlled retraining triggers.
-- **Production feedback:** Investigate drift, delayed labels, and changes in measured prediction quality.
-
-**Drift is a signal to investigate, not automatic proof that retraining is necessary.** A changed input distribution does not by itself establish that the model has become less useful.
-
-**Completion criterion:** Run an automated training-to-release workflow that validates its inputs, rejects an unsuitable candidate, records lineage, and supports rollback to a known version.
-
-Distributed training, multi-GPU networking, and checkpoint recovery can follow when target jobs emphasize training infrastructure. They are not prerequisites for the first two projects.
-
-## 4. Project A — A Reproducible Classical ML Service
-
-Use a small classification problem to learn the complete lifecycle without requiring a GPU.
-
-**Suggested starting stack:** Python + scikit-learn + MLflow + an API framework + Docker, followed by deployment to Kubernetes. These are starting choices, not an exhaustive tool checklist.
-
-### Required Deliverables
-
-- Versioned data, code, configuration, and model artifacts, with enough metadata to reproduce and explain a run.
-- A baseline model and held-out evaluation that avoids data leakage.
-- Automated tests and an evaluation gate before model promotion.
-- A deliberately degraded candidate that the release gate rejects.
-- A prediction endpoint with basic operational monitoring.
-- A demonstrated rollback to a known model version.
-
-Start with scripts and CI. Add a workflow orchestrator when the pipeline needs scheduling, dependencies, retries, or other coordination; do not make installing a large platform the first milestone.
-
-## 5. Project B — A Reliable LLM Inference Service
-
-Operate one small open-weight model and investigate its behavior under realistic workload changes.
-
-**Suggested starting stack:** One serving engine, such as vLLM, plus Kubernetes and the existing monitoring stack. Confirm model, GPU, and runtime compatibility before choosing the test environment.
-
-### Required Deliverables
-
-- Measurements of **time to first token**, **inter-token latency**, end-to-end latency, throughput, and queueing.
-- GPU memory and utilization dashboards alongside user-facing service metrics.
-- Load tests that record the model revision, hardware, serving configuration, concurrency, and input/output token lengths.
-- Recovery exercises for overload, model-loading failure, and a bad rollout, performed only in an isolated lab.
-- A fixed evaluation dataset and quality regression checks for model or configuration changes.
-- A runbook covering detection, triage, mitigation, recovery verification, and escalation.
-- A cost report with an explicit workload definition and measurement assumptions.
-
-### Separate Reliability from Model Quality
-
-An HTTP 200 response does not establish a correct answer. A good quality score does not establish availability.
-
-| Measurement Area | Examples | Purpose |
-| :--- | :--- | :--- |
-| Service reliability | Successful request rate, latency, time to first token, and streaming interruptions. | Define and assess the user-facing service SLOs. |
-| Capacity and efficiency | Queue depth, throughput, GPU memory, utilization, and workload-normalized cost. | Diagnose bottlenecks and inform scaling or capacity decisions. |
-| Model/application quality | Task success, groundedness, retrieval quality, and regression results on a fixed dataset. | Evaluate usefulness and guard against quality regressions. |
-
-Set thresholds for a documented workload and use case. Do not treat one aggregate score as a substitute for all three areas.
-
-### GPU Budget
-
-Project A can run without a GPU. For Project B, use short-lived GPU access with spending limits and release resources after experiments. A hosted model API is useful for application exercises, but it does not replace GPU operations practice.
-
-## 6. Integrate English with Engineering
-
-Use one shared topic each week so that reading, implementation, and English practice reinforce one another.
-
-| Activity | Suggested Share | Output |
-| :--- | :--- | :--- |
-| Implementation, testing, and troubleshooting | 60% | Working code, experiments, failure recovery, and measurements. |
-| Technical reading and targeted video segments | 25% | Notes that answer a concrete project question. |
-| English communication about the project | 15% | Architecture explanations, decision summaries, and incident reports. |
-
-Every week, produce:
-
-1. A **two-minute architecture explanation** in English.
-2. A **100–150-word decision or incident summary**.
-3. Answers to: **“What failed?”, “What evidence did you collect?”, and “Why did you choose this solution?”**
-
-Use familiar SRE topics for fluency practice, but spend most new technical study time on ML-specific gaps. Completing every video is not the objective.
-
-## 7. Weekly Self-Check and Portfolio Readiness
-
-- [ ] I built or improved something that can be demonstrated.
-- [ ] I recorded the configuration and evidence needed to explain the result.
-- [ ] I can identify a failure mode and describe how to detect and mitigate it.
-- [ ] I can explain one quality, latency, reliability, or cost trade-off in English.
-- [ ] I know which skill gap to address next week.
-
-By the end of this first iteration, aim to demonstrate both projects and explain their limits honestly. Use target job descriptions to decide which gaps need another iteration; a completed schedule alone does not establish production experience.
-
-The intended career positioning is:
-
-> I bring Kubernetes and SRE experience and can apply it to model delivery, inference performance, and AI reliability.
-
 ## 8. Daily English Learning Plan — AI SRE / Inference Infrastructure
 
 This companion plan covers **16 weeks × 6 study days = 96 days**, at approximately **30 minutes per study day**. Day numbers are study sessions, not calendar dates; use the seventh day for rest or catching up. The technical roadmap above remains a separate hands-on commitment. The English weeks follow their own progression and do not have to match the technical roadmap week for week.
@@ -180,8 +16,8 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
 | <span class="hl-key">❇️ </span> | 01 | **What happens during AI inference?** | [AI Inference: The Secret to AI's Superpowers — IBM Technology][v01] — listen for the request-to-prediction flow | [What is AI inference? — IBM][a01] — inference versus training | Record a 60-second baseline explanation using "input," "model," and "prediction." |
-| <span class="hl-key">❇️ </span> | 02 | How does a model reach production? | [Machine Learning Lifecycle Explained — Super Data Science][v02] — follow the lifecycle stages | [What is the AI lifecycle? — IBM][a02] — development and operational feedback | Write 80–100 words using "first," "next," and "finally." |
-| <span class="hl-key">❇️ </span> | 03 | Where do SRE and MLOps overlap? | [What is MLOps? — IBM Technology][v03] — listen for operational responsibilities | [What is MLOps? — IBM][a03] — lifecycle automation | Explain the overlap in 90 seconds using "whereas" and "reliability." |
+|  | 02 | How does a model reach production? | [Machine Learning Lifecycle Explained — Super Data Science][v02] — follow the lifecycle stages | [What is the AI lifecycle? — IBM][a02] — development and operational feedback | Write 80–100 words using "first," "next," and "finally." |
+| | 03 | Where do SRE and MLOps overlap? | [What is MLOps? — IBM Technology][v03] — listen for operational responsibilities | [What is MLOps? — IBM][a03] — lifecycle automation | Explain the overlap in 90 seconds using "whereas" and "reliability." |
 |  | 04 | Which layers support an AI service? | [Infrastructure Layer: Power the AI Stack — IBM Technology][v04] — follow the infrastructure dependencies | [What is an AI stack? — IBM][a04] — infrastructure, data, and model layers | Write a 100-word dependency map using "depends on" three times. |
 |  | 05 | Why does deployment need automation? | [What Is MLOps? — MathWorks, Heather Gorr][v05] — focus on production automation | [What is model deployment? — IBM][a05] — packaging and operational considerations | Explain two deployment risks in 90 seconds using "in order to." |
 |  | 06 | Review: explain the production ML lifecycle | [Machine Learning Engineering for Production — DeepLearning.AI][v06] — replay the opening discussion of production challenges | [MLOps: Continuous delivery and automation pipelines — Google Cloud][a06] — check the lifecycle and ownership | Give a two-minute explanation without notes; compare with Day 01. |
@@ -190,7 +26,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 07 | What does an LLM predict? | [Large Language Models Explained Briefly — 3Blue1Brown, official bilingual upload][v07] — listen for next-token prediction | [Large language models — IBM][a07] — definitions and limitations | Explain an LLM in 90 seconds using "predicts" rather than "knows." |
+| <span class="hl-key">❇️ </span> | 07 | What does an LLM predict? | [Large Language Models Explained Briefly — 3Blue1Brown, official bilingual upload][v07] — listen for next-token prediction | [Large language models — IBM][a07] — definitions and limitations | Explain an LLM in 90 seconds using "predicts" rather than "knows." |
 |  | 08 | How do tokens pass through a transformer? | [Transformers Explained — 3Blue1Brown, official bilingual upload][v08] — follow the opening token workflow | [Transformer models — IBM][a08] — architecture overview | Write 80–100 words using "first," "embedding," and "finally." |
 |  | 09 | Why does attention use context? | [Attention in Transformers — 3Blue1Brown, official bilingual upload][v09] — focus on the first contextual example | [Attention mechanisms — IBM][a09] — contextual relationships | Explain one example in 90 seconds using "depending on" and "relevant." |
 |  | 10 | What limits the context window? | [What Is the LLM's Context Window? — New Machina][v10] — listen for input and output limits | [Context windows — IBM][a10] — token limits and operational implications | Write a 100-word explanation using "whereas" and "limit." |
@@ -201,7 +37,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 13 | Why use GPUs instead of CPUs for some workloads? | [GPUs: Explained — IBM Technology][v13] — listen for parallel processing | [CPU vs. GPU for machine learning — IBM][a13] — architectural trade-offs | Compare CPU and GPU work in 90 seconds using "whereas" twice. |
+| <span class="hl-key">❇️ </span> | 13 | Why use GPUs instead of CPUs for some workloads? | [GPUs: Explained — IBM Technology][v13] — listen for parallel processing | [CPU vs. GPU for machine learning — IBM][a13] — architectural trade-offs | Compare CPU and GPU work in 90 seconds using "whereas" twice. |
 |  | 14 | How do memory capacity and bandwidth differ? | [High Bandwidth Memory Explained — Techquickie][v14] — focus on the memory-interface analogy | [High Bandwidth Memory: Everything You Need to Know — Rambus][a14] — bandwidth and stacked memory | Write 100 words distinguishing storage capacity from transfer speed. |
 |  | 15 | What does CUDA provide? | [Nvidia CUDA in 100 Seconds — Fireship][v15] — listen for the software and hardware relationship | [CUDA platform — NVIDIA][a15] — compiler, libraries, and runtime | Explain the CUDA stack in 90 seconds using "enables" and "depends on." |
 |  | 16 | How does a container access a GPU? | [Docker with NVIDIA GPU Support — Jeremy Pedersen][v16] — follow the runtime integration concept | [NVIDIA Container Toolkit overview][a16] — runtime components | Write 100 words separating the host driver from container libraries; do not copy old installation commands. |
@@ -212,7 +48,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 19 | How does Kubernetes discover GPUs? | [GPUs on Kubernetes: What Actually Happens — CNCF, Topcu and Polencic][v19] — follow the device allocation path | [Device plugins — Kubernetes][a19] — discovery and resource reporting | Explain device discovery in 90 seconds using "advertises," "allocates," and "kubelet." |
+| <span class="hl-key">❇️ </span> | 19 | How does Kubernetes discover GPUs? | [GPUs on Kubernetes: What Actually Happens — CNCF, Topcu and Polencic][v19] — follow the device allocation path | [Device plugins — Kubernetes][a19] — discovery and resource reporting | Explain device discovery in 90 seconds using "advertises," "allocates," and "kubelet." |
 |  | 20 | What does the GPU Operator manage? | [Mastering GPU Management Using the Operator Pattern — CNCF][v20] — focus on the managed components | [About the NVIDIA GPU Operator][a20] — driver, toolkit, and plugin responsibilities | Write 100 words explaining which responsibilities the operator automates. |
 |  | 21 | What isolation does MIG provide? | [Efficient Access to Shared GPU Resources — CNCF][v21] — listen for physical partitioning | [GPU Operator with MIG — NVIDIA][a21] — supported hardware and partitions | Compare a full GPU and a MIG instance in 90 seconds using "whereas." |
 |  | 22 | What are the limits of time-slicing? | [GPU Sharing and CDI in Device Plugins — CNCF][v22] — focus on sharing mechanisms | [Time-slicing GPUs in Kubernetes — NVIDIA][a22] — memory and fault-isolation limitations | Write 100–120 words explaining why a shared slot is not a dedicated memory partition. |
@@ -223,7 +59,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 25 | What does an inference runtime do? | [What an Inference Runtime Actually Does — Mahesh Dsouza][v25] — follow the serving responsibilities | [Quickstart — vLLM][a25] — offline inference and online serving | Explain the runtime's role in 90 seconds using "loads," "schedules," and "generates." |
+| <span class="hl-key">❇️ </span> | 25 | What does an inference runtime do? | [What an Inference Runtime Actually Does — Mahesh Dsouza][v25] — follow the serving responsibilities | [Quickstart — vLLM][a25] — offline inference and online serving | Explain the runtime's role in 90 seconds using "loads," "schedules," and "generates." |
 |  | 26 | What does an OpenAI-compatible endpoint provide? | [Understanding vLLM with a Hands-On Demo — KodeKloud][v26] — focus on the API server example | [OpenAI-compatible server — vLLM][a26] — supported APIs and limitations | Write 100 words explaining why compatible APIs do not imply identical behavior. |
 |  | 27 | What does Triton Inference Server manage? | [Top 5 Reasons Why Triton Is Simplifying Inference — NVIDIA Developer][v27] — listen for model-serving capabilities | [Triton Inference Server overview — NVIDIA][a27] — serving across model frameworks | Explain Triton's role in 90 seconds using "backend" and "endpoint." |
 |  | 28 | How does KServe fit above a model server? | [Deploy Models with KServe, MLServer and MLflow — MLWorks][v28] — focus on component responsibilities | [Deploy your first predictive InferenceService — KServe][a28] — declarative serving | Write 100 words distinguishing orchestration from model execution. |
@@ -234,7 +70,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 31 | How are model files downloaded and cached? | [Download a Model from Hugging Face — Amit Thinks][v31] — follow the artifact retrieval workflow | [Download files from the Hub — Hugging Face][a31] — revisions and caching | Explain a download failure and a cache hit in 90 seconds. |
+| <span class="hl-key">❇️ </span> | 31 | How are model files downloaded and cached? | [Download a Model from Hugging Face — Amit Thinks][v31] — follow the artifact retrieval workflow | [Download files from the Hub — Hugging Face][a31] — revisions and caching | Explain a download failure and a cache hit in 90 seconds. |
 |  | 32 | Why record the model version? | [MLflow Model Tracking and Model Registry — FourthBrainAI][v32] — listen for lineage and registration | [ML model registry — MLflow][a32] — versions, aliases, and metadata | Write a 100-word release record using "version," "artifact," and "reproduce." |
 |  | 33 | Which files make a model usable? | [Hugging Face AI Model Files Explained — Fahd Mirza][v33] — distinguish weights, configuration, and tokenizer files | [Safetensors security audit — Hugging Face][a33] — safer tensor serialization and its scope | Explain in 90 seconds why safe weights do not make all accompanying code trustworthy. |
 |  | 34 | What belongs in a deployable model package? | [Machine Learning Packaging for Ops with KitOps — Bret Fisher][v34] — focus on reproducible bundles | [ModelKit overview — KitOps][a34] — OCI packaging for model artifacts | Write 100 words comparing a model package with a container image. |
@@ -245,7 +81,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 37 | What is prefill versus decode? | [Why LLMs Read Fast but Write Slowly - Prefill vs Decode — ML Guy][v37] — listen for the two-phase timing difference | [Prefill and Decode for Concurrent Requests — Hugging Face][a37] — latency budgets under load | Explain in 90 seconds why time-to-first-token and inter-token latency behave differently. |
+| <span class="hl-key">❇️ </span> | 37 | What is prefill versus decode? | [Why LLMs Read Fast but Write Slowly - Prefill vs Decode — ML Guy][v37] — listen for the two-phase timing difference | [Prefill and Decode for Concurrent Requests — Hugging Face][a37] — latency budgets under load | Explain in 90 seconds why time-to-first-token and inter-token latency behave differently. |
 |  | 38 | What does the KV cache store? | [KV Cache Explained: Speed Up LLM Inference with Prefill and Decode — Ready Tensor][v38] — follow the key-and-value reuse example | [Paged Attention — vLLM][a38] — how attention memory is partitioned | Write 100 words explaining why a KV cache saves compute but uses GPU memory. |
 |  | 39 | How does continuous batching raise throughput? | [Continuous Batching for LLM Inference — Uplatz][v39] — focus on iteration-level scheduling | [Continuous batching from first principles — Hugging Face][a39] — static versus dynamic batching | Explain in 90 seconds why continuous batching reduces the padding waste of static batches. |
 |  | 40 | What does prefix caching reuse? | [What is Prefix Caching? — Standarity][v40] — listen for the shared-prefix reuse story | [Automatic Prefix Caching — vLLM][a40] — enabling APC and limits | Write 100 words describing one workload where prefix caching helps and one where it does not. |
@@ -256,7 +92,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 43 | What is time to first token? | [LLM Inference Performance: Latency and Throughput Metrics — Ready Tensor][v43] — listen for the TTFT definition | [Metrics — NVIDIA NIM LLMs Benchmarking][a43] — TTFT, e2e latency, ITL, TPS, RPS | Explain in 90 seconds which stages of inference contribute to TTFT. |
+| <span class="hl-key">❇️ </span> | 43 | What is time to first token? | [LLM Inference Performance: Latency and Throughput Metrics — Ready Tensor][v43] — listen for the TTFT definition | [Metrics — NVIDIA NIM LLMs Benchmarking][a43] — TTFT, e2e latency, ITL, TPS, RPS | Explain in 90 seconds which stages of inference contribute to TTFT. |
 |  | 44 | What is inter-token latency? | [RTX 4090 vLLM Benchmark — Database Mart][v44] — focus on the latency numbers | [Benchmark CLI — vLLM][a44] — benchmark serving and throughput scripts | Write 100 words describing how to record ITL under varying concurrency. |
 |  | 45 | How do TPS and RPS compare? | [GuideLLM: Evaluate your LLM Deployments for Real-World Inference — Red Hat, vLLM Office Hours][v45] — listen for the per-system versus per-user framing | [Understand LLM latency and throughput metrics — Anyscale][a45] — tokens, requests, and concurrency | Explain in 90 seconds why total TPS can grow while TPS per user shrinks. |
 |  | 46 | How do you design a realistic benchmark workload? | [Ultimate Guide to LLM Benchmarks — Bhavesh Bhatt][v46] — focus on the workload-shape examples | [LLM inference latency — ClickHouse][a46] — capturing TTFT and TPOT in practice | Write 100 words listing the workload variables a benchmark report must record. |
@@ -267,7 +103,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 49 | What does HPA scale on? | [Kubernetes HPA Explained in 10 Minutes — Cloud Guru][v49] — listen for the metric, target, and stabilization window | [Horizontal Pod Autoscaling — Kubernetes][a49] — metrics, behaviors, and policies | Explain in 90 seconds how a target utilization becomes a replica count. |
+| <span class="hl-key">❇️ </span> | 49 | What does HPA scale on? | [Kubernetes HPA Explained in 10 Minutes — Cloud Guru][v49] — listen for the metric, target, and stabilization window | [Horizontal Pod Autoscaling — Kubernetes][a49] — metrics, behaviors, and policies | Explain in 90 seconds how a target utilization becomes a replica count. |
 |  | 50 | Why is CPU-based HPA unreliable for LLMs? | [Optimizing Load Balancing and Autoscaling for LLM Inference on Kubernetes — CNCF, D. Gray][v50] — focus on the queue and prefill pressures | [Best practices for autoscaling LLM inference — Google Cloud][a50] — metric selection for inference | Write 100 words explaining why queue depth or pending requests beat CPU for LLM scale-out. |
 |  | 51 | How does KEDA extend HPA? | [Run Scalable LLMs on Kubernetes in Minutes (Using KEDA) — DigitalOcean][v51] — follow the ScaledObject definition | [Autoscaling with KEDA — vLLM Production Stack][a51] — Prometheus trigger and queue threshold | Explain in 90 seconds how KEDA scales a Deployment from a Prometheus query. |
 |  | 52 | What triggers a KEDA scaler? | [KEDA: Kubernetes Event-Driven Autoscaling — DevOps & AI Toolkit][v52] — listen for the scaler and polling examples | [Autoscale GPU and LLM workloads on Kubernetes — Kedify][a52] — inference-aware routing and HTTP scalers | Write 100 words comparing KEDA scalers with custom-metric HPA. |
@@ -278,7 +114,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 55 | What does vLLM expose as metrics? | [Get More Performance From Your DGX Spark — vLLM + Grafana Tuning Dashboard — Ryan Susman][v55] — follow the metric-to-panel example | [Metrics — vLLM][a55] — vLLM engine and request metrics | Explain in 90 seconds which vLLM metric best reflects user-perceived queueing. |
+| <span class="hl-key">❇️ </span> | 55 | What does vLLM expose as metrics? | [Get More Performance From Your DGX Spark — vLLM + Grafana Tuning Dashboard — Ryan Susman][v55] — follow the metric-to-panel example | [Metrics — vLLM][a55] — vLLM engine and request metrics | Explain in 90 seconds which vLLM metric best reflects user-perceived queueing. |
 |  | 56 | How does OpenTelemetry trace an LLM call? | [Intro to OpenTelemetry and LLM Observability — Arize AI][v56] — listen for the span and attributes example | [OpenTelemetry Concepts][a56] — signals, instrumentation, context | Write 100 words listing the spans you would record across one LLM request. |
 |  | 57 | How do you log prompts safely? | [WSO2 AI Guardrails: PII Masking, Prompt Injection & Safety — WSO2][v57] — focus on the masking and redaction steps | [Redact PII from LLM Telemetry Without Losing Debuggability — OpenObserve][a57] — masking trade-offs | Explain in 90 seconds why redaction is required before sending traces to a vendor. |
 |  | 58 | What belongs on a GPU dashboard? | [How to Monitor Key LLM Metrics (GPU + Grafana Dashboard) — Saujan Bohara][v58] — follow the panel selection | [Enabling the GPU Monitoring Dashboard — NVIDIA GPU Operator][a58] — DCGM exporter metrics | Write 100 words describing the panels you would keep, drop, or add for one inference cluster. |
@@ -289,7 +125,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 61 | What is an SLO? | [SLO vs SLI vs SLA vs Error Budget — Tech Tutorials with Piyush][v61] — listen for the reliability-target framing | [Designing SLOs — Google Cloud][a61] — SLI types, compliance, and error budget | Explain in 90 seconds the difference between SLO, SLI, and SLA. |
+| <span class="hl-key">❇️ </span> | 61 | What is an SLO? | [SLO vs SLI vs SLA vs Error Budget — Tech Tutorials with Piyush][v61] — listen for the reliability-target framing | [Designing SLOs — Google Cloud][a61] — SLI types, compliance, and error budget | Explain in 90 seconds the difference between SLO, SLI, and SLA. |
 |  | 62 | Which metric makes a good SLI? | [SLO & SLI Explained: Service Level Objectives & Indicators for Beginners — CodeLucky][v62] — follow the SLI-selection examples | [SLA vs SLO vs SLI Explained: Key Differences — NovelVista][a62] — what each term really covers | Write 100 words proposing SLIs for one documented inference workload. |
 |  | 63 | What is an error budget? | [Error Budgets Explained: Balance Innovation & Reliability — CodeLucky][v63] — listen for the budget-versus-risk framing | [How to Set SLOs in 2026: SLIs, Error Budgets & Burn-Rate Alerts — OpenObserve][a63] — common SLO mistakes | Explain in 90 seconds how an error budget connects availability and release velocity. |
 |  | 64 | How do you write an alert rule? | [Full Tutorial: AlertManager Set up and PrometheusRules — Anais Urlichs][v64] — follow the rule and routing example | [Configuration — Prometheus][a64] — alerting rules, routes, and receivers | Write 100 words distinguishing a symptom alert from a budget-burn alert. |
@@ -300,7 +136,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 67 | What is an incident response lifecycle? | [The 6 Steps of the Incident Response Life Cycle — Cyber Gray Matter][v67] — follow the detect-to-learn sequence | [Incident Response Process: Step-by-Step Guide for SRE Teams — Rootly][a67] — lifecycle stages and ownership | Explain in 90 seconds which stages an SRE typically owns and which need a separate responder. |
+| <span class="hl-key">❇️ </span> | 67 | What is an incident response lifecycle? | [The 6 Steps of the Incident Response Life Cycle — Cyber Gray Matter][v67] — follow the detect-to-learn sequence | [Incident Response Process: Step-by-Step Guide for SRE Teams — Rootly][a67] — lifecycle stages and ownership | Explain in 90 seconds which stages an SRE typically owns and which need a separate responder. |
 |  | 68 | How do you triage an inference failure? | [How Site Reliability Engineering Handles High-Severity Incidents — SystemDR][v68] — listen for the triage and command example | [Troubleshooting GPU Memory Out-of-Memory Errors — NVIDIA NIM][a68] — OOM symptoms and mitigations | Write 100 words listing the first three signals you would check for a slow LLM endpoint. |
 |  | 69 | What is a blameless postmortem? | [Blameless Post Mortems — Code for America, John Allspaw][v69] — listen for the systems-versus-people framing | [How to run a blameless postmortem — Atlassian][a69] — story, contributing factors, and actions | Explain in 90 seconds why a postmortem lists contributing factors instead of human faults. |
 |  | 70 | What causes GPU OOM during inference? | [Learn vLLM: Troubleshooting Deepseek R1 8B GPU OOM on single L4 GPU — Samos123][v70] — follow the OOM investigation | [vLLM OOM Errors: Root Cause Diagnosis Guide — Paralleliq][a70] — KV cache, batch size, fragmentation | Write 100 words distinguishing a model-size OOM from a KV-cache OOM. |
@@ -311,7 +147,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 73 | How do you version and stage a model? | [MLflow Model Registry Explained — YourMLStudents][v73] — listen for the staging-to-production transition | [Manage model lifecycle using the Workspace Model Registry — Databricks][a73] — lifecycle stages and ownership | Explain in 90 seconds why staging and production are separate steps. |
+| <span class="hl-key">❇️ </span> | 73 | How do you version and stage a model? | [MLflow Model Registry Explained — YourMLStudents][v73] — listen for the staging-to-production transition | [Manage model lifecycle using the Workspace Model Registry — Databricks][a73] — lifecycle stages and ownership | Explain in 90 seconds why staging and production are separate steps. |
 |  | 74 | What is a canary release? | [Canary Deployments Explained — Harness][v74] — focus on the gradual traffic shift | [Canary Deployment Strategy — Argo Rollouts][a74] — steps, weights, and pause conditions | Write 100 words explaining why canary shifts allow an early rollback. |
 |  | 75 | What is blue-green deployment? | [Kubernetes Blue Green Deployment Strategy Explained — Aman Pathak][v75] — follow the active and preview service split | [BlueGreen Deployment Strategy — Argo Rollouts][a75] — active, preview, and scale-down delay | Explain in 90 seconds why blue-green gives instant rollback but doubles resource use briefly. |
 |  | 76 | What is a dark launch or shadow deployment? | [How Do Dark Launches Work In Continuous Deployment? — Cloud Stack Studio][v76] — listen for the mirrored-traffic pattern | [Kubernetes Deployment Strategies — Octopus Deploy][a76] — rolling, blue-green, canary, and shadow | Write 100 words describing what shadow deployment tells you that canary cannot. |
@@ -322,7 +158,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 79 | What is RAG? | [What is Retrieval-Augmented Generation (RAG)? — IBM Technology][v79] — follow the retrieve-then-generate flow | [What is RAG? — IBM][a79] — knowledge base, retriever, generator | Explain in 90 seconds why retrieval can improve factuality without retraining. |
+| <span class="hl-key">❇️ </span> | 79 | What is RAG? | [What is Retrieval-Augmented Generation (RAG)? — IBM Technology][v79] — follow the retrieve-then-generate flow | [What is RAG? — IBM][a79] — knowledge base, retriever, generator | Explain in 90 seconds why retrieval can improve factuality without retraining. |
 |  | 80 | What are the parts of a RAG pipeline? | [RAG Explained in 10 Minutes — Cloud Quick Labs][v80] — listen for chunking and embedding | [What is Retrieval-Augmented Generation (RAG)? — Databricks][a80] — ingestion, retrieval, augmentation, generation | Write 100 words naming the offline ingestion path and the online query path. |
 |  | 81 | How do you build a RAG pipeline? | [RAG Tutorial 2026 #1 — Harish Neel][v81] — focus on the end-to-end walkthrough | [Faithfulness — Ragas][a81] — factual consistency of the response with retrieved context | Explain in 90 seconds why a faithful answer still may not be relevant. |
 |  | 82 | How do you evaluate the retriever? | [Vector Databases Explained — Aishwarya Srinivasan][v82] — focus on similarity search and chunking trade-offs | [Understanding RAG Part IV: RAGAs & Other Evaluation Frameworks — Machine Learning Mastery][a82] — contextual precision and recall | Write 100 words distinguishing recall from precision in retrieval. |
@@ -333,7 +169,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 85 | What is the cost per million tokens? | [LLM Cost Optimization: Token Economics for Agentic FinOps — KryptoMindz Technologies][v85] — follow the cost-per-token framing | [AI Inference Cost Economics in 2026 — Spheron][a85] — cost per million tokens and four optimization layers | Explain in 90 seconds why CPM is the most useful cost metric for inference. |
+| <span class="hl-key">❇️ </span> | 85 | What is the cost per million tokens? | [LLM Cost Optimization: Token Economics for Agentic FinOps — KryptoMindz Technologies][v85] — follow the cost-per-token framing | [AI Inference Cost Economics in 2026 — Spheron][a85] — cost per million tokens and four optimization layers | Explain in 90 seconds why CPM is the most useful cost metric for inference. |
 |  | 86 | How do you right-size GPU memory? | [How Much GPU Memory is Needed for LLM Inference? — AppliedAI][v86] — listen for the model-size plus KV-cache formula | [Optimizing Inference Costs: The Complete Guide — Mirantis][a86] — right-sizing and idle-capacity avoidance | Write 100 words explaining why model weights, KV cache, and concurrency all fit into the sizing math. |
 |  | 87 | Are spot GPUs worth the risk? | [Running Multiple Models on the Same GPU, on Spot Instances — Toronto Machine Learning Society][v87] — focus on interruption handling | [What Are Spot GPUs? — Northflank][a87] — discounts, interruption warnings, and fit for inference | Explain in 90 seconds why spot GPUs change the answer to "where does state live?" |
 |  | 88 | What is prompt injection? | [What Is a Prompt Injection Attack? — IBM Technology][v88] — listen for direct and indirect injection | [LLM01:2025 Prompt Injection — OWASP Gen AI Security Project][a88] — risk description and mitigations | Write 100 words distinguishing direct injection from indirect injection through retrieved content. |
@@ -344,7 +180,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-|  | 91 | How do throughput and latency trade off? | [ML Model Serving – Latency vs Throughput — Uplatz][v91] — follow the latency-versus-throughput framing | [The LLM Inference Trilemma — DigitalOcean][a91] — throughput, latency, and cost trade-offs | Explain in 90 seconds why per-user latency can rise while total throughput grows. |
+| <span class="hl-key">❇️ </span> | 91 | How do throughput and latency trade off? | [ML Model Serving – Latency vs Throughput — Uplatz][v91] — follow the latency-versus-throughput framing | [The LLM Inference Trilemma — DigitalOcean][a91] — throughput, latency, and cost trade-offs | Explain in 90 seconds why per-user latency can rise while total throughput grows. |
 |  | 92 | When is batch inference the right choice? | [Scaling LLM Batch Inference: Ray Data & vLLM — InfoQ][v92] — focus on the batch pipeline | [Realtime vs Batch Inference — Inworld AI][a92] — serving contracts, latency budgets, and batching wins | Write 100 words naming one workload that fits batch inference and one that does not. |
 |  | 93 | How do you serve multiple tenants safely? | [Multi-Tenant AI-as-a-Service for AI Factories — OpenNebula][v93] — listen for isolation and quota | [Multi-Tenant LLM Serving on GPU Cloud — Spheron][a93] — per-customer quotas and noisy-neighbor isolation | Explain in 90 seconds why request quotas are not the same as token quotas. |
 |  | 94 | Build versus buy: when is an API the right answer? | [API vs Self-Hosted LLMs — CodeLucky][v94] — follow the control-versus-convenience comparison | [Managed LLM API vs Self-Hosting — Access All GPT][a94] — decision criteria, cost, and compliance | Write 100 words listing two scenarios where a managed API wins and two where self-hosting wins. |
