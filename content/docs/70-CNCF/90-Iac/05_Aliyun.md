@@ -7,7 +7,7 @@ title: "Aliyun-IacService"
 
 | 服务 / 工具 | 文档地址 | 服务地址 | GitHub 地址 |
 |---|---|---|---|
-| 自动化服务台（IaC Service） | [文档](https://help.aliyun.com/zh/terraform/iac-service-overview) | [控制台](https://iac.console.aliyun.com/) | — |
+| 自动化服务台（IaC Service） | [文档](https://help.aliyun.com/zh/terraform/iac-service-overview) | [控制台](https://iac.console.aliyun.com/) | [alibabacloud-terraform-scaffold](https://github.com/alibabacloud-automation/alibabacloud-terraform-scaffold/blob/main/README-CN.md) |
 | 资源编排 ROS | [文档](https://help.aliyun.com/zh/ros/product-overview/what-is-ros) | [控制台](https://ros.console.aliyun.com/) | — |
 | Terraform Provider for Alicloud | [文档](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs) | — | [GitHub](https://github.com/aliyun/terraform-provider-alicloud) |
 | Pulumi Alicloud Provider | [文档](https://www.pulumi.com/registry/packages/alicloud/) | — | [GitHub](https://github.com/pulumi/pulumi-alicloud) |
