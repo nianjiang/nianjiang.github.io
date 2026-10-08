@@ -11,6 +11,27 @@ Use 3 minutes for recall, 10 minutes for a short English video segment, 8 minute
 
 The progression is inference fundamentals → GPU infrastructure → serving → performance and scaling → observability and reliability → quality, cost, and security → architecture decisions. Watching and explaining material does not replace the project completion criteria above.
 
+## Contents
+
+| Weeks | Theme | Key Topics |
+| :---: | :--- | :--- |
+| 1 | [AI Inference & Production ML Lifecycle](/docs/99-English/01-Schedule/02-First/#week-1--ai-inference-and-the-production-ml-lifecycle) | Inference basics, ML lifecycle, MLOps vs SRE, AI stack layers, deployment automation |
+| 2 | [LLM Fundamentals for Operators](/docs/99-English/01-Schedule/02-First/#week-2--llm-fundamentals-for-operators) | Next-token prediction, transformer flow, attention & context, context window limits, temperature & sampling |
+| 3 | [GPU Hardware, Memory & Runtime](/docs/99-English/01-Schedule/02-First/#week-3--gpu-hardware-memory-and-runtime-foundations) | CPU vs GPU, HBM bandwidth, CUDA stack, container GPU access, mixed precision (FP16/FP32) |
+| 4 | [GPU Workloads on Kubernetes](/docs/99-English/01-Schedule/02-First/#week-4--operating-gpu-workloads-on-kubernetes) | Device plugin discovery, GPU Operator, MIG isolation, time-slicing limits, scheduling troubleshooting |
+| 5 | [Model Serving & Inference Engines](/docs/99-English/01-Schedule/02-First/#week-5--model-serving-and-inference-engines) | Inference runtime role, OpenAI-compatible APIs, Triton, KServe orchestration, TensorRT-LLM |
+| 6 | [Model Artifacts, Deployment & Startup](/docs/99-English/01-Schedule/02-First/#week-6--model-artifacts-deployment-and-startup) | Model download & cache, versioning (MLflow), safetensors, OCI packaging, probes for slow loading |
+| 7 | [Inference Performance & Optimization](/docs/99-English/01-Schedule/02-First/#week-7--inference-performance-and-optimization) | Prefill vs decode, KV cache, continuous batching, prefix caching, quantization (GPTQ/AWQ/GGUF) |
+| 8 | [Benchmarking Latency, Throughput & Quality](/docs/99-English/01-Schedule/02-First/#week-8--benchmarking-latency-throughput-and-quality) | TTFT, ITL, TPS vs RPS, benchmark workload design, quality metrics vs SLOs |
+| 9 | [Autoscaling & Capacity Planning](/docs/99-English/01-Schedule/02-First/#week-9--autoscaling-and-capacity-planning) | HPA metrics, KEDA scalers, GPU capacity sizing, cost vs latency vs throughput |
+| 10 | [AI Observability: Metrics, Logs & Traces](/docs/99-English/01-Schedule/02-First/#week-10--ai-observability-metrics-logs-and-traces) | vLLM metrics, OpenTelemetry spans, PII redaction, GPU dashboards, prompt drift |
+| 11 | [Inference SLOs, Error Budgets & Alerting](/docs/99-English/01-Schedule/02-First/#week-11--inference-slos-error-budgets-and-alerting) | SLO/SLI/SLA, error budgets, AlertManager rules, multi-window burn-rate alerts |
+| 12 | [Incident Response & Failure Recovery](/docs/99-English/01-Schedule/02-First/#week-12--incident-response-and-failure-recovery) | IR lifecycle, inference triage, blameless postmortem, GPU OOM, chaos engineering |
+| 13 | [Safe Model Releases & Rollback](/docs/99-English/01-Schedule/02-First/#week-13--safe-model-releases-and-rollback) | Model registry stages, canary, blue-green, shadow/dark launch, Argo Rollouts |
+| 14 | [RAG Reliability & Quality Evaluation](/docs/99-English/01-Schedule/02-First/#week-14--rag-reliability-and-quality-evaluation) | RAG pipeline, retriever evaluation, RAG triad (relevancy, faithfulness, contextual relevancy) |
+| 15 | [Cost, Security & Data Protection](/docs/99-English/01-Schedule/02-First/#week-15--cost-security-and-data-protection) | Cost per M tokens, GPU right-sizing, spot GPUs, prompt injection, PII redaction |
+| 16 | [Architecture Trade-offs & Final Review](/docs/99-English/01-Schedule/02-First/#week-16--architecture-trade-offs-and-final-review) | Throughput vs latency, batch inference, multi-tenancy, build vs buy, hybrid vs self-hosted |
+
 ## Week 1 — AI Inference and the Production ML Lifecycle
 
 |  | Day | Topic | Video | Article | English Practice |
@@ -196,28 +217,6 @@ After each sixth study day, record:
 - **Speaking:** Can I explain the topic for two minutes using only a few keywords?
 - **Writing:** Can I produce a short summary with a main point, an example, and a limitation?
 - **Next step:** Which one difficulty should I focus on next week? Repeat a difficult week if needed; finishing on schedule is not a language-proficiency test.
-
-## Content
-
-| Weeks | Theme | Key Topics |
-| :---: | :--- | :--- |
-| 1 | [AI Inference & Production ML Lifecycle](#week-1--ai-inference-and-the-production-ml-lifecycle) | Inference basics, ML lifecycle, MLOps vs SRE, AI stack layers, deployment automation |
-| 2 | [LLM Fundamentals for Operators](#week-2--llm-fundamentals-for-operators) | Next-token prediction, transformer flow, attention & context, context window limits, temperature & sampling |
-| 3 | [GPU Hardware, Memory & Runtime](#week-3--gpu-hardware-memory-and-runtime-foundations) | CPU vs GPU, HBM bandwidth, CUDA stack, container GPU access, mixed precision (FP16/FP32) |
-| 4 | [GPU Workloads on Kubernetes](#week-4--operating-gpu-workloads-on-kubernetes) | Device plugin discovery, GPU Operator, MIG isolation, time-slicing limits, scheduling troubleshooting |
-| 5 | [Model Serving & Inference Engines](#week-5--model-serving-and-inference-engines) | Inference runtime role, OpenAI-compatible APIs, Triton, KServe orchestration, TensorRT-LLM |
-| 6 | [Model Artifacts, Deployment & Startup](#week-6--model-artifacts-deployment-and-startup) | Model download & cache, versioning (MLflow), safetensors, OCI packaging, probes for slow loading |
-| 7 | [Inference Performance & Optimization](#week-7--inference-performance-and-optimization) | Prefill vs decode, KV cache, continuous batching, prefix caching, quantization (GPTQ/AWQ/GGUF) |
-| 8 | [Benchmarking Latency, Throughput & Quality](#week-8--benchmarking-latency-throughput-and-quality) | TTFT, ITL, TPS vs RPS, benchmark workload design, quality metrics vs SLOs |
-| 9 | [Autoscaling & Capacity Planning](#week-9--autoscaling-and-capacity-planning) | HPA metrics, KEDA scalers, GPU capacity sizing, cost vs latency vs throughput |
-| 10 | [AI Observability: Metrics, Logs & Traces](#week-10--ai-observability-metrics-logs-and-traces) | vLLM metrics, OpenTelemetry spans, PII redaction, GPU dashboards, prompt drift |
-| 11 | [Inference SLOs, Error Budgets & Alerting](#week-11--inference-slos-error-budgets-and-alerting) | SLO/SLI/SLA, error budgets, AlertManager rules, multi-window burn-rate alerts |
-| 12 | [Incident Response & Failure Recovery](#week-12--incident-response-and-failure-recovery) | IR lifecycle, inference triage, blameless postmortem, GPU OOM, chaos engineering |
-| 13 | [Safe Model Releases & Rollback](#week-13--safe-model-releases-and-rollback) | Model registry stages, canary, blue-green, shadow/dark launch, Argo Rollouts |
-| 14 | [RAG Reliability & Quality Evaluation](#week-14--rag-reliability-and-quality-evaluation) | RAG pipeline, retriever evaluation, RAG triad (relevancy, faithfulness, contextual relevancy) |
-| 15 | [Cost, Security & Data Protection](#week-15--cost-security-and-data-protection) | Cost per M tokens, GPU right-sizing, spot GPUs, prompt injection, PII redaction |
-| 16 | [Architecture Trade-offs & Final Review](#week-16--architecture-trade-offs-and-final-review) | Throughput vs latency, batch inference, multi-tenancy, build vs buy, hybrid vs self-hosted |
-
 
 [v01]: https://www.youtube.com/watch?v=XtT5i0ZeHHE
 [v02]: https://www.youtube.com/watch?v=OMNHrfhdf0k
