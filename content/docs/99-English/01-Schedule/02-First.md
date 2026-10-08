@@ -13,7 +13,7 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 ## Contents
 
-| Weeks | Theme | Key Topics | |
+| Weeks | Theme | Key Topics |--------- |
 | :---: | :--- | :--- | :--- |
 | 1 | [AI Inference & Production ML Lifecycle](/docs/99-English/01-Schedule/02-First/#week-1--ai-inference-and-the-production-ml-lifecycle) | Inference basics, ML lifecycle, MLOps vs SRE, AI stack layers, deployment automation | AI 推理与生产级 ML 生命周期<br>推理基础、机器学习生命周期、MLOps 与 SRE、AI 技术栈分层、部署自动化 |
 | 2 | [LLM Fundamentals for Operators](/docs/99-English/01-Schedule/02-First/#week-2--llm-fundamentals-for-operators) | Next-token prediction, transformer flow, attention & context, context window limits, temperature & sampling | 运维人员的 LLM 基础<br>下一个 token 预测、Transformer 流程、注意力机制与上下文、上下文窗口限制、温度与采样 |
