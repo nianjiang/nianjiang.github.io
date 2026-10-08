@@ -13,24 +13,24 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 ## Contents
 
-| Weeks | Theme | Key Topics |
-| :---: | :--- | :--- |
-| 1 | [AI Inference & Production ML Lifecycle](/docs/99-English/01-Schedule/02-First/#week-1--ai-inference-and-the-production-ml-lifecycle) | Inference basics, ML lifecycle, MLOps vs SRE, AI stack layers, deployment automation |
-| 2 | [LLM Fundamentals for Operators](/docs/99-English/01-Schedule/02-First/#week-2--llm-fundamentals-for-operators) | Next-token prediction, transformer flow, attention & context, context window limits, temperature & sampling |
-| 3 | [GPU Hardware, Memory & Runtime](/docs/99-English/01-Schedule/02-First/#week-3--gpu-hardware-memory-and-runtime-foundations) | CPU vs GPU, HBM bandwidth, CUDA stack, container GPU access, mixed precision (FP16/FP32) |
-| 4 | [GPU Workloads on Kubernetes](/docs/99-English/01-Schedule/02-First/#week-4--operating-gpu-workloads-on-kubernetes) | Device plugin discovery, GPU Operator, MIG isolation, time-slicing limits, scheduling troubleshooting |
-| 5 | [Model Serving & Inference Engines](/docs/99-English/01-Schedule/02-First/#week-5--model-serving-and-inference-engines) | Inference runtime role, OpenAI-compatible APIs, Triton, KServe orchestration, TensorRT-LLM |
-| 6 | [Model Artifacts, Deployment & Startup](/docs/99-English/01-Schedule/02-First/#week-6--model-artifacts-deployment-and-startup) | Model download & cache, versioning (MLflow), safetensors, OCI packaging, probes for slow loading |
-| 7 | [Inference Performance & Optimization](/docs/99-English/01-Schedule/02-First/#week-7--inference-performance-and-optimization) | Prefill vs decode, KV cache, continuous batching, prefix caching, quantization (GPTQ/AWQ/GGUF) |
-| 8 | [Benchmarking Latency, Throughput & Quality](/docs/99-English/01-Schedule/02-First/#week-8--benchmarking-latency-throughput-and-quality) | TTFT, ITL, TPS vs RPS, benchmark workload design, quality metrics vs SLOs |
-| 9 | [Autoscaling & Capacity Planning](/docs/99-English/01-Schedule/02-First/#week-9--autoscaling-and-capacity-planning) | HPA metrics, KEDA scalers, GPU capacity sizing, cost vs latency vs throughput |
-| 10 | [AI Observability: Metrics, Logs & Traces](/docs/99-English/01-Schedule/02-First/#week-10--ai-observability-metrics-logs-and-traces) | vLLM metrics, OpenTelemetry spans, PII redaction, GPU dashboards, prompt drift |
-| 11 | [Inference SLOs, Error Budgets & Alerting](/docs/99-English/01-Schedule/02-First/#week-11--inference-slos-error-budgets-and-alerting) | SLO/SLI/SLA, error budgets, AlertManager rules, multi-window burn-rate alerts |
-| 12 | [Incident Response & Failure Recovery](/docs/99-English/01-Schedule/02-First/#week-12--incident-response-and-failure-recovery) | IR lifecycle, inference triage, blameless postmortem, GPU OOM, chaos engineering |
-| 13 | [Safe Model Releases & Rollback](/docs/99-English/01-Schedule/02-First/#week-13--safe-model-releases-and-rollback) | Model registry stages, canary, blue-green, shadow/dark launch, Argo Rollouts |
-| 14 | [RAG Reliability & Quality Evaluation](/docs/99-English/01-Schedule/02-First/#week-14--rag-reliability-and-quality-evaluation) | RAG pipeline, retriever evaluation, RAG triad (relevancy, faithfulness, contextual relevancy) |
-| 15 | [Cost, Security & Data Protection](/docs/99-English/01-Schedule/02-First/#week-15--cost-security-and-data-protection) | Cost per M tokens, GPU right-sizing, spot GPUs, prompt injection, PII redaction |
-| 16 | [Architecture Trade-offs & Final Review](/docs/99-English/01-Schedule/02-First/#week-16--architecture-trade-offs-and-final-review) | Throughput vs latency, batch inference, multi-tenancy, build vs buy, hybrid vs self-hosted |
+| Weeks | Theme | Key Topics | |
+| :---: | :--- | :--- | :--- |
+| 1 | [AI Inference & Production ML Lifecycle](/docs/99-English/01-Schedule/02-First/#week-1--ai-inference-and-the-production-ml-lifecycle) | Inference basics, ML lifecycle, MLOps vs SRE, AI stack layers, deployment automation | AI 推理与生产级 ML 生命周期<br>推理基础、机器学习生命周期、MLOps 与 SRE、AI 技术栈分层、部署自动化 |
+| 2 | [LLM Fundamentals for Operators](/docs/99-English/01-Schedule/02-First/#week-2--llm-fundamentals-for-operators) | Next-token prediction, transformer flow, attention & context, context window limits, temperature & sampling | 运维人员的 LLM 基础<br>下一个 token 预测、Transformer 流程、注意力机制与上下文、上下文窗口限制、温度与采样 |
+| 3 | [GPU Hardware, Memory & Runtime](/docs/99-English/01-Schedule/02-First/#week-3--gpu-hardware-memory-and-runtime-foundations) | CPU vs GPU, HBM bandwidth, CUDA stack, container GPU access, mixed precision (FP16/FP32) | GPU 硬件、显存与运行时<br>CPU vs GPU、HBM 带宽、CUDA 栈、容器 GPU 访问、混合精度 (FP16/FP32) |
+| 4 | [GPU Workloads on Kubernetes](/docs/99-English/01-Schedule/02-First/#week-4--operating-gpu-workloads-on-kubernetes) | Device plugin discovery, GPU Operator, MIG isolation, time-slicing limits, scheduling troubleshooting | K8s 上的 GPU 工作负载<br>设备插件发现、GPU Operator、MIG 隔离、时间片限制、调度排障 |
+| 5 | [Model Serving & Inference Engines](/docs/99-English/01-Schedule/02-First/#week-5--model-serving-and-inference-engines) | Inference runtime role, OpenAI-compatible APIs, Triton, KServe orchestration, TensorRT-LLM | 模型服务与推理引擎<br>推理运行时、OpenAI 兼容 API、Triton、KServe 编排、TensorRT-LLM |
+| 6 | [Model Artifacts, Deployment & Startup](/docs/99-English/01-Schedule/02-First/#week-6--model-artifacts-deployment-and-startup) | Model download & cache, versioning (MLflow), safetensors, OCI packaging, probes for slow loading | 模型制品、部署与启动<br>模型下载与缓存、模型版本管理 (MLflow)、safetensors 格式、OCI 镜像打包、慢加载就绪探针 |
+| 7 | [Inference Performance & Optimization](/docs/99-English/01-Schedule/02-First/#week-7--inference-performance-and-optimization) | Prefill vs decode, KV cache, continuous batching, prefix caching, quantization (GPTQ/AWQ/GGUF) | 推理性能与优化<br>Prefill vs Decode、KV 缓存、连续批处理、前缀缓存、量化 (GPTQ/AWQ/GGUF) |
+| 8 | [Benchmarking Latency, Throughput & Quality](/docs/99-English/01-Schedule/02-First/#week-8--benchmarking-latency-throughput-and-quality) | TTFT, ITL, TPS vs RPS, benchmark workload design, quality metrics vs SLOs | 延迟、吞吐量与质量基准测试<br>TTFT、ITL、TPS vs RPS、基准负载设计、质量指标 vs SLO |
+| 9 | [Autoscaling & Capacity Planning](/docs/99-English/01-Schedule/02-First/#week-9--autoscaling-and-capacity-planning) | HPA metrics, KEDA scalers, GPU capacity sizing, cost vs latency vs throughput | 自动伸缩与容量规划<br>HPA 指标、KEDA 缩放器、GPU 容量规格选择、成本 vs 延迟 vs 吞吐 |
+| 10 | [AI Observability: Metrics, Logs & Traces](/docs/99-English/01-Schedule/02-First/#week-10--ai-observability-metrics-logs-and-traces) | vLLM metrics, OpenTelemetry spans, PII redaction, GPU dashboards, prompt drift | AI 可观测性：指标、日志与链路<br>vLLM 指标、OpenTelemetry Span、PII 脱敏、GPU 仪表盘、Prompt 漂移 |
+| 11 | [Inference SLOs, Error Budgets & Alerting](/docs/99-English/01-Schedule/02-First/#week-11--inference-slos-error-budgets-and-alerting) | SLO/SLI/SLA, error budgets, AlertManager rules, multi-window burn-rate alerts | 推理 SLO、错误预算与告警<br>SLO/SLI/SLA、错误预算、AlertManager 规则、多窗口消耗率告警 |
+| 12 | [Incident Response & Failure Recovery](/docs/99-English/01-Schedule/02-First/#week-12--incident-response-and-failure-recovery) | IR lifecycle, inference triage, blameless postmortem, GPU OOM, chaos engineering | 事件响应与故障恢复<br>事件响应生命周期、推理故障分诊、无责事后复盘、GPU OOM、混沌工程 |
+| 13 | [Safe Model Releases & Rollback](/docs/99-English/01-Schedule/02-First/#week-13--safe-model-releases-and-rollback) | Model registry stages, canary, blue-green, shadow/dark launch, Argo Rollouts | 安全的模型发布与回滚<br>模型仓库阶段划分、金丝雀发布、蓝绿部署、影子/灰度发布、Argo Rollouts |
+| 14 | [RAG Reliability & Quality Evaluation](/docs/99-English/01-Schedule/02-First/#week-14--rag-reliability-and-quality-evaluation) | RAG pipeline, retriever evaluation, RAG triad (relevancy, faithfulness, contextual relevancy) | RAG 可靠性与质量评估<br>RAG 管线、检索器评估、RAG 三元组（相关性、忠实性、上下文相关性） |
+| 15 | [Cost, Security & Data Protection](/docs/99-English/01-Schedule/02-First/#week-15--cost-security-and-data-protection) | Cost per M tokens, GPU right-sizing, spot GPUs, prompt injection, PII redaction | 成本、安全与数据保护<br>每百万 token 成本、GPU 合理选型、竞价实例 GPU、提示词注入、PII 脱敏 |
+| 16 | [Architecture Trade-offs & Final Review](/docs/99-English/01-Schedule/02-First/#week-16--architecture-trade-offs-and-final-review) | Throughput vs latency, batch inference, multi-tenancy, build vs buy, hybrid vs self-hosted | 架构权衡与总复习<br>吞吐 vs 延迟、批量推理、多租户、自建 vs 外购、混合部署 vs 自托管 |
 
 ## Week 1 — AI Inference and the Production ML Lifecycle
 
