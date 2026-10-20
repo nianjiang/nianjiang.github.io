@@ -47,9 +47,9 @@ The progression is inference fundamentals → GPU infrastructure → serving →
 
 |  | Day | Topic | Video | Article | English Practice |
 | :---: | :--- | :--- | :--- | :--- | :--- |
-| <span class="hl-key">❇️ </span> | 07 | What does an LLM predict? | [Large Language Models Explained Briefly — 3Blue1Brown, official bilingual upload][v07] — listen for next-token prediction | [Large language models — IBM][a07] — definitions and limitations | Explain an LLM in 90 seconds using "predicts" rather than "knows." |
-|  | 08 | How do tokens pass through a transformer? | [Transformers Explained — 3Blue1Brown, official bilingual upload][v08] — follow the opening token workflow | [Transformer models — IBM][a08] — architecture overview | Write 80–100 words using "first," "embedding," and "finally." |
-|  | 09 | Why does attention use context? | [Attention in Transformers — 3Blue1Brown, official bilingual upload][v09] — focus on the first contextual example | [Attention mechanisms — IBM][a09] — contextual relationships | Explain one example in 90 seconds using "depending on" and "relevant." |
+| <span class="hl-key">❇️ </span> | 07 | What does an LLM predict? | [Large Language Models Explained Briefly — 3Blue1Brown][v07] — listen for next-token prediction，[Bilibili](https://www.bilibili.com/video/BV1xmA2eMEFF) | [Large language models — IBM][a07] — definitions and limitations | Explain an LLM in 90 seconds using "predicts" rather than "knows." |
+|  | 08 | How do tokens pass through a transformer? | [Transformers Explained — 3Blue1Brown][v08] — follow the opening token workflow，[Bilibili](https://www.bilibili.com/video/BV13z421U7cs) | [Transformer models — IBM][a08] — architecture overview | Write 80–100 words using "first," "embedding," and "finally." |
+|  | 09 | Why does attention use context? | [Attention in Transformers — 3Blue1Brown][v09] — focus on the first contextual example，[Bilibili](https://www.bilibili.com/video/BV1TZ421j7Ke) | [Attention mechanisms — IBM][a09] — contextual relationships | Explain one example in 90 seconds using "depending on" and "relevant." |
 |  | 10 | What limits the context window? | [What Is the LLM's Context Window? — New Machina][v10] — listen for input and output limits | [Context windows — IBM][a10] — token limits and operational implications | Write a 100-word explanation using "whereas" and "limit." |
 |  | 11 | How does sampling change responses? | [The Secret Controls for Your LLM — Gary Explains][v11] — focus on temperature and sampling | [LLM temperature — IBM][a11] — randomness versus correctness | Explain in 90 seconds why lower temperature does not guarantee factual accuracy. |
 |  | 12 | Review: explain the operator's model of an LLM | [Intro to Large Language Models — Andrej Karpathy][v12] — replay the opening model overview | [Large Language Models Explained Briefly — 3Blue1Brown][a12] — verify the prediction workflow | Give a two-minute explanation connecting tokens, context, attention, and sampling. |
@@ -224,9 +224,9 @@ After each sixth study day, record:
 [v04]: https://www.youtube.com/watch?v=itBc7nwAK5o
 [v05]: https://www.mathworks.com/videos/what-is-mlops-1706066104525.html
 [v06]: https://www.youtube.com/watch?v=Ta14KpeZJok
-[v07]: https://www.bilibili.com/video/BV1xmA2eMEFF
-[v08]: https://www.bilibili.com/video/BV13z421U7cs
-[v09]: https://www.bilibili.com/video/BV1TZ421j7Ke
+[v07]: https://www.youtube.com/watch?v=LPZh9BOjkQs
+[v08]: https://www.youtube.com/watch?v=wjZofJX0v4M
+[v09]: https://www.youtube.com/watch?v=eMlx5fFNoYc
 [v10]: https://www.youtube.com/watch?v=y5wBbDSe0cM
 [v11]: https://www.youtube.com/watch?v=MkaazQttbpc
 [v12]: https://www.youtube.com/watch?v=zjkBMFhNj_g
