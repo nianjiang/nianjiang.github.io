@@ -65,7 +65,7 @@ bookToc: false
 
 [Website](https://www.cncf.io/)
 
-[]()
+[gist🆘](https://gist.github.com/rxaviers/7360908), [A list of GitHub emoji markup👹](https://gist.github.com/GerHobbelt/b9b87a2257ddd5251a45628d61385717)
 
 []()
 
